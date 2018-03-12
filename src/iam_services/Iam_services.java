@@ -56,7 +56,8 @@ public class Iam_services {
      */
     public static void main(String[] args) {
         // TODO code application logic here
-        new Iam_services().Connect();
+        
+        new Iam_services().doWork();
     }
 
     public Iam_services() {
@@ -70,8 +71,21 @@ public class Iam_services {
         }
     }
 
+    private void doWork() {
+        while (true) {
+            try {
+                check_files();
+                Thread.sleep(1000*60);                
+            } catch (InterruptedException e) {
+                Error_logger(e,"doWork");
+                Error_logger(new Exception("Sytem Interrupted"),"doWork");
+            }
+            Error_logger(new Exception("Sytem system alive"),"doWork");
+        }
+    }
+
     private void Connect() {
-        String[] conStrings = getConnetionString();
+        String[] conStrings = getSettings();
         conn = MSQLConnection(conStrings[0]);
         if (conn == null) {//if not successful, try second
             Error_logger(new Exception("Failed to connect with connection string: " + conStrings[0]), "Connect");
@@ -84,12 +98,11 @@ public class Iam_services {
             Error_logger(new Exception("Failed to connect with connection string: " + conStrings[1]), "Connect");
             Error_logger(new Exception("System could not connect to the server using provided settings"), "Connect");
         } else {
-            System.err.println("Connection succeeded, hurray!");
-            check_files();
+            Error_logger(new Exception("Connection succeeded, hurray!"),"Connect");
         }
     }
 
-    private String[] getConnetionString() {
+    private String[] getSettings() {
         try {
             File file = new File("iam_service_settings.xml");
             FileInputStream fileInput = new FileInputStream(file);
@@ -227,7 +240,9 @@ public class Iam_services {
         return "";
     }
 
-    public void check_files() {
+    public void check_files() {        
+         getSettings();//read settings
+         
         if (settings.get("access_type").equalsIgnoreCase("remote")) {
             //process files from a remote server
             processRemoteFolder();
@@ -240,18 +255,27 @@ public class Iam_services {
         }
 
         //filter xml files
-        System.err.println(folder.listFiles(new XMLFileFilter()).length + " new Files found");
+        //System.err.println(folder.listFiles(new XMLFileFilter()).length + " new Files found");
+        int new_files=folder.listFiles(new XMLFileFilter()).length;
+        Error_logger(new Exception(new_files + " new Files found"), DB);
+        
+        if(new_files>0){
+            Connect();
+        }else{
+            return;
+        }
+        
         File processed_dir = new File(folder, "proccessed");
         if (!processed_dir.exists()) {
             processed_dir.mkdirs();
         }
 
-        int count=1;
+        int count = 1;
         for (final File fileEntry : folder.listFiles(new XMLFileFilter())) {
             if (fileEntry.isDirectory()) {
                 continue;
             }
-            System.err.println("Processing file->"+(count++));
+            Error_logger(new Exception("Processing file->" + (count++)),"check_files");
             try {
                 dump_xmlFILE_toDB(fileEntry.getName(), readLocalFile(fileEntry.getPath()));
                 Files.move(Paths.get(fileEntry.getPath()), Paths.get(new File(processed_dir, fileEntry.getName()).getPath()), StandardCopyOption.REPLACE_EXISTING);
@@ -269,11 +293,12 @@ public class Iam_services {
      * A class that implements the Java FileFilter interface.
      */
     public class XMLFileFilter implements FileFilter {
+
         @Override
         public boolean accept(File file) {
-                if (file.getName().toLowerCase().endsWith("xml")) {
-                    return true;
-                }
+            if (file.getName().toLowerCase().endsWith("xml")) {
+                return true;
+            }
             return false;
         }
     }
