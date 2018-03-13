@@ -1,16 +1,26 @@
 <?xml version="1.0" encoding="UTF-8"?>
 <!DOCTYPE properties SYSTEM "http://java.sun.com/dtd/properties.dtd">
 <properties>
-	<!--Enter sqlserver connection settings here-->
-	<entry key="SERVER_INSTANCE">192.168.13.48</entry>
-	<entry key="port"></entry>
-	<entry key="DB">xmltest</entry>
-	<entry key="user">sa</entry>
-	<entry key="password">sa</entry>
-	<!--Or, you can provide a commplete jdbc connection string, this is given first priority-->
-	<entry key="jdbc_connection_string">jdbc:sqlserver://192.168.13.48;databaseName=xmltest;user=sa;password=tester</entry>
-	<!--Path to directory containing files (file path or URL)-->
-	<entry key="destination_folder">C:\Users\user\Documents\DENNIS\allsamples</entry>
-	<!--How the folder is accessed (local or remote)-->
-	<entry key="access_type">local</entry>
+        <!--Enter sqlserver connection settings here-->
+        <entry key="SERVER_INSTANCE">192.168.13.48</entry>
+        <entry key="port"></entry>
+        <entry key="DB">xmltest</entry>
+        <entry key="user">sa</entry>
+        <entry key="password">sa</entry>
+        <!--Or, you can provide a commplete jdbc connection string, this is given first priority-->
+        <entry key="jdbc_connection_string">jdbc:sqlserver://192.168.13.48;databaseName=xmltest;user=sa;password=tester</entry>
+        <!--Path to directory containing files (file path or URL)-->
+        <entry key="destination_folder">C:\Users\user\Documents\DENNIS\allsamples</entry>
+        <!--How the folder is accessed (local , ftp , remote)-->
+        <entry key="access_type">ftp</entry>
+        
+        <!--if access_type=ftp then-->
+        <entry key="ftp_server_url">test.rebex.net</entry>
+        <entry key="ftp_server_port">21</entry>    
+        <entry key="ftp_server_user">demo</entry>  
+        <entry key="ftp_server_password">password</entry>
+		<entry key="remote_folder"></entry>
+		<entry key="working_dir">workspace</entry>
+        <!--ftp connection end-->
+        
 </properties>

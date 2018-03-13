@@ -50,14 +50,16 @@ public class Iam_services {
 
     Logger logger = Logger.getLogger(getClass().getSimpleName());
     FileHandler fh;
+    private static Iam_services instance;
 
     /**
      * @param args the command line arguments
      */
     public static void main(String[] args) {
         // TODO code application logic here
-        
-        new Iam_services().doWork();
+
+        instance = new Iam_services();
+        instance.doWork();
     }
 
     public Iam_services() {
@@ -75,12 +77,12 @@ public class Iam_services {
         while (true) {
             try {
                 check_files();
-                Thread.sleep(1000*60);                
+                Thread.sleep(1000 * 60);
             } catch (InterruptedException e) {
-                Error_logger(e,"doWork");
-                Error_logger(new Exception("Sytem Interrupted"),"doWork");
+                Error_logger(e, "doWork");
+                Error_logger(null, "Sytem Interrupted", true);
             }
-            Error_logger(new Exception("Sytem system alive"),"doWork");
+            Error_logger(null, "Sytem system alive", true);
         }
     }
 
@@ -95,10 +97,10 @@ public class Iam_services {
 
         if (conn == null) {
             //couldn't connect
-            Error_logger(new Exception("Failed to connect with connection string: " + conStrings[1]), "Connect");
-            Error_logger(new Exception("System could not connect to the server using provided settings"), "Connect");
+            Error_logger(null, "Failed to connect with connection string: " + conStrings[1], true);
+            Error_logger(null, "System could not connect to the server using provided settings", true);
         } else {
-            Error_logger(new Exception("Connection succeeded, hurray!"),"Connect");
+            Error_logger(null, "Connection succeeded, hurray!", true);
         }
     }
 
@@ -129,14 +131,22 @@ public class Iam_services {
         return null;
     }
 
-    private void Error_logger(Exception e, String methodName) {
+    public void Error_logger(Exception e, String methodName) {
+        Error_logger(e, methodName, false);
+    }
+
+    public void Error_logger(Exception e, String methodName, boolean info) {
         // logger.setUseParentHandlers(false);//no console logging
         try {
             // This block configure the logger with handler and formatter
             SimpleFormatter formatter = new SimpleFormatter();
             fh.setFormatter(formatter);
             // the following statement is used to log any messages
-            logger.log(Level.SEVERE, e, () -> methodName);
+            if (!info) {
+                logger.log(Level.SEVERE, e, () -> methodName);
+            } else {
+                logger.info(methodName);
+            }
 
         } catch (SecurityException ex) {
             ex.printStackTrace();
@@ -213,11 +223,10 @@ public class Iam_services {
         //System.err.println("Reading->" + path);
         try {
             String string = new String(Files.readAllBytes(Paths.get(path)));
-
             //System.err.println("Done reading");
             return string;
         } catch (IOException ex) {
-            Logger.getLogger(getClass().getName()).log(Level.SEVERE, null, ex);
+            Error_logger(ex, "readLocalFile");
         }
         return "";
     }
@@ -240,31 +249,58 @@ public class Iam_services {
         return "";
     }
 
-    public void check_files() {        
-         getSettings();//read settings
-         
-        if (settings.get("access_type").equalsIgnoreCase("remote")) {
-            //process files from a remote server
-            processRemoteFolder();
+    public void check_files() {
+        check_files(false);
+    }
+
+    public void check_files(boolean fromRemote) {
+        getSettings();//read settings
+
+        switch (settings.get("access_type").toLowerCase()) {
+            case "remote":
+                processRemoteFolder();
+                return;
+            case "ftp":
+                if (!fromRemote) {
+                    new FTP_FileProcessing(settings);
+                    return;
+                }
+                break;
+            case "local":
+                break;
+            default:
+                Error_logger(new Exception("Unsupported settings type:" + settings.get("access_type")), "check_files");
+                return;
         }
+
         //else process files on a local directory
-        File folder = new File(settings.get(FOLDER));
+        String get_folderpath = settings.get(FOLDER);
+        if(fromRemote){
+            get_folderpath=settings.get("working_dir");
+        }
+        
+        //check if its provided
+        if(get_folderpath.trim().isEmpty()){
+            get_folderpath="workspace";
+        }
+        
+        File folder = new File(get_folderpath);
         if (!folder.exists()) {
-            Error_logger(new IOException("File folder not found:" + folder.getPath()), "check_files");
+            Error_logger(null, "File folder not found:" + folder.getPath(), true);
             return;
         }
 
         //filter xml files
         //System.err.println(folder.listFiles(new XMLFileFilter()).length + " new Files found");
-        int new_files=folder.listFiles(new XMLFileFilter()).length;
-        Error_logger(new Exception(new_files + " new Files found"), DB);
-        
-        if(new_files>0){
+        int new_files = folder.listFiles(new XMLFileFilter()).length;
+        Error_logger(null, new_files + " new Files found", true);
+
+        if (new_files > 0) {
             Connect();
-        }else{
+        } else {
             return;
         }
-        
+
         File processed_dir = new File(folder, "proccessed");
         if (!processed_dir.exists()) {
             processed_dir.mkdirs();
@@ -275,7 +311,7 @@ public class Iam_services {
             if (fileEntry.isDirectory()) {
                 continue;
             }
-            Error_logger(new Exception("Processing file->" + (count++)),"check_files");
+            Error_logger(null, "Processing file->" + (count++), true);
             try {
                 dump_xmlFILE_toDB(fileEntry.getName(), readLocalFile(fileEntry.getPath()));
                 Files.move(Paths.get(fileEntry.getPath()), Paths.get(new File(processed_dir, fileEntry.getName()).getPath()), StandardCopyOption.REPLACE_EXISTING);
@@ -301,5 +337,12 @@ public class Iam_services {
             }
             return false;
         }
+    }
+
+    static Iam_services getInstance() {
+        if (instance == null) {
+            instance = new Iam_services();
+        }
+        return instance;
     }
 }

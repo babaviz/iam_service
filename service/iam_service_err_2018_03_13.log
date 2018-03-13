@@ -1,0 +1,98 @@
+Mar 13, 2018 4:35:57 PM iam_services.Iam_services Error_logger
+SEVERE: DB
+java.lang.Exception: 0 new Files found
+	at iam_services.Iam_services.check_files(Iam_services.java:260)
+	at iam_services.Iam_services.doWork(Iam_services.java:77)
+	at iam_services.Iam_services.main(Iam_services.java:60)
+
+Mar 13, 2018 4:36:58 PM iam_services.Iam_services Error_logger
+SEVERE: doWork
+java.lang.Exception: Sytem system alive
+	at iam_services.Iam_services.doWork(Iam_services.java:83)
+	at iam_services.Iam_services.main(Iam_services.java:60)
+
+Mar 13, 2018 4:36:58 PM iam_services.Iam_services Error_logger
+SEVERE: DB
+java.lang.Exception: 0 new Files found
+	at iam_services.Iam_services.check_files(Iam_services.java:260)
+	at iam_services.Iam_services.doWork(Iam_services.java:77)
+	at iam_services.Iam_services.main(Iam_services.java:60)
+
+Mar 13, 2018 4:37:58 PM iam_services.Iam_services Error_logger
+SEVERE: doWork
+java.lang.Exception: Sytem system alive
+	at iam_services.Iam_services.doWork(Iam_services.java:83)
+	at iam_services.Iam_services.main(Iam_services.java:60)
+
+Mar 13, 2018 4:37:58 PM iam_services.Iam_services Error_logger
+SEVERE: DB
+java.lang.Exception: 0 new Files found
+	at iam_services.Iam_services.check_files(Iam_services.java:260)
+	at iam_services.Iam_services.doWork(Iam_services.java:77)
+	at iam_services.Iam_services.main(Iam_services.java:60)
+
+Mar 13, 2018 4:38:58 PM iam_services.Iam_services Error_logger
+SEVERE: doWork
+java.lang.Exception: Sytem system alive
+	at iam_services.Iam_services.doWork(Iam_services.java:83)
+	at iam_services.Iam_services.main(Iam_services.java:60)
+
+Mar 13, 2018 4:38:59 PM iam_services.Iam_services Error_logger
+SEVERE: DB
+java.lang.Exception: 0 new Files found
+	at iam_services.Iam_services.check_files(Iam_services.java:260)
+	at iam_services.Iam_services.doWork(Iam_services.java:77)
+	at iam_services.Iam_services.main(Iam_services.java:60)
+
+Mar 13, 2018 4:39:59 PM iam_services.Iam_services Error_logger
+SEVERE: doWork
+java.lang.Exception: Sytem system alive
+	at iam_services.Iam_services.doWork(Iam_services.java:83)
+	at iam_services.Iam_services.main(Iam_services.java:60)
+
+Mar 13, 2018 4:39:59 PM iam_services.Iam_services Error_logger
+SEVERE: DB
+java.lang.Exception: 0 new Files found
+	at iam_services.Iam_services.check_files(Iam_services.java:260)
+	at iam_services.Iam_services.doWork(Iam_services.java:77)
+	at iam_services.Iam_services.main(Iam_services.java:60)
+
+Mar 13, 2018 4:40:59 PM iam_services.Iam_services Error_logger
+SEVERE: doWork
+java.lang.Exception: Sytem system alive
+	at iam_services.Iam_services.doWork(Iam_services.java:83)
+	at iam_services.Iam_services.main(Iam_services.java:60)
+
+Mar 13, 2018 4:40:59 PM iam_services.Iam_services Error_logger
+SEVERE: DB
+java.lang.Exception: 0 new Files found
+	at iam_services.Iam_services.check_files(Iam_services.java:260)
+	at iam_services.Iam_services.doWork(Iam_services.java:77)
+	at iam_services.Iam_services.main(Iam_services.java:60)
+
+Mar 13, 2018 4:41:59 PM iam_services.Iam_services Error_logger
+SEVERE: doWork
+java.lang.Exception: Sytem system alive
+	at iam_services.Iam_services.doWork(Iam_services.java:83)
+	at iam_services.Iam_services.main(Iam_services.java:60)
+
+Mar 13, 2018 4:41:59 PM iam_services.Iam_services Error_logger
+SEVERE: DB
+java.lang.Exception: 0 new Files found
+	at iam_services.Iam_services.check_files(Iam_services.java:260)
+	at iam_services.Iam_services.doWork(Iam_services.java:77)
+	at iam_services.Iam_services.main(Iam_services.java:60)
+
+Mar 13, 2018 4:42:59 PM iam_services.Iam_services Error_logger
+SEVERE: doWork
+java.lang.Exception: Sytem system alive
+	at iam_services.Iam_services.doWork(Iam_services.java:83)
+	at iam_services.Iam_services.main(Iam_services.java:60)
+
+Mar 13, 2018 4:42:59 PM iam_services.Iam_services Error_logger
+SEVERE: DB
+java.lang.Exception: 0 new Files found
+	at iam_services.Iam_services.check_files(Iam_services.java:260)
+	at iam_services.Iam_services.doWork(Iam_services.java:77)
+	at iam_services.Iam_services.main(Iam_services.java:60)
+
