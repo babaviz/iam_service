@@ -75,13 +75,14 @@ public class Iam_services {
     }
 
     private void doWork() {
+        int wait=10;
         while (true) {
             try {
                 if (!lock) {
                     check_files();
                 }
-
-                Thread.sleep(1000 * 60 * 10);
+                try{wait=Integer.parseInt(settings.get("duration").trim());}catch(Exception ex){Error_logger(ex, "doWork");}
+                Thread.sleep(1000 * 60 * wait);
             } catch (InterruptedException e) {
                 Error_logger(e, "doWork");
                 Error_logger(null, "Sytem Interrupted", true);
@@ -350,7 +351,7 @@ public class Iam_services {
         return instance;
     }
 
-    public boolean upload_inboundXMLFiles(String fileName, String type) {
+    public void upload_inboundXMLFiles(String fileName, String type,String docNum) {
         String func="process_inbound";
         StatusLogger dbLogger = null;
         int id=0;
@@ -373,13 +374,16 @@ public class Iam_services {
                 break;
                 default:
                     Error_logger(new Exception("Unsupported settings type:" + settings.get("access_type")), "check_files");
-                    return false;
+                    return;
             }
+            Files.move(new File(fileName).toPath(),
+                    new File(new File("inbound_generated", "processed"), new File(fileName).getName()).toPath()
+            );                    
         } catch (Exception ex) {
             Error_logger(ex, func);
             dbLogger.Log_error(id);
-            return false;
+            return;
         }
-        return true;
+        dbLogger.Log_success(id, docNum);         
     }
 }

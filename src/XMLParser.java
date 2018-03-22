@@ -23,7 +23,7 @@ import org.w3c.dom.NodeList;
 
 public class XMLParser {
     private String pre_Table="CNB_IAM_IN_";
-    private String key="PACKAGE_ID";
+    private String key="BONNUMMER";
     private String key2="ARTNR";
     private String key_value;
     
@@ -32,7 +32,7 @@ public class XMLParser {
     public static void main(String[] args) {
         XMLParser parser=new XMLParser();
         try {
-            File file = new File("C:\\Users\\user\\Documents\\DENNIS\\SAP_Inbound\\Z_all\\Inv-detail-Credit20180203020212-765249.xml");
+            File file = new File("C:\\Users\\user\\Documents\\DENNIS\\SAP_Inbound\\Z_all\\ART_ADJDOC_CON_102938_2040_20180208-133951-411.xml");
             DocumentBuilder dBuilder = DocumentBuilderFactory.newInstance().newDocumentBuilder();
             Document doc = dBuilder.parse(file);
             //System.out.println("Root element :" + doc.getDocumentElement().getNodeName());
@@ -97,20 +97,20 @@ public class XMLParser {
         }
           
         //set key_link
-        if(keys.get(key) !=null && data.get(key)==null && parent.equals("E1WPU02")){
+        if(keys.get(key) !=null && data.get(key)==null /*&& parent.equals("E1WPU02")*/){
             data.put(key, keys.get(key));
             cols+=key+",";
             vals+="?,";
             colcount++;
             col_List.add(key);
             
-        }else if(keys.get(key2) !=null && data.get(key2)==null && !parent.equalsIgnoreCase("E1WPU01")) {
+        }/*else if(keys.get(key2) !=null && data.get(key2)==null && !parent.equalsIgnoreCase("E1WPU01")) {
             data.put(key2, keys.get(key2));
             cols+=key2+",";
             vals+="?,";
             colcount++;
             col_List.add(key2);
-        }
+        }*/
         Connection conn=iam_services.Iam_services.getInstance().Connect();
         //process data
         cols=cols.replaceFirst(".$",")");

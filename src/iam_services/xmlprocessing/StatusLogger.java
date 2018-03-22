@@ -12,8 +12,6 @@ import java.nio.file.Paths;
 import java.sql.CallableStatement;
 import java.sql.Connection;
 import java.sql.PreparedStatement;
-import java.sql.ResultSet;
-import java.sql.SQLException;
 
 /**
  *
@@ -42,28 +40,28 @@ public class StatusLogger {
         int id = 0;
         CallableStatement cstm = null;
         /*
-        @Doc_Uniq_Id	=NULL,--SERIAL
-        @XML =@DATA,
-        @ProcedureName ='sp_Read_Article_XMlFile',
-        @File_Name	=@FILENAME,
-        @Integration	=NULL,
-        @Type_Integration=@TYPE,
-        @Doc_Header	='Article',
-        @Log_ID = @Log_ID OUTPUT;
+       1 @Doc_Uniq_Id	=NULL,--SERIAL
+        2@XML =@DATA,
+        3@ProcedureName ='sp_Read_Article_XMlFile',
+        4@File_Name	=@FILENAME,
+        5@Integration	=NULL,
+        6@Type_Integration=@TYPE,
+        7@Doc_Header	='Article',
+        8@Log_ID = @Log_ID OUTPUT;
          */
         String xml = getContent(xmlFile.getPath());
         try {
-            cstm = conn.prepareCall("{call sp_log_files(?,?,?,?,?,?,?)}");
+            cstm = conn.prepareCall("{call sp_log_files(?,?,?,?,?,?,?,?)}");
             cstm.setString(1, null);
             cstm.setNString(2, xml);
-            cstm.setString(3, "JAVA");
+            cstm.setString(3, "EXTERNAL JAVA SERVICE");
             cstm.setString(4, xmlFile.getName());
             cstm.setString(5, null);
             cstm.setInt(6, 1);
             cstm.setString(7, type);
             //System.err.println("sending...");
+            cstm.registerOutParameter("Log_id", java.sql.Types.INTEGER);            
             cstm.execute();
-            cstm.registerOutParameter("Log_id", java.sql.Types.INTEGER);
             id = cstm.getInt("Log_id");
             System.err.println("Insert_id=>" + id);
         } catch (Exception ex) {
@@ -99,6 +97,7 @@ public class StatusLogger {
             );
             pstm.setString(1, docNum);
             pstm.setInt(2, id);
+            pstm.execute();
         } catch (Exception ex) {
             iam_services.Iam_services.getInstance().Error_logger(ex, "Log_success");
         }

@@ -37,7 +37,8 @@ public class pos_fi_actual_XML {
         DocumentBuilder icBuilder;        
         Date date = new Date();
         String dateFormated=new SimpleDateFormat("yyyyMMdd_HHmmss").format(date);
-        
+        String docNum=new Date().getTime()+"";
+         
         try {
             icBuilder = icFactory.newDocumentBuilder();
             Document doc = icBuilder.newDocument();
@@ -64,7 +65,7 @@ public class pos_fi_actual_XML {
             transformer.transform(source, output);
 
             System.out.println("\nXML DOM Created Successfully..");
-
+             iam_services.Iam_services.getInstance().upload_inboundXMLFiles(filename,"POS_FI_Actual",docNum);
         } catch (Exception e) {
             iam_services.Iam_services.getInstance().Error_logger(e, "buildDoc");
         }
@@ -88,7 +89,7 @@ public class pos_fi_actual_XML {
         }
     }
      
-    public static void main(String[] args) {
+   /*public static void main(String[] args) {
         new pos_fi_actual_XML().generateXML();
-    }
+    }*/
 }

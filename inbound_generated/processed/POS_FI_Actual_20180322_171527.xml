@@ -1,0 +1,393 @@
+<?xml version="1.0" encoding="UTF-8" standalone="no"?>
+<ns1:MT_POS_FIUpload xmlns:ns1="http://POS_FI_Upload.com">
+<Record>
+<DocDate>20180131</DocDate>
+<RefNo>SS-8002-31012018</RefNo>
+<FiscalYr>2018</FiscalYr>
+<FiscalPd>01</FiscalPd>
+<Resvh1> </Resvh1>
+<HeadTxt> </HeadTxt>
+<CompCode>1800</CompCode>
+<Resvh2> </Resvh2>
+<SNo>111127</SNo>
+<Currency>AED</Currency>
+<DATE_STAMP>2018-03-22 17:10:53.13</DATE_STAMP>
+<id>1</id>
+<PostDate>20180131</PostDate>
+<ExcRate>1.000</ExcRate>
+<DocType>SA</DocType>
+<ItemDetails>
+<Salesman> </Salesman>
+<DocAmt>4461.300</DocAmt>
+<ProfitCenter>78002</ProfitCenter>
+<BusinessArea>0800</BusinessArea>
+<ItemText>Net Sales</ItemText>
+<Resvi1> </Resvi1>
+<GlAccount>6100100</GlAccount>
+<Resvi2>S1</Resvi2>
+<CompCode>1800</CompCode>
+<CostCenter> </CostCenter>
+<SNo>111127</SNo>
+<PostingKey>50</PostingKey>
+<DATE_STAMP>2018-03-22 17:10:53.093</DATE_STAMP>
+<id>1</id>
+<PayTerms> </PayTerms>
+<IntOrder> </IntOrder>
+<RefKey1>1800/02/00</RefKey1>
+<AssignNo>SS-8002-31/01/2018</AssignNo>
+<CreditControl> </CreditControl>
+<RefKey3> </RefKey3>
+<RefKey2> </RefKey2>
+</ItemDetails>
+<ItemDetails>
+<Salesman> </Salesman>
+<DocAmt>2070.000</DocAmt>
+<ProfitCenter>91000</ProfitCenter>
+<BusinessArea>0100</BusinessArea>
+<ItemText>Barclays Bank</ItemText>
+<Resvi1> </Resvi1>
+<GlAccount>2410101</GlAccount>
+<Resvi2> </Resvi2>
+<CompCode>1000</CompCode>
+<CostCenter> </CostCenter>
+<SNo>111127</SNo>
+<PostingKey>40</PostingKey>
+<DATE_STAMP>2018-03-22 17:10:53.113</DATE_STAMP>
+<id>2</id>
+<PayTerms> </PayTerms>
+<IntOrder> </IntOrder>
+<RefKey1>1800/02/00</RefKey1>
+<AssignNo>SS-8002-31/01/2018</AssignNo>
+<CreditControl> </CreditControl>
+<RefKey3> </RefKey3>
+<RefKey2> </RefKey2>
+</ItemDetails>
+<ItemDetails>
+<Salesman> </Salesman>
+<DocAmt>153.400</DocAmt>
+<ProfitCenter>78002</ProfitCenter>
+<BusinessArea>0800</BusinessArea>
+<ItemText>Discounts</ItemText>
+<Resvi1> </Resvi1>
+<GlAccount>6100100</GlAccount>
+<Resvi2>S1</Resvi2>
+<CompCode>1800</CompCode>
+<CostCenter> </CostCenter>
+<SNo>111127</SNo>
+<PostingKey>40</PostingKey>
+<DATE_STAMP>2018-03-22 17:10:53.117</DATE_STAMP>
+<id>3</id>
+<PayTerms> </PayTerms>
+<IntOrder> </IntOrder>
+<RefKey1>1800/02/00</RefKey1>
+<AssignNo>SS-8002-31/01/2018</AssignNo>
+<CreditControl> </CreditControl>
+<RefKey3> </RefKey3>
+<RefKey2> </RefKey2>
+</ItemDetails>
+<ItemDetails>
+<Salesman> </Salesman>
+<DocAmt>0.000</DocAmt>
+<ProfitCenter>78002</ProfitCenter>
+<BusinessArea>0800</BusinessArea>
+<ItemText>Manual Minus</ItemText>
+<Resvi1> </Resvi1>
+<GlAccount>6100200</GlAccount>
+<Resvi2>S1</Resvi2>
+<CompCode>1800</CompCode>
+<CostCenter> </CostCenter>
+<SNo>111127</SNo>
+<PostingKey>40</PostingKey>
+<DATE_STAMP>2018-03-22 17:10:53.117</DATE_STAMP>
+<id>4</id>
+<PayTerms> </PayTerms>
+<IntOrder> </IntOrder>
+<RefKey1>1800/02/00</RefKey1>
+<AssignNo>SS-8002-31/01/2018</AssignNo>
+<CreditControl> </CreditControl>
+<RefKey3> </RefKey3>
+<RefKey2> </RefKey2>
+</ItemDetails>
+<ItemDetails>
+<Salesman> </Salesman>
+<DocAmt>0.000</DocAmt>
+<ProfitCenter> </ProfitCenter>
+<BusinessArea>0800</BusinessArea>
+<ItemText>Excess In Till</ItemText>
+<Resvi1> </Resvi1>
+<GlAccount>7600000</GlAccount>
+<Resvi2>S1</Resvi2>
+<CompCode>1800</CompCode>
+<CostCenter>808002</CostCenter>
+<SNo>111127</SNo>
+<PostingKey>50</PostingKey>
+<DATE_STAMP>2018-03-22 17:10:53.12</DATE_STAMP>
+<id>5</id>
+<PayTerms> </PayTerms>
+<IntOrder> </IntOrder>
+<RefKey1>1800/02/00</RefKey1>
+<AssignNo>SS-8002-31/01/2018</AssignNo>
+<CreditControl> </CreditControl>
+<RefKey3> </RefKey3>
+<RefKey2> </RefKey2>
+</ItemDetails>
+<ItemDetails>
+<Salesman> </Salesman>
+<DocAmt>0.600</DocAmt>
+<ProfitCenter> </ProfitCenter>
+<BusinessArea>0800</BusinessArea>
+<ItemText>Short In Till</ItemText>
+<Resvi1> </Resvi1>
+<GlAccount>7600000</GlAccount>
+<Resvi2>S1</Resvi2>
+<CompCode>1800</CompCode>
+<CostCenter>808002</CostCenter>
+<SNo>111127</SNo>
+<PostingKey>40</PostingKey>
+<DATE_STAMP>2018-03-22 17:10:53.12</DATE_STAMP>
+<id>6</id>
+<PayTerms> </PayTerms>
+<IntOrder> </IntOrder>
+<RefKey1>1800/02/00</RefKey1>
+<AssignNo>SS-8002-31/01/2018</AssignNo>
+<CreditControl> </CreditControl>
+<RefKey3> </RefKey3>
+<RefKey2> </RefKey2>
+</ItemDetails>
+<ItemDetails>
+<Salesman> </Salesman>
+<DocAmt>70.000</DocAmt>
+<ProfitCenter>78002</ProfitCenter>
+<BusinessArea>0800</BusinessArea>
+<ItemText>Customer Receipt</ItemText>
+<Resvi1> </Resvi1>
+<GlAccount>151951</GlAccount>
+<Resvi2> </Resvi2>
+<CompCode>1800</CompCode>
+<CostCenter>808002</CostCenter>
+<SNo>111127</SNo>
+<PostingKey>15</PostingKey>
+<DATE_STAMP>2018-03-22 17:10:53.123</DATE_STAMP>
+<id>7</id>
+<PayTerms> </PayTerms>
+<IntOrder> </IntOrder>
+<RefKey1>1800/02/00</RefKey1>
+<AssignNo>SS-8002-31/01/2018</AssignNo>
+<CreditControl> </CreditControl>
+<RefKey3> </RefKey3>
+<RefKey2> </RefKey2>
+</ItemDetails>
+<ItemDetails>
+<Salesman> </Salesman>
+<DocAmt>2307.300</DocAmt>
+<ProfitCenter> </ProfitCenter>
+<BusinessArea>0800</BusinessArea>
+<ItemText>PREMIER</ItemText>
+<Resvi1> </Resvi1>
+<GlAccount>2450230</GlAccount>
+<Resvi2> </Resvi2>
+<CompCode>1800</CompCode>
+<CostCenter>808002</CostCenter>
+<SNo>111127</SNo>
+<PostingKey>40</PostingKey>
+<DATE_STAMP>2018-03-22 17:10:53.127</DATE_STAMP>
+<id>8</id>
+<PayTerms> </PayTerms>
+<IntOrder> </IntOrder>
+<RefKey1>1800/02/00</RefKey1>
+<AssignNo>SS-8002-31/01/2018</AssignNo>
+<CreditControl> </CreditControl>
+<RefKey3> </RefKey3>
+<RefKey2> </RefKey2>
+</ItemDetails>
+</Record>
+<Record>
+<DocDate>20170109</DocDate>
+<RefNo>Con-1030-102775</RefNo>
+<FiscalYr>2017</FiscalYr>
+<FiscalPd>01</FiscalPd>
+<Resvh1> </Resvh1>
+<HeadTxt> </HeadTxt>
+<CompCode>5000</CompCode>
+<Resvh2> </Resvh2>
+<SNo>67374</SNo>
+<Currency>AED</Currency>
+<DATE_STAMP>2018-03-22 17:15:15.923</DATE_STAMP>
+<id>2</id>
+<PostDate>20170109</PostDate>
+<ExcRate>1.000</ExcRate>
+<DocType>SA</DocType>
+<ItemDetails>
+<Salesman> </Salesman>
+<DocAmt>5390.480</DocAmt>
+<ProfitCenter> </ProfitCenter>
+<BusinessArea>0200</BusinessArea>
+<ItemText>Vendor Invoice</ItemText>
+<Resvi1> </Resvi1>
+<GlAccount>102775</GlAccount>
+<Resvi2> </Resvi2>
+<CompCode>5000</CompCode>
+<CostCenter> </CostCenter>
+<SNo>67374</SNo>
+<PostingKey>31</PostingKey>
+<DATE_STAMP>2018-03-22 17:15:15.917</DATE_STAMP>
+<id>9</id>
+<PayTerms> </PayTerms>
+<IntOrder> </IntOrder>
+<RefKey1>5000/02/00</RefKey1>
+<AssignNo>Con-1030-102775</AssignNo>
+<CreditControl> </CreditControl>
+<RefKey3> </RefKey3>
+<RefKey2> </RefKey2>
+</ItemDetails>
+<ItemDetails>
+<Salesman> </Salesman>
+<DocAmt>5390.480</DocAmt>
+<ProfitCenter>51030</ProfitCenter>
+<BusinessArea>0200</BusinessArea>
+<ItemText>GL DEBIT</ItemText>
+<Resvi1> </Resvi1>
+<GlAccount>7100905</GlAccount>
+<Resvi2> </Resvi2>
+<CompCode>5000</CompCode>
+<CostCenter> </CostCenter>
+<SNo>67374</SNo>
+<PostingKey>40</PostingKey>
+<DATE_STAMP>2018-03-22 17:15:15.92</DATE_STAMP>
+<id>10</id>
+<PayTerms> </PayTerms>
+<IntOrder> </IntOrder>
+<RefKey1>5000/02/00</RefKey1>
+<AssignNo>Con-1030-102775</AssignNo>
+<CreditControl> </CreditControl>
+<RefKey3> </RefKey3>
+<RefKey2> </RefKey2>
+</ItemDetails>
+</Record>
+<Record>
+<DocDate>20170110</DocDate>
+<RefNo>Con-1030-102775</RefNo>
+<FiscalYr>2017</FiscalYr>
+<FiscalPd>01</FiscalPd>
+<Resvh1> </Resvh1>
+<HeadTxt> </HeadTxt>
+<CompCode>5000</CompCode>
+<Resvh2> </Resvh2>
+<SNo>67375</SNo>
+<Currency>AED</Currency>
+<DATE_STAMP>2018-03-22 17:15:15.93</DATE_STAMP>
+<id>3</id>
+<PostDate>20170110</PostDate>
+<ExcRate>1.000</ExcRate>
+<DocType>SA</DocType>
+<ItemDetails>
+<Salesman> </Salesman>
+<DocAmt>5176.657</DocAmt>
+<ProfitCenter> </ProfitCenter>
+<BusinessArea>0200</BusinessArea>
+<ItemText>Vendor Invoice</ItemText>
+<Resvi1> </Resvi1>
+<GlAccount>102775</GlAccount>
+<Resvi2> </Resvi2>
+<CompCode>5000</CompCode>
+<CostCenter> </CostCenter>
+<SNo>67375</SNo>
+<PostingKey>31</PostingKey>
+<DATE_STAMP>2018-03-22 17:15:15.927</DATE_STAMP>
+<id>11</id>
+<PayTerms> </PayTerms>
+<IntOrder> </IntOrder>
+<RefKey1>5000/02/00</RefKey1>
+<AssignNo>Con-1030-102775</AssignNo>
+<CreditControl> </CreditControl>
+<RefKey3> </RefKey3>
+<RefKey2> </RefKey2>
+</ItemDetails>
+<ItemDetails>
+<Salesman> </Salesman>
+<DocAmt>5176.657</DocAmt>
+<ProfitCenter>51030</ProfitCenter>
+<BusinessArea>0200</BusinessArea>
+<ItemText>GL DEBIT</ItemText>
+<Resvi1> </Resvi1>
+<GlAccount>7100905</GlAccount>
+<Resvi2> </Resvi2>
+<CompCode>5000</CompCode>
+<CostCenter> </CostCenter>
+<SNo>67375</SNo>
+<PostingKey>40</PostingKey>
+<DATE_STAMP>2018-03-22 17:15:15.93</DATE_STAMP>
+<id>12</id>
+<PayTerms> </PayTerms>
+<IntOrder> </IntOrder>
+<RefKey1>5000/02/00</RefKey1>
+<AssignNo>Con-1030-102775</AssignNo>
+<CreditControl> </CreditControl>
+<RefKey3> </RefKey3>
+<RefKey2> </RefKey2>
+</ItemDetails>
+</Record>
+<Record>
+<DocDate>20170110</DocDate>
+<RefNo>Con-1030-302045</RefNo>
+<FiscalYr>2017</FiscalYr>
+<FiscalPd>01</FiscalPd>
+<Resvh1> </Resvh1>
+<HeadTxt> </HeadTxt>
+<CompCode>5000</CompCode>
+<Resvh2> </Resvh2>
+<SNo>67376</SNo>
+<Currency>AED</Currency>
+<DATE_STAMP>2018-03-22 17:15:15.937</DATE_STAMP>
+<id>4</id>
+<PostDate>20170110</PostDate>
+<ExcRate>1.000</ExcRate>
+<DocType>SA</DocType>
+<ItemDetails>
+<Salesman> </Salesman>
+<DocAmt>20.000</DocAmt>
+<ProfitCenter> </ProfitCenter>
+<BusinessArea>0200</BusinessArea>
+<ItemText>Vendor Invoice</ItemText>
+<Resvi1> </Resvi1>
+<GlAccount>302045</GlAccount>
+<Resvi2> </Resvi2>
+<CompCode>5000</CompCode>
+<CostCenter> </CostCenter>
+<SNo>67376</SNo>
+<PostingKey>31</PostingKey>
+<DATE_STAMP>2018-03-22 17:15:15.933</DATE_STAMP>
+<id>13</id>
+<PayTerms> </PayTerms>
+<IntOrder> </IntOrder>
+<RefKey1>5000/02/00</RefKey1>
+<AssignNo>Con-1030-302045</AssignNo>
+<CreditControl> </CreditControl>
+<RefKey3> </RefKey3>
+<RefKey2> </RefKey2>
+</ItemDetails>
+<ItemDetails>
+<Salesman> </Salesman>
+<DocAmt>20.000</DocAmt>
+<ProfitCenter>51030</ProfitCenter>
+<BusinessArea>0200</BusinessArea>
+<ItemText>GL DEBIT</ItemText>
+<Resvi1> </Resvi1>
+<GlAccount>7100905</GlAccount>
+<Resvi2> </Resvi2>
+<CompCode>5000</CompCode>
+<CostCenter> </CostCenter>
+<SNo>67376</SNo>
+<PostingKey>40</PostingKey>
+<DATE_STAMP>2018-03-22 17:15:15.933</DATE_STAMP>
+<id>14</id>
+<PayTerms> </PayTerms>
+<IntOrder> </IntOrder>
+<RefKey1>5000/02/00</RefKey1>
+<AssignNo>Con-1030-302045</AssignNo>
+<CreditControl> </CreditControl>
+<RefKey3> </RefKey3>
+<RefKey2> </RefKey2>
+</ItemDetails>
+</Record>
+</ns1:MT_POS_FIUpload>

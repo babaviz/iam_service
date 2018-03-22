@@ -38,7 +38,7 @@ public class art_adjdoc_con {
         DocumentBuilder icBuilder;        
         Date date = new Date();
         String dateFormated=new SimpleDateFormat("yyyyMMdd_HHmmss").format(date);
-        
+        String docNum=new Date().getTime()+"";
         try {
             icBuilder = icFactory.newDocumentBuilder();
             Document doc = icBuilder.newDocument();
@@ -46,7 +46,7 @@ public class art_adjdoc_con {
             doc.appendChild(mainRootElement);
             Element IDOC = doc.createElement("IDOC");
             mainRootElement.appendChild(IDOC);
-            addHeaderRow(doc, IDOC, dateFormated);
+            addHeaderRow(doc, IDOC, dateFormated,docNum);
             //prepare records
             List<Map<String, String>> dbResMap = XmlDB_funcs.getInstance().QueryDB(parentTable, null);
             if (dbResMap.isEmpty()) {
@@ -68,7 +68,7 @@ public class art_adjdoc_con {
             transformer.transform(source, output);
             System.out.println("\nXML DOM Created Successfully..");
             
-            iam_services.Iam_services.getInstance().upload_inboundXMLFiles(filename,"ART_ADJDOC_CON");
+            iam_services.Iam_services.getInstance().upload_inboundXMLFiles(filename,"ART_ADJDOC_CON",docNum);
             
         } catch (Exception e) {
             iam_services.Iam_services.getInstance().Error_logger(e, "buildDoc");
@@ -93,7 +93,7 @@ public class art_adjdoc_con {
         }
     }
     
-    private void addHeaderRow(Document doc,Element IDOC,String dateFormated){
+    private void addHeaderRow(Document doc,Element IDOC,String dateFormated,String docNum){
         Map<String,String> header=new HashMap<>();          
         header.put("MANDT", 100+"");
         header.put("DOCREL", "700");
@@ -111,12 +111,12 @@ public class art_adjdoc_con {
         header.put("IDOCTYP", "WPUWBW01");
         header.put("CREDAT", dateFormated.split("_")[0]);
         header.put("CRETIM", dateFormated.split("_")[1]);
-        header.put("DOCNUM", new Date().getTime()+"");
+        header.put("DOCNUM", docNum);
         Node record = CreateXMLElements.getInstance().createRecordFields(doc, header, "EDI_DC40");
         IDOC.appendChild(record);
     }
 
-    public static void main(String[] args) {
+    /*public static void main(String[] args) {
         new art_adjdoc_con().generateXML();
-    }
+    }*/
 }
