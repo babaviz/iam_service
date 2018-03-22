@@ -1,0 +1,2494 @@
+Mar 22, 2018 9:15:17 AM iam_services.Iam_services Error_logger
+INFO: Connection succeeded, hurray!
+Mar 22, 2018 9:15:17 AM iam_services.Iam_services Error_logger
+INFO: cols:(SERIAL,RCVPRN,DOCREL,SNDPRT,SNDPOR,MESTYP,RCVPRT,RCVPOR,DOCNUM,SNDPRN,TABNAM,MANDT,STATUS,IDOCTYP,CREDAT,CRETIM,DIRECT) 
+vals: VALUES(?,?,?,?,?,?,?,?,?,?,?,?,?,?,?,?,?)
+Mar 22, 2018 9:15:17 AM iam_services.Iam_services Error_logger
+INFO: Connection succeeded, hurray!
+Mar 22, 2018 9:15:17 AM iam_services.Iam_services Error_logger
+INFO: cols:(TAXCODE,TAXVALUE,TAXSIGN) 
+vals: VALUES(?,?,?)
+Mar 22, 2018 9:15:17 AM iam_services.Iam_services Error_logger
+INFO: Connection succeeded, hurray!
+Mar 22, 2018 9:15:17 AM iam_services.Iam_services Error_logger
+INFO: cols:(MWSKZ,MWSBT) 
+vals: VALUES(?,?)
+Mar 22, 2018 9:15:17 AM iam_services.Iam_services Error_logger
+INFO: Connection succeeded, hurray!
+Mar 22, 2018 9:15:17 AM iam_services.Iam_services Error_logger
+INFO: cols:(FLDVAL,FLDGRP,FLDNAME) 
+vals: VALUES(?,?,?)
+Mar 22, 2018 9:15:17 AM iam_services.Iam_services Error_logger
+INFO: Connection succeeded, hurray!
+Mar 22, 2018 9:15:17 AM iam_services.Iam_services Error_logger
+INFO: cols:(FLDVAL,FLDGRP,FLDNAME) 
+vals: VALUES(?,?,?)
+Mar 22, 2018 9:15:17 AM iam_services.Iam_services Error_logger
+INFO: Connection succeeded, hurray!
+Mar 22, 2018 9:15:17 AM iam_services.Iam_services Error_logger
+INFO: cols:(QUALARTNR,VORZMENGE,UMSMENGE,VORZWERT,UMSWERT,ARTNR) 
+vals: VALUES(?,?,?,?,?,?)
+Mar 22, 2018 9:15:17 AM iam_services.Iam_services Error_logger
+INFO: Connection succeeded, hurray!
+Mar 22, 2018 9:15:17 AM iam_services.Iam_services Error_logger
+INFO: cols:(TAXCODE,TAXVALUE,TAXSIGN) 
+vals: VALUES(?,?,?)
+Mar 22, 2018 9:15:17 AM iam_services.Iam_services Error_logger
+INFO: Connection succeeded, hurray!
+Mar 22, 2018 9:15:17 AM iam_services.Iam_services Error_logger
+INFO: cols:(MWSKZ,MWSBT) 
+vals: VALUES(?,?)
+Mar 22, 2018 9:15:17 AM iam_services.Iam_services Error_logger
+INFO: Connection succeeded, hurray!
+Mar 22, 2018 9:15:17 AM iam_services.Iam_services Error_logger
+INFO: cols:(FLDVAL,FLDGRP,FLDNAME) 
+vals: VALUES(?,?,?)
+Mar 22, 2018 9:15:17 AM iam_services.Iam_services Error_logger
+INFO: Connection succeeded, hurray!
+Mar 22, 2018 9:15:17 AM iam_services.Iam_services Error_logger
+INFO: cols:(FLDVAL,FLDGRP,FLDNAME) 
+vals: VALUES(?,?,?)
+Mar 22, 2018 9:15:17 AM iam_services.Iam_services Error_logger
+INFO: Connection succeeded, hurray!
+Mar 22, 2018 9:15:17 AM iam_services.Iam_services Error_logger
+INFO: cols:(QUALARTNR,VORZMENGE,UMSMENGE,VORZWERT,UMSWERT,ARTNR) 
+vals: VALUES(?,?,?,?,?,?)
+Mar 22, 2018 9:15:17 AM iam_services.Iam_services Error_logger
+INFO: Connection succeeded, hurray!
+Mar 22, 2018 9:15:17 AM iam_services.Iam_services Error_logger
+INFO: cols:(TAXCODE,TAXVALUE,TAXSIGN) 
+vals: VALUES(?,?,?)
+Mar 22, 2018 9:15:17 AM iam_services.Iam_services Error_logger
+INFO: Connection succeeded, hurray!
+Mar 22, 2018 9:15:17 AM iam_services.Iam_services Error_logger
+INFO: cols:(MWSKZ,MWSBT) 
+vals: VALUES(?,?)
+Mar 22, 2018 9:15:17 AM iam_services.Iam_services Error_logger
+INFO: Connection succeeded, hurray!
+Mar 22, 2018 9:15:17 AM iam_services.Iam_services Error_logger
+INFO: cols:(FLDVAL,FLDGRP,FLDNAME) 
+vals: VALUES(?,?,?)
+Mar 22, 2018 9:15:17 AM iam_services.Iam_services Error_logger
+INFO: Connection succeeded, hurray!
+Mar 22, 2018 9:15:17 AM iam_services.Iam_services Error_logger
+INFO: cols:(FLDVAL,FLDGRP,FLDNAME) 
+vals: VALUES(?,?,?)
+Mar 22, 2018 9:15:18 AM iam_services.Iam_services Error_logger
+INFO: Connection succeeded, hurray!
+Mar 22, 2018 9:15:18 AM iam_services.Iam_services Error_logger
+INFO: cols:(QUALARTNR,VORZMENGE,UMSMENGE,VORZWERT,UMSWERT,ARTNR) 
+vals: VALUES(?,?,?,?,?,?)
+Mar 22, 2018 9:15:18 AM iam_services.Iam_services Error_logger
+INFO: Connection succeeded, hurray!
+Mar 22, 2018 9:15:18 AM iam_services.Iam_services Error_logger
+INFO: cols:(TAXCODE,TAXVALUE,TAXSIGN) 
+vals: VALUES(?,?,?)
+Mar 22, 2018 9:15:18 AM iam_services.Iam_services Error_logger
+INFO: Connection succeeded, hurray!
+Mar 22, 2018 9:15:18 AM iam_services.Iam_services Error_logger
+INFO: cols:(MWSKZ,MWSBT) 
+vals: VALUES(?,?)
+Mar 22, 2018 9:15:18 AM iam_services.Iam_services Error_logger
+INFO: Connection succeeded, hurray!
+Mar 22, 2018 9:15:18 AM iam_services.Iam_services Error_logger
+INFO: cols:(FLDVAL,FLDGRP,FLDNAME) 
+vals: VALUES(?,?,?)
+Mar 22, 2018 9:15:18 AM iam_services.Iam_services Error_logger
+INFO: Connection succeeded, hurray!
+Mar 22, 2018 9:15:18 AM iam_services.Iam_services Error_logger
+INFO: cols:(FLDVAL,FLDGRP,FLDNAME) 
+vals: VALUES(?,?,?)
+Mar 22, 2018 9:15:18 AM iam_services.Iam_services Error_logger
+INFO: Connection succeeded, hurray!
+Mar 22, 2018 9:15:18 AM iam_services.Iam_services Error_logger
+INFO: cols:(QUALARTNR,VORZMENGE,UMSMENGE,VORZWERT,UMSWERT,ARTNR) 
+vals: VALUES(?,?,?,?,?,?)
+Mar 22, 2018 9:15:18 AM iam_services.Iam_services Error_logger
+INFO: Connection succeeded, hurray!
+Mar 22, 2018 9:15:18 AM iam_services.Iam_services Error_logger
+INFO: cols:(TAXCODE,TAXVALUE,TAXSIGN) 
+vals: VALUES(?,?,?)
+Mar 22, 2018 9:15:18 AM iam_services.Iam_services Error_logger
+INFO: Connection succeeded, hurray!
+Mar 22, 2018 9:15:18 AM iam_services.Iam_services Error_logger
+INFO: cols:(MWSKZ,MWSBT) 
+vals: VALUES(?,?)
+Mar 22, 2018 9:15:18 AM iam_services.Iam_services Error_logger
+INFO: Connection succeeded, hurray!
+Mar 22, 2018 9:15:18 AM iam_services.Iam_services Error_logger
+INFO: cols:(FLDVAL,FLDGRP,FLDNAME) 
+vals: VALUES(?,?,?)
+Mar 22, 2018 9:15:18 AM iam_services.Iam_services Error_logger
+INFO: Connection succeeded, hurray!
+Mar 22, 2018 9:15:18 AM iam_services.Iam_services Error_logger
+INFO: cols:(FLDVAL,FLDGRP,FLDNAME) 
+vals: VALUES(?,?,?)
+Mar 22, 2018 9:15:18 AM iam_services.Iam_services Error_logger
+INFO: Connection succeeded, hurray!
+Mar 22, 2018 9:15:18 AM iam_services.Iam_services Error_logger
+INFO: cols:(QUALARTNR,VORZMENGE,UMSMENGE,VORZWERT,UMSWERT,ARTNR) 
+vals: VALUES(?,?,?,?,?,?)
+Mar 22, 2018 9:15:18 AM iam_services.Iam_services Error_logger
+INFO: Connection succeeded, hurray!
+Mar 22, 2018 9:15:18 AM iam_services.Iam_services Error_logger
+INFO: cols:(TAXCODE,TAXVALUE,TAXSIGN) 
+vals: VALUES(?,?,?)
+Mar 22, 2018 9:15:18 AM iam_services.Iam_services Error_logger
+INFO: Connection succeeded, hurray!
+Mar 22, 2018 9:15:18 AM iam_services.Iam_services Error_logger
+INFO: cols:(MWSKZ,MWSBT) 
+vals: VALUES(?,?)
+Mar 22, 2018 9:15:18 AM iam_services.Iam_services Error_logger
+INFO: Connection succeeded, hurray!
+Mar 22, 2018 9:15:18 AM iam_services.Iam_services Error_logger
+INFO: cols:(FLDVAL,FLDGRP,FLDNAME) 
+vals: VALUES(?,?,?)
+Mar 22, 2018 9:15:18 AM iam_services.Iam_services Error_logger
+INFO: Connection succeeded, hurray!
+Mar 22, 2018 9:15:18 AM iam_services.Iam_services Error_logger
+INFO: cols:(FLDVAL,FLDGRP,FLDNAME) 
+vals: VALUES(?,?,?)
+Mar 22, 2018 9:15:18 AM iam_services.Iam_services Error_logger
+INFO: Connection succeeded, hurray!
+Mar 22, 2018 9:15:18 AM iam_services.Iam_services Error_logger
+INFO: cols:(QUALARTNR,VORZMENGE,UMSMENGE,VORZWERT,UMSWERT,ARTNR) 
+vals: VALUES(?,?,?,?,?,?)
+Mar 22, 2018 9:15:18 AM iam_services.Iam_services Error_logger
+INFO: Connection succeeded, hurray!
+Mar 22, 2018 9:15:18 AM iam_services.Iam_services Error_logger
+INFO: cols:(TAXCODE,TAXVALUE,TAXSIGN) 
+vals: VALUES(?,?,?)
+Mar 22, 2018 9:15:18 AM iam_services.Iam_services Error_logger
+INFO: Connection succeeded, hurray!
+Mar 22, 2018 9:15:18 AM iam_services.Iam_services Error_logger
+INFO: cols:(MWSKZ,MWSBT) 
+vals: VALUES(?,?)
+Mar 22, 2018 9:15:18 AM iam_services.Iam_services Error_logger
+INFO: Connection succeeded, hurray!
+Mar 22, 2018 9:15:18 AM iam_services.Iam_services Error_logger
+INFO: cols:(FLDVAL,FLDGRP,FLDNAME) 
+vals: VALUES(?,?,?)
+Mar 22, 2018 9:15:18 AM iam_services.Iam_services Error_logger
+INFO: Connection succeeded, hurray!
+Mar 22, 2018 9:15:18 AM iam_services.Iam_services Error_logger
+INFO: cols:(FLDVAL,FLDGRP,FLDNAME) 
+vals: VALUES(?,?,?)
+Mar 22, 2018 9:15:18 AM iam_services.Iam_services Error_logger
+INFO: Connection succeeded, hurray!
+Mar 22, 2018 9:15:18 AM iam_services.Iam_services Error_logger
+INFO: cols:(QUALARTNR,VORZMENGE,UMSMENGE,VORZWERT,UMSWERT,ARTNR) 
+vals: VALUES(?,?,?,?,?,?)
+Mar 22, 2018 9:15:18 AM iam_services.Iam_services Error_logger
+INFO: Connection succeeded, hurray!
+Mar 22, 2018 9:15:18 AM iam_services.Iam_services Error_logger
+INFO: cols:(TAXCODE,TAXVALUE,TAXSIGN) 
+vals: VALUES(?,?,?)
+Mar 22, 2018 9:15:18 AM iam_services.Iam_services Error_logger
+INFO: Connection succeeded, hurray!
+Mar 22, 2018 9:15:18 AM iam_services.Iam_services Error_logger
+INFO: cols:(MWSKZ,MWSBT) 
+vals: VALUES(?,?)
+Mar 22, 2018 9:15:18 AM iam_services.Iam_services Error_logger
+INFO: Connection succeeded, hurray!
+Mar 22, 2018 9:15:18 AM iam_services.Iam_services Error_logger
+INFO: cols:(FLDVAL,FLDGRP,FLDNAME) 
+vals: VALUES(?,?,?)
+Mar 22, 2018 9:15:18 AM iam_services.Iam_services Error_logger
+INFO: Connection succeeded, hurray!
+Mar 22, 2018 9:15:18 AM iam_services.Iam_services Error_logger
+INFO: cols:(FLDVAL,FLDGRP,FLDNAME) 
+vals: VALUES(?,?,?)
+Mar 22, 2018 9:15:18 AM iam_services.Iam_services Error_logger
+INFO: Connection succeeded, hurray!
+Mar 22, 2018 9:15:18 AM iam_services.Iam_services Error_logger
+INFO: cols:(QUALARTNR,VORZMENGE,UMSMENGE,VORZWERT,UMSWERT,ARTNR) 
+vals: VALUES(?,?,?,?,?,?)
+Mar 22, 2018 9:15:18 AM iam_services.Iam_services Error_logger
+INFO: Connection succeeded, hurray!
+Mar 22, 2018 9:15:18 AM iam_services.Iam_services Error_logger
+INFO: cols:(TAXCODE,TAXVALUE,TAXSIGN) 
+vals: VALUES(?,?,?)
+Mar 22, 2018 9:15:18 AM iam_services.Iam_services Error_logger
+INFO: Connection succeeded, hurray!
+Mar 22, 2018 9:15:18 AM iam_services.Iam_services Error_logger
+INFO: cols:(MWSKZ,MWSBT) 
+vals: VALUES(?,?)
+Mar 22, 2018 9:15:18 AM iam_services.Iam_services Error_logger
+INFO: Connection succeeded, hurray!
+Mar 22, 2018 9:15:18 AM iam_services.Iam_services Error_logger
+INFO: cols:(FLDVAL,FLDGRP,FLDNAME) 
+vals: VALUES(?,?,?)
+Mar 22, 2018 9:15:18 AM iam_services.Iam_services Error_logger
+INFO: Connection succeeded, hurray!
+Mar 22, 2018 9:15:18 AM iam_services.Iam_services Error_logger
+INFO: cols:(FLDVAL,FLDGRP,FLDNAME) 
+vals: VALUES(?,?,?)
+Mar 22, 2018 9:15:18 AM iam_services.Iam_services Error_logger
+INFO: Connection succeeded, hurray!
+Mar 22, 2018 9:15:18 AM iam_services.Iam_services Error_logger
+INFO: cols:(QUALARTNR,VORZMENGE,UMSMENGE,VORZWERT,UMSWERT,ARTNR) 
+vals: VALUES(?,?,?,?,?,?)
+Mar 22, 2018 9:15:18 AM iam_services.Iam_services Error_logger
+INFO: Connection succeeded, hurray!
+Mar 22, 2018 9:15:18 AM iam_services.Iam_services Error_logger
+INFO: cols:(TAXCODE,TAXVALUE,TAXSIGN) 
+vals: VALUES(?,?,?)
+Mar 22, 2018 9:15:18 AM iam_services.Iam_services Error_logger
+INFO: Connection succeeded, hurray!
+Mar 22, 2018 9:15:18 AM iam_services.Iam_services Error_logger
+INFO: cols:(MWSKZ,MWSBT) 
+vals: VALUES(?,?)
+Mar 22, 2018 9:15:18 AM iam_services.Iam_services Error_logger
+INFO: Connection succeeded, hurray!
+Mar 22, 2018 9:15:18 AM iam_services.Iam_services Error_logger
+INFO: cols:(FLDVAL,FLDGRP,FLDNAME) 
+vals: VALUES(?,?,?)
+Mar 22, 2018 9:15:19 AM iam_services.Iam_services Error_logger
+INFO: Connection succeeded, hurray!
+Mar 22, 2018 9:15:19 AM iam_services.Iam_services Error_logger
+INFO: cols:(FLDVAL,FLDGRP,FLDNAME) 
+vals: VALUES(?,?,?)
+Mar 22, 2018 9:15:19 AM iam_services.Iam_services Error_logger
+INFO: Connection succeeded, hurray!
+Mar 22, 2018 9:15:19 AM iam_services.Iam_services Error_logger
+INFO: cols:(QUALARTNR,VORZMENGE,UMSMENGE,VORZWERT,UMSWERT,ARTNR) 
+vals: VALUES(?,?,?,?,?,?)
+Mar 22, 2018 9:15:19 AM iam_services.Iam_services Error_logger
+INFO: Connection succeeded, hurray!
+Mar 22, 2018 9:15:19 AM iam_services.Iam_services Error_logger
+INFO: cols:(TAXCODE,TAXVALUE,TAXSIGN) 
+vals: VALUES(?,?,?)
+Mar 22, 2018 9:15:19 AM iam_services.Iam_services Error_logger
+INFO: Connection succeeded, hurray!
+Mar 22, 2018 9:15:19 AM iam_services.Iam_services Error_logger
+INFO: cols:(MWSKZ,MWSBT) 
+vals: VALUES(?,?)
+Mar 22, 2018 9:15:19 AM iam_services.Iam_services Error_logger
+INFO: Connection succeeded, hurray!
+Mar 22, 2018 9:15:19 AM iam_services.Iam_services Error_logger
+INFO: cols:(FLDVAL,FLDGRP,FLDNAME) 
+vals: VALUES(?,?,?)
+Mar 22, 2018 9:15:19 AM iam_services.Iam_services Error_logger
+INFO: Connection succeeded, hurray!
+Mar 22, 2018 9:15:19 AM iam_services.Iam_services Error_logger
+INFO: cols:(FLDVAL,FLDGRP,FLDNAME) 
+vals: VALUES(?,?,?)
+Mar 22, 2018 9:15:19 AM iam_services.Iam_services Error_logger
+INFO: Connection succeeded, hurray!
+Mar 22, 2018 9:15:19 AM iam_services.Iam_services Error_logger
+INFO: cols:(QUALARTNR,VORZMENGE,UMSMENGE,VORZWERT,UMSWERT,ARTNR) 
+vals: VALUES(?,?,?,?,?,?)
+Mar 22, 2018 9:15:19 AM iam_services.Iam_services Error_logger
+INFO: Connection succeeded, hurray!
+Mar 22, 2018 9:15:19 AM iam_services.Iam_services Error_logger
+INFO: cols:(BELEGWAERS,BELEGDATUM,PACKAGE_ID) 
+vals: VALUES(?,?,?)
+Mar 22, 2018 9:15:19 AM iam_services.Iam_services Error_logger
+INFO: Empty data for IDOC
+Mar 22, 2018 9:15:19 AM iam_services.Iam_services Error_logger
+INFO: Empty data for WPUUMS01
+Mar 22, 2018 9:15:19 AM iam_services.Iam_services Error_logger
+INFO: Empty data for #document
+Mar 22, 2018 9:20:29 AM iam_services.Iam_services Error_logger
+INFO: Connection succeeded, hurray!
+Mar 22, 2018 9:20:29 AM iam_services.Iam_services Error_logger
+INFO: cols:(SERIAL,RCVPRN,DOCREL,SNDPRT,SNDPOR,MESTYP,RCVPRT,RCVPOR,DOCNUM,SNDPRN,TABNAM,MANDT,STATUS,IDOCTYP,CREDAT,CRETIM,DIRECT) 
+vals: VALUES(?,?,?,?,?,?,?,?,?,?,?,?,?,?,?,?,?)
+Mar 22, 2018 9:20:29 AM iam_services.Iam_services Error_logger
+INFO: Connection succeeded, hurray!
+Mar 22, 2018 9:20:29 AM iam_services.Iam_services Error_logger
+INFO: cols:(TAXCODE,TAXVALUE,TAXSIGN) 
+vals: VALUES(?,?,?)
+Mar 22, 2018 9:20:29 AM iam_services.Iam_services Error_logger
+INFO: Connection succeeded, hurray!
+Mar 22, 2018 9:20:29 AM iam_services.Iam_services Error_logger
+INFO: cols:(MWSKZ,MWSBT) 
+vals: VALUES(?,?)
+Mar 22, 2018 9:20:29 AM iam_services.Iam_services Error_logger
+INFO: Connection succeeded, hurray!
+Mar 22, 2018 9:20:29 AM iam_services.Iam_services Error_logger
+INFO: cols:(FLDVAL,FLDGRP,FLDNAME) 
+vals: VALUES(?,?,?)
+Mar 22, 2018 9:20:29 AM iam_services.Iam_services Error_logger
+INFO: Connection succeeded, hurray!
+Mar 22, 2018 9:20:29 AM iam_services.Iam_services Error_logger
+INFO: cols:(FLDVAL,FLDGRP,FLDNAME) 
+vals: VALUES(?,?,?)
+Mar 22, 2018 9:20:29 AM iam_services.Iam_services Error_logger
+INFO: Connection succeeded, hurray!
+Mar 22, 2018 9:20:29 AM iam_services.Iam_services Error_logger
+INFO: cols:(QUALARTNR,VORZMENGE,UMSMENGE,VORZWERT,UMSWERT,ARTNR) 
+vals: VALUES(?,?,?,?,?,?)
+Mar 22, 2018 9:20:29 AM iam_services.Iam_services Error_logger
+INFO: Connection succeeded, hurray!
+Mar 22, 2018 9:20:29 AM iam_services.Iam_services Error_logger
+INFO: cols:(TAXCODE,TAXVALUE,TAXSIGN) 
+vals: VALUES(?,?,?)
+Mar 22, 2018 9:20:29 AM iam_services.Iam_services Error_logger
+INFO: Connection succeeded, hurray!
+Mar 22, 2018 9:20:29 AM iam_services.Iam_services Error_logger
+INFO: cols:(MWSKZ,MWSBT) 
+vals: VALUES(?,?)
+Mar 22, 2018 9:20:29 AM iam_services.Iam_services Error_logger
+INFO: Connection succeeded, hurray!
+Mar 22, 2018 9:20:29 AM iam_services.Iam_services Error_logger
+INFO: cols:(FLDVAL,FLDGRP,FLDNAME) 
+vals: VALUES(?,?,?)
+Mar 22, 2018 9:20:29 AM iam_services.Iam_services Error_logger
+INFO: Connection succeeded, hurray!
+Mar 22, 2018 9:20:29 AM iam_services.Iam_services Error_logger
+INFO: cols:(FLDVAL,FLDGRP,FLDNAME) 
+vals: VALUES(?,?,?)
+Mar 22, 2018 9:20:29 AM iam_services.Iam_services Error_logger
+INFO: Connection succeeded, hurray!
+Mar 22, 2018 9:20:29 AM iam_services.Iam_services Error_logger
+INFO: cols:(QUALARTNR,VORZMENGE,UMSMENGE,VORZWERT,UMSWERT,ARTNR) 
+vals: VALUES(?,?,?,?,?,?)
+Mar 22, 2018 9:20:29 AM iam_services.Iam_services Error_logger
+INFO: Connection succeeded, hurray!
+Mar 22, 2018 9:20:29 AM iam_services.Iam_services Error_logger
+INFO: cols:(TAXCODE,TAXVALUE,TAXSIGN) 
+vals: VALUES(?,?,?)
+Mar 22, 2018 9:20:29 AM iam_services.Iam_services Error_logger
+INFO: Connection succeeded, hurray!
+Mar 22, 2018 9:20:29 AM iam_services.Iam_services Error_logger
+INFO: cols:(MWSKZ,MWSBT) 
+vals: VALUES(?,?)
+Mar 22, 2018 9:20:29 AM iam_services.Iam_services Error_logger
+INFO: Connection succeeded, hurray!
+Mar 22, 2018 9:20:29 AM iam_services.Iam_services Error_logger
+INFO: cols:(FLDVAL,FLDGRP,FLDNAME) 
+vals: VALUES(?,?,?)
+Mar 22, 2018 9:20:29 AM iam_services.Iam_services Error_logger
+INFO: Connection succeeded, hurray!
+Mar 22, 2018 9:20:29 AM iam_services.Iam_services Error_logger
+INFO: cols:(FLDVAL,FLDGRP,FLDNAME) 
+vals: VALUES(?,?,?)
+Mar 22, 2018 9:20:29 AM iam_services.Iam_services Error_logger
+INFO: Connection succeeded, hurray!
+Mar 22, 2018 9:20:29 AM iam_services.Iam_services Error_logger
+INFO: cols:(QUALARTNR,VORZMENGE,UMSMENGE,VORZWERT,UMSWERT,ARTNR) 
+vals: VALUES(?,?,?,?,?,?)
+Mar 22, 2018 9:20:29 AM iam_services.Iam_services Error_logger
+INFO: Connection succeeded, hurray!
+Mar 22, 2018 9:20:29 AM iam_services.Iam_services Error_logger
+INFO: cols:(TAXCODE,TAXVALUE,TAXSIGN) 
+vals: VALUES(?,?,?)
+Mar 22, 2018 9:20:29 AM iam_services.Iam_services Error_logger
+INFO: Connection succeeded, hurray!
+Mar 22, 2018 9:20:29 AM iam_services.Iam_services Error_logger
+INFO: cols:(MWSKZ,MWSBT) 
+vals: VALUES(?,?)
+Mar 22, 2018 9:20:29 AM iam_services.Iam_services Error_logger
+INFO: Connection succeeded, hurray!
+Mar 22, 2018 9:20:29 AM iam_services.Iam_services Error_logger
+INFO: cols:(FLDVAL,FLDGRP,FLDNAME) 
+vals: VALUES(?,?,?)
+Mar 22, 2018 9:20:29 AM iam_services.Iam_services Error_logger
+INFO: Connection succeeded, hurray!
+Mar 22, 2018 9:20:29 AM iam_services.Iam_services Error_logger
+INFO: cols:(FLDVAL,FLDGRP,FLDNAME) 
+vals: VALUES(?,?,?)
+Mar 22, 2018 9:20:29 AM iam_services.Iam_services Error_logger
+INFO: Connection succeeded, hurray!
+Mar 22, 2018 9:20:29 AM iam_services.Iam_services Error_logger
+INFO: cols:(QUALARTNR,VORZMENGE,UMSMENGE,VORZWERT,UMSWERT,ARTNR) 
+vals: VALUES(?,?,?,?,?,?)
+Mar 22, 2018 9:20:29 AM iam_services.Iam_services Error_logger
+INFO: Connection succeeded, hurray!
+Mar 22, 2018 9:20:29 AM iam_services.Iam_services Error_logger
+INFO: cols:(TAXCODE,TAXVALUE,TAXSIGN) 
+vals: VALUES(?,?,?)
+Mar 22, 2018 9:20:29 AM iam_services.Iam_services Error_logger
+INFO: Connection succeeded, hurray!
+Mar 22, 2018 9:20:29 AM iam_services.Iam_services Error_logger
+INFO: cols:(MWSKZ,MWSBT) 
+vals: VALUES(?,?)
+Mar 22, 2018 9:20:29 AM iam_services.Iam_services Error_logger
+INFO: Connection succeeded, hurray!
+Mar 22, 2018 9:20:29 AM iam_services.Iam_services Error_logger
+INFO: cols:(FLDVAL,FLDGRP,FLDNAME) 
+vals: VALUES(?,?,?)
+Mar 22, 2018 9:20:29 AM iam_services.Iam_services Error_logger
+INFO: Connection succeeded, hurray!
+Mar 22, 2018 9:20:29 AM iam_services.Iam_services Error_logger
+INFO: cols:(FLDVAL,FLDGRP,FLDNAME) 
+vals: VALUES(?,?,?)
+Mar 22, 2018 9:20:29 AM iam_services.Iam_services Error_logger
+INFO: Connection succeeded, hurray!
+Mar 22, 2018 9:20:29 AM iam_services.Iam_services Error_logger
+INFO: cols:(QUALARTNR,VORZMENGE,UMSMENGE,VORZWERT,UMSWERT,ARTNR) 
+vals: VALUES(?,?,?,?,?,?)
+Mar 22, 2018 9:20:29 AM iam_services.Iam_services Error_logger
+INFO: Connection succeeded, hurray!
+Mar 22, 2018 9:20:29 AM iam_services.Iam_services Error_logger
+INFO: cols:(TAXCODE,TAXVALUE,TAXSIGN) 
+vals: VALUES(?,?,?)
+Mar 22, 2018 9:20:29 AM iam_services.Iam_services Error_logger
+INFO: Connection succeeded, hurray!
+Mar 22, 2018 9:20:29 AM iam_services.Iam_services Error_logger
+INFO: cols:(MWSKZ,MWSBT) 
+vals: VALUES(?,?)
+Mar 22, 2018 9:20:29 AM iam_services.Iam_services Error_logger
+INFO: Connection succeeded, hurray!
+Mar 22, 2018 9:20:29 AM iam_services.Iam_services Error_logger
+INFO: cols:(FLDVAL,FLDGRP,FLDNAME) 
+vals: VALUES(?,?,?)
+Mar 22, 2018 9:20:29 AM iam_services.Iam_services Error_logger
+INFO: Connection succeeded, hurray!
+Mar 22, 2018 9:20:29 AM iam_services.Iam_services Error_logger
+INFO: cols:(FLDVAL,FLDGRP,FLDNAME) 
+vals: VALUES(?,?,?)
+Mar 22, 2018 9:20:29 AM iam_services.Iam_services Error_logger
+INFO: Connection succeeded, hurray!
+Mar 22, 2018 9:20:29 AM iam_services.Iam_services Error_logger
+INFO: cols:(QUALARTNR,VORZMENGE,UMSMENGE,VORZWERT,UMSWERT,ARTNR) 
+vals: VALUES(?,?,?,?,?,?)
+Mar 22, 2018 9:20:29 AM iam_services.Iam_services Error_logger
+INFO: Connection succeeded, hurray!
+Mar 22, 2018 9:20:29 AM iam_services.Iam_services Error_logger
+INFO: cols:(TAXCODE,TAXVALUE,TAXSIGN) 
+vals: VALUES(?,?,?)
+Mar 22, 2018 9:20:29 AM iam_services.Iam_services Error_logger
+INFO: Connection succeeded, hurray!
+Mar 22, 2018 9:20:29 AM iam_services.Iam_services Error_logger
+INFO: cols:(MWSKZ,MWSBT) 
+vals: VALUES(?,?)
+Mar 22, 2018 9:20:29 AM iam_services.Iam_services Error_logger
+INFO: Connection succeeded, hurray!
+Mar 22, 2018 9:20:29 AM iam_services.Iam_services Error_logger
+INFO: cols:(FLDVAL,FLDGRP,FLDNAME) 
+vals: VALUES(?,?,?)
+Mar 22, 2018 9:20:29 AM iam_services.Iam_services Error_logger
+INFO: Connection succeeded, hurray!
+Mar 22, 2018 9:20:29 AM iam_services.Iam_services Error_logger
+INFO: cols:(FLDVAL,FLDGRP,FLDNAME) 
+vals: VALUES(?,?,?)
+Mar 22, 2018 9:20:29 AM iam_services.Iam_services Error_logger
+INFO: Connection succeeded, hurray!
+Mar 22, 2018 9:20:29 AM iam_services.Iam_services Error_logger
+INFO: cols:(QUALARTNR,VORZMENGE,UMSMENGE,VORZWERT,UMSWERT,ARTNR) 
+vals: VALUES(?,?,?,?,?,?)
+Mar 22, 2018 9:20:29 AM iam_services.Iam_services Error_logger
+INFO: Connection succeeded, hurray!
+Mar 22, 2018 9:20:29 AM iam_services.Iam_services Error_logger
+INFO: cols:(TAXCODE,TAXVALUE,TAXSIGN) 
+vals: VALUES(?,?,?)
+Mar 22, 2018 9:20:29 AM iam_services.Iam_services Error_logger
+INFO: Connection succeeded, hurray!
+Mar 22, 2018 9:20:29 AM iam_services.Iam_services Error_logger
+INFO: cols:(MWSKZ,MWSBT) 
+vals: VALUES(?,?)
+Mar 22, 2018 9:20:29 AM iam_services.Iam_services Error_logger
+INFO: Connection succeeded, hurray!
+Mar 22, 2018 9:20:29 AM iam_services.Iam_services Error_logger
+INFO: cols:(FLDVAL,FLDGRP,FLDNAME) 
+vals: VALUES(?,?,?)
+Mar 22, 2018 9:20:29 AM iam_services.Iam_services Error_logger
+INFO: Connection succeeded, hurray!
+Mar 22, 2018 9:20:29 AM iam_services.Iam_services Error_logger
+INFO: cols:(FLDVAL,FLDGRP,FLDNAME) 
+vals: VALUES(?,?,?)
+Mar 22, 2018 9:20:29 AM iam_services.Iam_services Error_logger
+INFO: Connection succeeded, hurray!
+Mar 22, 2018 9:20:29 AM iam_services.Iam_services Error_logger
+INFO: cols:(QUALARTNR,VORZMENGE,UMSMENGE,VORZWERT,UMSWERT,ARTNR) 
+vals: VALUES(?,?,?,?,?,?)
+Mar 22, 2018 9:20:29 AM iam_services.Iam_services Error_logger
+INFO: Connection succeeded, hurray!
+Mar 22, 2018 9:20:29 AM iam_services.Iam_services Error_logger
+INFO: cols:(TAXCODE,TAXVALUE,TAXSIGN) 
+vals: VALUES(?,?,?)
+Mar 22, 2018 9:20:29 AM iam_services.Iam_services Error_logger
+INFO: Connection succeeded, hurray!
+Mar 22, 2018 9:20:29 AM iam_services.Iam_services Error_logger
+INFO: cols:(MWSKZ,MWSBT) 
+vals: VALUES(?,?)
+Mar 22, 2018 9:20:29 AM iam_services.Iam_services Error_logger
+INFO: Connection succeeded, hurray!
+Mar 22, 2018 9:20:29 AM iam_services.Iam_services Error_logger
+INFO: cols:(FLDVAL,FLDGRP,FLDNAME) 
+vals: VALUES(?,?,?)
+Mar 22, 2018 9:20:29 AM iam_services.Iam_services Error_logger
+INFO: Connection succeeded, hurray!
+Mar 22, 2018 9:20:29 AM iam_services.Iam_services Error_logger
+INFO: cols:(FLDVAL,FLDGRP,FLDNAME) 
+vals: VALUES(?,?,?)
+Mar 22, 2018 9:20:29 AM iam_services.Iam_services Error_logger
+INFO: Connection succeeded, hurray!
+Mar 22, 2018 9:20:29 AM iam_services.Iam_services Error_logger
+INFO: cols:(QUALARTNR,VORZMENGE,UMSMENGE,VORZWERT,UMSWERT,ARTNR) 
+vals: VALUES(?,?,?,?,?,?)
+Mar 22, 2018 9:20:30 AM iam_services.Iam_services Error_logger
+INFO: Connection succeeded, hurray!
+Mar 22, 2018 9:20:30 AM iam_services.Iam_services Error_logger
+INFO: cols:(TAXCODE,TAXVALUE,TAXSIGN) 
+vals: VALUES(?,?,?)
+Mar 22, 2018 9:20:30 AM iam_services.Iam_services Error_logger
+INFO: Connection succeeded, hurray!
+Mar 22, 2018 9:20:30 AM iam_services.Iam_services Error_logger
+INFO: cols:(MWSKZ,MWSBT) 
+vals: VALUES(?,?)
+Mar 22, 2018 9:20:30 AM iam_services.Iam_services Error_logger
+INFO: Connection succeeded, hurray!
+Mar 22, 2018 9:20:30 AM iam_services.Iam_services Error_logger
+INFO: cols:(FLDVAL,FLDGRP,FLDNAME) 
+vals: VALUES(?,?,?)
+Mar 22, 2018 9:20:30 AM iam_services.Iam_services Error_logger
+INFO: Connection succeeded, hurray!
+Mar 22, 2018 9:20:30 AM iam_services.Iam_services Error_logger
+INFO: cols:(FLDVAL,FLDGRP,FLDNAME) 
+vals: VALUES(?,?,?)
+Mar 22, 2018 9:20:30 AM iam_services.Iam_services Error_logger
+INFO: Connection succeeded, hurray!
+Mar 22, 2018 9:20:30 AM iam_services.Iam_services Error_logger
+INFO: cols:(QUALARTNR,VORZMENGE,UMSMENGE,VORZWERT,UMSWERT,ARTNR) 
+vals: VALUES(?,?,?,?,?,?)
+Mar 22, 2018 9:20:30 AM iam_services.Iam_services Error_logger
+INFO: Connection succeeded, hurray!
+Mar 22, 2018 9:20:30 AM iam_services.Iam_services Error_logger
+INFO: cols:(TAXCODE,TAXVALUE,TAXSIGN) 
+vals: VALUES(?,?,?)
+Mar 22, 2018 9:20:30 AM iam_services.Iam_services Error_logger
+INFO: Connection succeeded, hurray!
+Mar 22, 2018 9:20:30 AM iam_services.Iam_services Error_logger
+INFO: cols:(MWSKZ,MWSBT) 
+vals: VALUES(?,?)
+Mar 22, 2018 9:20:30 AM iam_services.Iam_services Error_logger
+INFO: Connection succeeded, hurray!
+Mar 22, 2018 9:20:30 AM iam_services.Iam_services Error_logger
+INFO: cols:(FLDVAL,FLDGRP,FLDNAME) 
+vals: VALUES(?,?,?)
+Mar 22, 2018 9:20:30 AM iam_services.Iam_services Error_logger
+INFO: Connection succeeded, hurray!
+Mar 22, 2018 9:20:30 AM iam_services.Iam_services Error_logger
+INFO: cols:(FLDVAL,FLDGRP,FLDNAME) 
+vals: VALUES(?,?,?)
+Mar 22, 2018 9:20:30 AM iam_services.Iam_services Error_logger
+INFO: Connection succeeded, hurray!
+Mar 22, 2018 9:20:30 AM iam_services.Iam_services Error_logger
+INFO: cols:(QUALARTNR,VORZMENGE,UMSMENGE,VORZWERT,UMSWERT,ARTNR) 
+vals: VALUES(?,?,?,?,?,?)
+Mar 22, 2018 9:20:30 AM iam_services.Iam_services Error_logger
+INFO: Connection succeeded, hurray!
+Mar 22, 2018 9:20:30 AM iam_services.Iam_services Error_logger
+INFO: cols:(BELEGWAERS,BELEGDATUM,PACKAGE_ID) 
+vals: VALUES(?,?,?)
+Mar 22, 2018 9:20:30 AM iam_services.Iam_services Error_logger
+INFO: Empty data for IDOC
+Mar 22, 2018 9:20:30 AM iam_services.Iam_services Error_logger
+INFO: Empty data for WPUUMS01
+Mar 22, 2018 9:20:30 AM iam_services.Iam_services Error_logger
+INFO: Empty data for #document
+Mar 22, 2018 9:43:18 AM iam_services.Iam_services Error_logger
+INFO: Connection succeeded, hurray!
+Mar 22, 2018 9:43:18 AM iam_services.Iam_services Error_logger
+INFO: cols:(SERIAL,RCVPRN,DOCREL,SNDPRT,SNDPOR,MESTYP,RCVPRT,RCVPOR,DOCNUM,SNDPRN,TABNAM,MANDT,STATUS,IDOCTYP,CREDAT,CRETIM,DIRECT) 
+vals: VALUES(?,?,?,?,?,?,?,?,?,?,?,?,?,?,?,?,?)
+Mar 22, 2018 9:43:18 AM iam_services.Iam_services Error_logger
+INFO: Connection succeeded, hurray!
+Mar 22, 2018 9:43:18 AM iam_services.Iam_services Error_logger
+INFO: cols:(TAXCODE,TAXVALUE,TAXSIGN,ARTNR) 
+vals: VALUES(?,?,?,?)
+Mar 22, 2018 9:43:18 AM iam_services.Iam_services Error_logger
+INFO: Connection succeeded, hurray!
+Mar 22, 2018 9:43:18 AM iam_services.Iam_services Error_logger
+INFO: cols:(MWSKZ,MWSBT,ARTNR) 
+vals: VALUES(?,?,?)
+Mar 22, 2018 9:43:18 AM iam_services.Iam_services Error_logger
+INFO: Connection succeeded, hurray!
+Mar 22, 2018 9:43:18 AM iam_services.Iam_services Error_logger
+INFO: cols:(FLDVAL,FLDGRP,FLDNAME,ARTNR) 
+vals: VALUES(?,?,?,?)
+Mar 22, 2018 9:43:18 AM iam_services.Iam_services Error_logger
+INFO: Connection succeeded, hurray!
+Mar 22, 2018 9:43:18 AM iam_services.Iam_services Error_logger
+INFO: cols:(FLDVAL,FLDGRP,FLDNAME,ARTNR) 
+vals: VALUES(?,?,?,?)
+Mar 22, 2018 9:43:18 AM iam_services.Iam_services Error_logger
+INFO: Connection succeeded, hurray!
+Mar 22, 2018 9:43:18 AM iam_services.Iam_services Error_logger
+INFO: cols:(QUALARTNR,VORZMENGE,UMSMENGE,VORZWERT,UMSWERT,ARTNR,PACKAGE_ID) 
+vals: VALUES(?,?,?,?,?,?,?)
+Mar 22, 2018 9:43:18 AM iam_services.Iam_services Error_logger
+INFO: Connection succeeded, hurray!
+Mar 22, 2018 9:43:18 AM iam_services.Iam_services Error_logger
+INFO: cols:(TAXCODE,TAXVALUE,TAXSIGN,ARTNR) 
+vals: VALUES(?,?,?,?)
+Mar 22, 2018 9:43:18 AM iam_services.Iam_services Error_logger
+INFO: Connection succeeded, hurray!
+Mar 22, 2018 9:43:18 AM iam_services.Iam_services Error_logger
+INFO: cols:(MWSKZ,MWSBT,ARTNR) 
+vals: VALUES(?,?,?)
+Mar 22, 2018 9:43:18 AM iam_services.Iam_services Error_logger
+INFO: Connection succeeded, hurray!
+Mar 22, 2018 9:43:19 AM iam_services.Iam_services Error_logger
+INFO: cols:(FLDVAL,FLDGRP,FLDNAME,ARTNR) 
+vals: VALUES(?,?,?,?)
+Mar 22, 2018 9:43:19 AM iam_services.Iam_services Error_logger
+INFO: Connection succeeded, hurray!
+Mar 22, 2018 9:43:19 AM iam_services.Iam_services Error_logger
+INFO: cols:(FLDVAL,FLDGRP,FLDNAME,ARTNR) 
+vals: VALUES(?,?,?,?)
+Mar 22, 2018 9:43:19 AM iam_services.Iam_services Error_logger
+INFO: Connection succeeded, hurray!
+Mar 22, 2018 9:43:19 AM iam_services.Iam_services Error_logger
+INFO: cols:(QUALARTNR,VORZMENGE,UMSMENGE,VORZWERT,UMSWERT,ARTNR,PACKAGE_ID) 
+vals: VALUES(?,?,?,?,?,?,?)
+Mar 22, 2018 9:43:19 AM iam_services.Iam_services Error_logger
+INFO: Connection succeeded, hurray!
+Mar 22, 2018 9:43:19 AM iam_services.Iam_services Error_logger
+INFO: cols:(TAXCODE,TAXVALUE,TAXSIGN,ARTNR) 
+vals: VALUES(?,?,?,?)
+Mar 22, 2018 9:43:19 AM iam_services.Iam_services Error_logger
+INFO: Connection succeeded, hurray!
+Mar 22, 2018 9:43:19 AM iam_services.Iam_services Error_logger
+INFO: cols:(MWSKZ,MWSBT,ARTNR) 
+vals: VALUES(?,?,?)
+Mar 22, 2018 9:43:19 AM iam_services.Iam_services Error_logger
+INFO: Connection succeeded, hurray!
+Mar 22, 2018 9:43:19 AM iam_services.Iam_services Error_logger
+INFO: cols:(FLDVAL,FLDGRP,FLDNAME,ARTNR) 
+vals: VALUES(?,?,?,?)
+Mar 22, 2018 9:43:19 AM iam_services.Iam_services Error_logger
+INFO: Connection succeeded, hurray!
+Mar 22, 2018 9:43:19 AM iam_services.Iam_services Error_logger
+INFO: cols:(FLDVAL,FLDGRP,FLDNAME,ARTNR) 
+vals: VALUES(?,?,?,?)
+Mar 22, 2018 9:43:19 AM iam_services.Iam_services Error_logger
+INFO: Connection succeeded, hurray!
+Mar 22, 2018 9:43:19 AM iam_services.Iam_services Error_logger
+INFO: cols:(QUALARTNR,VORZMENGE,UMSMENGE,VORZWERT,UMSWERT,ARTNR,PACKAGE_ID) 
+vals: VALUES(?,?,?,?,?,?,?)
+Mar 22, 2018 9:43:19 AM iam_services.Iam_services Error_logger
+INFO: Connection succeeded, hurray!
+Mar 22, 2018 9:43:19 AM iam_services.Iam_services Error_logger
+INFO: cols:(TAXCODE,TAXVALUE,TAXSIGN,ARTNR) 
+vals: VALUES(?,?,?,?)
+Mar 22, 2018 9:43:19 AM iam_services.Iam_services Error_logger
+INFO: Connection succeeded, hurray!
+Mar 22, 2018 9:43:19 AM iam_services.Iam_services Error_logger
+INFO: cols:(MWSKZ,MWSBT,ARTNR) 
+vals: VALUES(?,?,?)
+Mar 22, 2018 9:43:19 AM iam_services.Iam_services Error_logger
+INFO: Connection succeeded, hurray!
+Mar 22, 2018 9:43:19 AM iam_services.Iam_services Error_logger
+INFO: cols:(FLDVAL,FLDGRP,FLDNAME,ARTNR) 
+vals: VALUES(?,?,?,?)
+Mar 22, 2018 9:43:19 AM iam_services.Iam_services Error_logger
+INFO: Connection succeeded, hurray!
+Mar 22, 2018 9:43:19 AM iam_services.Iam_services Error_logger
+INFO: cols:(FLDVAL,FLDGRP,FLDNAME,ARTNR) 
+vals: VALUES(?,?,?,?)
+Mar 22, 2018 9:43:19 AM iam_services.Iam_services Error_logger
+INFO: Connection succeeded, hurray!
+Mar 22, 2018 9:43:19 AM iam_services.Iam_services Error_logger
+INFO: cols:(QUALARTNR,VORZMENGE,UMSMENGE,VORZWERT,UMSWERT,ARTNR,PACKAGE_ID) 
+vals: VALUES(?,?,?,?,?,?,?)
+Mar 22, 2018 9:43:19 AM iam_services.Iam_services Error_logger
+INFO: Connection succeeded, hurray!
+Mar 22, 2018 9:43:19 AM iam_services.Iam_services Error_logger
+INFO: cols:(TAXCODE,TAXVALUE,TAXSIGN,ARTNR) 
+vals: VALUES(?,?,?,?)
+Mar 22, 2018 9:43:19 AM iam_services.Iam_services Error_logger
+INFO: Connection succeeded, hurray!
+Mar 22, 2018 9:43:19 AM iam_services.Iam_services Error_logger
+INFO: cols:(MWSKZ,MWSBT,ARTNR) 
+vals: VALUES(?,?,?)
+Mar 22, 2018 9:43:19 AM iam_services.Iam_services Error_logger
+INFO: Connection succeeded, hurray!
+Mar 22, 2018 9:43:19 AM iam_services.Iam_services Error_logger
+INFO: cols:(FLDVAL,FLDGRP,FLDNAME,ARTNR) 
+vals: VALUES(?,?,?,?)
+Mar 22, 2018 9:43:19 AM iam_services.Iam_services Error_logger
+INFO: Connection succeeded, hurray!
+Mar 22, 2018 9:43:19 AM iam_services.Iam_services Error_logger
+INFO: cols:(FLDVAL,FLDGRP,FLDNAME,ARTNR) 
+vals: VALUES(?,?,?,?)
+Mar 22, 2018 9:43:19 AM iam_services.Iam_services Error_logger
+INFO: Connection succeeded, hurray!
+Mar 22, 2018 9:43:19 AM iam_services.Iam_services Error_logger
+INFO: cols:(QUALARTNR,VORZMENGE,UMSMENGE,VORZWERT,UMSWERT,ARTNR,PACKAGE_ID) 
+vals: VALUES(?,?,?,?,?,?,?)
+Mar 22, 2018 9:43:19 AM iam_services.Iam_services Error_logger
+INFO: Connection succeeded, hurray!
+Mar 22, 2018 9:43:19 AM iam_services.Iam_services Error_logger
+INFO: cols:(TAXCODE,TAXVALUE,TAXSIGN,ARTNR) 
+vals: VALUES(?,?,?,?)
+Mar 22, 2018 9:43:19 AM iam_services.Iam_services Error_logger
+INFO: Connection succeeded, hurray!
+Mar 22, 2018 9:43:19 AM iam_services.Iam_services Error_logger
+INFO: cols:(MWSKZ,MWSBT,ARTNR) 
+vals: VALUES(?,?,?)
+Mar 22, 2018 9:43:19 AM iam_services.Iam_services Error_logger
+INFO: Connection succeeded, hurray!
+Mar 22, 2018 9:43:19 AM iam_services.Iam_services Error_logger
+INFO: cols:(FLDVAL,FLDGRP,FLDNAME,ARTNR) 
+vals: VALUES(?,?,?,?)
+Mar 22, 2018 9:43:19 AM iam_services.Iam_services Error_logger
+INFO: Connection succeeded, hurray!
+Mar 22, 2018 9:43:19 AM iam_services.Iam_services Error_logger
+INFO: cols:(FLDVAL,FLDGRP,FLDNAME,ARTNR) 
+vals: VALUES(?,?,?,?)
+Mar 22, 2018 9:43:19 AM iam_services.Iam_services Error_logger
+INFO: Connection succeeded, hurray!
+Mar 22, 2018 9:43:19 AM iam_services.Iam_services Error_logger
+INFO: cols:(QUALARTNR,VORZMENGE,UMSMENGE,VORZWERT,UMSWERT,ARTNR,PACKAGE_ID) 
+vals: VALUES(?,?,?,?,?,?,?)
+Mar 22, 2018 9:43:19 AM iam_services.Iam_services Error_logger
+INFO: Connection succeeded, hurray!
+Mar 22, 2018 9:43:19 AM iam_services.Iam_services Error_logger
+INFO: cols:(TAXCODE,TAXVALUE,TAXSIGN,ARTNR) 
+vals: VALUES(?,?,?,?)
+Mar 22, 2018 9:43:19 AM iam_services.Iam_services Error_logger
+INFO: Connection succeeded, hurray!
+Mar 22, 2018 9:43:19 AM iam_services.Iam_services Error_logger
+INFO: cols:(MWSKZ,MWSBT,ARTNR) 
+vals: VALUES(?,?,?)
+Mar 22, 2018 9:43:19 AM iam_services.Iam_services Error_logger
+INFO: Connection succeeded, hurray!
+Mar 22, 2018 9:43:19 AM iam_services.Iam_services Error_logger
+INFO: cols:(FLDVAL,FLDGRP,FLDNAME,ARTNR) 
+vals: VALUES(?,?,?,?)
+Mar 22, 2018 9:43:19 AM iam_services.Iam_services Error_logger
+INFO: Connection succeeded, hurray!
+Mar 22, 2018 9:43:19 AM iam_services.Iam_services Error_logger
+INFO: cols:(FLDVAL,FLDGRP,FLDNAME,ARTNR) 
+vals: VALUES(?,?,?,?)
+Mar 22, 2018 9:43:19 AM iam_services.Iam_services Error_logger
+INFO: Connection succeeded, hurray!
+Mar 22, 2018 9:43:19 AM iam_services.Iam_services Error_logger
+INFO: cols:(QUALARTNR,VORZMENGE,UMSMENGE,VORZWERT,UMSWERT,ARTNR,PACKAGE_ID) 
+vals: VALUES(?,?,?,?,?,?,?)
+Mar 22, 2018 9:43:19 AM iam_services.Iam_services Error_logger
+INFO: Connection succeeded, hurray!
+Mar 22, 2018 9:43:19 AM iam_services.Iam_services Error_logger
+INFO: cols:(TAXCODE,TAXVALUE,TAXSIGN,ARTNR) 
+vals: VALUES(?,?,?,?)
+Mar 22, 2018 9:43:19 AM iam_services.Iam_services Error_logger
+INFO: Connection succeeded, hurray!
+Mar 22, 2018 9:43:19 AM iam_services.Iam_services Error_logger
+INFO: cols:(MWSKZ,MWSBT,ARTNR) 
+vals: VALUES(?,?,?)
+Mar 22, 2018 9:43:19 AM iam_services.Iam_services Error_logger
+INFO: Connection succeeded, hurray!
+Mar 22, 2018 9:43:19 AM iam_services.Iam_services Error_logger
+INFO: cols:(FLDVAL,FLDGRP,FLDNAME,ARTNR) 
+vals: VALUES(?,?,?,?)
+Mar 22, 2018 9:43:19 AM iam_services.Iam_services Error_logger
+INFO: Connection succeeded, hurray!
+Mar 22, 2018 9:43:19 AM iam_services.Iam_services Error_logger
+INFO: cols:(FLDVAL,FLDGRP,FLDNAME,ARTNR) 
+vals: VALUES(?,?,?,?)
+Mar 22, 2018 9:43:19 AM iam_services.Iam_services Error_logger
+INFO: Connection succeeded, hurray!
+Mar 22, 2018 9:43:19 AM iam_services.Iam_services Error_logger
+INFO: cols:(QUALARTNR,VORZMENGE,UMSMENGE,VORZWERT,UMSWERT,ARTNR,PACKAGE_ID) 
+vals: VALUES(?,?,?,?,?,?,?)
+Mar 22, 2018 9:43:19 AM iam_services.Iam_services Error_logger
+INFO: Connection succeeded, hurray!
+Mar 22, 2018 9:43:19 AM iam_services.Iam_services Error_logger
+INFO: cols:(TAXCODE,TAXVALUE,TAXSIGN,ARTNR) 
+vals: VALUES(?,?,?,?)
+Mar 22, 2018 9:43:19 AM iam_services.Iam_services Error_logger
+INFO: Connection succeeded, hurray!
+Mar 22, 2018 9:43:19 AM iam_services.Iam_services Error_logger
+INFO: cols:(MWSKZ,MWSBT,ARTNR) 
+vals: VALUES(?,?,?)
+Mar 22, 2018 9:43:19 AM iam_services.Iam_services Error_logger
+INFO: Connection succeeded, hurray!
+Mar 22, 2018 9:43:19 AM iam_services.Iam_services Error_logger
+INFO: cols:(FLDVAL,FLDGRP,FLDNAME,ARTNR) 
+vals: VALUES(?,?,?,?)
+Mar 22, 2018 9:43:19 AM iam_services.Iam_services Error_logger
+INFO: Connection succeeded, hurray!
+Mar 22, 2018 9:43:19 AM iam_services.Iam_services Error_logger
+INFO: cols:(FLDVAL,FLDGRP,FLDNAME,ARTNR) 
+vals: VALUES(?,?,?,?)
+Mar 22, 2018 9:43:19 AM iam_services.Iam_services Error_logger
+INFO: Connection succeeded, hurray!
+Mar 22, 2018 9:43:19 AM iam_services.Iam_services Error_logger
+INFO: cols:(QUALARTNR,VORZMENGE,UMSMENGE,VORZWERT,UMSWERT,ARTNR,PACKAGE_ID) 
+vals: VALUES(?,?,?,?,?,?,?)
+Mar 22, 2018 9:43:19 AM iam_services.Iam_services Error_logger
+INFO: Connection succeeded, hurray!
+Mar 22, 2018 9:43:19 AM iam_services.Iam_services Error_logger
+INFO: cols:(TAXCODE,TAXVALUE,TAXSIGN,ARTNR) 
+vals: VALUES(?,?,?,?)
+Mar 22, 2018 9:43:19 AM iam_services.Iam_services Error_logger
+INFO: Connection succeeded, hurray!
+Mar 22, 2018 9:43:19 AM iam_services.Iam_services Error_logger
+INFO: cols:(MWSKZ,MWSBT,ARTNR) 
+vals: VALUES(?,?,?)
+Mar 22, 2018 9:43:19 AM iam_services.Iam_services Error_logger
+INFO: Connection succeeded, hurray!
+Mar 22, 2018 9:43:19 AM iam_services.Iam_services Error_logger
+INFO: cols:(FLDVAL,FLDGRP,FLDNAME,ARTNR) 
+vals: VALUES(?,?,?,?)
+Mar 22, 2018 9:43:19 AM iam_services.Iam_services Error_logger
+INFO: Connection succeeded, hurray!
+Mar 22, 2018 9:43:19 AM iam_services.Iam_services Error_logger
+INFO: cols:(FLDVAL,FLDGRP,FLDNAME,ARTNR) 
+vals: VALUES(?,?,?,?)
+Mar 22, 2018 9:43:19 AM iam_services.Iam_services Error_logger
+INFO: Connection succeeded, hurray!
+Mar 22, 2018 9:43:19 AM iam_services.Iam_services Error_logger
+INFO: cols:(QUALARTNR,VORZMENGE,UMSMENGE,VORZWERT,UMSWERT,ARTNR,PACKAGE_ID) 
+vals: VALUES(?,?,?,?,?,?,?)
+Mar 22, 2018 9:43:19 AM iam_services.Iam_services Error_logger
+INFO: Connection succeeded, hurray!
+Mar 22, 2018 9:43:19 AM iam_services.Iam_services Error_logger
+INFO: cols:(TAXCODE,TAXVALUE,TAXSIGN,ARTNR) 
+vals: VALUES(?,?,?,?)
+Mar 22, 2018 9:43:19 AM iam_services.Iam_services Error_logger
+INFO: Connection succeeded, hurray!
+Mar 22, 2018 9:43:19 AM iam_services.Iam_services Error_logger
+INFO: cols:(MWSKZ,MWSBT,ARTNR) 
+vals: VALUES(?,?,?)
+Mar 22, 2018 9:43:19 AM iam_services.Iam_services Error_logger
+INFO: Connection succeeded, hurray!
+Mar 22, 2018 9:43:19 AM iam_services.Iam_services Error_logger
+INFO: cols:(FLDVAL,FLDGRP,FLDNAME,ARTNR) 
+vals: VALUES(?,?,?,?)
+Mar 22, 2018 9:43:19 AM iam_services.Iam_services Error_logger
+INFO: Connection succeeded, hurray!
+Mar 22, 2018 9:43:19 AM iam_services.Iam_services Error_logger
+INFO: cols:(FLDVAL,FLDGRP,FLDNAME,ARTNR) 
+vals: VALUES(?,?,?,?)
+Mar 22, 2018 9:43:20 AM iam_services.Iam_services Error_logger
+INFO: Connection succeeded, hurray!
+Mar 22, 2018 9:43:20 AM iam_services.Iam_services Error_logger
+INFO: cols:(QUALARTNR,VORZMENGE,UMSMENGE,VORZWERT,UMSWERT,ARTNR,PACKAGE_ID) 
+vals: VALUES(?,?,?,?,?,?,?)
+Mar 22, 2018 9:43:20 AM iam_services.Iam_services Error_logger
+INFO: Connection succeeded, hurray!
+Mar 22, 2018 9:43:20 AM iam_services.Iam_services Error_logger
+INFO: cols:(BELEGWAERS,BELEGDATUM,PACKAGE_ID,ARTNR) 
+vals: VALUES(?,?,?,?)
+Mar 22, 2018 9:43:20 AM iam_services.Iam_services Error_logger
+INFO: Empty data for IDOC
+Mar 22, 2018 9:43:20 AM iam_services.Iam_services Error_logger
+INFO: Empty data for WPUUMS01
+Mar 22, 2018 9:43:20 AM iam_services.Iam_services Error_logger
+INFO: Empty data for #document
+Mar 22, 2018 9:44:41 AM iam_services.Iam_services Error_logger
+INFO: Connection succeeded, hurray!
+Mar 22, 2018 9:44:41 AM iam_services.Iam_services Error_logger
+INFO: cols:(SERIAL,RCVPRN,DOCREL,SNDPRT,SNDPOR,MESTYP,RCVPRT,RCVPOR,DOCNUM,SNDPRN,TABNAM,MANDT,STATUS,IDOCTYP,CREDAT,CRETIM,DIRECT) 
+vals: VALUES(?,?,?,?,?,?,?,?,?,?,?,?,?,?,?,?,?)
+Mar 22, 2018 9:44:41 AM iam_services.Iam_services Error_logger
+INFO: Connection succeeded, hurray!
+Mar 22, 2018 9:44:41 AM iam_services.Iam_services Error_logger
+INFO: cols:(TAXCODE,TAXVALUE,TAXSIGN,ARTNR) 
+vals: VALUES(?,?,?,?)
+Mar 22, 2018 9:44:41 AM iam_services.Iam_services Error_logger
+INFO: Connection succeeded, hurray!
+Mar 22, 2018 9:44:41 AM iam_services.Iam_services Error_logger
+INFO: cols:(MWSKZ,MWSBT,ARTNR) 
+vals: VALUES(?,?,?)
+Mar 22, 2018 9:44:41 AM iam_services.Iam_services Error_logger
+INFO: Connection succeeded, hurray!
+Mar 22, 2018 9:44:41 AM iam_services.Iam_services Error_logger
+INFO: cols:(FLDVAL,FLDGRP,FLDNAME,ARTNR) 
+vals: VALUES(?,?,?,?)
+Mar 22, 2018 9:44:41 AM iam_services.Iam_services Error_logger
+INFO: Connection succeeded, hurray!
+Mar 22, 2018 9:44:41 AM iam_services.Iam_services Error_logger
+INFO: cols:(FLDVAL,FLDGRP,FLDNAME,ARTNR) 
+vals: VALUES(?,?,?,?)
+Mar 22, 2018 9:44:41 AM iam_services.Iam_services Error_logger
+INFO: Connection succeeded, hurray!
+Mar 22, 2018 9:44:41 AM iam_services.Iam_services Error_logger
+INFO: cols:(QUALARTNR,VORZMENGE,UMSMENGE,VORZWERT,UMSWERT,ARTNR,PACKAGE_ID) 
+vals: VALUES(?,?,?,?,?,?,?)
+Mar 22, 2018 9:44:41 AM iam_services.Iam_services Error_logger
+INFO: Connection succeeded, hurray!
+Mar 22, 2018 9:44:41 AM iam_services.Iam_services Error_logger
+INFO: cols:(TAXCODE,TAXVALUE,TAXSIGN,ARTNR) 
+vals: VALUES(?,?,?,?)
+Mar 22, 2018 9:44:41 AM iam_services.Iam_services Error_logger
+INFO: Connection succeeded, hurray!
+Mar 22, 2018 9:44:41 AM iam_services.Iam_services Error_logger
+INFO: cols:(MWSKZ,MWSBT,ARTNR) 
+vals: VALUES(?,?,?)
+Mar 22, 2018 9:44:41 AM iam_services.Iam_services Error_logger
+INFO: Connection succeeded, hurray!
+Mar 22, 2018 9:44:41 AM iam_services.Iam_services Error_logger
+INFO: cols:(FLDVAL,FLDGRP,FLDNAME,ARTNR) 
+vals: VALUES(?,?,?,?)
+Mar 22, 2018 9:44:41 AM iam_services.Iam_services Error_logger
+INFO: Connection succeeded, hurray!
+Mar 22, 2018 9:44:41 AM iam_services.Iam_services Error_logger
+INFO: cols:(FLDVAL,FLDGRP,FLDNAME,ARTNR) 
+vals: VALUES(?,?,?,?)
+Mar 22, 2018 9:44:41 AM iam_services.Iam_services Error_logger
+INFO: Connection succeeded, hurray!
+Mar 22, 2018 9:44:41 AM iam_services.Iam_services Error_logger
+INFO: cols:(QUALARTNR,VORZMENGE,UMSMENGE,VORZWERT,UMSWERT,ARTNR,PACKAGE_ID) 
+vals: VALUES(?,?,?,?,?,?,?)
+Mar 22, 2018 9:44:41 AM iam_services.Iam_services Error_logger
+INFO: Connection succeeded, hurray!
+Mar 22, 2018 9:44:41 AM iam_services.Iam_services Error_logger
+INFO: cols:(TAXCODE,TAXVALUE,TAXSIGN,ARTNR) 
+vals: VALUES(?,?,?,?)
+Mar 22, 2018 9:44:41 AM iam_services.Iam_services Error_logger
+INFO: Connection succeeded, hurray!
+Mar 22, 2018 9:44:41 AM iam_services.Iam_services Error_logger
+INFO: cols:(MWSKZ,MWSBT,ARTNR) 
+vals: VALUES(?,?,?)
+Mar 22, 2018 9:44:41 AM iam_services.Iam_services Error_logger
+INFO: Connection succeeded, hurray!
+Mar 22, 2018 9:44:41 AM iam_services.Iam_services Error_logger
+INFO: cols:(FLDVAL,FLDGRP,FLDNAME,ARTNR) 
+vals: VALUES(?,?,?,?)
+Mar 22, 2018 9:44:41 AM iam_services.Iam_services Error_logger
+INFO: Connection succeeded, hurray!
+Mar 22, 2018 9:44:41 AM iam_services.Iam_services Error_logger
+INFO: cols:(FLDVAL,FLDGRP,FLDNAME,ARTNR) 
+vals: VALUES(?,?,?,?)
+Mar 22, 2018 9:44:41 AM iam_services.Iam_services Error_logger
+INFO: Connection succeeded, hurray!
+Mar 22, 2018 9:44:41 AM iam_services.Iam_services Error_logger
+INFO: cols:(QUALARTNR,VORZMENGE,UMSMENGE,VORZWERT,UMSWERT,ARTNR,PACKAGE_ID) 
+vals: VALUES(?,?,?,?,?,?,?)
+Mar 22, 2018 9:44:41 AM iam_services.Iam_services Error_logger
+INFO: Connection succeeded, hurray!
+Mar 22, 2018 9:44:41 AM iam_services.Iam_services Error_logger
+INFO: cols:(TAXCODE,TAXVALUE,TAXSIGN,ARTNR) 
+vals: VALUES(?,?,?,?)
+Mar 22, 2018 9:44:41 AM iam_services.Iam_services Error_logger
+INFO: Connection succeeded, hurray!
+Mar 22, 2018 9:44:41 AM iam_services.Iam_services Error_logger
+INFO: cols:(MWSKZ,MWSBT,ARTNR) 
+vals: VALUES(?,?,?)
+Mar 22, 2018 9:44:41 AM iam_services.Iam_services Error_logger
+INFO: Connection succeeded, hurray!
+Mar 22, 2018 9:44:41 AM iam_services.Iam_services Error_logger
+INFO: cols:(FLDVAL,FLDGRP,FLDNAME,ARTNR) 
+vals: VALUES(?,?,?,?)
+Mar 22, 2018 9:44:41 AM iam_services.Iam_services Error_logger
+INFO: Connection succeeded, hurray!
+Mar 22, 2018 9:44:41 AM iam_services.Iam_services Error_logger
+INFO: cols:(FLDVAL,FLDGRP,FLDNAME,ARTNR) 
+vals: VALUES(?,?,?,?)
+Mar 22, 2018 9:44:41 AM iam_services.Iam_services Error_logger
+INFO: Connection succeeded, hurray!
+Mar 22, 2018 9:44:41 AM iam_services.Iam_services Error_logger
+INFO: cols:(QUALARTNR,VORZMENGE,UMSMENGE,VORZWERT,UMSWERT,ARTNR,PACKAGE_ID) 
+vals: VALUES(?,?,?,?,?,?,?)
+Mar 22, 2018 9:44:41 AM iam_services.Iam_services Error_logger
+INFO: Connection succeeded, hurray!
+Mar 22, 2018 9:44:41 AM iam_services.Iam_services Error_logger
+INFO: cols:(TAXCODE,TAXVALUE,TAXSIGN,ARTNR) 
+vals: VALUES(?,?,?,?)
+Mar 22, 2018 9:44:41 AM iam_services.Iam_services Error_logger
+INFO: Connection succeeded, hurray!
+Mar 22, 2018 9:44:41 AM iam_services.Iam_services Error_logger
+INFO: cols:(MWSKZ,MWSBT,ARTNR) 
+vals: VALUES(?,?,?)
+Mar 22, 2018 9:44:41 AM iam_services.Iam_services Error_logger
+INFO: Connection succeeded, hurray!
+Mar 22, 2018 9:44:41 AM iam_services.Iam_services Error_logger
+INFO: cols:(FLDVAL,FLDGRP,FLDNAME,ARTNR) 
+vals: VALUES(?,?,?,?)
+Mar 22, 2018 9:44:41 AM iam_services.Iam_services Error_logger
+INFO: Connection succeeded, hurray!
+Mar 22, 2018 9:44:41 AM iam_services.Iam_services Error_logger
+INFO: cols:(FLDVAL,FLDGRP,FLDNAME,ARTNR) 
+vals: VALUES(?,?,?,?)
+Mar 22, 2018 9:44:41 AM iam_services.Iam_services Error_logger
+INFO: Connection succeeded, hurray!
+Mar 22, 2018 9:44:41 AM iam_services.Iam_services Error_logger
+INFO: cols:(QUALARTNR,VORZMENGE,UMSMENGE,VORZWERT,UMSWERT,ARTNR,PACKAGE_ID) 
+vals: VALUES(?,?,?,?,?,?,?)
+Mar 22, 2018 9:44:41 AM iam_services.Iam_services Error_logger
+INFO: Connection succeeded, hurray!
+Mar 22, 2018 9:44:41 AM iam_services.Iam_services Error_logger
+INFO: cols:(TAXCODE,TAXVALUE,TAXSIGN,ARTNR) 
+vals: VALUES(?,?,?,?)
+Mar 22, 2018 9:44:41 AM iam_services.Iam_services Error_logger
+INFO: Connection succeeded, hurray!
+Mar 22, 2018 9:44:41 AM iam_services.Iam_services Error_logger
+INFO: cols:(MWSKZ,MWSBT,ARTNR) 
+vals: VALUES(?,?,?)
+Mar 22, 2018 9:44:41 AM iam_services.Iam_services Error_logger
+INFO: Connection succeeded, hurray!
+Mar 22, 2018 9:44:41 AM iam_services.Iam_services Error_logger
+INFO: cols:(FLDVAL,FLDGRP,FLDNAME,ARTNR) 
+vals: VALUES(?,?,?,?)
+Mar 22, 2018 9:44:41 AM iam_services.Iam_services Error_logger
+INFO: Connection succeeded, hurray!
+Mar 22, 2018 9:44:41 AM iam_services.Iam_services Error_logger
+INFO: cols:(FLDVAL,FLDGRP,FLDNAME,ARTNR) 
+vals: VALUES(?,?,?,?)
+Mar 22, 2018 9:44:41 AM iam_services.Iam_services Error_logger
+INFO: Connection succeeded, hurray!
+Mar 22, 2018 9:44:41 AM iam_services.Iam_services Error_logger
+INFO: cols:(QUALARTNR,VORZMENGE,UMSMENGE,VORZWERT,UMSWERT,ARTNR,PACKAGE_ID) 
+vals: VALUES(?,?,?,?,?,?,?)
+Mar 22, 2018 9:44:41 AM iam_services.Iam_services Error_logger
+INFO: Connection succeeded, hurray!
+Mar 22, 2018 9:44:41 AM iam_services.Iam_services Error_logger
+INFO: cols:(TAXCODE,TAXVALUE,TAXSIGN,ARTNR) 
+vals: VALUES(?,?,?,?)
+Mar 22, 2018 9:44:41 AM iam_services.Iam_services Error_logger
+INFO: Connection succeeded, hurray!
+Mar 22, 2018 9:44:41 AM iam_services.Iam_services Error_logger
+INFO: cols:(MWSKZ,MWSBT,ARTNR) 
+vals: VALUES(?,?,?)
+Mar 22, 2018 9:44:41 AM iam_services.Iam_services Error_logger
+INFO: Connection succeeded, hurray!
+Mar 22, 2018 9:44:41 AM iam_services.Iam_services Error_logger
+INFO: cols:(FLDVAL,FLDGRP,FLDNAME,ARTNR) 
+vals: VALUES(?,?,?,?)
+Mar 22, 2018 9:44:41 AM iam_services.Iam_services Error_logger
+INFO: Connection succeeded, hurray!
+Mar 22, 2018 9:44:41 AM iam_services.Iam_services Error_logger
+INFO: cols:(FLDVAL,FLDGRP,FLDNAME,ARTNR) 
+vals: VALUES(?,?,?,?)
+Mar 22, 2018 9:44:41 AM iam_services.Iam_services Error_logger
+INFO: Connection succeeded, hurray!
+Mar 22, 2018 9:44:41 AM iam_services.Iam_services Error_logger
+INFO: cols:(QUALARTNR,VORZMENGE,UMSMENGE,VORZWERT,UMSWERT,ARTNR,PACKAGE_ID) 
+vals: VALUES(?,?,?,?,?,?,?)
+Mar 22, 2018 9:44:41 AM iam_services.Iam_services Error_logger
+INFO: Connection succeeded, hurray!
+Mar 22, 2018 9:44:41 AM iam_services.Iam_services Error_logger
+INFO: cols:(TAXCODE,TAXVALUE,TAXSIGN,ARTNR) 
+vals: VALUES(?,?,?,?)
+Mar 22, 2018 9:44:41 AM iam_services.Iam_services Error_logger
+INFO: Connection succeeded, hurray!
+Mar 22, 2018 9:44:41 AM iam_services.Iam_services Error_logger
+INFO: cols:(MWSKZ,MWSBT,ARTNR) 
+vals: VALUES(?,?,?)
+Mar 22, 2018 9:44:41 AM iam_services.Iam_services Error_logger
+INFO: Connection succeeded, hurray!
+Mar 22, 2018 9:44:41 AM iam_services.Iam_services Error_logger
+INFO: cols:(FLDVAL,FLDGRP,FLDNAME,ARTNR) 
+vals: VALUES(?,?,?,?)
+Mar 22, 2018 9:44:41 AM iam_services.Iam_services Error_logger
+INFO: Connection succeeded, hurray!
+Mar 22, 2018 9:44:41 AM iam_services.Iam_services Error_logger
+INFO: cols:(FLDVAL,FLDGRP,FLDNAME,ARTNR) 
+vals: VALUES(?,?,?,?)
+Mar 22, 2018 9:44:41 AM iam_services.Iam_services Error_logger
+INFO: Connection succeeded, hurray!
+Mar 22, 2018 9:44:41 AM iam_services.Iam_services Error_logger
+INFO: cols:(QUALARTNR,VORZMENGE,UMSMENGE,VORZWERT,UMSWERT,ARTNR,PACKAGE_ID) 
+vals: VALUES(?,?,?,?,?,?,?)
+Mar 22, 2018 9:44:41 AM iam_services.Iam_services Error_logger
+INFO: Connection succeeded, hurray!
+Mar 22, 2018 9:44:41 AM iam_services.Iam_services Error_logger
+INFO: cols:(TAXCODE,TAXVALUE,TAXSIGN,ARTNR) 
+vals: VALUES(?,?,?,?)
+Mar 22, 2018 9:44:41 AM iam_services.Iam_services Error_logger
+INFO: Connection succeeded, hurray!
+Mar 22, 2018 9:44:41 AM iam_services.Iam_services Error_logger
+INFO: cols:(MWSKZ,MWSBT,ARTNR) 
+vals: VALUES(?,?,?)
+Mar 22, 2018 9:44:41 AM iam_services.Iam_services Error_logger
+INFO: Connection succeeded, hurray!
+Mar 22, 2018 9:44:41 AM iam_services.Iam_services Error_logger
+INFO: cols:(FLDVAL,FLDGRP,FLDNAME,ARTNR) 
+vals: VALUES(?,?,?,?)
+Mar 22, 2018 9:44:41 AM iam_services.Iam_services Error_logger
+INFO: Connection succeeded, hurray!
+Mar 22, 2018 9:44:41 AM iam_services.Iam_services Error_logger
+INFO: cols:(FLDVAL,FLDGRP,FLDNAME,ARTNR) 
+vals: VALUES(?,?,?,?)
+Mar 22, 2018 9:44:41 AM iam_services.Iam_services Error_logger
+INFO: Connection succeeded, hurray!
+Mar 22, 2018 9:44:41 AM iam_services.Iam_services Error_logger
+INFO: cols:(QUALARTNR,VORZMENGE,UMSMENGE,VORZWERT,UMSWERT,ARTNR,PACKAGE_ID) 
+vals: VALUES(?,?,?,?,?,?,?)
+Mar 22, 2018 9:44:41 AM iam_services.Iam_services Error_logger
+INFO: Connection succeeded, hurray!
+Mar 22, 2018 9:44:41 AM iam_services.Iam_services Error_logger
+INFO: cols:(TAXCODE,TAXVALUE,TAXSIGN,ARTNR) 
+vals: VALUES(?,?,?,?)
+Mar 22, 2018 9:44:41 AM iam_services.Iam_services Error_logger
+INFO: Connection succeeded, hurray!
+Mar 22, 2018 9:44:41 AM iam_services.Iam_services Error_logger
+INFO: cols:(MWSKZ,MWSBT,ARTNR) 
+vals: VALUES(?,?,?)
+Mar 22, 2018 9:44:41 AM iam_services.Iam_services Error_logger
+INFO: Connection succeeded, hurray!
+Mar 22, 2018 9:44:41 AM iam_services.Iam_services Error_logger
+INFO: cols:(FLDVAL,FLDGRP,FLDNAME,ARTNR) 
+vals: VALUES(?,?,?,?)
+Mar 22, 2018 9:44:41 AM iam_services.Iam_services Error_logger
+INFO: Connection succeeded, hurray!
+Mar 22, 2018 9:44:41 AM iam_services.Iam_services Error_logger
+INFO: cols:(FLDVAL,FLDGRP,FLDNAME,ARTNR) 
+vals: VALUES(?,?,?,?)
+Mar 22, 2018 9:44:41 AM iam_services.Iam_services Error_logger
+INFO: Connection succeeded, hurray!
+Mar 22, 2018 9:44:41 AM iam_services.Iam_services Error_logger
+INFO: cols:(QUALARTNR,VORZMENGE,UMSMENGE,VORZWERT,UMSWERT,ARTNR,PACKAGE_ID) 
+vals: VALUES(?,?,?,?,?,?,?)
+Mar 22, 2018 9:44:41 AM iam_services.Iam_services Error_logger
+INFO: Connection succeeded, hurray!
+Mar 22, 2018 9:44:41 AM iam_services.Iam_services Error_logger
+INFO: cols:(TAXCODE,TAXVALUE,TAXSIGN,ARTNR) 
+vals: VALUES(?,?,?,?)
+Mar 22, 2018 9:44:42 AM iam_services.Iam_services Error_logger
+INFO: Connection succeeded, hurray!
+Mar 22, 2018 9:44:42 AM iam_services.Iam_services Error_logger
+INFO: cols:(MWSKZ,MWSBT,ARTNR) 
+vals: VALUES(?,?,?)
+Mar 22, 2018 9:44:42 AM iam_services.Iam_services Error_logger
+INFO: Connection succeeded, hurray!
+Mar 22, 2018 9:44:42 AM iam_services.Iam_services Error_logger
+INFO: cols:(FLDVAL,FLDGRP,FLDNAME,ARTNR) 
+vals: VALUES(?,?,?,?)
+Mar 22, 2018 9:44:42 AM iam_services.Iam_services Error_logger
+INFO: Connection succeeded, hurray!
+Mar 22, 2018 9:44:42 AM iam_services.Iam_services Error_logger
+INFO: cols:(FLDVAL,FLDGRP,FLDNAME,ARTNR) 
+vals: VALUES(?,?,?,?)
+Mar 22, 2018 9:44:42 AM iam_services.Iam_services Error_logger
+INFO: Connection succeeded, hurray!
+Mar 22, 2018 9:44:42 AM iam_services.Iam_services Error_logger
+INFO: cols:(QUALARTNR,VORZMENGE,UMSMENGE,VORZWERT,UMSWERT,ARTNR,PACKAGE_ID) 
+vals: VALUES(?,?,?,?,?,?,?)
+Mar 22, 2018 9:44:42 AM iam_services.Iam_services Error_logger
+INFO: Connection succeeded, hurray!
+Mar 22, 2018 9:44:42 AM iam_services.Iam_services Error_logger
+INFO: cols:(BELEGWAERS,BELEGDATUM,PACKAGE_ID,ARTNR) 
+vals: VALUES(?,?,?,?)
+Mar 22, 2018 9:44:42 AM iam_services.Iam_services Error_logger
+INFO: Empty data for IDOC
+Mar 22, 2018 9:44:42 AM iam_services.Iam_services Error_logger
+INFO: Empty data for WPUUMS01
+Mar 22, 2018 9:44:42 AM iam_services.Iam_services Error_logger
+INFO: Empty data for #document
+Mar 22, 2018 9:54:22 AM iam_services.Iam_services Error_logger
+INFO: Connection succeeded, hurray!
+Mar 22, 2018 9:54:22 AM iam_services.Iam_services Error_logger
+INFO: cols:(SERIAL,RCVPRN,DOCREL,SNDPRT,SNDPOR,MESTYP,RCVPRT,RCVPOR,DOCNUM,SNDPRN,TABNAM,MANDT,STATUS,IDOCTYP,CREDAT,CRETIM,DIRECT) 
+vals: VALUES(?,?,?,?,?,?,?,?,?,?,?,?,?,?,?,?,?)
+Mar 22, 2018 9:54:22 AM iam_services.Iam_services Error_logger
+INFO: Connection succeeded, hurray!
+Mar 22, 2018 9:54:22 AM iam_services.Iam_services Error_logger
+INFO: cols:(TAXCODE,TAXVALUE,TAXSIGN,ARTNR) 
+vals: VALUES(?,?,?,?)
+Mar 22, 2018 9:54:22 AM iam_services.Iam_services Error_logger
+INFO: Connection succeeded, hurray!
+Mar 22, 2018 9:54:22 AM iam_services.Iam_services Error_logger
+INFO: cols:(MWSKZ,MWSBT,ARTNR) 
+vals: VALUES(?,?,?)
+Mar 22, 2018 9:54:22 AM iam_services.Iam_services Error_logger
+INFO: Connection succeeded, hurray!
+Mar 22, 2018 9:54:22 AM iam_services.Iam_services Error_logger
+INFO: cols:(FLDVAL,FLDGRP,FLDNAME,ARTNR) 
+vals: VALUES(?,?,?,?)
+Mar 22, 2018 9:54:22 AM iam_services.Iam_services Error_logger
+INFO: Connection succeeded, hurray!
+Mar 22, 2018 9:54:22 AM iam_services.Iam_services Error_logger
+INFO: cols:(FLDVAL,FLDGRP,FLDNAME,ARTNR) 
+vals: VALUES(?,?,?,?)
+Mar 22, 2018 9:54:22 AM iam_services.Iam_services Error_logger
+INFO: Connection succeeded, hurray!
+Mar 22, 2018 9:54:22 AM iam_services.Iam_services Error_logger
+INFO: cols:(QUALARTNR,VORZMENGE,UMSMENGE,VORZWERT,UMSWERT,ARTNR) 
+vals: VALUES(?,?,?,?,?,?)
+Mar 22, 2018 9:54:22 AM iam_services.Iam_services Error_logger
+INFO: Connection succeeded, hurray!
+Mar 22, 2018 9:54:22 AM iam_services.Iam_services Error_logger
+INFO: cols:(TAXCODE,TAXVALUE,TAXSIGN,ARTNR) 
+vals: VALUES(?,?,?,?)
+Mar 22, 2018 9:54:22 AM iam_services.Iam_services Error_logger
+INFO: Connection succeeded, hurray!
+Mar 22, 2018 9:54:22 AM iam_services.Iam_services Error_logger
+INFO: cols:(MWSKZ,MWSBT,ARTNR) 
+vals: VALUES(?,?,?)
+Mar 22, 2018 9:54:22 AM iam_services.Iam_services Error_logger
+INFO: Connection succeeded, hurray!
+Mar 22, 2018 9:54:22 AM iam_services.Iam_services Error_logger
+INFO: cols:(FLDVAL,FLDGRP,FLDNAME,ARTNR) 
+vals: VALUES(?,?,?,?)
+Mar 22, 2018 9:54:22 AM iam_services.Iam_services Error_logger
+INFO: Connection succeeded, hurray!
+Mar 22, 2018 9:54:22 AM iam_services.Iam_services Error_logger
+INFO: cols:(FLDVAL,FLDGRP,FLDNAME,ARTNR) 
+vals: VALUES(?,?,?,?)
+Mar 22, 2018 9:54:22 AM iam_services.Iam_services Error_logger
+INFO: Connection succeeded, hurray!
+Mar 22, 2018 9:54:22 AM iam_services.Iam_services Error_logger
+INFO: cols:(QUALARTNR,VORZMENGE,UMSMENGE,VORZWERT,UMSWERT,ARTNR) 
+vals: VALUES(?,?,?,?,?,?)
+Mar 22, 2018 9:54:22 AM iam_services.Iam_services Error_logger
+INFO: Connection succeeded, hurray!
+Mar 22, 2018 9:54:22 AM iam_services.Iam_services Error_logger
+INFO: cols:(TAXCODE,TAXVALUE,TAXSIGN,ARTNR) 
+vals: VALUES(?,?,?,?)
+Mar 22, 2018 9:54:22 AM iam_services.Iam_services Error_logger
+INFO: Connection succeeded, hurray!
+Mar 22, 2018 9:54:22 AM iam_services.Iam_services Error_logger
+INFO: cols:(MWSKZ,MWSBT,ARTNR) 
+vals: VALUES(?,?,?)
+Mar 22, 2018 9:54:22 AM iam_services.Iam_services Error_logger
+INFO: Connection succeeded, hurray!
+Mar 22, 2018 9:54:22 AM iam_services.Iam_services Error_logger
+INFO: cols:(FLDVAL,FLDGRP,FLDNAME,ARTNR) 
+vals: VALUES(?,?,?,?)
+Mar 22, 2018 9:54:22 AM iam_services.Iam_services Error_logger
+INFO: Connection succeeded, hurray!
+Mar 22, 2018 9:54:22 AM iam_services.Iam_services Error_logger
+INFO: cols:(FLDVAL,FLDGRP,FLDNAME,ARTNR) 
+vals: VALUES(?,?,?,?)
+Mar 22, 2018 9:54:22 AM iam_services.Iam_services Error_logger
+INFO: Connection succeeded, hurray!
+Mar 22, 2018 9:54:22 AM iam_services.Iam_services Error_logger
+INFO: cols:(QUALARTNR,VORZMENGE,UMSMENGE,VORZWERT,UMSWERT,ARTNR) 
+vals: VALUES(?,?,?,?,?,?)
+Mar 22, 2018 9:54:22 AM iam_services.Iam_services Error_logger
+INFO: Connection succeeded, hurray!
+Mar 22, 2018 9:54:22 AM iam_services.Iam_services Error_logger
+INFO: cols:(TAXCODE,TAXVALUE,TAXSIGN,ARTNR) 
+vals: VALUES(?,?,?,?)
+Mar 22, 2018 9:54:22 AM iam_services.Iam_services Error_logger
+INFO: Connection succeeded, hurray!
+Mar 22, 2018 9:54:22 AM iam_services.Iam_services Error_logger
+INFO: cols:(MWSKZ,MWSBT,ARTNR) 
+vals: VALUES(?,?,?)
+Mar 22, 2018 9:54:22 AM iam_services.Iam_services Error_logger
+INFO: Connection succeeded, hurray!
+Mar 22, 2018 9:54:22 AM iam_services.Iam_services Error_logger
+INFO: cols:(FLDVAL,FLDGRP,FLDNAME,ARTNR) 
+vals: VALUES(?,?,?,?)
+Mar 22, 2018 9:54:22 AM iam_services.Iam_services Error_logger
+INFO: Connection succeeded, hurray!
+Mar 22, 2018 9:54:22 AM iam_services.Iam_services Error_logger
+INFO: cols:(FLDVAL,FLDGRP,FLDNAME,ARTNR) 
+vals: VALUES(?,?,?,?)
+Mar 22, 2018 9:54:22 AM iam_services.Iam_services Error_logger
+INFO: Connection succeeded, hurray!
+Mar 22, 2018 9:54:22 AM iam_services.Iam_services Error_logger
+INFO: cols:(QUALARTNR,VORZMENGE,UMSMENGE,VORZWERT,UMSWERT,ARTNR) 
+vals: VALUES(?,?,?,?,?,?)
+Mar 22, 2018 9:54:22 AM iam_services.Iam_services Error_logger
+INFO: Connection succeeded, hurray!
+Mar 22, 2018 9:54:22 AM iam_services.Iam_services Error_logger
+INFO: cols:(TAXCODE,TAXVALUE,TAXSIGN,ARTNR) 
+vals: VALUES(?,?,?,?)
+Mar 22, 2018 9:54:22 AM iam_services.Iam_services Error_logger
+INFO: Connection succeeded, hurray!
+Mar 22, 2018 9:54:22 AM iam_services.Iam_services Error_logger
+INFO: cols:(MWSKZ,MWSBT,ARTNR) 
+vals: VALUES(?,?,?)
+Mar 22, 2018 9:54:22 AM iam_services.Iam_services Error_logger
+INFO: Connection succeeded, hurray!
+Mar 22, 2018 9:54:22 AM iam_services.Iam_services Error_logger
+INFO: cols:(FLDVAL,FLDGRP,FLDNAME,ARTNR) 
+vals: VALUES(?,?,?,?)
+Mar 22, 2018 9:54:22 AM iam_services.Iam_services Error_logger
+INFO: Connection succeeded, hurray!
+Mar 22, 2018 9:54:23 AM iam_services.Iam_services Error_logger
+INFO: cols:(FLDVAL,FLDGRP,FLDNAME,ARTNR) 
+vals: VALUES(?,?,?,?)
+Mar 22, 2018 9:54:23 AM iam_services.Iam_services Error_logger
+INFO: Connection succeeded, hurray!
+Mar 22, 2018 9:54:23 AM iam_services.Iam_services Error_logger
+INFO: cols:(QUALARTNR,VORZMENGE,UMSMENGE,VORZWERT,UMSWERT,ARTNR) 
+vals: VALUES(?,?,?,?,?,?)
+Mar 22, 2018 9:54:23 AM iam_services.Iam_services Error_logger
+INFO: Connection succeeded, hurray!
+Mar 22, 2018 9:54:23 AM iam_services.Iam_services Error_logger
+INFO: cols:(TAXCODE,TAXVALUE,TAXSIGN,ARTNR) 
+vals: VALUES(?,?,?,?)
+Mar 22, 2018 9:54:23 AM iam_services.Iam_services Error_logger
+INFO: Connection succeeded, hurray!
+Mar 22, 2018 9:54:23 AM iam_services.Iam_services Error_logger
+INFO: cols:(MWSKZ,MWSBT,ARTNR) 
+vals: VALUES(?,?,?)
+Mar 22, 2018 9:54:23 AM iam_services.Iam_services Error_logger
+INFO: Connection succeeded, hurray!
+Mar 22, 2018 9:54:23 AM iam_services.Iam_services Error_logger
+INFO: cols:(FLDVAL,FLDGRP,FLDNAME,ARTNR) 
+vals: VALUES(?,?,?,?)
+Mar 22, 2018 9:54:23 AM iam_services.Iam_services Error_logger
+INFO: Connection succeeded, hurray!
+Mar 22, 2018 9:54:23 AM iam_services.Iam_services Error_logger
+INFO: cols:(FLDVAL,FLDGRP,FLDNAME,ARTNR) 
+vals: VALUES(?,?,?,?)
+Mar 22, 2018 9:54:23 AM iam_services.Iam_services Error_logger
+INFO: Connection succeeded, hurray!
+Mar 22, 2018 9:54:23 AM iam_services.Iam_services Error_logger
+INFO: cols:(QUALARTNR,VORZMENGE,UMSMENGE,VORZWERT,UMSWERT,ARTNR) 
+vals: VALUES(?,?,?,?,?,?)
+Mar 22, 2018 9:54:23 AM iam_services.Iam_services Error_logger
+INFO: Connection succeeded, hurray!
+Mar 22, 2018 9:54:23 AM iam_services.Iam_services Error_logger
+INFO: cols:(TAXCODE,TAXVALUE,TAXSIGN,ARTNR) 
+vals: VALUES(?,?,?,?)
+Mar 22, 2018 9:54:23 AM iam_services.Iam_services Error_logger
+INFO: Connection succeeded, hurray!
+Mar 22, 2018 9:54:23 AM iam_services.Iam_services Error_logger
+INFO: cols:(MWSKZ,MWSBT,ARTNR) 
+vals: VALUES(?,?,?)
+Mar 22, 2018 9:54:23 AM iam_services.Iam_services Error_logger
+INFO: Connection succeeded, hurray!
+Mar 22, 2018 9:54:23 AM iam_services.Iam_services Error_logger
+INFO: cols:(FLDVAL,FLDGRP,FLDNAME,ARTNR) 
+vals: VALUES(?,?,?,?)
+Mar 22, 2018 9:54:23 AM iam_services.Iam_services Error_logger
+INFO: Connection succeeded, hurray!
+Mar 22, 2018 9:54:23 AM iam_services.Iam_services Error_logger
+INFO: cols:(FLDVAL,FLDGRP,FLDNAME,ARTNR) 
+vals: VALUES(?,?,?,?)
+Mar 22, 2018 9:54:23 AM iam_services.Iam_services Error_logger
+INFO: Connection succeeded, hurray!
+Mar 22, 2018 9:54:23 AM iam_services.Iam_services Error_logger
+INFO: cols:(QUALARTNR,VORZMENGE,UMSMENGE,VORZWERT,UMSWERT,ARTNR) 
+vals: VALUES(?,?,?,?,?,?)
+Mar 22, 2018 9:54:23 AM iam_services.Iam_services Error_logger
+INFO: Connection succeeded, hurray!
+Mar 22, 2018 9:54:23 AM iam_services.Iam_services Error_logger
+INFO: cols:(TAXCODE,TAXVALUE,TAXSIGN,ARTNR) 
+vals: VALUES(?,?,?,?)
+Mar 22, 2018 9:54:23 AM iam_services.Iam_services Error_logger
+INFO: Connection succeeded, hurray!
+Mar 22, 2018 9:54:23 AM iam_services.Iam_services Error_logger
+INFO: cols:(MWSKZ,MWSBT,ARTNR) 
+vals: VALUES(?,?,?)
+Mar 22, 2018 9:54:23 AM iam_services.Iam_services Error_logger
+INFO: Connection succeeded, hurray!
+Mar 22, 2018 9:54:23 AM iam_services.Iam_services Error_logger
+INFO: cols:(FLDVAL,FLDGRP,FLDNAME,ARTNR) 
+vals: VALUES(?,?,?,?)
+Mar 22, 2018 9:54:23 AM iam_services.Iam_services Error_logger
+INFO: Connection succeeded, hurray!
+Mar 22, 2018 9:54:23 AM iam_services.Iam_services Error_logger
+INFO: cols:(FLDVAL,FLDGRP,FLDNAME,ARTNR) 
+vals: VALUES(?,?,?,?)
+Mar 22, 2018 9:54:23 AM iam_services.Iam_services Error_logger
+INFO: Connection succeeded, hurray!
+Mar 22, 2018 9:54:23 AM iam_services.Iam_services Error_logger
+INFO: cols:(QUALARTNR,VORZMENGE,UMSMENGE,VORZWERT,UMSWERT,ARTNR) 
+vals: VALUES(?,?,?,?,?,?)
+Mar 22, 2018 9:54:23 AM iam_services.Iam_services Error_logger
+INFO: Connection succeeded, hurray!
+Mar 22, 2018 9:54:23 AM iam_services.Iam_services Error_logger
+INFO: cols:(TAXCODE,TAXVALUE,TAXSIGN,ARTNR) 
+vals: VALUES(?,?,?,?)
+Mar 22, 2018 9:54:23 AM iam_services.Iam_services Error_logger
+INFO: Connection succeeded, hurray!
+Mar 22, 2018 9:54:23 AM iam_services.Iam_services Error_logger
+INFO: cols:(MWSKZ,MWSBT,ARTNR) 
+vals: VALUES(?,?,?)
+Mar 22, 2018 9:54:23 AM iam_services.Iam_services Error_logger
+INFO: Connection succeeded, hurray!
+Mar 22, 2018 9:54:23 AM iam_services.Iam_services Error_logger
+INFO: cols:(FLDVAL,FLDGRP,FLDNAME,ARTNR) 
+vals: VALUES(?,?,?,?)
+Mar 22, 2018 9:54:23 AM iam_services.Iam_services Error_logger
+INFO: Connection succeeded, hurray!
+Mar 22, 2018 9:54:23 AM iam_services.Iam_services Error_logger
+INFO: cols:(FLDVAL,FLDGRP,FLDNAME,ARTNR) 
+vals: VALUES(?,?,?,?)
+Mar 22, 2018 9:54:23 AM iam_services.Iam_services Error_logger
+INFO: Connection succeeded, hurray!
+Mar 22, 2018 9:54:23 AM iam_services.Iam_services Error_logger
+INFO: cols:(QUALARTNR,VORZMENGE,UMSMENGE,VORZWERT,UMSWERT,ARTNR) 
+vals: VALUES(?,?,?,?,?,?)
+Mar 22, 2018 9:54:23 AM iam_services.Iam_services Error_logger
+INFO: Connection succeeded, hurray!
+Mar 22, 2018 9:54:23 AM iam_services.Iam_services Error_logger
+INFO: cols:(TAXCODE,TAXVALUE,TAXSIGN,ARTNR) 
+vals: VALUES(?,?,?,?)
+Mar 22, 2018 9:54:23 AM iam_services.Iam_services Error_logger
+INFO: Connection succeeded, hurray!
+Mar 22, 2018 9:54:23 AM iam_services.Iam_services Error_logger
+INFO: cols:(MWSKZ,MWSBT,ARTNR) 
+vals: VALUES(?,?,?)
+Mar 22, 2018 9:54:23 AM iam_services.Iam_services Error_logger
+INFO: Connection succeeded, hurray!
+Mar 22, 2018 9:54:23 AM iam_services.Iam_services Error_logger
+INFO: cols:(FLDVAL,FLDGRP,FLDNAME,ARTNR) 
+vals: VALUES(?,?,?,?)
+Mar 22, 2018 9:54:23 AM iam_services.Iam_services Error_logger
+INFO: Connection succeeded, hurray!
+Mar 22, 2018 9:54:23 AM iam_services.Iam_services Error_logger
+INFO: cols:(FLDVAL,FLDGRP,FLDNAME,ARTNR) 
+vals: VALUES(?,?,?,?)
+Mar 22, 2018 9:54:23 AM iam_services.Iam_services Error_logger
+INFO: Connection succeeded, hurray!
+Mar 22, 2018 9:54:23 AM iam_services.Iam_services Error_logger
+INFO: cols:(QUALARTNR,VORZMENGE,UMSMENGE,VORZWERT,UMSWERT,ARTNR) 
+vals: VALUES(?,?,?,?,?,?)
+Mar 22, 2018 9:54:23 AM iam_services.Iam_services Error_logger
+INFO: Connection succeeded, hurray!
+Mar 22, 2018 9:54:23 AM iam_services.Iam_services Error_logger
+INFO: cols:(TAXCODE,TAXVALUE,TAXSIGN,ARTNR) 
+vals: VALUES(?,?,?,?)
+Mar 22, 2018 9:54:23 AM iam_services.Iam_services Error_logger
+INFO: Connection succeeded, hurray!
+Mar 22, 2018 9:54:23 AM iam_services.Iam_services Error_logger
+INFO: cols:(MWSKZ,MWSBT,ARTNR) 
+vals: VALUES(?,?,?)
+Mar 22, 2018 9:54:23 AM iam_services.Iam_services Error_logger
+INFO: Connection succeeded, hurray!
+Mar 22, 2018 9:54:23 AM iam_services.Iam_services Error_logger
+INFO: cols:(FLDVAL,FLDGRP,FLDNAME,ARTNR) 
+vals: VALUES(?,?,?,?)
+Mar 22, 2018 9:54:23 AM iam_services.Iam_services Error_logger
+INFO: Connection succeeded, hurray!
+Mar 22, 2018 9:54:23 AM iam_services.Iam_services Error_logger
+INFO: cols:(FLDVAL,FLDGRP,FLDNAME,ARTNR) 
+vals: VALUES(?,?,?,?)
+Mar 22, 2018 9:54:23 AM iam_services.Iam_services Error_logger
+INFO: Connection succeeded, hurray!
+Mar 22, 2018 9:54:23 AM iam_services.Iam_services Error_logger
+INFO: cols:(QUALARTNR,VORZMENGE,UMSMENGE,VORZWERT,UMSWERT,ARTNR) 
+vals: VALUES(?,?,?,?,?,?)
+Mar 22, 2018 9:54:23 AM iam_services.Iam_services Error_logger
+INFO: Connection succeeded, hurray!
+Mar 22, 2018 9:54:23 AM iam_services.Iam_services Error_logger
+INFO: cols:(BELEGWAERS,BELEGDATUM,PACKAGE_ID,ARTNR) 
+vals: VALUES(?,?,?,?)
+Mar 22, 2018 9:54:23 AM iam_services.Iam_services Error_logger
+INFO: Empty data for IDOC
+Mar 22, 2018 9:54:23 AM iam_services.Iam_services Error_logger
+INFO: Empty data for WPUUMS01
+Mar 22, 2018 9:54:23 AM iam_services.Iam_services Error_logger
+INFO: Empty data for #document
+Mar 22, 2018 10:00:32 AM iam_services.Iam_services Error_logger
+INFO: Connection succeeded, hurray!
+Mar 22, 2018 10:00:32 AM iam_services.Iam_services Error_logger
+INFO: cols:(SERIAL,RCVPRN,DOCREL,SNDPRT,SNDPOR,MESTYP,RCVPRT,RCVPOR,DOCNUM,SNDPRN,TABNAM,MANDT,STATUS,IDOCTYP,CREDAT,CRETIM,DIRECT) 
+vals: VALUES(?,?,?,?,?,?,?,?,?,?,?,?,?,?,?,?,?)
+Mar 22, 2018 10:00:32 AM iam_services.Iam_services Error_logger
+INFO: Connection succeeded, hurray!
+Mar 22, 2018 10:00:32 AM iam_services.Iam_services Error_logger
+INFO: cols:(TAXCODE,TAXVALUE,TAXSIGN,ARTNR) 
+vals: VALUES(?,?,?,?)
+Mar 22, 2018 10:00:32 AM iam_services.Iam_services Error_logger
+INFO: Connection succeeded, hurray!
+Mar 22, 2018 10:00:32 AM iam_services.Iam_services Error_logger
+INFO: cols:(MWSKZ,MWSBT,ARTNR) 
+vals: VALUES(?,?,?)
+Mar 22, 2018 10:00:32 AM iam_services.Iam_services Error_logger
+INFO: Connection succeeded, hurray!
+Mar 22, 2018 10:00:32 AM iam_services.Iam_services Error_logger
+INFO: cols:(FLDVAL,FLDGRP,FLDNAME,ARTNR) 
+vals: VALUES(?,?,?,?)
+Mar 22, 2018 10:00:32 AM iam_services.Iam_services Error_logger
+INFO: Connection succeeded, hurray!
+Mar 22, 2018 10:00:32 AM iam_services.Iam_services Error_logger
+INFO: cols:(FLDVAL,FLDGRP,FLDNAME,ARTNR) 
+vals: VALUES(?,?,?,?)
+Mar 22, 2018 10:00:32 AM iam_services.Iam_services Error_logger
+INFO: Connection succeeded, hurray!
+Mar 22, 2018 10:00:32 AM iam_services.Iam_services Error_logger
+INFO: cols:(QUALARTNR,VORZMENGE,UMSMENGE,VORZWERT,UMSWERT,ARTNR) 
+vals: VALUES(?,?,?,?,?,?)
+Mar 22, 2018 10:00:32 AM iam_services.Iam_services Error_logger
+INFO: Connection succeeded, hurray!
+Mar 22, 2018 10:00:32 AM iam_services.Iam_services Error_logger
+INFO: cols:(TAXCODE,TAXVALUE,TAXSIGN,ARTNR) 
+vals: VALUES(?,?,?,?)
+Mar 22, 2018 10:00:32 AM iam_services.Iam_services Error_logger
+INFO: Connection succeeded, hurray!
+Mar 22, 2018 10:00:32 AM iam_services.Iam_services Error_logger
+INFO: cols:(MWSKZ,MWSBT,ARTNR) 
+vals: VALUES(?,?,?)
+Mar 22, 2018 10:00:32 AM iam_services.Iam_services Error_logger
+INFO: Connection succeeded, hurray!
+Mar 22, 2018 10:00:32 AM iam_services.Iam_services Error_logger
+INFO: cols:(FLDVAL,FLDGRP,FLDNAME,ARTNR) 
+vals: VALUES(?,?,?,?)
+Mar 22, 2018 10:00:32 AM iam_services.Iam_services Error_logger
+INFO: Connection succeeded, hurray!
+Mar 22, 2018 10:00:32 AM iam_services.Iam_services Error_logger
+INFO: cols:(FLDVAL,FLDGRP,FLDNAME,ARTNR) 
+vals: VALUES(?,?,?,?)
+Mar 22, 2018 10:00:32 AM iam_services.Iam_services Error_logger
+INFO: Connection succeeded, hurray!
+Mar 22, 2018 10:00:32 AM iam_services.Iam_services Error_logger
+INFO: cols:(QUALARTNR,VORZMENGE,UMSMENGE,VORZWERT,UMSWERT,ARTNR) 
+vals: VALUES(?,?,?,?,?,?)
+Mar 22, 2018 10:00:32 AM iam_services.Iam_services Error_logger
+INFO: Connection succeeded, hurray!
+Mar 22, 2018 10:00:32 AM iam_services.Iam_services Error_logger
+INFO: cols:(TAXCODE,TAXVALUE,TAXSIGN,ARTNR) 
+vals: VALUES(?,?,?,?)
+Mar 22, 2018 10:00:32 AM iam_services.Iam_services Error_logger
+INFO: Connection succeeded, hurray!
+Mar 22, 2018 10:00:32 AM iam_services.Iam_services Error_logger
+INFO: cols:(MWSKZ,MWSBT,ARTNR) 
+vals: VALUES(?,?,?)
+Mar 22, 2018 10:00:32 AM iam_services.Iam_services Error_logger
+INFO: Connection succeeded, hurray!
+Mar 22, 2018 10:00:32 AM iam_services.Iam_services Error_logger
+INFO: cols:(FLDVAL,FLDGRP,FLDNAME,ARTNR) 
+vals: VALUES(?,?,?,?)
+Mar 22, 2018 10:00:33 AM iam_services.Iam_services Error_logger
+INFO: Connection succeeded, hurray!
+Mar 22, 2018 10:00:33 AM iam_services.Iam_services Error_logger
+INFO: cols:(FLDVAL,FLDGRP,FLDNAME,ARTNR) 
+vals: VALUES(?,?,?,?)
+Mar 22, 2018 10:00:33 AM iam_services.Iam_services Error_logger
+INFO: Connection succeeded, hurray!
+Mar 22, 2018 10:00:33 AM iam_services.Iam_services Error_logger
+INFO: cols:(QUALARTNR,VORZMENGE,UMSMENGE,VORZWERT,UMSWERT,ARTNR) 
+vals: VALUES(?,?,?,?,?,?)
+Mar 22, 2018 10:00:33 AM iam_services.Iam_services Error_logger
+INFO: Connection succeeded, hurray!
+Mar 22, 2018 10:00:33 AM iam_services.Iam_services Error_logger
+INFO: cols:(TAXCODE,TAXVALUE,TAXSIGN,ARTNR) 
+vals: VALUES(?,?,?,?)
+Mar 22, 2018 10:00:33 AM iam_services.Iam_services Error_logger
+INFO: Connection succeeded, hurray!
+Mar 22, 2018 10:00:33 AM iam_services.Iam_services Error_logger
+INFO: cols:(MWSKZ,MWSBT,ARTNR) 
+vals: VALUES(?,?,?)
+Mar 22, 2018 10:00:33 AM iam_services.Iam_services Error_logger
+INFO: Connection succeeded, hurray!
+Mar 22, 2018 10:00:33 AM iam_services.Iam_services Error_logger
+INFO: cols:(FLDVAL,FLDGRP,FLDNAME,ARTNR) 
+vals: VALUES(?,?,?,?)
+Mar 22, 2018 10:00:33 AM iam_services.Iam_services Error_logger
+INFO: Connection succeeded, hurray!
+Mar 22, 2018 10:00:33 AM iam_services.Iam_services Error_logger
+INFO: cols:(FLDVAL,FLDGRP,FLDNAME,ARTNR) 
+vals: VALUES(?,?,?,?)
+Mar 22, 2018 10:00:33 AM iam_services.Iam_services Error_logger
+INFO: Connection succeeded, hurray!
+Mar 22, 2018 10:00:33 AM iam_services.Iam_services Error_logger
+INFO: cols:(QUALARTNR,VORZMENGE,UMSMENGE,VORZWERT,UMSWERT,ARTNR) 
+vals: VALUES(?,?,?,?,?,?)
+Mar 22, 2018 10:00:33 AM iam_services.Iam_services Error_logger
+INFO: Connection succeeded, hurray!
+Mar 22, 2018 10:00:33 AM iam_services.Iam_services Error_logger
+INFO: cols:(TAXCODE,TAXVALUE,TAXSIGN,ARTNR) 
+vals: VALUES(?,?,?,?)
+Mar 22, 2018 10:00:33 AM iam_services.Iam_services Error_logger
+INFO: Connection succeeded, hurray!
+Mar 22, 2018 10:00:33 AM iam_services.Iam_services Error_logger
+INFO: cols:(MWSKZ,MWSBT,ARTNR) 
+vals: VALUES(?,?,?)
+Mar 22, 2018 10:00:33 AM iam_services.Iam_services Error_logger
+INFO: Connection succeeded, hurray!
+Mar 22, 2018 10:00:33 AM iam_services.Iam_services Error_logger
+INFO: cols:(FLDVAL,FLDGRP,FLDNAME,ARTNR) 
+vals: VALUES(?,?,?,?)
+Mar 22, 2018 10:00:33 AM iam_services.Iam_services Error_logger
+INFO: Connection succeeded, hurray!
+Mar 22, 2018 10:00:33 AM iam_services.Iam_services Error_logger
+INFO: cols:(FLDVAL,FLDGRP,FLDNAME,ARTNR) 
+vals: VALUES(?,?,?,?)
+Mar 22, 2018 10:00:33 AM iam_services.Iam_services Error_logger
+INFO: Connection succeeded, hurray!
+Mar 22, 2018 10:00:33 AM iam_services.Iam_services Error_logger
+INFO: cols:(QUALARTNR,VORZMENGE,UMSMENGE,VORZWERT,UMSWERT,ARTNR) 
+vals: VALUES(?,?,?,?,?,?)
+Mar 22, 2018 10:00:33 AM iam_services.Iam_services Error_logger
+INFO: Connection succeeded, hurray!
+Mar 22, 2018 10:00:33 AM iam_services.Iam_services Error_logger
+INFO: cols:(TAXCODE,TAXVALUE,TAXSIGN,ARTNR) 
+vals: VALUES(?,?,?,?)
+Mar 22, 2018 10:00:33 AM iam_services.Iam_services Error_logger
+INFO: Connection succeeded, hurray!
+Mar 22, 2018 10:00:33 AM iam_services.Iam_services Error_logger
+INFO: cols:(MWSKZ,MWSBT,ARTNR) 
+vals: VALUES(?,?,?)
+Mar 22, 2018 10:00:33 AM iam_services.Iam_services Error_logger
+INFO: Connection succeeded, hurray!
+Mar 22, 2018 10:00:33 AM iam_services.Iam_services Error_logger
+INFO: cols:(FLDVAL,FLDGRP,FLDNAME,ARTNR) 
+vals: VALUES(?,?,?,?)
+Mar 22, 2018 10:00:33 AM iam_services.Iam_services Error_logger
+INFO: Connection succeeded, hurray!
+Mar 22, 2018 10:00:33 AM iam_services.Iam_services Error_logger
+INFO: cols:(FLDVAL,FLDGRP,FLDNAME,ARTNR) 
+vals: VALUES(?,?,?,?)
+Mar 22, 2018 10:00:33 AM iam_services.Iam_services Error_logger
+INFO: Connection succeeded, hurray!
+Mar 22, 2018 10:00:33 AM iam_services.Iam_services Error_logger
+INFO: cols:(QUALARTNR,VORZMENGE,UMSMENGE,VORZWERT,UMSWERT,ARTNR) 
+vals: VALUES(?,?,?,?,?,?)
+Mar 22, 2018 10:00:33 AM iam_services.Iam_services Error_logger
+INFO: Connection succeeded, hurray!
+Mar 22, 2018 10:00:33 AM iam_services.Iam_services Error_logger
+INFO: cols:(TAXCODE,TAXVALUE,TAXSIGN,ARTNR) 
+vals: VALUES(?,?,?,?)
+Mar 22, 2018 10:00:33 AM iam_services.Iam_services Error_logger
+INFO: Connection succeeded, hurray!
+Mar 22, 2018 10:00:33 AM iam_services.Iam_services Error_logger
+INFO: cols:(MWSKZ,MWSBT,ARTNR) 
+vals: VALUES(?,?,?)
+Mar 22, 2018 10:00:33 AM iam_services.Iam_services Error_logger
+INFO: Connection succeeded, hurray!
+Mar 22, 2018 10:00:33 AM iam_services.Iam_services Error_logger
+INFO: cols:(FLDVAL,FLDGRP,FLDNAME,ARTNR) 
+vals: VALUES(?,?,?,?)
+Mar 22, 2018 10:00:33 AM iam_services.Iam_services Error_logger
+INFO: Connection succeeded, hurray!
+Mar 22, 2018 10:00:33 AM iam_services.Iam_services Error_logger
+INFO: cols:(FLDVAL,FLDGRP,FLDNAME,ARTNR) 
+vals: VALUES(?,?,?,?)
+Mar 22, 2018 10:00:33 AM iam_services.Iam_services Error_logger
+INFO: Connection succeeded, hurray!
+Mar 22, 2018 10:00:33 AM iam_services.Iam_services Error_logger
+INFO: cols:(QUALARTNR,VORZMENGE,UMSMENGE,VORZWERT,UMSWERT,ARTNR) 
+vals: VALUES(?,?,?,?,?,?)
+Mar 22, 2018 10:00:33 AM iam_services.Iam_services Error_logger
+INFO: Connection succeeded, hurray!
+Mar 22, 2018 10:00:33 AM iam_services.Iam_services Error_logger
+INFO: cols:(TAXCODE,TAXVALUE,TAXSIGN,ARTNR) 
+vals: VALUES(?,?,?,?)
+Mar 22, 2018 10:00:33 AM iam_services.Iam_services Error_logger
+INFO: Connection succeeded, hurray!
+Mar 22, 2018 10:00:33 AM iam_services.Iam_services Error_logger
+INFO: cols:(MWSKZ,MWSBT,ARTNR) 
+vals: VALUES(?,?,?)
+Mar 22, 2018 10:00:33 AM iam_services.Iam_services Error_logger
+INFO: Connection succeeded, hurray!
+Mar 22, 2018 10:00:33 AM iam_services.Iam_services Error_logger
+INFO: cols:(FLDVAL,FLDGRP,FLDNAME,ARTNR) 
+vals: VALUES(?,?,?,?)
+Mar 22, 2018 10:00:33 AM iam_services.Iam_services Error_logger
+INFO: Connection succeeded, hurray!
+Mar 22, 2018 10:00:33 AM iam_services.Iam_services Error_logger
+INFO: cols:(FLDVAL,FLDGRP,FLDNAME,ARTNR) 
+vals: VALUES(?,?,?,?)
+Mar 22, 2018 10:00:33 AM iam_services.Iam_services Error_logger
+INFO: Connection succeeded, hurray!
+Mar 22, 2018 10:00:33 AM iam_services.Iam_services Error_logger
+INFO: cols:(QUALARTNR,VORZMENGE,UMSMENGE,VORZWERT,UMSWERT,ARTNR) 
+vals: VALUES(?,?,?,?,?,?)
+Mar 22, 2018 10:00:33 AM iam_services.Iam_services Error_logger
+INFO: Connection succeeded, hurray!
+Mar 22, 2018 10:00:33 AM iam_services.Iam_services Error_logger
+INFO: cols:(TAXCODE,TAXVALUE,TAXSIGN,ARTNR) 
+vals: VALUES(?,?,?,?)
+Mar 22, 2018 10:00:33 AM iam_services.Iam_services Error_logger
+INFO: Connection succeeded, hurray!
+Mar 22, 2018 10:00:33 AM iam_services.Iam_services Error_logger
+INFO: cols:(MWSKZ,MWSBT,ARTNR) 
+vals: VALUES(?,?,?)
+Mar 22, 2018 10:00:33 AM iam_services.Iam_services Error_logger
+INFO: Connection succeeded, hurray!
+Mar 22, 2018 10:00:33 AM iam_services.Iam_services Error_logger
+INFO: cols:(FLDVAL,FLDGRP,FLDNAME,ARTNR) 
+vals: VALUES(?,?,?,?)
+Mar 22, 2018 10:00:33 AM iam_services.Iam_services Error_logger
+INFO: Connection succeeded, hurray!
+Mar 22, 2018 10:00:33 AM iam_services.Iam_services Error_logger
+INFO: cols:(FLDVAL,FLDGRP,FLDNAME,ARTNR) 
+vals: VALUES(?,?,?,?)
+Mar 22, 2018 10:00:33 AM iam_services.Iam_services Error_logger
+INFO: Connection succeeded, hurray!
+Mar 22, 2018 10:00:33 AM iam_services.Iam_services Error_logger
+INFO: cols:(QUALARTNR,VORZMENGE,UMSMENGE,VORZWERT,UMSWERT,ARTNR) 
+vals: VALUES(?,?,?,?,?,?)
+Mar 22, 2018 10:00:33 AM iam_services.Iam_services Error_logger
+INFO: Connection succeeded, hurray!
+Mar 22, 2018 10:00:33 AM iam_services.Iam_services Error_logger
+INFO: cols:(TAXCODE,TAXVALUE,TAXSIGN,ARTNR) 
+vals: VALUES(?,?,?,?)
+Mar 22, 2018 10:00:33 AM iam_services.Iam_services Error_logger
+INFO: Connection succeeded, hurray!
+Mar 22, 2018 10:00:33 AM iam_services.Iam_services Error_logger
+INFO: cols:(MWSKZ,MWSBT,ARTNR) 
+vals: VALUES(?,?,?)
+Mar 22, 2018 10:00:33 AM iam_services.Iam_services Error_logger
+INFO: Connection succeeded, hurray!
+Mar 22, 2018 10:00:33 AM iam_services.Iam_services Error_logger
+INFO: cols:(FLDVAL,FLDGRP,FLDNAME,ARTNR) 
+vals: VALUES(?,?,?,?)
+Mar 22, 2018 10:00:33 AM iam_services.Iam_services Error_logger
+INFO: Connection succeeded, hurray!
+Mar 22, 2018 10:00:33 AM iam_services.Iam_services Error_logger
+INFO: cols:(FLDVAL,FLDGRP,FLDNAME,ARTNR) 
+vals: VALUES(?,?,?,?)
+Mar 22, 2018 10:00:33 AM iam_services.Iam_services Error_logger
+INFO: Connection succeeded, hurray!
+Mar 22, 2018 10:00:33 AM iam_services.Iam_services Error_logger
+INFO: cols:(QUALARTNR,VORZMENGE,UMSMENGE,VORZWERT,UMSWERT,ARTNR) 
+vals: VALUES(?,?,?,?,?,?)
+Mar 22, 2018 10:00:33 AM iam_services.Iam_services Error_logger
+INFO: Connection succeeded, hurray!
+Mar 22, 2018 10:00:33 AM iam_services.Iam_services Error_logger
+INFO: cols:(TAXCODE,TAXVALUE,TAXSIGN,ARTNR) 
+vals: VALUES(?,?,?,?)
+Mar 22, 2018 10:00:33 AM iam_services.Iam_services Error_logger
+INFO: Connection succeeded, hurray!
+Mar 22, 2018 10:00:33 AM iam_services.Iam_services Error_logger
+INFO: cols:(MWSKZ,MWSBT,ARTNR) 
+vals: VALUES(?,?,?)
+Mar 22, 2018 10:00:33 AM iam_services.Iam_services Error_logger
+INFO: Connection succeeded, hurray!
+Mar 22, 2018 10:00:33 AM iam_services.Iam_services Error_logger
+INFO: cols:(FLDVAL,FLDGRP,FLDNAME,ARTNR) 
+vals: VALUES(?,?,?,?)
+Mar 22, 2018 10:00:33 AM iam_services.Iam_services Error_logger
+INFO: Connection succeeded, hurray!
+Mar 22, 2018 10:00:33 AM iam_services.Iam_services Error_logger
+INFO: cols:(FLDVAL,FLDGRP,FLDNAME,ARTNR) 
+vals: VALUES(?,?,?,?)
+Mar 22, 2018 10:00:33 AM iam_services.Iam_services Error_logger
+INFO: Connection succeeded, hurray!
+Mar 22, 2018 10:00:33 AM iam_services.Iam_services Error_logger
+INFO: cols:(QUALARTNR,VORZMENGE,UMSMENGE,VORZWERT,UMSWERT,ARTNR) 
+vals: VALUES(?,?,?,?,?,?)
+Mar 22, 2018 10:00:33 AM iam_services.Iam_services Error_logger
+INFO: Connection succeeded, hurray!
+Mar 22, 2018 10:00:33 AM iam_services.Iam_services Error_logger
+INFO: cols:(BELEGWAERS,BELEGDATUM,PACKAGE_ID) 
+vals: VALUES(?,?,?)
+Mar 22, 2018 10:00:33 AM iam_services.Iam_services Error_logger
+INFO: Empty data for IDOC
+Mar 22, 2018 10:00:33 AM iam_services.Iam_services Error_logger
+INFO: Empty data for WPUUMS01
+Mar 22, 2018 10:00:33 AM iam_services.Iam_services Error_logger
+INFO: Empty data for #document
+Mar 22, 2018 10:09:57 AM iam_services.Iam_services Error_logger
+INFO: Connection succeeded, hurray!
+Mar 22, 2018 10:09:57 AM iam_services.Iam_services Error_logger
+INFO: cols:(SERIAL,RCVPRN,DOCREL,SNDPRT,SNDPOR,MESTYP,RCVPRT,RCVPOR,DOCNUM,SNDPRN,TABNAM,MANDT,STATUS,IDOCTYP,CREDAT,CRETIM,DIRECT) 
+vals: VALUES(?,?,?,?,?,?,?,?,?,?,?,?,?,?,?,?,?)
+Mar 22, 2018 10:09:57 AM iam_services.Iam_services Error_logger
+INFO: Connection succeeded, hurray!
+Mar 22, 2018 10:09:57 AM iam_services.Iam_services Error_logger
+INFO: cols:(TAXCODE,TAXVALUE,TAXSIGN,ARTNR) 
+vals: VALUES(?,?,?,?)
+Mar 22, 2018 10:09:57 AM iam_services.Iam_services Error_logger
+INFO: Connection succeeded, hurray!
+Mar 22, 2018 10:09:57 AM iam_services.Iam_services Error_logger
+INFO: cols:(MWSKZ,MWSBT,ARTNR) 
+vals: VALUES(?,?,?)
+Mar 22, 2018 10:09:57 AM iam_services.Iam_services Error_logger
+INFO: Connection succeeded, hurray!
+Mar 22, 2018 10:09:57 AM iam_services.Iam_services Error_logger
+INFO: cols:(FLDVAL,FLDGRP,FLDNAME,ARTNR) 
+vals: VALUES(?,?,?,?)
+Mar 22, 2018 10:09:57 AM iam_services.Iam_services Error_logger
+INFO: Connection succeeded, hurray!
+Mar 22, 2018 10:09:57 AM iam_services.Iam_services Error_logger
+INFO: cols:(FLDVAL,FLDGRP,FLDNAME,ARTNR) 
+vals: VALUES(?,?,?,?)
+Mar 22, 2018 10:09:57 AM iam_services.Iam_services Error_logger
+INFO: Connection succeeded, hurray!
+Mar 22, 2018 10:09:57 AM iam_services.Iam_services Error_logger
+INFO: cols:(QUALARTNR,VORZMENGE,UMSMENGE,VORZWERT,UMSWERT,ARTNR,PACKAGE_ID) 
+vals: VALUES(?,?,?,?,?,?,?)
+Mar 22, 2018 10:09:57 AM iam_services.Iam_services Error_logger
+INFO: Connection succeeded, hurray!
+Mar 22, 2018 10:09:57 AM iam_services.Iam_services Error_logger
+INFO: cols:(TAXCODE,TAXVALUE,TAXSIGN,ARTNR) 
+vals: VALUES(?,?,?,?)
+Mar 22, 2018 10:09:57 AM iam_services.Iam_services Error_logger
+INFO: Connection succeeded, hurray!
+Mar 22, 2018 10:09:57 AM iam_services.Iam_services Error_logger
+INFO: cols:(MWSKZ,MWSBT,ARTNR) 
+vals: VALUES(?,?,?)
+Mar 22, 2018 10:09:57 AM iam_services.Iam_services Error_logger
+INFO: Connection succeeded, hurray!
+Mar 22, 2018 10:09:57 AM iam_services.Iam_services Error_logger
+INFO: cols:(FLDVAL,FLDGRP,FLDNAME,ARTNR) 
+vals: VALUES(?,?,?,?)
+Mar 22, 2018 10:09:57 AM iam_services.Iam_services Error_logger
+INFO: Connection succeeded, hurray!
+Mar 22, 2018 10:09:57 AM iam_services.Iam_services Error_logger
+INFO: cols:(FLDVAL,FLDGRP,FLDNAME,ARTNR) 
+vals: VALUES(?,?,?,?)
+Mar 22, 2018 10:09:57 AM iam_services.Iam_services Error_logger
+INFO: Connection succeeded, hurray!
+Mar 22, 2018 10:09:57 AM iam_services.Iam_services Error_logger
+INFO: cols:(QUALARTNR,VORZMENGE,UMSMENGE,VORZWERT,UMSWERT,ARTNR,PACKAGE_ID) 
+vals: VALUES(?,?,?,?,?,?,?)
+Mar 22, 2018 10:09:57 AM iam_services.Iam_services Error_logger
+INFO: Connection succeeded, hurray!
+Mar 22, 2018 10:09:57 AM iam_services.Iam_services Error_logger
+INFO: cols:(TAXCODE,TAXVALUE,TAXSIGN,ARTNR) 
+vals: VALUES(?,?,?,?)
+Mar 22, 2018 10:09:57 AM iam_services.Iam_services Error_logger
+INFO: Connection succeeded, hurray!
+Mar 22, 2018 10:09:57 AM iam_services.Iam_services Error_logger
+INFO: cols:(MWSKZ,MWSBT,ARTNR) 
+vals: VALUES(?,?,?)
+Mar 22, 2018 10:09:57 AM iam_services.Iam_services Error_logger
+INFO: Connection succeeded, hurray!
+Mar 22, 2018 10:09:57 AM iam_services.Iam_services Error_logger
+INFO: cols:(FLDVAL,FLDGRP,FLDNAME,ARTNR) 
+vals: VALUES(?,?,?,?)
+Mar 22, 2018 10:09:58 AM iam_services.Iam_services Error_logger
+INFO: Connection succeeded, hurray!
+Mar 22, 2018 10:09:58 AM iam_services.Iam_services Error_logger
+INFO: cols:(FLDVAL,FLDGRP,FLDNAME,ARTNR) 
+vals: VALUES(?,?,?,?)
+Mar 22, 2018 10:09:58 AM iam_services.Iam_services Error_logger
+INFO: Connection succeeded, hurray!
+Mar 22, 2018 10:09:58 AM iam_services.Iam_services Error_logger
+INFO: cols:(QUALARTNR,VORZMENGE,UMSMENGE,VORZWERT,UMSWERT,ARTNR,PACKAGE_ID) 
+vals: VALUES(?,?,?,?,?,?,?)
+Mar 22, 2018 10:09:58 AM iam_services.Iam_services Error_logger
+INFO: Connection succeeded, hurray!
+Mar 22, 2018 10:09:58 AM iam_services.Iam_services Error_logger
+INFO: cols:(TAXCODE,TAXVALUE,TAXSIGN,ARTNR) 
+vals: VALUES(?,?,?,?)
+Mar 22, 2018 10:09:58 AM iam_services.Iam_services Error_logger
+INFO: Connection succeeded, hurray!
+Mar 22, 2018 10:09:58 AM iam_services.Iam_services Error_logger
+INFO: cols:(MWSKZ,MWSBT,ARTNR) 
+vals: VALUES(?,?,?)
+Mar 22, 2018 10:09:58 AM iam_services.Iam_services Error_logger
+INFO: Connection succeeded, hurray!
+Mar 22, 2018 10:09:58 AM iam_services.Iam_services Error_logger
+INFO: cols:(FLDVAL,FLDGRP,FLDNAME,ARTNR) 
+vals: VALUES(?,?,?,?)
+Mar 22, 2018 10:09:58 AM iam_services.Iam_services Error_logger
+INFO: Connection succeeded, hurray!
+Mar 22, 2018 10:09:58 AM iam_services.Iam_services Error_logger
+INFO: cols:(FLDVAL,FLDGRP,FLDNAME,ARTNR) 
+vals: VALUES(?,?,?,?)
+Mar 22, 2018 10:09:58 AM iam_services.Iam_services Error_logger
+INFO: Connection succeeded, hurray!
+Mar 22, 2018 10:09:58 AM iam_services.Iam_services Error_logger
+INFO: cols:(QUALARTNR,VORZMENGE,UMSMENGE,VORZWERT,UMSWERT,ARTNR,PACKAGE_ID) 
+vals: VALUES(?,?,?,?,?,?,?)
+Mar 22, 2018 10:09:58 AM iam_services.Iam_services Error_logger
+INFO: Connection succeeded, hurray!
+Mar 22, 2018 10:09:58 AM iam_services.Iam_services Error_logger
+INFO: cols:(TAXCODE,TAXVALUE,TAXSIGN,ARTNR) 
+vals: VALUES(?,?,?,?)
+Mar 22, 2018 10:09:58 AM iam_services.Iam_services Error_logger
+INFO: Connection succeeded, hurray!
+Mar 22, 2018 10:09:58 AM iam_services.Iam_services Error_logger
+INFO: cols:(MWSKZ,MWSBT,ARTNR) 
+vals: VALUES(?,?,?)
+Mar 22, 2018 10:09:58 AM iam_services.Iam_services Error_logger
+INFO: Connection succeeded, hurray!
+Mar 22, 2018 10:09:58 AM iam_services.Iam_services Error_logger
+INFO: cols:(FLDVAL,FLDGRP,FLDNAME,ARTNR) 
+vals: VALUES(?,?,?,?)
+Mar 22, 2018 10:09:58 AM iam_services.Iam_services Error_logger
+INFO: Connection succeeded, hurray!
+Mar 22, 2018 10:09:58 AM iam_services.Iam_services Error_logger
+INFO: cols:(FLDVAL,FLDGRP,FLDNAME,ARTNR) 
+vals: VALUES(?,?,?,?)
+Mar 22, 2018 10:09:58 AM iam_services.Iam_services Error_logger
+INFO: Connection succeeded, hurray!
+Mar 22, 2018 10:09:58 AM iam_services.Iam_services Error_logger
+INFO: cols:(QUALARTNR,VORZMENGE,UMSMENGE,VORZWERT,UMSWERT,ARTNR,PACKAGE_ID) 
+vals: VALUES(?,?,?,?,?,?,?)
+Mar 22, 2018 10:09:58 AM iam_services.Iam_services Error_logger
+INFO: Connection succeeded, hurray!
+Mar 22, 2018 10:09:58 AM iam_services.Iam_services Error_logger
+INFO: cols:(TAXCODE,TAXVALUE,TAXSIGN,ARTNR) 
+vals: VALUES(?,?,?,?)
+Mar 22, 2018 10:09:58 AM iam_services.Iam_services Error_logger
+INFO: Connection succeeded, hurray!
+Mar 22, 2018 10:09:58 AM iam_services.Iam_services Error_logger
+INFO: cols:(MWSKZ,MWSBT,ARTNR) 
+vals: VALUES(?,?,?)
+Mar 22, 2018 10:09:58 AM iam_services.Iam_services Error_logger
+INFO: Connection succeeded, hurray!
+Mar 22, 2018 10:09:58 AM iam_services.Iam_services Error_logger
+INFO: cols:(FLDVAL,FLDGRP,FLDNAME,ARTNR) 
+vals: VALUES(?,?,?,?)
+Mar 22, 2018 10:09:58 AM iam_services.Iam_services Error_logger
+INFO: Connection succeeded, hurray!
+Mar 22, 2018 10:09:58 AM iam_services.Iam_services Error_logger
+INFO: cols:(FLDVAL,FLDGRP,FLDNAME,ARTNR) 
+vals: VALUES(?,?,?,?)
+Mar 22, 2018 10:09:58 AM iam_services.Iam_services Error_logger
+INFO: Connection succeeded, hurray!
+Mar 22, 2018 10:09:58 AM iam_services.Iam_services Error_logger
+INFO: cols:(QUALARTNR,VORZMENGE,UMSMENGE,VORZWERT,UMSWERT,ARTNR,PACKAGE_ID) 
+vals: VALUES(?,?,?,?,?,?,?)
+Mar 22, 2018 10:09:58 AM iam_services.Iam_services Error_logger
+INFO: Connection succeeded, hurray!
+Mar 22, 2018 10:09:58 AM iam_services.Iam_services Error_logger
+INFO: cols:(TAXCODE,TAXVALUE,TAXSIGN,ARTNR) 
+vals: VALUES(?,?,?,?)
+Mar 22, 2018 10:09:58 AM iam_services.Iam_services Error_logger
+INFO: Connection succeeded, hurray!
+Mar 22, 2018 10:09:58 AM iam_services.Iam_services Error_logger
+INFO: cols:(MWSKZ,MWSBT,ARTNR) 
+vals: VALUES(?,?,?)
+Mar 22, 2018 10:09:58 AM iam_services.Iam_services Error_logger
+INFO: Connection succeeded, hurray!
+Mar 22, 2018 10:09:58 AM iam_services.Iam_services Error_logger
+INFO: cols:(FLDVAL,FLDGRP,FLDNAME,ARTNR) 
+vals: VALUES(?,?,?,?)
+Mar 22, 2018 10:09:58 AM iam_services.Iam_services Error_logger
+INFO: Connection succeeded, hurray!
+Mar 22, 2018 10:09:58 AM iam_services.Iam_services Error_logger
+INFO: cols:(FLDVAL,FLDGRP,FLDNAME,ARTNR) 
+vals: VALUES(?,?,?,?)
+Mar 22, 2018 10:09:58 AM iam_services.Iam_services Error_logger
+INFO: Connection succeeded, hurray!
+Mar 22, 2018 10:09:58 AM iam_services.Iam_services Error_logger
+INFO: cols:(QUALARTNR,VORZMENGE,UMSMENGE,VORZWERT,UMSWERT,ARTNR,PACKAGE_ID) 
+vals: VALUES(?,?,?,?,?,?,?)
+Mar 22, 2018 10:09:58 AM iam_services.Iam_services Error_logger
+INFO: Connection succeeded, hurray!
+Mar 22, 2018 10:09:58 AM iam_services.Iam_services Error_logger
+INFO: cols:(TAXCODE,TAXVALUE,TAXSIGN,ARTNR) 
+vals: VALUES(?,?,?,?)
+Mar 22, 2018 10:09:58 AM iam_services.Iam_services Error_logger
+INFO: Connection succeeded, hurray!
+Mar 22, 2018 10:09:58 AM iam_services.Iam_services Error_logger
+INFO: cols:(MWSKZ,MWSBT,ARTNR) 
+vals: VALUES(?,?,?)
+Mar 22, 2018 10:09:58 AM iam_services.Iam_services Error_logger
+INFO: Connection succeeded, hurray!
+Mar 22, 2018 10:09:58 AM iam_services.Iam_services Error_logger
+INFO: cols:(FLDVAL,FLDGRP,FLDNAME,ARTNR) 
+vals: VALUES(?,?,?,?)
+Mar 22, 2018 10:09:58 AM iam_services.Iam_services Error_logger
+INFO: Connection succeeded, hurray!
+Mar 22, 2018 10:09:58 AM iam_services.Iam_services Error_logger
+INFO: cols:(FLDVAL,FLDGRP,FLDNAME,ARTNR) 
+vals: VALUES(?,?,?,?)
+Mar 22, 2018 10:09:58 AM iam_services.Iam_services Error_logger
+INFO: Connection succeeded, hurray!
+Mar 22, 2018 10:09:58 AM iam_services.Iam_services Error_logger
+INFO: cols:(QUALARTNR,VORZMENGE,UMSMENGE,VORZWERT,UMSWERT,ARTNR,PACKAGE_ID) 
+vals: VALUES(?,?,?,?,?,?,?)
+Mar 22, 2018 10:09:58 AM iam_services.Iam_services Error_logger
+INFO: Connection succeeded, hurray!
+Mar 22, 2018 10:09:58 AM iam_services.Iam_services Error_logger
+INFO: cols:(TAXCODE,TAXVALUE,TAXSIGN,ARTNR) 
+vals: VALUES(?,?,?,?)
+Mar 22, 2018 10:09:58 AM iam_services.Iam_services Error_logger
+INFO: Connection succeeded, hurray!
+Mar 22, 2018 10:09:58 AM iam_services.Iam_services Error_logger
+INFO: cols:(MWSKZ,MWSBT,ARTNR) 
+vals: VALUES(?,?,?)
+Mar 22, 2018 10:09:58 AM iam_services.Iam_services Error_logger
+INFO: Connection succeeded, hurray!
+Mar 22, 2018 10:09:58 AM iam_services.Iam_services Error_logger
+INFO: cols:(FLDVAL,FLDGRP,FLDNAME,ARTNR) 
+vals: VALUES(?,?,?,?)
+Mar 22, 2018 10:09:58 AM iam_services.Iam_services Error_logger
+INFO: Connection succeeded, hurray!
+Mar 22, 2018 10:09:58 AM iam_services.Iam_services Error_logger
+INFO: cols:(FLDVAL,FLDGRP,FLDNAME,ARTNR) 
+vals: VALUES(?,?,?,?)
+Mar 22, 2018 10:09:58 AM iam_services.Iam_services Error_logger
+INFO: Connection succeeded, hurray!
+Mar 22, 2018 10:09:58 AM iam_services.Iam_services Error_logger
+INFO: cols:(QUALARTNR,VORZMENGE,UMSMENGE,VORZWERT,UMSWERT,ARTNR,PACKAGE_ID) 
+vals: VALUES(?,?,?,?,?,?,?)
+Mar 22, 2018 10:09:58 AM iam_services.Iam_services Error_logger
+INFO: Connection succeeded, hurray!
+Mar 22, 2018 10:09:58 AM iam_services.Iam_services Error_logger
+INFO: cols:(TAXCODE,TAXVALUE,TAXSIGN,ARTNR) 
+vals: VALUES(?,?,?,?)
+Mar 22, 2018 10:09:58 AM iam_services.Iam_services Error_logger
+INFO: Connection succeeded, hurray!
+Mar 22, 2018 10:09:58 AM iam_services.Iam_services Error_logger
+INFO: cols:(MWSKZ,MWSBT,ARTNR) 
+vals: VALUES(?,?,?)
+Mar 22, 2018 10:09:58 AM iam_services.Iam_services Error_logger
+INFO: Connection succeeded, hurray!
+Mar 22, 2018 10:09:58 AM iam_services.Iam_services Error_logger
+INFO: cols:(FLDVAL,FLDGRP,FLDNAME,ARTNR) 
+vals: VALUES(?,?,?,?)
+Mar 22, 2018 10:09:58 AM iam_services.Iam_services Error_logger
+INFO: Connection succeeded, hurray!
+Mar 22, 2018 10:09:58 AM iam_services.Iam_services Error_logger
+INFO: cols:(FLDVAL,FLDGRP,FLDNAME,ARTNR) 
+vals: VALUES(?,?,?,?)
+Mar 22, 2018 10:09:58 AM iam_services.Iam_services Error_logger
+INFO: Connection succeeded, hurray!
+Mar 22, 2018 10:09:58 AM iam_services.Iam_services Error_logger
+INFO: cols:(QUALARTNR,VORZMENGE,UMSMENGE,VORZWERT,UMSWERT,ARTNR,PACKAGE_ID) 
+vals: VALUES(?,?,?,?,?,?,?)
+Mar 22, 2018 10:09:58 AM iam_services.Iam_services Error_logger
+INFO: Connection succeeded, hurray!
+Mar 22, 2018 10:09:58 AM iam_services.Iam_services Error_logger
+INFO: cols:(TAXCODE,TAXVALUE,TAXSIGN,ARTNR) 
+vals: VALUES(?,?,?,?)
+Mar 22, 2018 10:09:58 AM iam_services.Iam_services Error_logger
+INFO: Connection succeeded, hurray!
+Mar 22, 2018 10:09:58 AM iam_services.Iam_services Error_logger
+INFO: cols:(MWSKZ,MWSBT,ARTNR) 
+vals: VALUES(?,?,?)
+Mar 22, 2018 10:09:58 AM iam_services.Iam_services Error_logger
+INFO: Connection succeeded, hurray!
+Mar 22, 2018 10:09:58 AM iam_services.Iam_services Error_logger
+INFO: cols:(FLDVAL,FLDGRP,FLDNAME,ARTNR) 
+vals: VALUES(?,?,?,?)
+Mar 22, 2018 10:09:58 AM iam_services.Iam_services Error_logger
+INFO: Connection succeeded, hurray!
+Mar 22, 2018 10:09:58 AM iam_services.Iam_services Error_logger
+INFO: cols:(FLDVAL,FLDGRP,FLDNAME,ARTNR) 
+vals: VALUES(?,?,?,?)
+Mar 22, 2018 10:09:58 AM iam_services.Iam_services Error_logger
+INFO: Connection succeeded, hurray!
+Mar 22, 2018 10:09:58 AM iam_services.Iam_services Error_logger
+INFO: cols:(QUALARTNR,VORZMENGE,UMSMENGE,VORZWERT,UMSWERT,ARTNR,PACKAGE_ID) 
+vals: VALUES(?,?,?,?,?,?,?)
+Mar 22, 2018 10:09:58 AM iam_services.Iam_services Error_logger
+INFO: Connection succeeded, hurray!
+Mar 22, 2018 10:09:58 AM iam_services.Iam_services Error_logger
+INFO: cols:(BELEGWAERS,BELEGDATUM,PACKAGE_ID) 
+vals: VALUES(?,?,?)
+Mar 22, 2018 10:09:59 AM iam_services.Iam_services Error_logger
+INFO: Empty data for IDOC
+Mar 22, 2018 10:09:59 AM iam_services.Iam_services Error_logger
+INFO: Empty data for WPUUMS01
+Mar 22, 2018 10:09:59 AM iam_services.Iam_services Error_logger
+INFO: Empty data for #document
+Mar 22, 2018 10:22:46 AM iam_services.Iam_services Error_logger
+INFO: Connection succeeded, hurray!
+Mar 22, 2018 10:22:46 AM iam_services.Iam_services Error_logger
+INFO: Query->SELECT * FROM CNB_IAM_IN_E1WPU01 WHERE CONVERT(DATE, [DATE_STAMP]) = CONVERT(DATE, CURRENT_TIMESTAMP);
+Mar 22, 2018 10:22:46 AM iam_services.Iam_services Error_logger
+INFO: Query->SELECT * FROM CNB_IAM_IN_E1WPU02 WHERE  PACKAGE_ID=? 
+Mar 22, 2018 10:22:46 AM iam_services.Iam_services Error_logger
+INFO: Query->SELECT * FROM CNB_IAM_IN_E1WPU05 WHERE  ARTNR=? 
+Mar 22, 2018 10:22:46 AM iam_services.Iam_services Error_logger
+INFO: Query->SELECT * FROM CNB_IAM_IN_E1WPU04 WHERE  ARTNR=? 
+Mar 22, 2018 10:22:46 AM iam_services.Iam_services Error_logger
+INFO: Query->SELECT * FROM CNB_IAM_IN_E1WXX01 WHERE  ARTNR=? 
+Mar 22, 2018 10:22:46 AM iam_services.Iam_services Error_logger
+INFO: Empty sub-records=>3
+Mar 22, 2018 10:22:46 AM iam_services.Iam_services Error_logger
+INFO: Query->SELECT * FROM CNB_IAM_IN_E1WPU05 WHERE  ARTNR=? 
+Mar 22, 2018 10:22:46 AM iam_services.Iam_services Error_logger
+INFO: Query->SELECT * FROM CNB_IAM_IN_E1WPU04 WHERE  ARTNR=? 
+Mar 22, 2018 10:22:46 AM iam_services.Iam_services Error_logger
+INFO: Query->SELECT * FROM CNB_IAM_IN_E1WXX01 WHERE  ARTNR=? 
+Mar 22, 2018 10:22:46 AM iam_services.Iam_services Error_logger
+INFO: Empty sub-records=>3
+Mar 22, 2018 10:22:46 AM iam_services.Iam_services Error_logger
+INFO: Query->SELECT * FROM CNB_IAM_IN_E1WPU05 WHERE  ARTNR=? 
+Mar 22, 2018 10:22:46 AM iam_services.Iam_services Error_logger
+INFO: Query->SELECT * FROM CNB_IAM_IN_E1WPU04 WHERE  ARTNR=? 
+Mar 22, 2018 10:22:46 AM iam_services.Iam_services Error_logger
+INFO: Query->SELECT * FROM CNB_IAM_IN_E1WXX01 WHERE  ARTNR=? 
+Mar 22, 2018 10:22:46 AM iam_services.Iam_services Error_logger
+INFO: Empty sub-records=>3
+Mar 22, 2018 10:22:46 AM iam_services.Iam_services Error_logger
+INFO: Query->SELECT * FROM CNB_IAM_IN_E1WPU05 WHERE  ARTNR=? 
+Mar 22, 2018 10:22:46 AM iam_services.Iam_services Error_logger
+INFO: Query->SELECT * FROM CNB_IAM_IN_E1WPU04 WHERE  ARTNR=? 
+Mar 22, 2018 10:22:46 AM iam_services.Iam_services Error_logger
+INFO: Query->SELECT * FROM CNB_IAM_IN_E1WXX01 WHERE  ARTNR=? 
+Mar 22, 2018 10:22:46 AM iam_services.Iam_services Error_logger
+INFO: Empty sub-records=>3
+Mar 22, 2018 10:22:46 AM iam_services.Iam_services Error_logger
+INFO: Query->SELECT * FROM CNB_IAM_IN_E1WPU05 WHERE  ARTNR=? 
+Mar 22, 2018 10:22:46 AM iam_services.Iam_services Error_logger
+INFO: Query->SELECT * FROM CNB_IAM_IN_E1WPU04 WHERE  ARTNR=? 
+Mar 22, 2018 10:22:46 AM iam_services.Iam_services Error_logger
+INFO: Query->SELECT * FROM CNB_IAM_IN_E1WXX01 WHERE  ARTNR=? 
+Mar 22, 2018 10:22:46 AM iam_services.Iam_services Error_logger
+INFO: Empty sub-records=>3
+Mar 22, 2018 10:22:46 AM iam_services.Iam_services Error_logger
+INFO: Query->SELECT * FROM CNB_IAM_IN_E1WPU05 WHERE  ARTNR=? 
+Mar 22, 2018 10:22:46 AM iam_services.Iam_services Error_logger
+INFO: Query->SELECT * FROM CNB_IAM_IN_E1WPU04 WHERE  ARTNR=? 
+Mar 22, 2018 10:22:46 AM iam_services.Iam_services Error_logger
+INFO: Query->SELECT * FROM CNB_IAM_IN_E1WXX01 WHERE  ARTNR=? 
+Mar 22, 2018 10:22:46 AM iam_services.Iam_services Error_logger
+INFO: Empty sub-records=>3
+Mar 22, 2018 10:22:46 AM iam_services.Iam_services Error_logger
+INFO: Query->SELECT * FROM CNB_IAM_IN_E1WPU05 WHERE  ARTNR=? 
+Mar 22, 2018 10:22:46 AM iam_services.Iam_services Error_logger
+INFO: Query->SELECT * FROM CNB_IAM_IN_E1WPU04 WHERE  ARTNR=? 
+Mar 22, 2018 10:22:46 AM iam_services.Iam_services Error_logger
+INFO: Query->SELECT * FROM CNB_IAM_IN_E1WXX01 WHERE  ARTNR=? 
+Mar 22, 2018 10:22:46 AM iam_services.Iam_services Error_logger
+INFO: Empty sub-records=>3
+Mar 22, 2018 10:22:46 AM iam_services.Iam_services Error_logger
+INFO: Query->SELECT * FROM CNB_IAM_IN_E1WPU05 WHERE  ARTNR=? 
+Mar 22, 2018 10:22:46 AM iam_services.Iam_services Error_logger
+INFO: Query->SELECT * FROM CNB_IAM_IN_E1WPU04 WHERE  ARTNR=? 
+Mar 22, 2018 10:22:46 AM iam_services.Iam_services Error_logger
+INFO: Query->SELECT * FROM CNB_IAM_IN_E1WXX01 WHERE  ARTNR=? 
+Mar 22, 2018 10:22:46 AM iam_services.Iam_services Error_logger
+INFO: Empty sub-records=>3
+Mar 22, 2018 10:22:46 AM iam_services.Iam_services Error_logger
+INFO: Query->SELECT * FROM CNB_IAM_IN_E1WPU05 WHERE  ARTNR=? 
+Mar 22, 2018 10:22:46 AM iam_services.Iam_services Error_logger
+INFO: Query->SELECT * FROM CNB_IAM_IN_E1WPU04 WHERE  ARTNR=? 
+Mar 22, 2018 10:22:46 AM iam_services.Iam_services Error_logger
+INFO: Query->SELECT * FROM CNB_IAM_IN_E1WXX01 WHERE  ARTNR=? 
+Mar 22, 2018 10:22:46 AM iam_services.Iam_services Error_logger
+INFO: Empty sub-records=>3
+Mar 22, 2018 10:22:46 AM iam_services.Iam_services Error_logger
+INFO: Query->SELECT * FROM CNB_IAM_IN_E1WPU05 WHERE  ARTNR=? 
+Mar 22, 2018 10:22:46 AM iam_services.Iam_services Error_logger
+INFO: Query->SELECT * FROM CNB_IAM_IN_E1WPU04 WHERE  ARTNR=? 
+Mar 22, 2018 10:22:46 AM iam_services.Iam_services Error_logger
+INFO: Query->SELECT * FROM CNB_IAM_IN_E1WXX01 WHERE  ARTNR=? 
+Mar 22, 2018 10:22:46 AM iam_services.Iam_services Error_logger
+INFO: Empty sub-records=>3
+Mar 22, 2018 10:22:46 AM iam_services.Iam_services Error_logger
+INFO: Query->SELECT * FROM CNB_IAM_IN_E1WPU05 WHERE  ARTNR=? 
+Mar 22, 2018 10:22:46 AM iam_services.Iam_services Error_logger
+INFO: Query->SELECT * FROM CNB_IAM_IN_E1WPU04 WHERE  ARTNR=? 
+Mar 22, 2018 10:22:46 AM iam_services.Iam_services Error_logger
+INFO: Query->SELECT * FROM CNB_IAM_IN_E1WXX01 WHERE  ARTNR=? 
+Mar 22, 2018 10:22:46 AM iam_services.Iam_services Error_logger
+INFO: Empty sub-records=>3
+Mar 22, 2018 10:41:55 AM iam_services.Iam_services Error_logger
+INFO: Connection succeeded, hurray!
+Mar 22, 2018 10:41:55 AM iam_services.Iam_services Error_logger
+INFO: cols:(SERIAL,RCVPRN,DOCREL,SNDPRT,SNDPOR,MESTYP,RCVPRT,RCVPOR,DOCNUM,SNDPRN,TABNAM,MANDT,STATUS,IDOCTYP,CREDAT,CRETIM,DIRECT) 
+vals: VALUES(?,?,?,?,?,?,?,?,?,?,?,?,?,?,?,?,?)
+Mar 22, 2018 10:41:55 AM iam_services.Iam_services Error_logger
+INFO: Connection succeeded, hurray!
+Mar 22, 2018 10:41:55 AM iam_services.Iam_services Error_logger
+INFO: cols:(TAXCODE,TAXVALUE,TAXSIGN,ARTNR) 
+vals: VALUES(?,?,?,?)
+Mar 22, 2018 10:41:55 AM iam_services.Iam_services Error_logger
+INFO: Connection succeeded, hurray!
+Mar 22, 2018 10:41:55 AM iam_services.Iam_services Error_logger
+INFO: cols:(MWSKZ,MWSBT,ARTNR) 
+vals: VALUES(?,?,?)
+Mar 22, 2018 10:41:55 AM iam_services.Iam_services Error_logger
+INFO: Connection succeeded, hurray!
+Mar 22, 2018 10:41:55 AM iam_services.Iam_services Error_logger
+INFO: cols:(FLDVAL,FLDGRP,FLDNAME,ARTNR) 
+vals: VALUES(?,?,?,?)
+Mar 22, 2018 10:41:55 AM iam_services.Iam_services Error_logger
+INFO: Connection succeeded, hurray!
+Mar 22, 2018 10:41:55 AM iam_services.Iam_services Error_logger
+INFO: cols:(FLDVAL,FLDGRP,FLDNAME,ARTNR) 
+vals: VALUES(?,?,?,?)
+Mar 22, 2018 10:41:55 AM iam_services.Iam_services Error_logger
+INFO: Connection succeeded, hurray!
+Mar 22, 2018 10:41:55 AM iam_services.Iam_services Error_logger
+INFO: cols:(QUALARTNR,VORZMENGE,UMSMENGE,VORZWERT,UMSWERT,ARTNR,PACKAGE_ID) 
+vals: VALUES(?,?,?,?,?,?,?)
+Mar 22, 2018 10:41:55 AM iam_services.Iam_services Error_logger
+INFO: Connection succeeded, hurray!
+Mar 22, 2018 10:41:55 AM iam_services.Iam_services Error_logger
+INFO: cols:(TAXCODE,TAXVALUE,TAXSIGN,ARTNR) 
+vals: VALUES(?,?,?,?)
+Mar 22, 2018 10:41:55 AM iam_services.Iam_services Error_logger
+INFO: Connection succeeded, hurray!
+Mar 22, 2018 10:41:55 AM iam_services.Iam_services Error_logger
+INFO: cols:(MWSKZ,MWSBT,ARTNR) 
+vals: VALUES(?,?,?)
+Mar 22, 2018 10:41:55 AM iam_services.Iam_services Error_logger
+INFO: Connection succeeded, hurray!
+Mar 22, 2018 10:41:55 AM iam_services.Iam_services Error_logger
+INFO: cols:(FLDVAL,FLDGRP,FLDNAME,ARTNR) 
+vals: VALUES(?,?,?,?)
+Mar 22, 2018 10:41:55 AM iam_services.Iam_services Error_logger
+INFO: Connection succeeded, hurray!
+Mar 22, 2018 10:41:55 AM iam_services.Iam_services Error_logger
+INFO: cols:(FLDVAL,FLDGRP,FLDNAME,ARTNR) 
+vals: VALUES(?,?,?,?)
+Mar 22, 2018 10:41:55 AM iam_services.Iam_services Error_logger
+INFO: Connection succeeded, hurray!
+Mar 22, 2018 10:41:55 AM iam_services.Iam_services Error_logger
+INFO: cols:(QUALARTNR,VORZMENGE,UMSMENGE,VORZWERT,UMSWERT,ARTNR,PACKAGE_ID) 
+vals: VALUES(?,?,?,?,?,?,?)
+Mar 22, 2018 10:41:55 AM iam_services.Iam_services Error_logger
+INFO: Connection succeeded, hurray!
+Mar 22, 2018 10:41:55 AM iam_services.Iam_services Error_logger
+INFO: cols:(TAXCODE,TAXVALUE,TAXSIGN,ARTNR) 
+vals: VALUES(?,?,?,?)
+Mar 22, 2018 10:41:55 AM iam_services.Iam_services Error_logger
+INFO: Connection succeeded, hurray!
+Mar 22, 2018 10:41:55 AM iam_services.Iam_services Error_logger
+INFO: cols:(MWSKZ,MWSBT,ARTNR) 
+vals: VALUES(?,?,?)
+Mar 22, 2018 10:41:55 AM iam_services.Iam_services Error_logger
+INFO: Connection succeeded, hurray!
+Mar 22, 2018 10:41:55 AM iam_services.Iam_services Error_logger
+INFO: cols:(FLDVAL,FLDGRP,FLDNAME,ARTNR) 
+vals: VALUES(?,?,?,?)
+Mar 22, 2018 10:41:55 AM iam_services.Iam_services Error_logger
+INFO: Connection succeeded, hurray!
+Mar 22, 2018 10:41:55 AM iam_services.Iam_services Error_logger
+INFO: cols:(FLDVAL,FLDGRP,FLDNAME,ARTNR) 
+vals: VALUES(?,?,?,?)
+Mar 22, 2018 10:41:55 AM iam_services.Iam_services Error_logger
+INFO: Connection succeeded, hurray!
+Mar 22, 2018 10:41:55 AM iam_services.Iam_services Error_logger
+INFO: cols:(QUALARTNR,VORZMENGE,UMSMENGE,VORZWERT,UMSWERT,ARTNR,PACKAGE_ID) 
+vals: VALUES(?,?,?,?,?,?,?)
+Mar 22, 2018 10:41:55 AM iam_services.Iam_services Error_logger
+INFO: Connection succeeded, hurray!
+Mar 22, 2018 10:41:55 AM iam_services.Iam_services Error_logger
+INFO: cols:(TAXCODE,TAXVALUE,TAXSIGN,ARTNR) 
+vals: VALUES(?,?,?,?)
+Mar 22, 2018 10:41:55 AM iam_services.Iam_services Error_logger
+INFO: Connection succeeded, hurray!
+Mar 22, 2018 10:41:55 AM iam_services.Iam_services Error_logger
+INFO: cols:(MWSKZ,MWSBT,ARTNR) 
+vals: VALUES(?,?,?)
+Mar 22, 2018 10:41:55 AM iam_services.Iam_services Error_logger
+INFO: Connection succeeded, hurray!
+Mar 22, 2018 10:41:55 AM iam_services.Iam_services Error_logger
+INFO: cols:(FLDVAL,FLDGRP,FLDNAME,ARTNR) 
+vals: VALUES(?,?,?,?)
+Mar 22, 2018 10:41:55 AM iam_services.Iam_services Error_logger
+INFO: Connection succeeded, hurray!
+Mar 22, 2018 10:41:55 AM iam_services.Iam_services Error_logger
+INFO: cols:(FLDVAL,FLDGRP,FLDNAME,ARTNR) 
+vals: VALUES(?,?,?,?)
+Mar 22, 2018 10:41:55 AM iam_services.Iam_services Error_logger
+INFO: Connection succeeded, hurray!
+Mar 22, 2018 10:41:55 AM iam_services.Iam_services Error_logger
+INFO: cols:(QUALARTNR,VORZMENGE,UMSMENGE,VORZWERT,UMSWERT,ARTNR,PACKAGE_ID) 
+vals: VALUES(?,?,?,?,?,?,?)
+Mar 22, 2018 10:41:55 AM iam_services.Iam_services Error_logger
+INFO: Connection succeeded, hurray!
+Mar 22, 2018 10:41:55 AM iam_services.Iam_services Error_logger
+INFO: cols:(TAXCODE,TAXVALUE,TAXSIGN,ARTNR) 
+vals: VALUES(?,?,?,?)
+Mar 22, 2018 10:41:56 AM iam_services.Iam_services Error_logger
+INFO: Connection succeeded, hurray!
+Mar 22, 2018 10:41:56 AM iam_services.Iam_services Error_logger
+INFO: cols:(MWSKZ,MWSBT,ARTNR) 
+vals: VALUES(?,?,?)
+Mar 22, 2018 10:41:56 AM iam_services.Iam_services Error_logger
+INFO: Connection succeeded, hurray!
+Mar 22, 2018 10:41:56 AM iam_services.Iam_services Error_logger
+INFO: cols:(FLDVAL,FLDGRP,FLDNAME,ARTNR) 
+vals: VALUES(?,?,?,?)
+Mar 22, 2018 10:41:56 AM iam_services.Iam_services Error_logger
+INFO: Connection succeeded, hurray!
+Mar 22, 2018 10:41:56 AM iam_services.Iam_services Error_logger
+INFO: cols:(FLDVAL,FLDGRP,FLDNAME,ARTNR) 
+vals: VALUES(?,?,?,?)
+Mar 22, 2018 10:41:56 AM iam_services.Iam_services Error_logger
+INFO: Connection succeeded, hurray!
+Mar 22, 2018 10:41:56 AM iam_services.Iam_services Error_logger
+INFO: cols:(QUALARTNR,VORZMENGE,UMSMENGE,VORZWERT,UMSWERT,ARTNR,PACKAGE_ID) 
+vals: VALUES(?,?,?,?,?,?,?)
+Mar 22, 2018 10:41:56 AM iam_services.Iam_services Error_logger
+INFO: Connection succeeded, hurray!
+Mar 22, 2018 10:41:56 AM iam_services.Iam_services Error_logger
+INFO: cols:(TAXCODE,TAXVALUE,TAXSIGN,ARTNR) 
+vals: VALUES(?,?,?,?)
+Mar 22, 2018 10:41:56 AM iam_services.Iam_services Error_logger
+INFO: Connection succeeded, hurray!
+Mar 22, 2018 10:41:56 AM iam_services.Iam_services Error_logger
+INFO: cols:(MWSKZ,MWSBT,ARTNR) 
+vals: VALUES(?,?,?)
+Mar 22, 2018 10:41:56 AM iam_services.Iam_services Error_logger
+INFO: Connection succeeded, hurray!
+Mar 22, 2018 10:41:56 AM iam_services.Iam_services Error_logger
+INFO: cols:(FLDVAL,FLDGRP,FLDNAME,ARTNR) 
+vals: VALUES(?,?,?,?)
+Mar 22, 2018 10:41:56 AM iam_services.Iam_services Error_logger
+INFO: Connection succeeded, hurray!
+Mar 22, 2018 10:41:56 AM iam_services.Iam_services Error_logger
+INFO: cols:(FLDVAL,FLDGRP,FLDNAME,ARTNR) 
+vals: VALUES(?,?,?,?)
+Mar 22, 2018 10:41:56 AM iam_services.Iam_services Error_logger
+INFO: Connection succeeded, hurray!
+Mar 22, 2018 10:41:56 AM iam_services.Iam_services Error_logger
+INFO: cols:(QUALARTNR,VORZMENGE,UMSMENGE,VORZWERT,UMSWERT,ARTNR,PACKAGE_ID) 
+vals: VALUES(?,?,?,?,?,?,?)
+Mar 22, 2018 10:41:56 AM iam_services.Iam_services Error_logger
+INFO: Connection succeeded, hurray!
+Mar 22, 2018 10:41:56 AM iam_services.Iam_services Error_logger
+INFO: cols:(TAXCODE,TAXVALUE,TAXSIGN,ARTNR) 
+vals: VALUES(?,?,?,?)
+Mar 22, 2018 10:41:56 AM iam_services.Iam_services Error_logger
+INFO: Connection succeeded, hurray!
+Mar 22, 2018 10:41:56 AM iam_services.Iam_services Error_logger
+INFO: cols:(MWSKZ,MWSBT,ARTNR) 
+vals: VALUES(?,?,?)
+Mar 22, 2018 10:41:56 AM iam_services.Iam_services Error_logger
+INFO: Connection succeeded, hurray!
+Mar 22, 2018 10:41:56 AM iam_services.Iam_services Error_logger
+INFO: cols:(FLDVAL,FLDGRP,FLDNAME,ARTNR) 
+vals: VALUES(?,?,?,?)
+Mar 22, 2018 10:41:56 AM iam_services.Iam_services Error_logger
+INFO: Connection succeeded, hurray!
+Mar 22, 2018 10:41:56 AM iam_services.Iam_services Error_logger
+INFO: cols:(FLDVAL,FLDGRP,FLDNAME,ARTNR) 
+vals: VALUES(?,?,?,?)
+Mar 22, 2018 10:41:56 AM iam_services.Iam_services Error_logger
+INFO: Connection succeeded, hurray!
+Mar 22, 2018 10:41:56 AM iam_services.Iam_services Error_logger
+INFO: cols:(QUALARTNR,VORZMENGE,UMSMENGE,VORZWERT,UMSWERT,ARTNR,PACKAGE_ID) 
+vals: VALUES(?,?,?,?,?,?,?)
+Mar 22, 2018 10:41:56 AM iam_services.Iam_services Error_logger
+INFO: Connection succeeded, hurray!
+Mar 22, 2018 10:41:56 AM iam_services.Iam_services Error_logger
+INFO: cols:(TAXCODE,TAXVALUE,TAXSIGN,ARTNR) 
+vals: VALUES(?,?,?,?)
+Mar 22, 2018 10:41:56 AM iam_services.Iam_services Error_logger
+INFO: Connection succeeded, hurray!
+Mar 22, 2018 10:41:56 AM iam_services.Iam_services Error_logger
+INFO: cols:(MWSKZ,MWSBT,ARTNR) 
+vals: VALUES(?,?,?)
+Mar 22, 2018 10:41:56 AM iam_services.Iam_services Error_logger
+INFO: Connection succeeded, hurray!
+Mar 22, 2018 10:41:56 AM iam_services.Iam_services Error_logger
+INFO: cols:(FLDVAL,FLDGRP,FLDNAME,ARTNR) 
+vals: VALUES(?,?,?,?)
+Mar 22, 2018 10:41:56 AM iam_services.Iam_services Error_logger
+INFO: Connection succeeded, hurray!
+Mar 22, 2018 10:41:56 AM iam_services.Iam_services Error_logger
+INFO: cols:(FLDVAL,FLDGRP,FLDNAME,ARTNR) 
+vals: VALUES(?,?,?,?)
+Mar 22, 2018 10:41:56 AM iam_services.Iam_services Error_logger
+INFO: Connection succeeded, hurray!
+Mar 22, 2018 10:41:56 AM iam_services.Iam_services Error_logger
+INFO: cols:(QUALARTNR,VORZMENGE,UMSMENGE,VORZWERT,UMSWERT,ARTNR,PACKAGE_ID) 
+vals: VALUES(?,?,?,?,?,?,?)
+Mar 22, 2018 10:41:56 AM iam_services.Iam_services Error_logger
+INFO: Connection succeeded, hurray!
+Mar 22, 2018 10:41:56 AM iam_services.Iam_services Error_logger
+INFO: cols:(TAXCODE,TAXVALUE,TAXSIGN,ARTNR) 
+vals: VALUES(?,?,?,?)
+Mar 22, 2018 10:41:56 AM iam_services.Iam_services Error_logger
+INFO: Connection succeeded, hurray!
+Mar 22, 2018 10:41:56 AM iam_services.Iam_services Error_logger
+INFO: cols:(MWSKZ,MWSBT,ARTNR) 
+vals: VALUES(?,?,?)
+Mar 22, 2018 10:41:56 AM iam_services.Iam_services Error_logger
+INFO: Connection succeeded, hurray!
+Mar 22, 2018 10:41:56 AM iam_services.Iam_services Error_logger
+INFO: cols:(FLDVAL,FLDGRP,FLDNAME,ARTNR) 
+vals: VALUES(?,?,?,?)
+Mar 22, 2018 10:41:56 AM iam_services.Iam_services Error_logger
+INFO: Connection succeeded, hurray!
+Mar 22, 2018 10:41:56 AM iam_services.Iam_services Error_logger
+INFO: cols:(FLDVAL,FLDGRP,FLDNAME,ARTNR) 
+vals: VALUES(?,?,?,?)
+Mar 22, 2018 10:41:56 AM iam_services.Iam_services Error_logger
+INFO: Connection succeeded, hurray!
+Mar 22, 2018 10:41:56 AM iam_services.Iam_services Error_logger
+INFO: cols:(QUALARTNR,VORZMENGE,UMSMENGE,VORZWERT,UMSWERT,ARTNR,PACKAGE_ID) 
+vals: VALUES(?,?,?,?,?,?,?)
+Mar 22, 2018 10:41:56 AM iam_services.Iam_services Error_logger
+INFO: Connection succeeded, hurray!
+Mar 22, 2018 10:41:56 AM iam_services.Iam_services Error_logger
+INFO: cols:(TAXCODE,TAXVALUE,TAXSIGN,ARTNR) 
+vals: VALUES(?,?,?,?)
+Mar 22, 2018 10:41:56 AM iam_services.Iam_services Error_logger
+INFO: Connection succeeded, hurray!
+Mar 22, 2018 10:41:56 AM iam_services.Iam_services Error_logger
+INFO: cols:(MWSKZ,MWSBT,ARTNR) 
+vals: VALUES(?,?,?)
+Mar 22, 2018 10:41:56 AM iam_services.Iam_services Error_logger
+INFO: Connection succeeded, hurray!
+Mar 22, 2018 10:41:56 AM iam_services.Iam_services Error_logger
+INFO: cols:(FLDVAL,FLDGRP,FLDNAME,ARTNR) 
+vals: VALUES(?,?,?,?)
+Mar 22, 2018 10:41:56 AM iam_services.Iam_services Error_logger
+INFO: Connection succeeded, hurray!
+Mar 22, 2018 10:41:56 AM iam_services.Iam_services Error_logger
+INFO: cols:(FLDVAL,FLDGRP,FLDNAME,ARTNR) 
+vals: VALUES(?,?,?,?)
+Mar 22, 2018 10:41:56 AM iam_services.Iam_services Error_logger
+INFO: Connection succeeded, hurray!
+Mar 22, 2018 10:41:56 AM iam_services.Iam_services Error_logger
+INFO: cols:(QUALARTNR,VORZMENGE,UMSMENGE,VORZWERT,UMSWERT,ARTNR,PACKAGE_ID) 
+vals: VALUES(?,?,?,?,?,?,?)
+Mar 22, 2018 10:41:56 AM iam_services.Iam_services Error_logger
+INFO: Connection succeeded, hurray!
+Mar 22, 2018 10:41:56 AM iam_services.Iam_services Error_logger
+INFO: cols:(TAXCODE,TAXVALUE,TAXSIGN,ARTNR) 
+vals: VALUES(?,?,?,?)
+Mar 22, 2018 10:41:56 AM iam_services.Iam_services Error_logger
+INFO: Connection succeeded, hurray!
+Mar 22, 2018 10:41:56 AM iam_services.Iam_services Error_logger
+INFO: cols:(MWSKZ,MWSBT,ARTNR) 
+vals: VALUES(?,?,?)
+Mar 22, 2018 10:41:56 AM iam_services.Iam_services Error_logger
+INFO: Connection succeeded, hurray!
+Mar 22, 2018 10:41:56 AM iam_services.Iam_services Error_logger
+INFO: cols:(FLDVAL,FLDGRP,FLDNAME,ARTNR) 
+vals: VALUES(?,?,?,?)
+Mar 22, 2018 10:41:56 AM iam_services.Iam_services Error_logger
+INFO: Connection succeeded, hurray!
+Mar 22, 2018 10:41:56 AM iam_services.Iam_services Error_logger
+INFO: cols:(FLDVAL,FLDGRP,FLDNAME,ARTNR) 
+vals: VALUES(?,?,?,?)
+Mar 22, 2018 10:41:56 AM iam_services.Iam_services Error_logger
+INFO: Connection succeeded, hurray!
+Mar 22, 2018 10:41:56 AM iam_services.Iam_services Error_logger
+INFO: cols:(QUALARTNR,VORZMENGE,UMSMENGE,VORZWERT,UMSWERT,ARTNR,PACKAGE_ID) 
+vals: VALUES(?,?,?,?,?,?,?)
+Mar 22, 2018 10:41:56 AM iam_services.Iam_services Error_logger
+INFO: Connection succeeded, hurray!
+Mar 22, 2018 10:41:56 AM iam_services.Iam_services Error_logger
+INFO: cols:(BELEGWAERS,BELEGDATUM,PACKAGE_ID) 
+vals: VALUES(?,?,?)
+Mar 22, 2018 10:41:56 AM iam_services.Iam_services Error_logger
+INFO: Empty data for IDOC
+Mar 22, 2018 10:41:56 AM iam_services.Iam_services Error_logger
+INFO: Empty data for WPUUMS01
+Mar 22, 2018 10:41:56 AM iam_services.Iam_services Error_logger
+INFO: Empty data for #document
+Mar 22, 2018 10:43:40 AM iam_services.Iam_services Error_logger
+INFO: Connection succeeded, hurray!
+Mar 22, 2018 10:43:40 AM iam_services.Iam_services Error_logger
+INFO: Query->SELECT * FROM CNB_IAM_IN_E1WPU01 WHERE CONVERT(DATE, [DATE_STAMP]) = CONVERT(DATE, CURRENT_TIMESTAMP);
+Mar 22, 2018 10:43:40 AM iam_services.Iam_services Error_logger
+INFO: Query->SELECT * FROM CNB_IAM_IN_E1WPU02 WHERE  PACKAGE_ID=? 
+Mar 22, 2018 10:43:40 AM iam_services.Iam_services Error_logger
+INFO: Query->SELECT * FROM CNB_IAM_IN_E1WPU05 WHERE  ARTNR=? 
+Mar 22, 2018 10:43:40 AM iam_services.Iam_services Error_logger
+INFO: Query->SELECT * FROM CNB_IAM_IN_E1WPU04 WHERE  ARTNR=? 
+Mar 22, 2018 10:43:40 AM iam_services.Iam_services Error_logger
+INFO: Query->SELECT * FROM CNB_IAM_IN_E1WXX01 WHERE  ARTNR=? 
+Mar 22, 2018 10:43:40 AM iam_services.Iam_services Error_logger
+INFO: Query->SELECT * FROM CNB_IAM_IN_E1WPU05 WHERE  ARTNR=? 
+Mar 22, 2018 10:43:40 AM iam_services.Iam_services Error_logger
+INFO: Query->SELECT * FROM CNB_IAM_IN_E1WPU04 WHERE  ARTNR=? 
+Mar 22, 2018 10:43:40 AM iam_services.Iam_services Error_logger
+INFO: Query->SELECT * FROM CNB_IAM_IN_E1WXX01 WHERE  ARTNR=? 
+Mar 22, 2018 10:43:40 AM iam_services.Iam_services Error_logger
+INFO: Query->SELECT * FROM CNB_IAM_IN_E1WPU05 WHERE  ARTNR=? 
+Mar 22, 2018 10:43:40 AM iam_services.Iam_services Error_logger
+INFO: Query->SELECT * FROM CNB_IAM_IN_E1WPU04 WHERE  ARTNR=? 
+Mar 22, 2018 10:43:40 AM iam_services.Iam_services Error_logger
+INFO: Query->SELECT * FROM CNB_IAM_IN_E1WXX01 WHERE  ARTNR=? 
+Mar 22, 2018 10:43:40 AM iam_services.Iam_services Error_logger
+INFO: Query->SELECT * FROM CNB_IAM_IN_E1WPU05 WHERE  ARTNR=? 
+Mar 22, 2018 10:43:40 AM iam_services.Iam_services Error_logger
+INFO: Query->SELECT * FROM CNB_IAM_IN_E1WPU04 WHERE  ARTNR=? 
+Mar 22, 2018 10:43:40 AM iam_services.Iam_services Error_logger
+INFO: Query->SELECT * FROM CNB_IAM_IN_E1WXX01 WHERE  ARTNR=? 
+Mar 22, 2018 10:43:40 AM iam_services.Iam_services Error_logger
+INFO: Query->SELECT * FROM CNB_IAM_IN_E1WPU05 WHERE  ARTNR=? 
+Mar 22, 2018 10:43:40 AM iam_services.Iam_services Error_logger
+INFO: Query->SELECT * FROM CNB_IAM_IN_E1WPU04 WHERE  ARTNR=? 
+Mar 22, 2018 10:43:40 AM iam_services.Iam_services Error_logger
+INFO: Query->SELECT * FROM CNB_IAM_IN_E1WXX01 WHERE  ARTNR=? 
+Mar 22, 2018 10:43:40 AM iam_services.Iam_services Error_logger
+INFO: Query->SELECT * FROM CNB_IAM_IN_E1WPU05 WHERE  ARTNR=? 
+Mar 22, 2018 10:43:40 AM iam_services.Iam_services Error_logger
+INFO: Query->SELECT * FROM CNB_IAM_IN_E1WPU04 WHERE  ARTNR=? 
+Mar 22, 2018 10:43:40 AM iam_services.Iam_services Error_logger
+INFO: Query->SELECT * FROM CNB_IAM_IN_E1WXX01 WHERE  ARTNR=? 
+Mar 22, 2018 10:43:40 AM iam_services.Iam_services Error_logger
+INFO: Query->SELECT * FROM CNB_IAM_IN_E1WPU05 WHERE  ARTNR=? 
+Mar 22, 2018 10:43:40 AM iam_services.Iam_services Error_logger
+INFO: Query->SELECT * FROM CNB_IAM_IN_E1WPU04 WHERE  ARTNR=? 
+Mar 22, 2018 10:43:40 AM iam_services.Iam_services Error_logger
+INFO: Query->SELECT * FROM CNB_IAM_IN_E1WXX01 WHERE  ARTNR=? 
+Mar 22, 2018 10:43:40 AM iam_services.Iam_services Error_logger
+INFO: Query->SELECT * FROM CNB_IAM_IN_E1WPU05 WHERE  ARTNR=? 
+Mar 22, 2018 10:43:40 AM iam_services.Iam_services Error_logger
+INFO: Query->SELECT * FROM CNB_IAM_IN_E1WPU04 WHERE  ARTNR=? 
+Mar 22, 2018 10:43:40 AM iam_services.Iam_services Error_logger
+INFO: Query->SELECT * FROM CNB_IAM_IN_E1WXX01 WHERE  ARTNR=? 
+Mar 22, 2018 10:43:40 AM iam_services.Iam_services Error_logger
+INFO: Query->SELECT * FROM CNB_IAM_IN_E1WPU05 WHERE  ARTNR=? 
+Mar 22, 2018 10:43:40 AM iam_services.Iam_services Error_logger
+INFO: Query->SELECT * FROM CNB_IAM_IN_E1WPU04 WHERE  ARTNR=? 
+Mar 22, 2018 10:43:40 AM iam_services.Iam_services Error_logger
+INFO: Query->SELECT * FROM CNB_IAM_IN_E1WXX01 WHERE  ARTNR=? 
+Mar 22, 2018 10:43:40 AM iam_services.Iam_services Error_logger
+INFO: Query->SELECT * FROM CNB_IAM_IN_E1WPU05 WHERE  ARTNR=? 
+Mar 22, 2018 10:43:40 AM iam_services.Iam_services Error_logger
+INFO: Query->SELECT * FROM CNB_IAM_IN_E1WPU04 WHERE  ARTNR=? 
+Mar 22, 2018 10:43:40 AM iam_services.Iam_services Error_logger
+INFO: Query->SELECT * FROM CNB_IAM_IN_E1WXX01 WHERE  ARTNR=? 
+Mar 22, 2018 10:43:40 AM iam_services.Iam_services Error_logger
+INFO: Query->SELECT * FROM CNB_IAM_IN_E1WPU05 WHERE  ARTNR=? 
+Mar 22, 2018 10:43:40 AM iam_services.Iam_services Error_logger
+INFO: Query->SELECT * FROM CNB_IAM_IN_E1WPU04 WHERE  ARTNR=? 
+Mar 22, 2018 10:43:40 AM iam_services.Iam_services Error_logger
+INFO: Query->SELECT * FROM CNB_IAM_IN_E1WXX01 WHERE  ARTNR=? 

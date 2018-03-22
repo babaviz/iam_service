@@ -5,6 +5,7 @@
  */
 package iam_services;
 
+import iam_services.xmlprocessing.StatusLogger;
 import java.io.BufferedReader;
 import java.io.File;
 import java.io.FileFilter;
@@ -32,7 +33,6 @@ import java.util.logging.Logger;
 import java.util.logging.SimpleFormatter;
 
 /**
- *
  * @author user
  */
 public class Iam_services {
@@ -51,6 +51,7 @@ public class Iam_services {
     Logger logger = Logger.getLogger(getClass().getSimpleName());
     FileHandler fh;
     private static Iam_services instance;
+    public boolean lock = false;
 
     /**
      * @param args the command line arguments
@@ -76,8 +77,11 @@ public class Iam_services {
     private void doWork() {
         while (true) {
             try {
-                check_files();
-                Thread.sleep(1000 * 60);
+                if (!lock) {
+                    check_files();
+                }
+
+                Thread.sleep(1000 * 60 * 10);
             } catch (InterruptedException e) {
                 Error_logger(e, "doWork");
                 Error_logger(null, "Sytem Interrupted", true);
@@ -86,7 +90,9 @@ public class Iam_services {
         }
     }
 
-    private void Connect() {
+    public Connection Connect() {
+        if(conn !=null)return conn;
+        
         String[] conStrings = getSettings();
         conn = MSQLConnection(conStrings[0]);
         if (conn == null) {//if not successful, try second
@@ -102,6 +108,7 @@ public class Iam_services {
         } else {
             Error_logger(null, "Connection succeeded, hurray!", true);
         }
+        return conn;
     }
 
     private String[] getSettings() {
@@ -155,7 +162,7 @@ public class Iam_services {
     }
 
     //mssql connection
-    public Connection MSQLConnection(String connectionUrl) {
+    private Connection MSQLConnection(String connectionUrl) {
         try {
             // Establish the connection.  
             Class.forName(DATABASE_DRIVER_MSSSQL);
@@ -188,7 +195,7 @@ public class Iam_services {
                 try {
                     cstm.execute();
                 } catch (SQLException ex) {
-                    Logger.getLogger(getClass().getName()).log(Level.SEVERE, null, ex);
+                    Error_logger(ex, "dump_xmlFILE_toDB");
                 }
             }).start();
         } catch (SQLException ex) {
@@ -275,15 +282,15 @@ public class Iam_services {
 
         //else process files on a local directory
         String get_folderpath = settings.get(FOLDER);
-        if(fromRemote){
-            get_folderpath=settings.get("working_dir");
+        if (fromRemote) {
+            get_folderpath = settings.get("working_dir");
         }
-        
+
         //check if its provided
-        if(get_folderpath.trim().isEmpty()){
-            get_folderpath="workspace";
+        if (get_folderpath.trim().isEmpty()) {
+            get_folderpath = "workspace";
         }
-        
+
         File folder = new File(get_folderpath);
         if (!folder.exists()) {
             Error_logger(null, "File folder not found:" + folder.getPath(), true);
@@ -332,17 +339,47 @@ public class Iam_services {
 
         @Override
         public boolean accept(File file) {
-            if (file.getName().toLowerCase().endsWith("xml")) {
-                return true;
-            }
-            return false;
+            return file.getName().toLowerCase().endsWith("xml");
         }
     }
 
-    static Iam_services getInstance() {
+    public static Iam_services getInstance() {
         if (instance == null) {
             instance = new Iam_services();
         }
         return instance;
+    }
+
+    public boolean upload_inboundXMLFiles(String fileName, String type) {
+        String func="process_inbound";
+        StatusLogger dbLogger = null;
+        int id=0;
+        try {
+            new File("inbound_generated", "processed").mkdirs();
+            dbLogger=StatusLogger.getInstance();
+            id=dbLogger.Log_start(new File(fileName), type);
+            switch (settings.get("access_type").toLowerCase()) {
+                case "remote":
+                    processRemoteFolder();
+                    break;
+                case "ftp":
+                    //wait
+                    break;
+                case "local": 
+                    File localInbound=new File(settings.get(FOLDER), "inbound");
+                    localInbound.mkdirs();
+                    Files.copy(new File(fileName).toPath(), new File(localInbound, new File(fileName).getName()).toPath());                    
+                
+                break;
+                default:
+                    Error_logger(new Exception("Unsupported settings type:" + settings.get("access_type")), "check_files");
+                    return false;
+            }
+        } catch (Exception ex) {
+            Error_logger(ex, func);
+            dbLogger.Log_error(id);
+            return false;
+        }
+        return true;
     }
 }

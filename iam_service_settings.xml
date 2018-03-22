@@ -1,26 +1,33 @@
 <?xml version="1.0" encoding="UTF-8"?>
 <!DOCTYPE properties SYSTEM "http://java.sun.com/dtd/properties.dtd">
 <properties>
-        <!--Enter sqlserver connection settings here-->
-        <entry key="SERVER_INSTANCE">192.168.13.48</entry>
-        <entry key="port"></entry>
-        <entry key="DB">xmltest</entry>
-        <entry key="user">sa</entry>
-        <entry key="password">sa</entry>
-        <!--Or, you can provide a commplete jdbc connection string, this is given first priority-->
-        <entry key="jdbc_connection_string">jdbc:sqlserver://192.168.13.48;databaseName=xmltest;user=sa;password=tester</entry>
-        <!--Path to directory containing files (file path or URL)-->
-        <entry key="destination_folder">C:\Users\user\Documents\DENNIS\allsamples</entry>
-        <!--How the folder is accessed (local , ftp , remote)-->
-        <entry key="access_type">ftp</entry>
+    <!--Enter sqlserver connection settings here-->
+    <entry key="SERVER_INSTANCE">192.168.13.48</entry>
+    <entry key="port"></entry>
+    <entry key="DB">xmltest</entry>
+    <entry key="user">sa</entry>
+    <entry key="password">sa</entry>
+		
+    <!--Or, you can provide a commplete jdbc connection string, this is given first priority-->
+    <entry key="jdbc_connection_string">jdbc:sqlserver://192.168.13.48;databaseName=xmltest;user=sa;password=tester</entry>
+      <!--End  of sql server connection settings-->     
         
-        <!--if access_type=ftp then-->
-        <entry key="ftp_server_url">test.rebex.net</entry>
-        <entry key="ftp_server_port">21</entry>    
-        <entry key="ftp_server_user">demo</entry>  
-        <entry key="ftp_server_password">password</entry>
-		<entry key="remote_folder"></entry>
-		<entry key="working_dir">workspace</entry>
-        <!--ftp connection end-->
+    <!--How the folder is accessed (local , ftp , remote)-->
+    <entry key="access_type">local</entry>
+    
+    
+    <!--Path to local directory containing files (file path or URL) if system working on local access_type-->
+    <entry key="destination_folder">C:\Users\user\Documents\DENNIS\allsamples</entry>
+        
+    <!--ftp server settings, if access_type is ftp-->
+    <entry key="ftp_server_url">ftp.drivehq.com</entry>
+    <entry key="ftp_server_port">21</entry>    
+    <entry key="ftp_server_user">babaviz</entry>  
+    <entry key="ftp_server_password">4617dennis_</entry>
+    <entry key="remote_outbound_folder">xml</entry>
+    <entry key="remote_inbound_folder">xml</entry>		
+    <!--Local working directory where files will be downloaded, leave it untouched-->
+    <entry key="working_dir">workspace</entry>
+    <!--end of ftp connection server settings-->
         
 </properties>
