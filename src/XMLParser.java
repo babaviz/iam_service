@@ -23,7 +23,7 @@ import org.w3c.dom.NodeList;
 
 public class XMLParser {
     private String pre_Table="CNB_IAM_IN_";
-    private String key="BONNUMMER";
+    private String key="SNo";
     private String key2="ARTNR";
     private String key_value;
     
@@ -32,7 +32,7 @@ public class XMLParser {
     public static void main(String[] args) {
         XMLParser parser=new XMLParser();
         try {
-            File file = new File("C:\\Users\\user\\Documents\\DENNIS\\SAP_Inbound\\Z_all\\ART_ADJDOC_CON_102938_2040_20180208-133951-411.xml");
+            File file = new File("C:\\Users\\user\\Documents\\DENNIS\\SAP_Inbound\\Z_all\\POS_FI_Actual_1030_20170111-061432-520_VI.xml");
             DocumentBuilder dBuilder = DocumentBuilderFactory.newInstance().newDocumentBuilder();
             Document doc = dBuilder.parse(file);
             //System.out.println("Root element :" + doc.getDocumentElement().getNodeName());

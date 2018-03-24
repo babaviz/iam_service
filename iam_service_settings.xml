@@ -12,6 +12,9 @@
     <entry key="jdbc_connection_string">jdbc:sqlserver://192.168.13.48;databaseName=xmltest;user=sa;password=tester</entry>
       <!--End  of sql server connection settings-->     
         
+		<!--Check new files after every {X} Minutes-->
+    <entry key="duration">10</entry>    
+        
     <!--How the folder is accessed (local , ftp , remote)-->
     <entry key="access_type">local</entry>
     

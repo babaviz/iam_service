@@ -6,6 +6,9 @@
 package iam_services;
 
 import iam_services.xmlprocessing.StatusLogger;
+import iam_services.xmlprocessing.art_adjdoc_con;
+import iam_services.xmlprocessing.inv_detail_credit;
+import iam_services.xmlprocessing.pos_fi_actual_XML;
 import java.io.BufferedReader;
 import java.io.File;
 import java.io.FileFilter;
@@ -80,6 +83,7 @@ public class Iam_services {
             try {
                 if (!lock) {
                     check_files();
+                    check_and_process_inboundDATA();
                 }
                 try{wait=Integer.parseInt(settings.get("duration").trim());}catch(Exception ex){Error_logger(ex, "doWork");}
                 Thread.sleep(1000 * 60 * wait);
@@ -176,32 +180,28 @@ public class Iam_services {
         return conn;
     }
 
-    public void dump_xmlFILE_toDB(String name, String xml) {
+    public boolean dump_xmlFILE_toDB(String name, String xml) {
         try {
             CallableStatement cstm = getStatement(name);
             if (xml.isEmpty()) {
                 Error_logger(new Exception("Empty xml file content:" + name), "dump_xmlFILE_toDB");
-                return;
+                return true;
             }
 
             if (cstm == null) {
                 Error_logger(new Exception("System couldn't determine category of xml file:" + name), "dump_xmlFILE_toDB");
-                return;
+                return false;
             }
 
             cstm.setNString(1, xml);
             cstm.setString(2, name);
             //System.err.println("sending...");
-            new Thread(() -> {
-                try {
                     cstm.execute();
-                } catch (SQLException ex) {
-                    Error_logger(ex, "dump_xmlFILE_toDB");
-                }
-            }).start();
         } catch (SQLException ex) {
             Error_logger(ex, "dump_xmlFILE_toDB");
+            return false;
         }
+        return true;
     }
 
     public CallableStatement getStatement(String fileName) throws SQLException {
@@ -321,8 +321,8 @@ public class Iam_services {
             }
             Error_logger(null, "Processing file->" + (count++), true);
             try {
-                dump_xmlFILE_toDB(fileEntry.getName(), readLocalFile(fileEntry.getPath()));
-                Files.move(Paths.get(fileEntry.getPath()), Paths.get(new File(processed_dir, fileEntry.getName()).getPath()), StandardCopyOption.REPLACE_EXISTING);
+                if(dump_xmlFILE_toDB(fileEntry.getName(), readLocalFile(fileEntry.getPath())))
+                    Files.move(Paths.get(fileEntry.getPath()), Paths.get(new File(processed_dir, fileEntry.getName()).getPath()), StandardCopyOption.REPLACE_EXISTING);
             } catch (Exception ex) {
                 Error_logger(ex, "check_files");
             }
@@ -349,6 +349,13 @@ public class Iam_services {
             instance = new Iam_services();
         }
         return instance;
+    }
+    
+    public void check_and_process_inboundDATA(){
+         new art_adjdoc_con().generateXML();
+         new inv_detail_credit().generateXML();
+         new inv_detail_credit(true).generateXML();
+         new pos_fi_actual_XML().generateXML();
     }
 
     public void upload_inboundXMLFiles(String fileName, String type,String docNum) {

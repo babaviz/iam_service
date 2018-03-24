@@ -1,0 +1,266 @@
+Mar 24, 2018 10:58:24 AM iam_services.Iam_services Error_logger
+INFO: 8 new Files found
+Mar 24, 2018 10:58:24 AM iam_services.Iam_services Error_logger
+INFO: Connection succeeded, hurray!
+Mar 24, 2018 10:58:24 AM iam_services.Iam_services Error_logger
+INFO: Processing file->1
+Mar 24, 2018 10:58:24 AM iam_services.Iam_services Error_logger
+INFO: Processing file->2
+Mar 24, 2018 10:58:24 AM iam_services.Iam_services Error_logger
+INFO: Processing file->3
+Mar 24, 2018 10:58:24 AM iam_services.Iam_services Error_logger
+INFO: Processing file->4
+Mar 24, 2018 10:58:24 AM iam_services.Iam_services Error_logger
+INFO: Processing file->5
+Mar 24, 2018 10:58:24 AM iam_services.Iam_services Error_logger
+INFO: Processing file->6
+Mar 24, 2018 10:58:24 AM iam_services.Iam_services Error_logger
+INFO: Processing file->7
+Mar 24, 2018 10:58:24 AM iam_services.Iam_services Error_logger
+INFO: Processing file->8
+Mar 24, 2018 11:02:06 AM iam_services.Iam_services Error_logger
+INFO: 8 new Files found
+Mar 24, 2018 11:02:07 AM iam_services.Iam_services Error_logger
+INFO: Connection succeeded, hurray!
+Mar 24, 2018 11:02:07 AM iam_services.Iam_services Error_logger
+INFO: Processing file->1
+Mar 24, 2018 11:02:07 AM iam_services.Iam_services Error_logger
+INFO: Processing file->2
+Mar 24, 2018 11:02:07 AM iam_services.Iam_services Error_logger
+INFO: Processing file->3
+Mar 24, 2018 11:02:07 AM iam_services.Iam_services Error_logger
+INFO: Processing file->4
+Mar 24, 2018 11:02:07 AM iam_services.Iam_services Error_logger
+INFO: Processing file->5
+Mar 24, 2018 11:02:07 AM iam_services.Iam_services Error_logger
+INFO: Processing file->6
+Mar 24, 2018 11:02:07 AM iam_services.Iam_services Error_logger
+INFO: Processing file->7
+Mar 24, 2018 11:02:07 AM iam_services.Iam_services Error_logger
+INFO: Processing file->8
+Mar 24, 2018 11:02:07 AM iam_services.Iam_services Error_logger
+SEVERE: dump_xmlFILE_toDB
+com.microsoft.sqlserver.jdbc.SQLServerException: Invalid column name 'Log_ID'.
+	at com.microsoft.sqlserver.jdbc.SQLServerException.makeFromDatabaseError(SQLServerException.java:217)
+	at com.microsoft.sqlserver.jdbc.SQLServerStatement.getNextResult(SQLServerStatement.java:1655)
+	at com.microsoft.sqlserver.jdbc.SQLServerPreparedStatement.doExecutePreparedStatement(SQLServerPreparedStatement.java:440)
+	at com.microsoft.sqlserver.jdbc.SQLServerPreparedStatement$PrepStmtExecCmd.doExecute(SQLServerPreparedStatement.java:385)
+	at com.microsoft.sqlserver.jdbc.TDSCommand.execute(IOBuffer.java:7505)
+	at com.microsoft.sqlserver.jdbc.SQLServerConnection.executeCommand(SQLServerConnection.java:2445)
+	at com.microsoft.sqlserver.jdbc.SQLServerStatement.executeCommand(SQLServerStatement.java:191)
+	at com.microsoft.sqlserver.jdbc.SQLServerStatement.executeStatement(SQLServerStatement.java:166)
+	at com.microsoft.sqlserver.jdbc.SQLServerPreparedStatement.execute(SQLServerPreparedStatement.java:367)
+	at iam_services.Iam_services.lambda$dump_xmlFILE_toDB$1(Iam_services.java:201)
+	at java.lang.Thread.run(Thread.java:745)
+
+Mar 24, 2018 11:09:55 AM iam_services.Iam_services Error_logger
+INFO: 8 new Files found
+Mar 24, 2018 11:09:55 AM iam_services.Iam_services Error_logger
+INFO: Connection succeeded, hurray!
+Mar 24, 2018 11:09:55 AM iam_services.Iam_services Error_logger
+INFO: Processing file->1
+Mar 24, 2018 11:09:55 AM iam_services.Iam_services Error_logger
+INFO: Processing file->2
+Mar 24, 2018 11:09:55 AM iam_services.Iam_services Error_logger
+INFO: Processing file->3
+Mar 24, 2018 11:09:55 AM iam_services.Iam_services Error_logger
+INFO: Processing file->4
+Mar 24, 2018 11:09:55 AM iam_services.Iam_services Error_logger
+INFO: Processing file->5
+Mar 24, 2018 11:09:55 AM iam_services.Iam_services Error_logger
+INFO: Processing file->6
+Mar 24, 2018 11:09:55 AM iam_services.Iam_services Error_logger
+INFO: Processing file->7
+Mar 24, 2018 11:09:55 AM iam_services.Iam_services Error_logger
+INFO: Processing file->8
+Mar 24, 2018 11:42:09 AM iam_services.Iam_services Error_logger
+INFO: 1 new Files found
+Mar 24, 2018 11:42:10 AM iam_services.Iam_services Error_logger
+INFO: Connection succeeded, hurray!
+Mar 24, 2018 11:42:10 AM iam_services.Iam_services Error_logger
+INFO: Processing file->1
+Mar 24, 2018 11:42:10 AM iam_services.Iam_services Error_logger
+SEVERE: dump_xmlFILE_toDB
+com.microsoft.sqlserver.jdbc.SQLServerException: XML parsing: line 1, character 38, unable to switch the encoding
+	at com.microsoft.sqlserver.jdbc.SQLServerException.makeFromDatabaseError(SQLServerException.java:217)
+	at com.microsoft.sqlserver.jdbc.SQLServerStatement.getNextResult(SQLServerStatement.java:1655)
+	at com.microsoft.sqlserver.jdbc.SQLServerPreparedStatement.doExecutePreparedStatement(SQLServerPreparedStatement.java:440)
+	at com.microsoft.sqlserver.jdbc.SQLServerPreparedStatement$PrepStmtExecCmd.doExecute(SQLServerPreparedStatement.java:385)
+	at com.microsoft.sqlserver.jdbc.TDSCommand.execute(IOBuffer.java:7505)
+	at com.microsoft.sqlserver.jdbc.SQLServerConnection.executeCommand(SQLServerConnection.java:2445)
+	at com.microsoft.sqlserver.jdbc.SQLServerStatement.executeCommand(SQLServerStatement.java:191)
+	at com.microsoft.sqlserver.jdbc.SQLServerStatement.executeStatement(SQLServerStatement.java:166)
+	at com.microsoft.sqlserver.jdbc.SQLServerPreparedStatement.execute(SQLServerPreparedStatement.java:367)
+	at iam_services.Iam_services.lambda$dump_xmlFILE_toDB$1(Iam_services.java:201)
+	at java.lang.Thread.run(Thread.java:745)
+
+Mar 24, 2018 2:31:45 PM iam_services.Iam_services Error_logger
+INFO: 8 new Files found
+Mar 24, 2018 2:31:46 PM iam_services.Iam_services Error_logger
+INFO: Connection succeeded, hurray!
+Mar 24, 2018 2:31:46 PM iam_services.Iam_services Error_logger
+INFO: Processing file->1
+Mar 24, 2018 2:31:46 PM iam_services.Iam_services Error_logger
+INFO: Processing file->2
+Mar 24, 2018 2:31:46 PM iam_services.Iam_services Error_logger
+INFO: Processing file->3
+Mar 24, 2018 2:31:46 PM iam_services.Iam_services Error_logger
+INFO: Processing file->4
+Mar 24, 2018 2:31:46 PM iam_services.Iam_services Error_logger
+INFO: Processing file->5
+Mar 24, 2018 2:31:46 PM iam_services.Iam_services Error_logger
+INFO: Processing file->6
+Mar 24, 2018 2:31:46 PM iam_services.Iam_services Error_logger
+INFO: Processing file->7
+Mar 24, 2018 2:31:46 PM iam_services.Iam_services Error_logger
+INFO: Processing file->8
+Mar 24, 2018 2:31:46 PM iam_services.Iam_services Error_logger
+INFO: Query->SELECT * FROM CNB_IAM_IN_E1WPG01 WHERE CONVERT(DATE, [DATE_STAMP]) = CONVERT(DATE, CURRENT_TIMESTAMP);
+Mar 24, 2018 2:31:47 PM iam_services.Iam_services Error_logger
+SEVERE: dump_xmlFILE_toDB
+com.microsoft.sqlserver.jdbc.SQLServerException: XML parsing: line 1, character 38, unable to switch the encoding
+	at com.microsoft.sqlserver.jdbc.SQLServerException.makeFromDatabaseError(SQLServerException.java:217)
+	at com.microsoft.sqlserver.jdbc.SQLServerStatement.getNextResult(SQLServerStatement.java:1655)
+	at com.microsoft.sqlserver.jdbc.SQLServerPreparedStatement.doExecutePreparedStatement(SQLServerPreparedStatement.java:440)
+	at com.microsoft.sqlserver.jdbc.SQLServerPreparedStatement$PrepStmtExecCmd.doExecute(SQLServerPreparedStatement.java:385)
+	at com.microsoft.sqlserver.jdbc.TDSCommand.execute(IOBuffer.java:7505)
+	at com.microsoft.sqlserver.jdbc.SQLServerConnection.executeCommand(SQLServerConnection.java:2445)
+	at com.microsoft.sqlserver.jdbc.SQLServerStatement.executeCommand(SQLServerStatement.java:191)
+	at com.microsoft.sqlserver.jdbc.SQLServerStatement.executeStatement(SQLServerStatement.java:166)
+	at com.microsoft.sqlserver.jdbc.SQLServerPreparedStatement.execute(SQLServerPreparedStatement.java:367)
+	at iam_services.Iam_services.lambda$dump_xmlFILE_toDB$1(Iam_services.java:201)
+	at java.lang.Thread.run(Thread.java:745)
+
+Mar 24, 2018 2:31:48 PM iam_services.Iam_services Error_logger
+INFO: Empty records
+Mar 24, 2018 2:31:48 PM iam_services.Iam_services Error_logger
+INFO: Query->SELECT * FROM CNB_IAM_IN_E1WPU01 WHERE CONVERT(DATE, [DATE_STAMP]) = CONVERT(DATE, CURRENT_TIMESTAMP);
+Mar 24, 2018 2:31:48 PM iam_services.Iam_services Error_logger
+INFO: Empty records
+Mar 24, 2018 2:31:48 PM iam_services.Iam_services Error_logger
+INFO: Query->SELECT * FROM CNB_IAM_IN_E1WPU01 WHERE CONVERT(DATE, [DATE_STAMP]) = CONVERT(DATE, CURRENT_TIMESTAMP);
+Mar 24, 2018 2:31:48 PM iam_services.Iam_services Error_logger
+INFO: Empty records
+Mar 24, 2018 2:31:48 PM iam_services.Iam_services Error_logger
+INFO: Query->SELECT * FROM CNB_IAM_IN_Record WHERE CONVERT(DATE, [DATE_STAMP]) = CONVERT(DATE, CURRENT_TIMESTAMP);
+Mar 24, 2018 2:31:48 PM iam_services.Iam_services Error_logger
+INFO: Empty records
+Mar 24, 2018 2:34:12 PM iam_services.Iam_services Error_logger
+INFO: 0 new Files found
+Mar 24, 2018 2:34:12 PM iam_services.Iam_services Error_logger
+INFO: Connection succeeded, hurray!
+Mar 24, 2018 2:34:12 PM iam_services.Iam_services Error_logger
+INFO: Query->SELECT * FROM CNB_IAM_IN_E1WPG01 WHERE CONVERT(DATE, [DATE_STAMP]) = CONVERT(DATE, CURRENT_TIMESTAMP);
+Mar 24, 2018 2:34:12 PM iam_services.Iam_services Error_logger
+INFO: Empty records
+Mar 24, 2018 2:34:12 PM iam_services.Iam_services Error_logger
+INFO: Query->SELECT * FROM CNB_IAM_IN_E1WPU01 WHERE CONVERT(DATE, [DATE_STAMP]) = CONVERT(DATE, CURRENT_TIMESTAMP);
+Mar 24, 2018 2:34:12 PM iam_services.Iam_services Error_logger
+INFO: Empty records
+Mar 24, 2018 2:34:12 PM iam_services.Iam_services Error_logger
+INFO: Query->SELECT * FROM CNB_IAM_IN_E1WPU01 WHERE CONVERT(DATE, [DATE_STAMP]) = CONVERT(DATE, CURRENT_TIMESTAMP);
+Mar 24, 2018 2:34:12 PM iam_services.Iam_services Error_logger
+INFO: Empty records
+Mar 24, 2018 2:34:12 PM iam_services.Iam_services Error_logger
+INFO: Query->SELECT * FROM CNB_IAM_IN_Record WHERE CONVERT(DATE, [DATE_STAMP]) = CONVERT(DATE, CURRENT_TIMESTAMP);
+Mar 24, 2018 2:34:12 PM iam_services.Iam_services Error_logger
+INFO: Empty records
+Mar 24, 2018 2:38:27 PM iam_services.Iam_services Error_logger
+INFO: 1 new Files found
+Mar 24, 2018 2:38:27 PM iam_services.Iam_services Error_logger
+INFO: Connection succeeded, hurray!
+Mar 24, 2018 2:38:27 PM iam_services.Iam_services Error_logger
+INFO: Processing file->1
+Mar 24, 2018 2:38:27 PM iam_services.Iam_services Error_logger
+INFO: Query->SELECT * FROM CNB_IAM_IN_E1WPG01 WHERE CONVERT(DATE, [DATE_STAMP]) = CONVERT(DATE, CURRENT_TIMESTAMP);
+Mar 24, 2018 2:38:28 PM iam_services.Iam_services Error_logger
+SEVERE: dump_xmlFILE_toDB
+com.microsoft.sqlserver.jdbc.SQLServerException: Invalid column name 'HAUPTEAN'.
+	at com.microsoft.sqlserver.jdbc.SQLServerException.makeFromDatabaseError(SQLServerException.java:217)
+	at com.microsoft.sqlserver.jdbc.SQLServerStatement.getNextResult(SQLServerStatement.java:1655)
+	at com.microsoft.sqlserver.jdbc.SQLServerPreparedStatement.doExecutePreparedStatement(SQLServerPreparedStatement.java:440)
+	at com.microsoft.sqlserver.jdbc.SQLServerPreparedStatement$PrepStmtExecCmd.doExecute(SQLServerPreparedStatement.java:385)
+	at com.microsoft.sqlserver.jdbc.TDSCommand.execute(IOBuffer.java:7505)
+	at com.microsoft.sqlserver.jdbc.SQLServerConnection.executeCommand(SQLServerConnection.java:2445)
+	at com.microsoft.sqlserver.jdbc.SQLServerStatement.executeCommand(SQLServerStatement.java:191)
+	at com.microsoft.sqlserver.jdbc.SQLServerStatement.executeStatement(SQLServerStatement.java:166)
+	at com.microsoft.sqlserver.jdbc.SQLServerPreparedStatement.execute(SQLServerPreparedStatement.java:367)
+	at iam_services.Iam_services.lambda$dump_xmlFILE_toDB$1(Iam_services.java:201)
+	at java.lang.Thread.run(Thread.java:745)
+
+Mar 24, 2018 2:38:28 PM iam_services.Iam_services Error_logger
+INFO: Empty records
+Mar 24, 2018 2:38:28 PM iam_services.Iam_services Error_logger
+INFO: Query->SELECT * FROM CNB_IAM_IN_E1WPU01 WHERE CONVERT(DATE, [DATE_STAMP]) = CONVERT(DATE, CURRENT_TIMESTAMP);
+Mar 24, 2018 2:38:28 PM iam_services.Iam_services Error_logger
+INFO: Empty records
+Mar 24, 2018 2:38:28 PM iam_services.Iam_services Error_logger
+INFO: Query->SELECT * FROM CNB_IAM_IN_E1WPU01 WHERE CONVERT(DATE, [DATE_STAMP]) = CONVERT(DATE, CURRENT_TIMESTAMP);
+Mar 24, 2018 2:38:28 PM iam_services.Iam_services Error_logger
+INFO: Empty records
+Mar 24, 2018 2:38:28 PM iam_services.Iam_services Error_logger
+INFO: Query->SELECT * FROM CNB_IAM_IN_Record WHERE CONVERT(DATE, [DATE_STAMP]) = CONVERT(DATE, CURRENT_TIMESTAMP);
+Mar 24, 2018 2:38:28 PM iam_services.Iam_services Error_logger
+INFO: Empty records
+Mar 24, 2018 2:44:25 PM iam_services.Iam_services Error_logger
+INFO: 1 new Files found
+Mar 24, 2018 2:44:25 PM iam_services.Iam_services Error_logger
+INFO: Connection succeeded, hurray!
+Mar 24, 2018 2:44:25 PM iam_services.Iam_services Error_logger
+INFO: Processing file->1
+Mar 24, 2018 2:44:26 PM iam_services.Iam_services Error_logger
+SEVERE: dump_xmlFILE_toDB
+com.microsoft.sqlserver.jdbc.SQLServerException: Invalid column name 'HAUPTEAN'.
+	at com.microsoft.sqlserver.jdbc.SQLServerException.makeFromDatabaseError(SQLServerException.java:217)
+	at com.microsoft.sqlserver.jdbc.SQLServerStatement.getNextResult(SQLServerStatement.java:1655)
+	at com.microsoft.sqlserver.jdbc.SQLServerPreparedStatement.doExecutePreparedStatement(SQLServerPreparedStatement.java:440)
+	at com.microsoft.sqlserver.jdbc.SQLServerPreparedStatement$PrepStmtExecCmd.doExecute(SQLServerPreparedStatement.java:385)
+	at com.microsoft.sqlserver.jdbc.TDSCommand.execute(IOBuffer.java:7505)
+	at com.microsoft.sqlserver.jdbc.SQLServerConnection.executeCommand(SQLServerConnection.java:2445)
+	at com.microsoft.sqlserver.jdbc.SQLServerStatement.executeCommand(SQLServerStatement.java:191)
+	at com.microsoft.sqlserver.jdbc.SQLServerStatement.executeStatement(SQLServerStatement.java:166)
+	at com.microsoft.sqlserver.jdbc.SQLServerPreparedStatement.execute(SQLServerPreparedStatement.java:367)
+	at iam_services.Iam_services.dump_xmlFILE_toDB(Iam_services.java:199)
+	at iam_services.Iam_services.check_files(Iam_services.java:324)
+	at iam_services.Iam_services.check_files(Iam_services.java:261)
+	at iam_services.Iam_services.doWork(Iam_services.java:85)
+	at iam_services.Iam_services.main(Iam_services.java:66)
+
+Mar 24, 2018 2:44:26 PM iam_services.Iam_services Error_logger
+INFO: Query->SELECT * FROM CNB_IAM_IN_E1WPG01 WHERE CONVERT(DATE, [DATE_STAMP]) = CONVERT(DATE, CURRENT_TIMESTAMP);
+Mar 24, 2018 2:44:26 PM iam_services.Iam_services Error_logger
+INFO: Empty records
+Mar 24, 2018 2:44:26 PM iam_services.Iam_services Error_logger
+INFO: Query->SELECT * FROM CNB_IAM_IN_E1WPU01 WHERE CONVERT(DATE, [DATE_STAMP]) = CONVERT(DATE, CURRENT_TIMESTAMP);
+Mar 24, 2018 2:44:26 PM iam_services.Iam_services Error_logger
+INFO: Empty records
+Mar 24, 2018 2:44:26 PM iam_services.Iam_services Error_logger
+INFO: Query->SELECT * FROM CNB_IAM_IN_E1WPU01 WHERE CONVERT(DATE, [DATE_STAMP]) = CONVERT(DATE, CURRENT_TIMESTAMP);
+Mar 24, 2018 2:44:26 PM iam_services.Iam_services Error_logger
+INFO: Empty records
+Mar 24, 2018 2:44:26 PM iam_services.Iam_services Error_logger
+INFO: Query->SELECT * FROM CNB_IAM_IN_Record WHERE CONVERT(DATE, [DATE_STAMP]) = CONVERT(DATE, CURRENT_TIMESTAMP);
+Mar 24, 2018 2:44:26 PM iam_services.Iam_services Error_logger
+INFO: Empty records
+Mar 24, 2018 2:45:34 PM iam_services.Iam_services Error_logger
+INFO: 1 new Files found
+Mar 24, 2018 2:45:34 PM iam_services.Iam_services Error_logger
+INFO: Connection succeeded, hurray!
+Mar 24, 2018 2:45:34 PM iam_services.Iam_services Error_logger
+INFO: Processing file->1
+Mar 24, 2018 2:45:34 PM iam_services.Iam_services Error_logger
+INFO: Query->SELECT * FROM CNB_IAM_IN_E1WPG01 WHERE CONVERT(DATE, [DATE_STAMP]) = CONVERT(DATE, CURRENT_TIMESTAMP);
+Mar 24, 2018 2:45:35 PM iam_services.Iam_services Error_logger
+INFO: Empty records
+Mar 24, 2018 2:45:35 PM iam_services.Iam_services Error_logger
+INFO: Query->SELECT * FROM CNB_IAM_IN_E1WPU01 WHERE CONVERT(DATE, [DATE_STAMP]) = CONVERT(DATE, CURRENT_TIMESTAMP);
+Mar 24, 2018 2:45:35 PM iam_services.Iam_services Error_logger
+INFO: Empty records
+Mar 24, 2018 2:45:35 PM iam_services.Iam_services Error_logger
+INFO: Query->SELECT * FROM CNB_IAM_IN_E1WPU01 WHERE CONVERT(DATE, [DATE_STAMP]) = CONVERT(DATE, CURRENT_TIMESTAMP);
+Mar 24, 2018 2:45:35 PM iam_services.Iam_services Error_logger
+INFO: Empty records
+Mar 24, 2018 2:45:35 PM iam_services.Iam_services Error_logger
+INFO: Query->SELECT * FROM CNB_IAM_IN_Record WHERE CONVERT(DATE, [DATE_STAMP]) = CONVERT(DATE, CURRENT_TIMESTAMP);
+Mar 24, 2018 2:45:35 PM iam_services.Iam_services Error_logger
+INFO: Empty records
