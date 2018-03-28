@@ -10,6 +10,9 @@ import java.io.File;
 import java.io.FileOutputStream;
 import java.io.IOException;
 import java.io.OutputStream;
+import java.util.ArrayList;
+import java.util.Arrays;
+import java.util.List;
 import java.util.Map;
 import org.apache.commons.net.ftp.FTPClient;
 import org.apache.commons.net.ftp.FTPFile;
@@ -42,9 +45,10 @@ public class FTP_FileProcessing {
         String pass = settings.get("ftp_server_password");
         Iam_services.getInstance().Error_logger(null, "Connectiong to ftp server at " + server + ":" + port + ", with @username:" + user + " &  @password:" + pass, true);
         FTPClient ftpClient = new FTPClient();
-
+        ftpClient.setControlEncoding("UTF-8");
+        ftpClient.setAutodetectUTF8(true);
+        
         try {
-
             ftpClient.connect(server, port);
             showServerReply(ftpClient);
 
@@ -56,39 +60,48 @@ public class FTP_FileProcessing {
 
             boolean success = ftpClient.login(user, pass);
             showServerReply(ftpClient);
-
             if (!success) {
                 Iam_services.getInstance().Error_logger(null, "Could not login to the server", true);
                 return;
             }
-
+            
+            ftpClient.setFileType(FTPClient.BINARY_FILE_TYPE);
+            //ftpClient.enterLocalPassiveMode();
+            
             Iam_services.getInstance().Error_logger(null, "Now connected to ftp server successfully", true);
             //dir
             String dir = settings.get("remote_outbound_folder");
-            if (!dir.isEmpty() && !dir.contains("/")) {
+           /* if (!dir.isEmpty() && !dir.contains("/")) {
                 dir = "/" + dir;
-            }
+            }*/
             //check if processed dir exist then create it
-            String proc=dir.trim().isEmpty() ? "" : dir + "/";
-            if(!checkDirectoryExists(ftpClient, proc+"processed")){
-                boolean makeDirectory = ftpClient.makeDirectory( proc+"processed");
-                if(makeDirectory){
-                    Iam_services.getInstance().Error_logger(null,"Proccessed dir created successfully",true);
-                }else{
-                     Iam_services.getInstance().Error_logger(new Exception("proccessed directory could not be created on the server"),func);
+            /*String proc = dir.trim().isEmpty() ? "" : dir + "/";
+            if (!checkDirectoryExists(ftpClient, proc + settings.get("proccessed_folder_name"))) {
+                boolean makeDirectory = ftpClient.makeDirectory(proc + settings.get("proccessed_folder_name"));
+                if (makeDirectory) {
+                    Iam_services.getInstance().Error_logger(null, "Proccessed dir created successfully", true);
+                } else {
+                    Iam_services.getInstance().Error_logger(new Exception("proccessed directory could not be created on the server"), func);
                 }
-            }
-            
+            }*/
+
+            //test
+            List<String[]> newXMFileList =new ArrayList<>();
+            listDirectory(ftpClient, dir, "", 0,newXMFileList);
             // Lists files and directories
-            Iam_services.getInstance().Error_logger(null, "Dircetory:"+dir, true);
-            FTPFile[] files1 = ftpClient.listFiles(dir);
-            
-            Iam_services.getInstance().Error_logger(null, files1.length + "  Files found", true);
-            get_down_LoadFiles(files1, ftpClient, dir.trim().isEmpty() ? "" : dir + "/");
-            //check and process downloaded files
-            if (files1.length > 0) {
-                Iam_services.getInstance().check_files(true);
+            //Iam_services.getInstance().Error_logger(null, "Dircetory:" + dir, true);
+            //FTPFile[] files1 = ftpClient.listFiles(dir);
+            Iam_services.getInstance().Error_logger(null, newXMFileList.size() + "  Files found", true);
+            //download files for processing
+            for(String [] file:newXMFileList){
+                download_file(ftpClient, file[1],file[0]);
             }
+            
+            //get_down_LoadFiles(files1, ftpClient, dir.trim().isEmpty() ? "" : dir + "/");*/
+            //check and process downloaded files
+            if (newXMFileList.size() > 0) {
+                Iam_services.getInstance().check_files(true);
+           }
         } catch (IOException ex) {
             Iam_services.getInstance().Error_logger(ex, func);
         } finally {
@@ -105,18 +118,20 @@ public class FTP_FileProcessing {
         Iam_services.getInstance().lock = false;
     }
 
-    private void get_down_LoadFiles(FTPFile[] files, FTPClient fTPClient,String dir) {
+    private void get_down_LoadFiles(FTPFile[] files, FTPClient fTPClient, String dir) {
+
         for (FTPFile file : files) {
             String details = file.getName();
             if (file.isDirectory()) {
                 details = "[" + details + "]";
+                Iam_services.getInstance().Error_logger(null, details, true);
             } else /*if(truefile.contains(".xml"))*/ {
-                download_file(fTPClient, details,dir);
+                download_file(fTPClient, details, dir);
             }
         }
     }
 
-    private void download_file(FTPClient ftpClient, String file,String dir) {
+    private void download_file(FTPClient ftpClient, String file, String dir) {
         String func = "download_file";
         String hmdir = settings.get("working_dir");
         if (hmdir.trim().isEmpty()) {
@@ -126,15 +141,30 @@ public class FTP_FileProcessing {
         if (!downloadFolder.exists()) {
             downloadFolder.mkdirs();
         }
+        
+        if(!dir.endsWith("/")){
+            dir+="/";
+        }
 
         try {
             OutputStream outputStream = new BufferedOutputStream(new FileOutputStream(new File(downloadFolder, file).getPath()));
-            boolean success = ftpClient.retrieveFile(dir+file, outputStream);
+            boolean success = ftpClient.retrieveFile(dir + file, outputStream);
             outputStream.close();
 
             if (success) {
                 Iam_services.getInstance().Error_logger(null, file + " has been downloaded successfully.", true);
-                boolean rename = ftpClient.rename(dir+file, dir+"processed/" + file);
+                
+                String proc = dir;
+                if (!checkDirectoryExists(ftpClient, proc + settings.get("proccessed_folder_name"))) {
+                    boolean makeDirectory = ftpClient.makeDirectory(proc + settings.get("proccessed_folder_name"));
+                    if (makeDirectory) {
+                        Iam_services.getInstance().Error_logger(null, "Proccessed dir created successfully", true);
+                    } else {
+                        Iam_services.getInstance().Error_logger(new Exception("proccessed directory could not be created on the server"), func);
+                    }
+                }
+                
+                boolean rename = ftpClient.rename(dir + file, dir + settings.get("proccessed_folder_name")+"/" + file);
 
                 if (!rename) {
                     Iam_services.getInstance().Error_logger(null, file + "-> File could not be relocated on server", true);
@@ -155,7 +185,7 @@ public class FTP_FileProcessing {
             }
         }
     }
-    
+
     boolean checkDirectoryExists(FTPClient ftpClient, String dirPath) {
         try {
             ftpClient.changeWorkingDirectory(dirPath);
@@ -169,6 +199,46 @@ public class FTP_FileProcessing {
             return false;
         }
     }
-    
-    
+
+    private void listDirectory(FTPClient ftpClient, String parentDir, String currentDir, int level,List<String[]> newFilList) throws IOException {
+        String dirToList = parentDir;
+        if (!currentDir.equals("")) {
+            dirToList += "/" + currentDir;
+        }
+        
+       // Iam_services.getInstance().Error_logger(null, dirToList, true);
+        
+        FTPFile[] subFiles = ftpClient.listFiles(dirToList);
+        if(subFiles==null){
+            // Iam_services.getInstance().Error_logger(null, dirToList+"->Returned null", true);
+        }else if(subFiles.length==0){
+             //Iam_services.getInstance().Error_logger(null, dirToList+"->list files empty", true);
+        }else{
+       /* if (subFiles != null && subFiles.length > 0) {*/
+            for (FTPFile aFile : subFiles) {
+                String currentFileName = aFile.getName();
+                //Iam_services.getInstance().Error_logger(null, "Early:"+currentDir, true);
+                if (currentFileName.equals(".") || currentFileName.equals("..") || 
+                        new ArrayList<>(Arrays.asList(settings.get("ignore_folders").split(","))).contains(currentFileName)) {
+                    
+                    // skip parent directory and directory itself
+                    continue;
+                }
+                String tab = "";
+                /*for (int i = 0; i < level; i++) {
+                    //System.out.print("\t");
+                    //tab += "\t";
+                }*/
+                if (aFile.isDirectory()) {
+                   // System.out.println("[" + currentFileName + "]");
+                    //Iam_services.getInstance().Error_logger(null, tab + "[" + currentFileName + "]", true);
+                    listDirectory(ftpClient, dirToList, currentFileName, level + 1,newFilList);
+                } else {
+                    //System.out.println(currentFileName);
+                    //Iam_services.getInstance().Error_logger(null, tab + currentFileName, true);
+                    newFilList.add(new String[]{dirToList,currentFileName});//add to queue
+                }
+            }
+        }
+    }
 }

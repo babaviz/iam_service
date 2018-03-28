@@ -42,7 +42,7 @@ public class XmlDB_funcs {
         }
         return instance;
     }
-
+    
     private List<Map<String, String>> getDBResMap(PreparedStatement pstm) {
         try {
             //Statement stmt = conn.createStatement();
@@ -57,7 +57,7 @@ public class XmlDB_funcs {
             while (rs.next()) {
                 Map<String, String> row = new HashMap<>(columns.size());
                 for (String col : columns) {
-                    row.put(col, rs.getString(col));
+                        row.put(col, rs.getString(col));
                 }
                 data.add(row);
             }
@@ -74,25 +74,30 @@ public class XmlDB_funcs {
         PreparedStatement pstm;
         String query="";
         if(where==null){
-            query="SELECT * FROM "+table+" WHERE CONVERT(DATE, [DATE_STAMP]) = CONVERT(DATE, CURRENT_TIMESTAMP);";
-            pstm=conn.prepareCall(query);
+            //query="SELECT * FROM "+table+" WHERE CONVERT(DATE, [DATE_STAMP]) = CONVERT(DATE, CURRENT_TIMESTAMP) ORDER BY id ASC;";
+            query="UPDATE "+table+" SET READ_FLG = 1 OUTPUT inserted.* WHERE  (READ_FLG = 0 OR READ_FLG IS NULL) AND CONVERT(DATE, [DATE_STAMP]) = CONVERT(DATE, CURRENT_TIMESTAMP) ;";
+            pstm=conn.prepareStatement(query);
         }else{
             StringBuilder sql=new StringBuilder("SELECT * FROM "+table+" WHERE ");
+            List<String> wherecols=new ArrayList<>();
             where.entrySet().forEach(set->{
-                sql.append(" "+set.getKey()+"=? &");
+                sql.append(" "+set.getKey()+"=? AND");
+                wherecols.add(set.getKey());
             });
-            query=sql.toString().replaceFirst(".$","");
-            pstm=conn.prepareCall(query);//remove the last &
+            query=sql.toString();
+            query=query.substring(0, query.length()-3);
+            pstm=conn.prepareStatement(query);//remove the last &
             
             int i=1;
-            for (Map.Entry<String, String> entry : where.entrySet()) {
-                pstm.setString(i++, entry.getValue());
+            for (String col_h : wherecols) {
+                pstm.setString(i++, where.get(col_h));
             }
         }
         
         iam_services.Iam_services.getInstance().Error_logger(null, "Query->"+query, true);
         return pstm;
     }
+    
     
     public  List<Map<String, String>> QueryDB(String table, Map<String,String> where){
         try {

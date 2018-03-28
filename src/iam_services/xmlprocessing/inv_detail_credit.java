@@ -7,10 +7,16 @@ package iam_services.xmlprocessing;
 
 import java.io.File;
 import java.text.SimpleDateFormat;
+import java.util.ArrayList;
+import java.util.Arrays;
 import java.util.Date;
 import java.util.HashMap;
 import java.util.List;
 import java.util.Map;
+import java.util.logging.Level;
+import java.util.logging.Logger;
+import java.util.stream.IntStream;
+import java.util.stream.Stream;
 import javax.xml.parsers.DocumentBuilder;
 import javax.xml.parsers.DocumentBuilderFactory;
 import javax.xml.transform.OutputKeys;
@@ -38,6 +44,8 @@ public class inv_detail_credit {
                 link_key2="ARTNR";
         
     private boolean walkin;
+    private String walkin_surffix="_summary";
+    private ArrayList<String> exemptions=new ArrayList<>(Arrays.asList("id", "DATE_STAMP"));
 
     public inv_detail_credit(boolean summery) {
         this.walkin = summery;
@@ -48,11 +56,25 @@ public class inv_detail_credit {
     }
 
     public void generateXML() {
-        new File("inbound_generated").mkdir();
+            try {
+                List<Map<String, String>> dbResMap = XmlDB_funcs.getInstance().QueryDB(parentTable+(walkin?walkin_surffix:""), null);
+                if(dbResMap.size()>(walkin?1:550)){
+                   CreateXMLElements.getInstance().batches(dbResMap,(walkin?1:550)).forEach(list->{genarate_XMLDOC(list);});
+                }else{
+                    genarate_XMLDOC(dbResMap);
+                }
+            } catch (Exception ex) {
+                iam_services.Iam_services.getInstance().Error_logger(ex, "generateXML");
+            }
+    }
+    
+    
+    private void genarate_XMLDOC(List<Map<String, String>> dbResMap){
+         new File("inbound_generated").mkdir();
         DocumentBuilderFactory icFactory = DocumentBuilderFactory.newInstance();
         DocumentBuilder icBuilder;        
         Date date = new Date();
-        String dateFormated=new SimpleDateFormat("yyyyMMdd_HHmmss").format(date);
+        String dateFormated=new SimpleDateFormat("yyyyMMdd_HHmmssS").format(date);
         String docNum=new Date().getTime()+"";
         
         try {
@@ -64,13 +86,13 @@ public class inv_detail_credit {
             mainRootElement.appendChild(IDOC);
             addHeaderRow(doc, IDOC, dateFormated,docNum);
             //prepare records
-            List<Map<String, String>> dbResMap = XmlDB_funcs.getInstance().QueryDB(parentTable, null);
+            
             if (dbResMap.isEmpty()) {
                 iam_services.Iam_services.getInstance().Error_logger(null, "Empty records", true);
                 return;
             }
             dbResMap.forEach((row) -> {
-                Node record = CreateXMLElements.getInstance().createRecordFields(doc, row, "E1WPU01");
+                Node record = CreateXMLElements.getInstance().createRecordFields(doc, row, "E1WPU01",exemptions);
                 addSubrecords(doc, record, row.get(link_key1));
                 IDOC.appendChild(record);
             });
@@ -87,7 +109,7 @@ public class inv_detail_credit {
             iam_services.Iam_services.getInstance().upload_inboundXMLFiles(filename,walkin?"Inv-summary-CASH":"Inv-detail-Credit",docNum);
              
         } catch (Exception e) {
-            iam_services.Iam_services.getInstance().Error_logger(e, "buildDoc");
+            iam_services.Iam_services.getInstance().Error_logger(e, "genarate_XMLDOC");
         }
     }
 
@@ -95,14 +117,17 @@ public class inv_detail_credit {
         try {
             Map<String, String> where = new HashMap<>();
             where.put(link_key1, key);
-            List<Map<String, String>> dbResMap = XmlDB_funcs.getInstance().QueryDB(subRecordsTable1, where);
+            List<String> ex=new ArrayList<>();
+            ex.addAll(exemptions);ex.add(link_key1);
+            
+            List<Map<String, String>> dbResMap = XmlDB_funcs.getInstance().QueryDB(subRecordsTable1+(walkin?walkin_surffix:""), where);
             if (dbResMap.isEmpty()) {
                 iam_services.Iam_services.getInstance().Error_logger(null, "Empty sub-records", true);
                 return;
             }
             dbResMap.forEach((row) -> {
-                 Node sub = CreateXMLElements.getInstance().createRecordFields(doc, row, "E1WPU02");
-                 addSubOfSubrecords(doc, sub, row.get(link_key2));
+                 Node sub = CreateXMLElements.getInstance().createRecordFields(doc, row, "E1WPU02",ex);                 
+                 addSubOfSubrecords(doc, sub, row.get(link_key1),row.get(link_key2));
                  record.appendChild(sub);
             });
 
@@ -111,12 +136,18 @@ public class inv_detail_credit {
         }
     }
     
-     private void addSubOfSubrecords(Document doc, Node record, String key) {
+     private void addSubOfSubrecords(Document doc, Node record, String key1,String key2) {
         try {
             Map<String, String> where = new HashMap<>();
-            where.put(link_key2, key);
-            List<Map<String, String>> dbResMap1 = XmlDB_funcs.getInstance().QueryDB(subRecordsTable2, where);
-            List<Map<String, String>> dbResMap2 = XmlDB_funcs.getInstance().QueryDB(subRecordsTable3, where);           
+            where.put(link_key2, key2);
+            where.put(link_key1, key1);
+            
+            ArrayList<String> ex=new ArrayList<>();
+            ex.addAll(exemptions);ex.add(link_key1);
+            ex.add(link_key2);
+            
+            List<Map<String, String>> dbResMap1 = XmlDB_funcs.getInstance().QueryDB(subRecordsTable2+(walkin?walkin_surffix:""), where);
+            List<Map<String, String>> dbResMap2 = XmlDB_funcs.getInstance().QueryDB(subRecordsTable3+(walkin?walkin_surffix:""), where);           
             if (dbResMap1.isEmpty()) {
                 iam_services.Iam_services.getInstance().Error_logger(null, "Empty sub-records=>1", true);
             }
@@ -125,24 +156,24 @@ public class inv_detail_credit {
             }
             
             dbResMap1.forEach((row) -> {
-                Node sub = CreateXMLElements.getInstance().createRecordFields(doc, row, "E1WPU05");
+                Node sub = CreateXMLElements.getInstance().createRecordFields(doc, row, "E1WPU05",ex);
                 record.appendChild(sub);
             });
             
             dbResMap2.forEach((row) -> {
-                Node sub = CreateXMLElements.getInstance().createRecordFields(doc, row, "E1WPU04");
+                Node sub = CreateXMLElements.getInstance().createRecordFields(doc, row, "E1WPU04",ex);
                 record.appendChild(sub);
             });
             
             if(walkin){
-                List<Map<String, String>> dbResMap3 = XmlDB_funcs.getInstance().QueryDB(subRecordsTable4, where);
-
+                List<Map<String, String>> dbResMap3 = XmlDB_funcs.getInstance().QueryDB(subRecordsTable4+(walkin?walkin_surffix:""), where);
+           
                if (dbResMap3.isEmpty()) {
                    iam_services.Iam_services.getInstance().Error_logger(null, "Empty sub-records=>3", true);
                }
 
                dbResMap3.forEach((row) -> {
-                   Node sub = CreateXMLElements.getInstance().createRecordFields(doc, row, "E1WXX01");
+                   Node sub = CreateXMLElements.getInstance().createRecordFields(doc, row, "E1WXX01",ex);
                    record.appendChild(sub);
                });
             }

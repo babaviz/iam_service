@@ -48,6 +48,7 @@ public class Iam_services {
     final String CONNECTION_STRING = "jdbc_connection_string";
     final String DATABASE_DRIVER_MSSSQL = "com.microsoft.sqlserver.jdbc.SQLServerDriver";
     final String FOLDER = "destination_folder";
+    final String IN_FOLDER ="inbound_xml_generateg_folder";
     Connection conn = null;
     Map<String, String> settings = new HashMap<>();
 
@@ -70,7 +71,7 @@ public class Iam_services {
         try {
             //initialize logger
             String dateString = new SimpleDateFormat("yyyy_MM_dd").format(new Date());
-            fh = new FileHandler("iam_service_err_" + dateString + ".log", true);
+            fh = new FileHandler("iam_service_err_" + dateString + ".log", 1024 * 1024, 20, true);//new FileHandler("iam_service_err_" + dateString + ".log", true);
             logger.addHandler(fh);
         } catch (IOException | SecurityException ex) {
             Logger.getLogger(Iam_services.class.getName()).log(Level.SEVERE, null, ex);
@@ -78,14 +79,18 @@ public class Iam_services {
     }
 
     private void doWork() {
-        int wait=10;
+        int wait = 10;
         while (true) {
             try {
                 if (!lock) {
                     check_files();
                     check_and_process_inboundDATA();
                 }
-                try{wait=Integer.parseInt(settings.get("duration").trim());}catch(Exception ex){Error_logger(ex, "doWork");}
+                try {
+                    wait = Integer.parseInt(settings.get("duration").trim());
+                } catch (Exception ex) {
+                    Error_logger(ex, "doWork");
+                }
                 Thread.sleep(1000 * 60 * wait);
             } catch (InterruptedException e) {
                 Error_logger(e, "doWork");
@@ -96,8 +101,10 @@ public class Iam_services {
     }
 
     public Connection Connect() {
-        if(conn !=null)return conn;
-        
+        if (conn != null) {
+            return conn;
+        }
+
         String[] conStrings = getSettings();
         conn = MSQLConnection(conStrings[0]);
         if (conn == null) {//if not successful, try second
@@ -196,7 +203,7 @@ public class Iam_services {
             cstm.setNString(1, xml);
             cstm.setString(2, name);
             //System.err.println("sending...");
-                    cstm.execute();
+            cstm.execute();
         } catch (SQLException ex) {
             Error_logger(ex, "dump_xmlFILE_toDB");
             return false;
@@ -321,8 +328,9 @@ public class Iam_services {
             }
             Error_logger(null, "Processing file->" + (count++), true);
             try {
-                if(dump_xmlFILE_toDB(fileEntry.getName(), readLocalFile(fileEntry.getPath())))
+                if (dump_xmlFILE_toDB(fileEntry.getName(), readLocalFile(fileEntry.getPath()))) {
                     Files.move(Paths.get(fileEntry.getPath()), Paths.get(new File(processed_dir, fileEntry.getName()).getPath()), StandardCopyOption.REPLACE_EXISTING);
+                }
             } catch (Exception ex) {
                 Error_logger(ex, "check_files");
             }
@@ -350,23 +358,23 @@ public class Iam_services {
         }
         return instance;
     }
-    
-    public void check_and_process_inboundDATA(){
-         new art_adjdoc_con().generateXML();
-         new inv_detail_credit().generateXML();
-         new inv_detail_credit(true).generateXML();
-         new pos_fi_actual_XML().generateXML();
+
+    public void check_and_process_inboundDATA() {
+        new art_adjdoc_con().generateXML();
+        new inv_detail_credit().generateXML();
+        new inv_detail_credit(true).generateXML();
+        new pos_fi_actual_XML().generateXML();
     }
 
-    public void upload_inboundXMLFiles(String fileName, String type,String docNum) {
-        String func="process_inbound";
+    public void upload_inboundXMLFiles(String fileName, String type, String docNum) {
+        String func = "process_inbound";
         StatusLogger dbLogger = null;
-        int id=0;
+        int id = 0;
         try {
             new File("inbound_generated", "processed").mkdirs();
-            dbLogger=StatusLogger.getInstance();
-            id=dbLogger.Log_start(new File(fileName), type);
-            switch (settings.get("access_type").toLowerCase()) {
+            dbLogger = StatusLogger.getInstance();
+            id = dbLogger.Log_start(new File(fileName), type);
+            /*switch (settings.get("access_type").toLowerCase()) {
                 case "remote":
                     processRemoteFolder();
                     break;
@@ -382,15 +390,19 @@ public class Iam_services {
                 default:
                     Error_logger(new Exception("Unsupported settings type:" + settings.get("access_type")), "check_files");
                     return;
-            }
+            }*/
+            File localInbound = new File(settings.get(IN_FOLDER), "inbound");
+            localInbound.mkdirs();
+            Files.copy(new File(fileName).toPath(), new File(localInbound, new File(fileName).getName()).toPath());
+            
             Files.move(new File(fileName).toPath(),
                     new File(new File("inbound_generated", "processed"), new File(fileName).getName()).toPath()
-            );                    
+            );
         } catch (Exception ex) {
             Error_logger(ex, func);
             dbLogger.Log_error(id);
             return;
         }
-        dbLogger.Log_success(id, docNum);         
+        dbLogger.Log_success(id, docNum);
     }
 }

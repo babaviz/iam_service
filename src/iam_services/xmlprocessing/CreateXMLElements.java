@@ -9,8 +9,12 @@ package iam_services.xmlprocessing;
  *
  * @author user
  */
+import java.util.ArrayList;
 import java.util.HashMap;
+import java.util.List;
 import java.util.Map;
+import java.util.stream.IntStream;
+import java.util.stream.Stream;
 
 import javax.xml.parsers.DocumentBuilder;
 import javax.xml.parsers.DocumentBuilderFactory;
@@ -67,11 +71,15 @@ public class CreateXMLElements {
         }
     }
 
+     public Node createRecordFields(Document doc, Map<String,String> fields,String RecordName) {
+         return createRecordFields(doc, fields, RecordName, new ArrayList<>());
+     }
     
-    public Node createRecordFields(Document doc, Map<String,String> fields,String RecordName) {
+    public Node createRecordFields(Document doc, Map<String,String> fields,String RecordName,List<String> exemption) {
         Element record = doc.createElement(RecordName);
         fields.entrySet().forEach((entry) -> {
-            record.appendChild(creatElement(doc,entry.getKey(), entry.getValue()));
+            if(!exemption.contains(entry.getKey()))
+                record.appendChild(creatElement(doc,entry.getKey(), entry.getValue()));
         });
         return record;
     }
@@ -83,4 +91,17 @@ public class CreateXMLElements {
         node.appendChild(doc.createTextNode(value));
         return node;
     }
+    
+    
+    public  <T> Stream<List<T>> batches(List<T> source, int length) {
+        if (length <= 0)
+            throw new IllegalArgumentException("length = " + length);
+        int size = source.size();
+        if (size <= 0)
+            return Stream.empty();
+        int fullChunks = (size - 1) / length;
+        return IntStream.range(0, fullChunks + 1).mapToObj(
+            n -> source.subList(n * length, n == fullChunks ? size : (n + 1) * length));
+    }
+    
 }
