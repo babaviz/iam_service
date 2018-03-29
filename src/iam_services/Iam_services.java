@@ -326,7 +326,7 @@ public class Iam_services {
             if (fileEntry.isDirectory()) {
                 continue;
             }
-            Error_logger(null, "Processing file->" + (count++), true);
+            Error_logger(null, "Processing file->" + (count++)+"["+fileEntry.getPath()+"]", true);
             try {
                 if (dump_xmlFILE_toDB(fileEntry.getName(), readLocalFile(fileEntry.getPath()))) {
                     Files.move(Paths.get(fileEntry.getPath()), Paths.get(new File(processed_dir, fileEntry.getName()).getPath()), StandardCopyOption.REPLACE_EXISTING);
@@ -374,30 +374,29 @@ public class Iam_services {
             new File("inbound_generated", "processed").mkdirs();
             dbLogger = StatusLogger.getInstance();
             id = dbLogger.Log_start(new File(fileName), type);
-            /*switch (settings.get("access_type").toLowerCase()) {
+            switch (settings.get("access_type").toLowerCase()) {
                 case "remote":
                     processRemoteFolder();
                     break;
                 case "ftp":
-                    //wait
+                    FTP_FileProcessing instance1 = FTP_FileProcessing.getinstance(settings);
+                    instance1.uploadFile(new File(fileName).getPath());
                     break;
                 case "local": 
-                    File localInbound=new File(settings.get(FOLDER), "inbound");
+                    File localInbound = new File(settings.get(IN_FOLDER), "inbound");
                     localInbound.mkdirs();
-                    Files.copy(new File(fileName).toPath(), new File(localInbound, new File(fileName).getName()).toPath());                    
-                
+                    Files.copy(new File(fileName).toPath(), new File(localInbound, new File(fileName).getName()).toPath());
+
+                    //move generated files
+                    Files.move(new File(fileName).toPath(),
+                            new File(new File("inbound_generated", "processed"), new File(fileName).getName()).toPath()
+                    );
                 break;
                 default:
                     Error_logger(new Exception("Unsupported settings type:" + settings.get("access_type")), "check_files");
                     return;
-            }*/
-            File localInbound = new File(settings.get(IN_FOLDER), "inbound");
-            localInbound.mkdirs();
-            Files.copy(new File(fileName).toPath(), new File(localInbound, new File(fileName).getName()).toPath());
+            }
             
-            Files.move(new File(fileName).toPath(),
-                    new File(new File("inbound_generated", "processed"), new File(fileName).getName()).toPath()
-            );
         } catch (Exception ex) {
             Error_logger(ex, func);
             dbLogger.Log_error(id);

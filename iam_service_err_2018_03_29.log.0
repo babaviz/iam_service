@@ -1,0 +1,192 @@
+Mar 29, 2018 3:49:16 PM iam_services.Iam_services Error_logger
+INFO: 15 new Files found
+Mar 29, 2018 3:49:17 PM iam_services.Iam_services Error_logger
+INFO: Connection succeeded, hurray!
+Mar 29, 2018 3:49:17 PM iam_services.Iam_services Error_logger
+INFO: Processing file->1[C:\Users\user\Documents\DENNIS\allsamples\artmas_20180208-072021-938.xml]
+Mar 29, 2018 3:49:17 PM iam_services.Iam_services Error_logger
+INFO: Processing file->2[C:\Users\user\Documents\DENNIS\allsamples\artmas_20180320-101005-775.xml]
+Mar 29, 2018 3:49:17 PM iam_services.Iam_services Error_logger
+INFO: Processing file->3[C:\Users\user\Documents\DENNIS\allsamples\artmas_20180328-155618-024.xml]
+Mar 29, 2018 3:49:18 PM iam_services.Iam_services Error_logger
+INFO: Processing file->4[C:\Users\user\Documents\DENNIS\allsamples\brand_20180213-115212-179.xml]
+Mar 29, 2018 3:49:18 PM iam_services.Iam_services Error_logger
+INFO: Processing file->5[C:\Users\user\Documents\DENNIS\allsamples\brand_20180320-110729-129.xml]
+Mar 29, 2018 3:49:18 PM iam_services.Iam_services Error_logger
+INFO: Processing file->6[C:\Users\user\Documents\DENNIS\allsamples\brand_20180320-110729-170.xml]
+Mar 29, 2018 3:49:18 PM iam_services.Iam_services Error_logger
+INFO: Processing file->7[C:\Users\user\Documents\DENNIS\allsamples\brand_20180328-160205-914.xml]
+Mar 29, 2018 3:49:18 PM iam_services.Iam_services Error_logger
+INFO: Processing file->8[C:\Users\user\Documents\DENNIS\allsamples\brand_20180328-160205-927.xml]
+Mar 29, 2018 3:49:18 PM iam_services.Iam_services Error_logger
+INFO: Processing file->9[C:\Users\user\Documents\DENNIS\allsamples\brand_20180328-160206-028.xml]
+Mar 29, 2018 3:49:18 PM iam_services.Iam_services Error_logger
+INFO: Processing file->10[C:\Users\user\Documents\DENNIS\allsamples\brand_20180328-160206-137.xml]
+Mar 29, 2018 3:49:18 PM iam_services.Iam_services Error_logger
+INFO: Processing file->11[C:\Users\user\Documents\DENNIS\allsamples\brand_20180328-160206-246.xml]
+Mar 29, 2018 3:49:18 PM iam_services.Iam_services Error_logger
+INFO: Processing file->12[C:\Users\user\Documents\DENNIS\allsamples\brand_20180328-160206-340.xml]
+Mar 29, 2018 3:49:18 PM iam_services.Iam_services Error_logger
+INFO: Processing file->13[C:\Users\user\Documents\DENNIS\allsamples\brand_20180328-160206-446.xml]
+Mar 29, 2018 3:49:18 PM iam_services.Iam_services Error_logger
+INFO: Processing file->14[C:\Users\user\Documents\DENNIS\allsamples\brand_20180328-160206-511.xml]
+Mar 29, 2018 3:49:18 PM iam_services.Iam_services Error_logger
+INFO: Processing file->15[C:\Users\user\Documents\DENNIS\allsamples\brand_20180328-160206-614.xml]
+Mar 29, 2018 3:49:18 PM iam_services.Iam_services Error_logger
+INFO: Query->UPDATE CNB_IAM_IN_E1WPG01 SET READ_FLG = 1 OUTPUT inserted.* WHERE  (READ_FLG = 0 OR READ_FLG IS NULL) AND CONVERT(DATE, [DATE_STAMP]) = CONVERT(DATE, CURRENT_TIMESTAMP) ;
+Mar 29, 2018 3:49:18 PM iam_services.Iam_services Error_logger
+INFO: Empty records
+Mar 29, 2018 3:49:18 PM iam_services.Iam_services Error_logger
+INFO: Query->UPDATE CNB_IAM_IN_E1WPU01 SET READ_FLG = 1 OUTPUT inserted.* WHERE  (READ_FLG = 0 OR READ_FLG IS NULL) AND CONVERT(DATE, [DATE_STAMP]) = CONVERT(DATE, CURRENT_TIMESTAMP) ;
+Mar 29, 2018 3:49:18 PM iam_services.Iam_services Error_logger
+INFO: Empty records
+Mar 29, 2018 3:49:18 PM iam_services.Iam_services Error_logger
+INFO: Query->UPDATE CNB_IAM_IN_E1WPU01_summary SET READ_FLG = 1 OUTPUT inserted.* WHERE  (READ_FLG = 0 OR READ_FLG IS NULL) AND CONVERT(DATE, [DATE_STAMP]) = CONVERT(DATE, CURRENT_TIMESTAMP) ;
+Mar 29, 2018 3:49:18 PM iam_services.Iam_services Error_logger
+INFO: Empty records
+Mar 29, 2018 3:49:18 PM iam_services.Iam_services Error_logger
+INFO: Query->UPDATE CNB_IAM_IN_Record SET READ_FLG = 1 OUTPUT inserted.* WHERE  (READ_FLG = 0 OR READ_FLG IS NULL) AND CONVERT(DATE, [DATE_STAMP]) = CONVERT(DATE, CURRENT_TIMESTAMP) ;
+Mar 29, 2018 3:49:18 PM iam_services.Iam_services Error_logger
+INFO: Empty records
+Mar 29, 2018 3:51:21 PM iam_services.Iam_services Error_logger
+INFO: 9 new Files found
+Mar 29, 2018 3:51:21 PM iam_services.Iam_services Error_logger
+INFO: Connection succeeded, hurray!
+Mar 29, 2018 3:51:21 PM iam_services.Iam_services Error_logger
+INFO: Processing file->1[C:\Users\user\Documents\DENNIS\allsamples\price_artuom_20180328-155920-437.xml]
+Mar 29, 2018 3:51:22 PM iam_services.Iam_services Error_logger
+INFO: Processing file->2[C:\Users\user\Documents\DENNIS\allsamples\price_artuom_20180328-155920-536.xml]
+Mar 29, 2018 3:51:22 PM iam_services.Iam_services Error_logger
+INFO: Processing file->3[C:\Users\user\Documents\DENNIS\allsamples\price_artuom_20180328-155920-729.xml]
+Mar 29, 2018 3:51:22 PM iam_services.Iam_services Error_logger
+INFO: Processing file->4[C:\Users\user\Documents\DENNIS\allsamples\price_artuom_20180328-155920-779.xml]
+Mar 29, 2018 3:51:22 PM iam_services.Iam_services Error_logger
+INFO: Processing file->5[C:\Users\user\Documents\DENNIS\allsamples\price_artuom_20180328-155920-864.xml]
+Mar 29, 2018 3:51:22 PM iam_services.Iam_services Error_logger
+INFO: Processing file->6[C:\Users\user\Documents\DENNIS\allsamples\price_artuom_20180328-155920-967.xml]
+Mar 29, 2018 3:51:22 PM iam_services.Iam_services Error_logger
+INFO: Processing file->7[C:\Users\user\Documents\DENNIS\allsamples\price_artuom_20180328-155921-153.xml]
+Mar 29, 2018 3:51:22 PM iam_services.Iam_services Error_logger
+INFO: Processing file->8[C:\Users\user\Documents\DENNIS\allsamples\price_artuom_20180328-155921-307.xml]
+Mar 29, 2018 3:51:22 PM iam_services.Iam_services Error_logger
+INFO: Processing file->9[C:\Users\user\Documents\DENNIS\allsamples\price_artuom_20180328-155921-397.xml]
+Mar 29, 2018 3:51:22 PM iam_services.Iam_services Error_logger
+INFO: Query->UPDATE CNB_IAM_IN_E1WPG01 SET READ_FLG = 1 OUTPUT inserted.* WHERE  (READ_FLG = 0 OR READ_FLG IS NULL) AND CONVERT(DATE, [DATE_STAMP]) = CONVERT(DATE, CURRENT_TIMESTAMP) ;
+Mar 29, 2018 3:51:22 PM iam_services.Iam_services Error_logger
+INFO: Empty records
+Mar 29, 2018 3:51:22 PM iam_services.Iam_services Error_logger
+INFO: Query->UPDATE CNB_IAM_IN_E1WPU01 SET READ_FLG = 1 OUTPUT inserted.* WHERE  (READ_FLG = 0 OR READ_FLG IS NULL) AND CONVERT(DATE, [DATE_STAMP]) = CONVERT(DATE, CURRENT_TIMESTAMP) ;
+Mar 29, 2018 3:51:22 PM iam_services.Iam_services Error_logger
+INFO: Empty records
+Mar 29, 2018 3:51:22 PM iam_services.Iam_services Error_logger
+INFO: Query->UPDATE CNB_IAM_IN_E1WPU01_summary SET READ_FLG = 1 OUTPUT inserted.* WHERE  (READ_FLG = 0 OR READ_FLG IS NULL) AND CONVERT(DATE, [DATE_STAMP]) = CONVERT(DATE, CURRENT_TIMESTAMP) ;
+Mar 29, 2018 3:51:22 PM iam_services.Iam_services Error_logger
+INFO: Empty records
+Mar 29, 2018 3:51:22 PM iam_services.Iam_services Error_logger
+INFO: Query->UPDATE CNB_IAM_IN_Record SET READ_FLG = 1 OUTPUT inserted.* WHERE  (READ_FLG = 0 OR READ_FLG IS NULL) AND CONVERT(DATE, [DATE_STAMP]) = CONVERT(DATE, CURRENT_TIMESTAMP) ;
+Mar 29, 2018 3:51:22 PM iam_services.Iam_services Error_logger
+INFO: Empty records
+Mar 29, 2018 3:53:31 PM iam_services.Iam_services Error_logger
+INFO: 3 new Files found
+Mar 29, 2018 3:53:32 PM iam_services.Iam_services Error_logger
+INFO: Connection succeeded, hurray!
+Mar 29, 2018 3:53:32 PM iam_services.Iam_services Error_logger
+INFO: Processing file->1[C:\Users\user\Documents\DENNIS\allsamples\ean_20180208-144052-543.xml]
+Mar 29, 2018 3:53:32 PM iam_services.Iam_services Error_logger
+INFO: Processing file->2[C:\Users\user\Documents\DENNIS\allsamples\ean_20180320-103922-911.xml]
+Mar 29, 2018 3:53:32 PM iam_services.Iam_services Error_logger
+INFO: Processing file->3[C:\Users\user\Documents\DENNIS\allsamples\ean_20180328-155618-122.xml]
+Mar 29, 2018 3:53:32 PM iam_services.Iam_services Error_logger
+INFO: Query->UPDATE CNB_IAM_IN_E1WPG01 SET READ_FLG = 1 OUTPUT inserted.* WHERE  (READ_FLG = 0 OR READ_FLG IS NULL) AND CONVERT(DATE, [DATE_STAMP]) = CONVERT(DATE, CURRENT_TIMESTAMP) ;
+Mar 29, 2018 3:53:32 PM iam_services.Iam_services Error_logger
+INFO: Empty records
+Mar 29, 2018 3:53:32 PM iam_services.Iam_services Error_logger
+INFO: Query->UPDATE CNB_IAM_IN_E1WPU01 SET READ_FLG = 1 OUTPUT inserted.* WHERE  (READ_FLG = 0 OR READ_FLG IS NULL) AND CONVERT(DATE, [DATE_STAMP]) = CONVERT(DATE, CURRENT_TIMESTAMP) ;
+Mar 29, 2018 3:53:32 PM iam_services.Iam_services Error_logger
+INFO: Empty records
+Mar 29, 2018 3:53:32 PM iam_services.Iam_services Error_logger
+INFO: Query->UPDATE CNB_IAM_IN_E1WPU01_summary SET READ_FLG = 1 OUTPUT inserted.* WHERE  (READ_FLG = 0 OR READ_FLG IS NULL) AND CONVERT(DATE, [DATE_STAMP]) = CONVERT(DATE, CURRENT_TIMESTAMP) ;
+Mar 29, 2018 3:53:32 PM iam_services.Iam_services Error_logger
+INFO: Empty records
+Mar 29, 2018 3:53:32 PM iam_services.Iam_services Error_logger
+INFO: Query->UPDATE CNB_IAM_IN_Record SET READ_FLG = 1 OUTPUT inserted.* WHERE  (READ_FLG = 0 OR READ_FLG IS NULL) AND CONVERT(DATE, [DATE_STAMP]) = CONVERT(DATE, CURRENT_TIMESTAMP) ;
+Mar 29, 2018 3:53:32 PM iam_services.Iam_services Error_logger
+INFO: Empty records
+Mar 29, 2018 3:55:56 PM iam_services.Iam_services Error_logger
+INFO: 3 new Files found
+Mar 29, 2018 3:55:56 PM iam_services.Iam_services Error_logger
+INFO: Connection succeeded, hurray!
+Mar 29, 2018 3:55:56 PM iam_services.Iam_services Error_logger
+INFO: Processing file->1[C:\Users\user\Documents\DENNIS\allsamples\ean_20180208-144052-543.xml]
+Mar 29, 2018 3:55:56 PM iam_services.Iam_services Error_logger
+INFO: Processing file->2[C:\Users\user\Documents\DENNIS\allsamples\ean_20180320-103922-911.xml]
+Mar 29, 2018 3:55:56 PM iam_services.Iam_services Error_logger
+INFO: Processing file->3[C:\Users\user\Documents\DENNIS\allsamples\ean_20180328-155618-122.xml]
+Mar 29, 2018 3:55:56 PM iam_services.Iam_services Error_logger
+INFO: Query->UPDATE CNB_IAM_IN_E1WPG01 SET READ_FLG = 1 OUTPUT inserted.* WHERE  (READ_FLG = 0 OR READ_FLG IS NULL) AND CONVERT(DATE, [DATE_STAMP]) = CONVERT(DATE, CURRENT_TIMESTAMP) ;
+Mar 29, 2018 3:55:56 PM iam_services.Iam_services Error_logger
+INFO: Empty records
+Mar 29, 2018 3:55:56 PM iam_services.Iam_services Error_logger
+INFO: Query->UPDATE CNB_IAM_IN_E1WPU01 SET READ_FLG = 1 OUTPUT inserted.* WHERE  (READ_FLG = 0 OR READ_FLG IS NULL) AND CONVERT(DATE, [DATE_STAMP]) = CONVERT(DATE, CURRENT_TIMESTAMP) ;
+Mar 29, 2018 3:55:56 PM iam_services.Iam_services Error_logger
+INFO: Empty records
+Mar 29, 2018 3:55:56 PM iam_services.Iam_services Error_logger
+INFO: Query->UPDATE CNB_IAM_IN_E1WPU01_summary SET READ_FLG = 1 OUTPUT inserted.* WHERE  (READ_FLG = 0 OR READ_FLG IS NULL) AND CONVERT(DATE, [DATE_STAMP]) = CONVERT(DATE, CURRENT_TIMESTAMP) ;
+Mar 29, 2018 3:55:56 PM iam_services.Iam_services Error_logger
+INFO: Empty records
+Mar 29, 2018 3:55:56 PM iam_services.Iam_services Error_logger
+INFO: Query->UPDATE CNB_IAM_IN_Record SET READ_FLG = 1 OUTPUT inserted.* WHERE  (READ_FLG = 0 OR READ_FLG IS NULL) AND CONVERT(DATE, [DATE_STAMP]) = CONVERT(DATE, CURRENT_TIMESTAMP) ;
+Mar 29, 2018 3:55:56 PM iam_services.Iam_services Error_logger
+INFO: Empty records
+Mar 29, 2018 4:00:47 PM iam_services.Iam_services Error_logger
+INFO: 3 new Files found
+Mar 29, 2018 4:00:47 PM iam_services.Iam_services Error_logger
+INFO: Connection succeeded, hurray!
+Mar 29, 2018 4:00:47 PM iam_services.Iam_services Error_logger
+INFO: Processing file->1[C:\Users\user\Documents\DENNIS\allsamples\ean_20180208-144052-543.xml]
+Mar 29, 2018 4:00:47 PM iam_services.Iam_services Error_logger
+INFO: Processing file->2[C:\Users\user\Documents\DENNIS\allsamples\ean_20180320-103922-911.xml]
+Mar 29, 2018 4:00:47 PM iam_services.Iam_services Error_logger
+INFO: Processing file->3[C:\Users\user\Documents\DENNIS\allsamples\ean_20180328-155618-122.xml]
+Mar 29, 2018 4:00:47 PM iam_services.Iam_services Error_logger
+INFO: Query->UPDATE CNB_IAM_IN_E1WPG01 SET READ_FLG = 1 OUTPUT inserted.* WHERE  (READ_FLG = 0 OR READ_FLG IS NULL) AND CONVERT(DATE, [DATE_STAMP]) = CONVERT(DATE, CURRENT_TIMESTAMP) ;
+Mar 29, 2018 4:00:47 PM iam_services.Iam_services Error_logger
+INFO: Empty records
+Mar 29, 2018 4:00:47 PM iam_services.Iam_services Error_logger
+INFO: Query->UPDATE CNB_IAM_IN_E1WPU01 SET READ_FLG = 1 OUTPUT inserted.* WHERE  (READ_FLG = 0 OR READ_FLG IS NULL) AND CONVERT(DATE, [DATE_STAMP]) = CONVERT(DATE, CURRENT_TIMESTAMP) ;
+Mar 29, 2018 4:00:47 PM iam_services.Iam_services Error_logger
+INFO: Empty records
+Mar 29, 2018 4:00:47 PM iam_services.Iam_services Error_logger
+INFO: Query->UPDATE CNB_IAM_IN_E1WPU01_summary SET READ_FLG = 1 OUTPUT inserted.* WHERE  (READ_FLG = 0 OR READ_FLG IS NULL) AND CONVERT(DATE, [DATE_STAMP]) = CONVERT(DATE, CURRENT_TIMESTAMP) ;
+Mar 29, 2018 4:00:47 PM iam_services.Iam_services Error_logger
+INFO: Empty records
+Mar 29, 2018 4:00:47 PM iam_services.Iam_services Error_logger
+INFO: Query->UPDATE CNB_IAM_IN_Record SET READ_FLG = 1 OUTPUT inserted.* WHERE  (READ_FLG = 0 OR READ_FLG IS NULL) AND CONVERT(DATE, [DATE_STAMP]) = CONVERT(DATE, CURRENT_TIMESTAMP) ;
+Mar 29, 2018 4:00:47 PM iam_services.Iam_services Error_logger
+INFO: Empty records
+Mar 29, 2018 4:02:58 PM iam_services.Iam_services Error_logger
+INFO: 3 new Files found
+Mar 29, 2018 4:02:58 PM iam_services.Iam_services Error_logger
+INFO: Connection succeeded, hurray!
+Mar 29, 2018 4:02:58 PM iam_services.Iam_services Error_logger
+INFO: Processing file->1[C:\Users\user\Documents\DENNIS\allsamples\ean_20180208-144052-543.xml]
+Mar 29, 2018 4:02:59 PM iam_services.Iam_services Error_logger
+INFO: Processing file->2[C:\Users\user\Documents\DENNIS\allsamples\ean_20180320-103922-911.xml]
+Mar 29, 2018 4:02:59 PM iam_services.Iam_services Error_logger
+INFO: Processing file->3[C:\Users\user\Documents\DENNIS\allsamples\ean_20180328-155618-122.xml]
+Mar 29, 2018 4:02:59 PM iam_services.Iam_services Error_logger
+INFO: Query->UPDATE CNB_IAM_IN_E1WPG01 SET READ_FLG = 1 OUTPUT inserted.* WHERE  (READ_FLG = 0 OR READ_FLG IS NULL) AND CONVERT(DATE, [DATE_STAMP]) = CONVERT(DATE, CURRENT_TIMESTAMP) ;
+Mar 29, 2018 4:02:59 PM iam_services.Iam_services Error_logger
+INFO: Empty records
+Mar 29, 2018 4:02:59 PM iam_services.Iam_services Error_logger
+INFO: Query->UPDATE CNB_IAM_IN_E1WPU01 SET READ_FLG = 1 OUTPUT inserted.* WHERE  (READ_FLG = 0 OR READ_FLG IS NULL) AND CONVERT(DATE, [DATE_STAMP]) = CONVERT(DATE, CURRENT_TIMESTAMP) ;
+Mar 29, 2018 4:02:59 PM iam_services.Iam_services Error_logger
+INFO: Empty records
+Mar 29, 2018 4:02:59 PM iam_services.Iam_services Error_logger
+INFO: Query->UPDATE CNB_IAM_IN_E1WPU01_summary SET READ_FLG = 1 OUTPUT inserted.* WHERE  (READ_FLG = 0 OR READ_FLG IS NULL) AND CONVERT(DATE, [DATE_STAMP]) = CONVERT(DATE, CURRENT_TIMESTAMP) ;
+Mar 29, 2018 4:02:59 PM iam_services.Iam_services Error_logger
+INFO: Empty records
+Mar 29, 2018 4:02:59 PM iam_services.Iam_services Error_logger
+INFO: Query->UPDATE CNB_IAM_IN_Record SET READ_FLG = 1 OUTPUT inserted.* WHERE  (READ_FLG = 0 OR READ_FLG IS NULL) AND CONVERT(DATE, [DATE_STAMP]) = CONVERT(DATE, CURRENT_TIMESTAMP) ;
+Mar 29, 2018 4:02:59 PM iam_services.Iam_services Error_logger
+INFO: Empty records
