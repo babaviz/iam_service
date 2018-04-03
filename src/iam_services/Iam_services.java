@@ -71,7 +71,7 @@ public class Iam_services {
         try {
             //initialize logger
             String dateString = new SimpleDateFormat("yyyy_MM_dd").format(new Date());
-            fh = new FileHandler("iam_service_err_" + dateString + ".log", 1024 * 1024, 20, true);//new FileHandler("iam_service_err_" + dateString + ".log", true);
+            fh = new FileHandler("iam_service_err_" + dateString + ".log", 30*1024 * 1024, 1, true);//new FileHandler("iam_service_err_" + dateString + ".log", true);
             logger.addHandler(fh);
         } catch (IOException | SecurityException ex) {
             Logger.getLogger(Iam_services.class.getName()).log(Level.SEVERE, null, ex);
