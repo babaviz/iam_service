@@ -165,18 +165,17 @@ public class inv_detail_credit {
                 record.appendChild(sub);
             });
             
-            if(walkin){
-                List<Map<String, String>> dbResMap3 = XmlDB_funcs.getInstance().QueryDB(subRecordsTable4+(walkin?walkin_surffix:""), where);
-           
-               if (dbResMap3.isEmpty()) {
-                   iam_services.Iam_services.getInstance().Error_logger(null, "Empty sub-records=>3", true);
-               }
+            List<Map<String, String>> dbResMap3 = XmlDB_funcs.getInstance().QueryDB(subRecordsTable4+(walkin?walkin_surffix:""), where);
 
-               dbResMap3.forEach((row) -> {
-                   Node sub = CreateXMLElements.getInstance().createRecordFields(doc, row, "E1WXX01",ex);
-                   record.appendChild(sub);
-               });
-            }
+           if (dbResMap3.isEmpty()) {
+               iam_services.Iam_services.getInstance().Error_logger(null, "Empty sub-records=>3", true);
+           }
+
+           dbResMap3.forEach((row) -> {
+               Node sub = CreateXMLElements.getInstance().createRecordFields(doc, row, "E1WXX01",ex);
+               record.appendChild(sub);
+           });
+               
         } catch (Exception e) {
              iam_services.Iam_services.getInstance().Error_logger(e, "addSubOfSubrecords");
         }

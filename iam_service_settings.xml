@@ -2,14 +2,14 @@
 <!DOCTYPE properties SYSTEM "http://java.sun.com/dtd/properties.dtd">
 <properties>
     <!--Enter sqlserver connection settings here-->
-    <entry key="SERVER_INSTANCE">192.168.13.48</entry>
+    <entry key="SERVER_INSTANCE">192.168.13.27</entry>
     <entry key="port"></entry>
     <entry key="DB">xmltest</entry>
     <entry key="user">sa</entry>
     <entry key="password">sa</entry>
 		
     <!--Or, you can provide a commplete jdbc connection string, this is given first priority-->
-    <entry key="jdbc_connection_string">jdbc:sqlserver://192.168.13.48;databaseName=xmltest;user=sa;password=tester</entry>
+    <entry key="jdbc_connection_string">jdbc:sqlserver://192.168.13.27;databaseName=xmltest;user=sa;password=tester</entry>
     <!--End  of sql server connection settings-->  
       
     <!--Check new files after every {X} Minutes-->

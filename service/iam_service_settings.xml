@@ -2,34 +2,40 @@
 <!DOCTYPE properties SYSTEM "http://java.sun.com/dtd/properties.dtd">
 <properties>
     <!--Enter sqlserver connection settings here-->
-    <entry key="SERVER_INSTANCE">192.168.13.48</entry>
+    <entry key="SERVER_INSTANCE">192.168.13.27</entry>
     <entry key="port"></entry>
     <entry key="DB">xmltest</entry>
     <entry key="user">sa</entry>
     <entry key="password">sa</entry>
 		
     <!--Or, you can provide a commplete jdbc connection string, this is given first priority-->
-    <entry key="jdbc_connection_string">jdbc:sqlserver://192.168.13.48;databaseName=xmltest;user=sa;password=tester</entry>
-      <!--End  of sql server connection settings-->     
+    <entry key="jdbc_connection_string">jdbc:sqlserver://192.168.13.27;databaseName=xmltest;user=sa;password=tester</entry>
+    <!--End  of sql server connection settings-->  
+      
+    <!--Check new files after every {X} Minutes-->
+    <entry key="duration">10</entry>    
         
     <!--How the folder is accessed (local , ftp , remote)-->
-    <entry key="access_type">local</entry>
-    
+    <entry key="access_type">local</entry>    
     
     <!--Path to local directory containing files (file path or URL) if system working on local access_type-->
     <entry key="destination_folder">C:\Users\user\Documents\DENNIS\allsamples</entry>
-        
+    
+    <!--Path to local directory to save XML Files generated-->
+    <entry key="inbound_xml_generateg_folder">C:\Users\user\Documents\DENNIS\allsamples</entry>
+    
     <!--ftp server settings, if access_type is ftp-->
-    <entry key="ftp_server_url">ftp.drivehq.com</entry>
+    <entry key="ftp_server_url">172.16.25.53</entry>
     <entry key="ftp_server_port">21</entry>    
-    <entry key="ftp_server_user">babaviz</entry>  
-    <entry key="ftp_server_password">4617dennis_</entry>
-    <entry key="remote_outbound_folder">xml</entry>
-    <entry key="remote_inbound_folder">xml</entry>		
+    <entry key="ftp_server_user">ftpuser1</entry>  
+    <entry key="ftp_server_password">P@ssw0rd</entry>
+    <entry key="remote_outbound_folder">/poq/NexxPos/sap_outbound</entry>
+    <entry key="remote_inbound_folder">/poq/NexxPos/InboundXML</entry>	
+    <!--Name of the folder to store processed xml files-->
+    <entry key="proccessed_folder_name">archive</entry>
+    <!--Ignore folders, dont process files within this folders, use comma to separate-->
+    <entry key="ignore_folders">archive,error</entry>	
     <!--Local working directory where files will be downloaded, leave it untouched-->
     <entry key="working_dir">workspace</entry>
-    <!--end of ftp connection server settings-->
-        
+    <!--end of ftp connection server settings-->   
 </properties>
-
-<!--done-->
