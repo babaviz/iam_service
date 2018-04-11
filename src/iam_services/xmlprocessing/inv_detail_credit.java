@@ -45,7 +45,7 @@ public class inv_detail_credit {
         
     private boolean walkin;
     private String walkin_surffix="_summary";
-    private ArrayList<String> exemptions=new ArrayList<>(Arrays.asList("id", "DATE_STAMP"));
+    private ArrayList<String> exemptions=new ArrayList<>(Arrays.asList("id", "DATE_STAMP","READ_FLG"));
 
     public inv_detail_credit(boolean summery) {
         this.walkin = summery;
