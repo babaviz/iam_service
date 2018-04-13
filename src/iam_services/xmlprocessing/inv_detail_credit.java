@@ -149,25 +149,45 @@ public class inv_detail_credit {
             ex.addAll(exemptions);ex.add(link_key1);
             ex.add(link_key2);
             
+            //record 1
+           List<Map<String, String>> dbResMap4 = XmlDB_funcs.getInstance().QueryDB(subRecordsTable5+(walkin?walkin_surffix:""), where);
+
+           if (dbResMap4.isEmpty()) {
+               iam_services.Iam_services.getInstance().Error_logger(null, "Empty sub-records=>4: where:"+where.toString(), true);
+           }
+
+           dbResMap4.forEach((row) -> {
+               Node sub = CreateXMLElements.getInstance().createRecordFields(doc, row, "E1WPU03",ex,attributes);
+               record.appendChild(sub);
+           });
+            dbResMap4.clear();//release memory
+            
+             //record 2
             List<Map<String, String>> dbResMap1 = XmlDB_funcs.getInstance().QueryDB(subRecordsTable2+(walkin?walkin_surffix:""), where);
-            List<Map<String, String>> dbResMap2 = XmlDB_funcs.getInstance().QueryDB(subRecordsTable3+(walkin?walkin_surffix:""), where);           
+           
             if (dbResMap1.isEmpty()) {
                 iam_services.Iam_services.getInstance().Error_logger(null, "Empty sub-records=>1", true);
             }
-            if (dbResMap2.isEmpty()) {
-                iam_services.Iam_services.getInstance().Error_logger(null, "Empty sub-records=>3", true);
-            }
             
-            dbResMap1.forEach((row) -> {
+             dbResMap1.forEach((row) -> {
                 Node sub = CreateXMLElements.getInstance().createRecordFields(doc, row, "E1WPU05",ex,attributes);
                 record.appendChild(sub);
             });
+            dbResMap1.clear();//release memory
+            
+             //record 2
+            List<Map<String, String>> dbResMap2 = XmlDB_funcs.getInstance().QueryDB(subRecordsTable3+(walkin?walkin_surffix:""), where);           
+            if (dbResMap2.isEmpty()) {
+                iam_services.Iam_services.getInstance().Error_logger(null, "Empty sub-records=>3", true);
+            }           
             
             dbResMap2.forEach((row) -> {
                 Node sub = CreateXMLElements.getInstance().createRecordFields(doc, row, "E1WPU04",ex,attributes);
                 record.appendChild(sub);
             });
-            
+            dbResMap2.clear();//release memory
+             
+             //record 4
             List<Map<String, String>> dbResMap3 = XmlDB_funcs.getInstance().QueryDB(subRecordsTable4+(walkin?walkin_surffix:""), where);
 
            if (dbResMap3.isEmpty()) {
@@ -178,19 +198,8 @@ public class inv_detail_credit {
                Node sub = CreateXMLElements.getInstance().createRecordFields(doc, row, "E1WXX01",ex,attributes);
                record.appendChild(sub);
            });
-           
-           
-           List<Map<String, String>> dbResMap4 = XmlDB_funcs.getInstance().QueryDB(subRecordsTable5+(walkin?walkin_surffix:""), where);
-
-           if (dbResMap4.isEmpty()) {
-               iam_services.Iam_services.getInstance().Error_logger(null, "Empty sub-records=>4", true);
-           }
-
-           dbResMap4.forEach((row) -> {
-               Node sub = CreateXMLElements.getInstance().createRecordFields(doc, row, "E1WPU03",ex,attributes);
-               record.appendChild(sub);
-           });
-               
+           dbResMap3.clear();//release memory
+              
         } catch (Exception e) {
              iam_services.Iam_services.getInstance().Error_logger(e, "addSubOfSubrecords");
         }
