@@ -13,10 +13,6 @@ import java.util.Date;
 import java.util.HashMap;
 import java.util.List;
 import java.util.Map;
-import java.util.logging.Level;
-import java.util.logging.Logger;
-import java.util.stream.IntStream;
-import java.util.stream.Stream;
 import javax.xml.parsers.DocumentBuilder;
 import javax.xml.parsers.DocumentBuilderFactory;
 import javax.xml.transform.OutputKeys;
@@ -39,27 +35,33 @@ public class inv_detail_credit {
                 subRecordsTable2 = "CNB_IAM_IN_E1WPU05",
                 subRecordsTable3 = "CNB_IAM_IN_E1WPU04",
                 subRecordsTable4 = "CNB_IAM_IN_E1WXX01",
+                subRecordsTable5 = "CNB_IAM_IN_E1WPU03",
                 
                 link_key1 = "PACKAGE_ID",
                 link_key2="ARTNR";
         
     private boolean walkin;
     private String walkin_surffix="_summary";
-    private ArrayList<String> exemptions=new ArrayList<>(Arrays.asList("id", "DATE_STAMP","READ_FLG"));
-
+    private ArrayList<String> exemptions=new ArrayList<>(Arrays.asList("id", "DATE_STAMP","READ_FLG","BRNCH_ID"));
+    private Map<String,String> attributes=new HashMap<>();
+    
     public inv_detail_credit(boolean summery) {
         this.walkin = summery;
+        attributes.clear();
+        attributes.put("SEGMENT", "");
     }
 
     public inv_detail_credit() {
         walkin=false;
+        attributes.clear();
+        attributes.put("SEGMENT", "");
     }
 
     public void generateXML() {
             try {
                 List<Map<String, String>> dbResMap = XmlDB_funcs.getInstance().QueryDB(parentTable+(walkin?walkin_surffix:""), null);
-                if(dbResMap.size()>(walkin?1:550)){
-                   CreateXMLElements.getInstance().batches(dbResMap,(walkin?1:550)).forEach(list->{genarate_XMLDOC(list);});
+                if(dbResMap.size()>1/*(walkin?1:550)*/){
+                   CreateXMLElements.getInstance().batches(dbResMap,(1/*walkin?1:550*/)).forEach(list->{genarate_XMLDOC(list);});
                 }else{
                     genarate_XMLDOC(dbResMap);
                 }
@@ -83,6 +85,7 @@ public class inv_detail_credit {
             Element mainRootElement = doc.createElement("WPUUMS01");
             doc.appendChild(mainRootElement);
             Element IDOC = doc.createElement("IDOC");
+            IDOC.setAttribute("BEGIN", "0");
             mainRootElement.appendChild(IDOC);
             addHeaderRow(doc, IDOC, dateFormated,docNum);
             //prepare records
@@ -92,7 +95,7 @@ public class inv_detail_credit {
                 return;
             }
             dbResMap.forEach((row) -> {
-                Node record = CreateXMLElements.getInstance().createRecordFields(doc, row, "E1WPU01",exemptions);
+                Node record = CreateXMLElements.getInstance().createRecordFields(doc, row, "E1WPU01",exemptions,attributes);
                 addSubrecords(doc, record, row.get(link_key1));
                 IDOC.appendChild(record);
             });
@@ -126,7 +129,7 @@ public class inv_detail_credit {
                 return;
             }
             dbResMap.forEach((row) -> {
-                 Node sub = CreateXMLElements.getInstance().createRecordFields(doc, row, "E1WPU02",ex);                 
+                 Node sub = CreateXMLElements.getInstance().createRecordFields(doc, row, "E1WPU02",ex,attributes);                 
                  addSubOfSubrecords(doc, sub, row.get(link_key1),row.get(link_key2));
                  record.appendChild(sub);
             });
@@ -156,12 +159,12 @@ public class inv_detail_credit {
             }
             
             dbResMap1.forEach((row) -> {
-                Node sub = CreateXMLElements.getInstance().createRecordFields(doc, row, "E1WPU05",ex);
+                Node sub = CreateXMLElements.getInstance().createRecordFields(doc, row, "E1WPU05",ex,attributes);
                 record.appendChild(sub);
             });
             
             dbResMap2.forEach((row) -> {
-                Node sub = CreateXMLElements.getInstance().createRecordFields(doc, row, "E1WPU04",ex);
+                Node sub = CreateXMLElements.getInstance().createRecordFields(doc, row, "E1WPU04",ex,attributes);
                 record.appendChild(sub);
             });
             
@@ -172,7 +175,19 @@ public class inv_detail_credit {
            }
 
            dbResMap3.forEach((row) -> {
-               Node sub = CreateXMLElements.getInstance().createRecordFields(doc, row, "E1WXX01",ex);
+               Node sub = CreateXMLElements.getInstance().createRecordFields(doc, row, "E1WXX01",ex,attributes);
+               record.appendChild(sub);
+           });
+           
+           
+           List<Map<String, String>> dbResMap4 = XmlDB_funcs.getInstance().QueryDB(subRecordsTable5+(walkin?walkin_surffix:""), where);
+
+           if (dbResMap4.isEmpty()) {
+               iam_services.Iam_services.getInstance().Error_logger(null, "Empty sub-records=>4", true);
+           }
+
+           dbResMap4.forEach((row) -> {
+               Node sub = CreateXMLElements.getInstance().createRecordFields(doc, row, "E1WPU03",ex,attributes);
                record.appendChild(sub);
            });
                
@@ -201,7 +216,7 @@ public class inv_detail_credit {
         header.put("CRETIM", dateFormated.split("_")[1]);
         header.put("SERIAL", dateFormated.replace("_", ""));
         header.put("DOCNUM", docNum);
-        Node record = CreateXMLElements.getInstance().createRecordFields(doc, header, "EDI_DC40");
+        Node record = CreateXMLElements.getInstance().createRecordFields(doc, header, "EDI_DC40",new ArrayList<>(),attributes);
         IDOC.appendChild(record);
     }
 

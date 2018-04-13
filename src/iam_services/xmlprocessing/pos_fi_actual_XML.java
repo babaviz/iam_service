@@ -70,7 +70,7 @@ public class pos_fi_actual_XML {
                 return;
             }
             dbResMap.forEach((row) -> {
-                Node record = CreateXMLElements.getInstance().createRecordFields(doc, row, "Record",exemptions);
+                Node record = CreateXMLElements.getInstance().createRecordFields(doc, row, "Record",exemptions,new HashMap<>());
                 addSubrecords(doc, record, row.get(link_key));
                 mainRootElement.appendChild(record);
             });
@@ -103,7 +103,7 @@ public class pos_fi_actual_XML {
                 iam_services.Iam_services.getInstance().Error_logger(null, "Empty sub-records", true);
             }
             dbResMap.forEach((row) -> {
-                Node sub = CreateXMLElements.getInstance().createRecordFields(doc, row, "ItemDetails",ex);
+                Node sub = CreateXMLElements.getInstance().createRecordFields(doc, row, "ItemDetails",ex,new HashMap<>());
                 record.appendChild(sub);
             });
 

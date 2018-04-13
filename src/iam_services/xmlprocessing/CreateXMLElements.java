@@ -72,11 +72,17 @@ public class CreateXMLElements {
     }
 
      public Node createRecordFields(Document doc, Map<String,String> fields,String RecordName) {
-         return createRecordFields(doc, fields, RecordName, new ArrayList<>());
+         return createRecordFields(doc, fields, RecordName, new ArrayList<>(),new HashMap<>());
      }
     
-    public Node createRecordFields(Document doc, Map<String,String> fields,String RecordName,List<String> exemption) {
+    public Node createRecordFields(Document doc, Map<String,String> fields,String RecordName,List<String> exemption,Map<String,String> attributes) {
         Element record = doc.createElement(RecordName);
+        for (Map.Entry<String, String> attrEntry : attributes.entrySet()) {
+            String key = attrEntry.getKey();
+            String value = attrEntry.getValue();
+            record.setAttribute(key, value);
+        }
+        
         fields.entrySet().forEach((entry) -> {
             if(!exemption.contains(entry.getKey()))
                 record.appendChild(creatElement(doc,entry.getKey(), entry.getValue()));

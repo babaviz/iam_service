@@ -35,7 +35,15 @@ public class art_adjdoc_con {
             link_key = "BONNUMMER";
     
     private ArrayList<String> exemptions=new ArrayList<>(Arrays.asList("id", "DATE_STAMP"));
+    private Map<String,String> attributes=new HashMap<>();
 
+    public art_adjdoc_con() {
+        attributes.clear();
+        attributes.put("SEGMENT", "1");
+    }
+    
+    
+    
     public void generateXML() {
         try {
             List<Map<String, String>> dbResMap = XmlDB_funcs.getInstance().QueryDB(parentTable, null);
@@ -64,6 +72,7 @@ public class art_adjdoc_con {
             Element mainRootElement = doc.createElement("WPUUMS01");
             doc.appendChild(mainRootElement);
             Element IDOC = doc.createElement("IDOC");
+            IDOC.setAttribute("BEGIN", "1");
             mainRootElement.appendChild(IDOC);
             addHeaderRow(doc, IDOC, dateFormated, docNum);
             //prepare records
@@ -72,7 +81,7 @@ public class art_adjdoc_con {
                 return;
             }
             dbResMap.forEach((row) -> {
-                Node record = CreateXMLElements.getInstance().createRecordFields(doc, row, "E1WPG01",exemptions);
+                Node record = CreateXMLElements.getInstance().createRecordFields(doc, row, "E1WPG01",exemptions,attributes);
                 addSubrecords(doc, record, row.get(link_key));
                 IDOC.appendChild(record);
             });
@@ -106,7 +115,7 @@ public class art_adjdoc_con {
                 iam_services.Iam_services.getInstance().Error_logger(null, "Empty sub-records", true);
             }
             dbResMap.forEach((row) -> {
-                Node sub = CreateXMLElements.getInstance().createRecordFields(doc, row, "E1WPG02",ex);
+                Node sub = CreateXMLElements.getInstance().createRecordFields(doc, row, "E1WPG02",ex,attributes);
                 record.appendChild(sub);
             });
 
@@ -134,7 +143,7 @@ public class art_adjdoc_con {
         header.put("CREDAT", dateFormated.split("_")[0]);
         header.put("CRETIM", dateFormated.split("_")[1]);
         header.put("DOCNUM", docNum);
-        Node record = CreateXMLElements.getInstance().createRecordFields(doc, header, "EDI_DC40");
+        Node record = CreateXMLElements.getInstance().createRecordFields(doc, header, "EDI_DC40",new ArrayList<>(),attributes);
         IDOC.appendChild(record);
     }
 
