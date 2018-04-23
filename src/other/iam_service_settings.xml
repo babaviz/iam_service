@@ -38,4 +38,7 @@
     <!--Local working directory where files will be downloaded, leave it untouched-->
     <entry key="working_dir">workspace</entry>
     <!--end of ftp connection server settings-->   
+    
+    <!--E-commerce-->
+    <entry key="ecomm_endpoint">http://192.168.13.27:9000/iam/api/ecomm/</entry>
 </properties>

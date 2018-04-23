@@ -5,6 +5,7 @@
  */
 package iam_services;
 
+import api.Api_executor;
 import iam_services.xmlprocessing.StatusLogger;
 import iam_services.xmlprocessing.art_adjdoc_con;
 import iam_services.xmlprocessing.inv_detail_credit;
@@ -34,6 +35,9 @@ import java.util.logging.FileHandler;
 import java.util.logging.Level;
 import java.util.logging.Logger;
 import java.util.logging.SimpleFormatter;
+import org.json.JSONException;
+import org.json.JSONObject;
+import org.json.XML;
 
 /**
  * @author user
@@ -202,8 +206,13 @@ public class Iam_services {
 
             cstm.setNString(1, xml);
             cstm.setString(2, name);
-            //System.err.println("sending...");
             cstm.execute();
+            
+            //if its ecommerce, send json as well
+            if(name.toLowerCase().contains("order")){
+                return XML_to_JSON(xml);
+            }
+            
         } catch (SQLException ex) {
             Error_logger(ex, "dump_xmlFILE_toDB");
             return false;
@@ -229,6 +238,8 @@ public class Iam_services {
             cstm = conn.prepareCall("{call sp_Read_BrandMaster_XMLFILE(?,?)}");
         } else if (fileName.toLowerCase().contains("artmas")) {
             cstm = conn.prepareCall("{call sp_Read_Article_XMlFile(?,?)}");
+        }else if(fileName.toLowerCase().contains("order")){
+            cstm=conn.prepareCall("{call sp_Read_Ecomm_Order_XMLFILE(?,?)}");            
         }
 
         return cstm;
@@ -403,5 +414,21 @@ public class Iam_services {
             return;
         }
         dbLogger.Log_success(id, docNum);
+    }
+    
+    public boolean XML_to_JSON(String xml){
+        try {
+            JSONObject xmlJSONObj = XML.toJSONObject(xml);
+            String json_indented = xmlJSONObj.toString();
+            //System.out.println(jsonPrettyPrintString);
+            Error_logger(null, json_indented, true);
+            String response = Api_executor.getInstance(settings.get("ecomm_endpoint")).callMethod("", json_indented);
+            Error_logger(null, response, true);
+        } catch (Exception je) {
+            Error_logger(je, "XML_to_JSON");
+            return false;
+        }
+        
+        return true;
     }
 }

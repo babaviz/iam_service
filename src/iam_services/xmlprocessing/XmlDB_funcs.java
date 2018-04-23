@@ -42,7 +42,7 @@ public class XmlDB_funcs {
         }
         return instance;
     }
-    
+
     private List<Map<String, String>> getDBResMap(PreparedStatement pstm) {
         try {
             //Statement stmt = conn.createStatement();
@@ -52,12 +52,12 @@ public class XmlDB_funcs {
             for (int i = 1; i <= rsmd.getColumnCount(); i++) {
                 columns.add(rsmd.getColumnName(i));
             }
-            
+
             List<Map<String, String>> data = new ArrayList<>();
             while (rs.next()) {
                 Map<String, String> row = new HashMap<>(columns.size());
                 for (String col : columns) {
-                        row.put(col, rs.getString(col));
+                    row.put(col, rs.getString(col));
                 }
                 data.add(row);
             }
@@ -69,37 +69,40 @@ public class XmlDB_funcs {
         }
         return new ArrayList<>();//empty
     }
-    
-    private PreparedStatement buildQuery(String table, Map<String,String> where) throws SQLException{
+
+    private PreparedStatement buildQuery(String table, Map<String, String> where) throws SQLException {
         PreparedStatement pstm;
-        String query="";
-        if(where==null){
+        String query = "";
+        if (where == null) {
             //query="SELECT * FROM "+table+" WHERE CONVERT(DATE, [DATE_STAMP]) = CONVERT(DATE, CURRENT_TIMESTAMP) ORDER BY id ASC;";
-            query="UPDATE "+table+" SET READ_FLG = 1 OUTPUT inserted.* WHERE  (READ_FLG = 0 OR READ_FLG IS NULL) AND CONVERT(DATE, [DATE_STAMP]) = CONVERT(DATE, CURRENT_TIMESTAMP) ;";
-            pstm=conn.prepareStatement(query);
-        }else{
-            StringBuilder sql=new StringBuilder("SELECT * FROM "+table+" WHERE ");
-            List<String> wherecols=new ArrayList<>();
-            where.entrySet().forEach(set->{
-                sql.append(" "+set.getKey()+"=? AND");
-                wherecols.add(set.getKey());
+            query = "UPDATE " + table + " SET READ_FLG = 1 OUTPUT inserted.* WHERE  (READ_FLG = 0 OR READ_FLG IS NULL) AND CONVERT(DATE, [DATE_STAMP]) = CONVERT(DATE, CURRENT_TIMESTAMP) ;";
+            pstm = conn.prepareStatement(query);
+        } else {
+            StringBuilder sql = new StringBuilder("SELECT * FROM " + table + " WHERE ");
+            List<String> wherecols = new ArrayList<>();
+            where.entrySet().forEach(set -> {
+                if(!set.getKey().equals("no")){
+                    sql.append(" " + set.getKey() + "=? AND");
+                    wherecols.add(set.getKey());
+                }else{//Its ready, just a string
+                    sql.append(" " + set.getValue() + " AND");
+                }
             });
-            query=sql.toString();
-            query=query.substring(0, query.length()-3);
-            pstm=conn.prepareStatement(query);//remove the last &
-            
-            int i=1;
+            query = sql.toString();
+            query = query.substring(0, query.length() - 3);
+            pstm = conn.prepareStatement(query);//remove the last &
+
+            int i = 1;
             for (String col_h : wherecols) {
                 pstm.setString(i++, where.get(col_h));
             }
         }
-        
-        iam_services.Iam_services.getInstance().Error_logger(null, "Query->"+query, true);
+
+        iam_services.Iam_services.getInstance().Error_logger(null, "Query->" + query, true);
         return pstm;
     }
-    
-    
-    public  List<Map<String, String>> QueryDB(String table, Map<String,String> where){
+
+    public List<Map<String, String>> QueryDB(String table, Map<String, String> where) {
         try {
             PreparedStatement pstm = buildQuery(table, where);
             return getDBResMap(pstm);
@@ -108,7 +111,54 @@ public class XmlDB_funcs {
         }
         return new ArrayList<>();
     }
-    
+
+    public static Map<String, String> brachidMap;
+
+    public String getSAPBranchMapping(String branch_id) throws Exception {
+        if (brachidMap == null) {//initialize the map
+            brachidMap = new HashMap<>();
+        }
+        //check if we already have that id, to avaoid network delay connecting everytime
+        if (brachidMap.get(branch_id) != null) {
+            return brachidMap.get(branch_id);
+        }
+
+        //not available on our map yet, so, we fetch it
+        return fetch_branch_id_mapping(branch_id);
+    }
+
+    public String fetch_branch_id_mapping(String branch_id) {
+        String sap_branch_mapping = "";
+        try {
+            PreparedStatement pstm = conn.prepareStatement("SELECT TOP 1 SAP_ENT_ID FROM CNB_IAM_ENTITY_MAP WHERE ENT_ID=?");
+            pstm.setString(1, branch_id);
+            ResultSet rs = pstm.executeQuery();
+            while (rs.next()) {
+                sap_branch_mapping = rs.getString("SAP_ENT_ID");
+            }
+        } catch (Exception ex) {
+            iam_services.Iam_services.getInstance().Error_logger(ex, "fetch_branch_id_mapping");
+        }
+
+        iam_services.Iam_services.getInstance().Error_logger(null, "Branch mapping res=" + sap_branch_mapping, true);
+        return sap_branch_mapping;
+    }
+
+    public List<String> getDistict_byDate(String column, String query) {
+        List<String> res = new ArrayList<>();
+        try {
+            PreparedStatement pstm = conn.prepareStatement(query);
+            ResultSet rs = pstm.executeQuery();
+            while (rs.next()) {
+                res.add(rs.getString(column));
+            }
+        } catch (Exception ex) {
+            iam_services.Iam_services.getInstance().Error_logger(ex, "getDistict");
+        }
+
+        return res;
+    }
+
     /*public static void main(String[] args) {
         try {
             System.out.println(getInstance().getDBResMap("CNB_IAM_E1WXX01"));
