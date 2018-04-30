@@ -84,7 +84,14 @@ public class inv_detail_credit {
                 }
                 //now generate xml
                 //dbResMap = XmlDB_funcs.getInstance().QueryDB(parentTable+(walkin?walkin_surffix:""), null);
-                accu_data.forEach(list->{genarate_XMLDOC(list);});
+                accu_data.forEach(list->{
+                     if(list.size()>1){
+                         //splite header records into single row
+                        CreateXMLElements.getInstance().batches(list,1).forEach(sublist->{genarate_XMLDOC(sublist);});
+                     }else{
+                        genarate_XMLDOC(list);
+                     }
+                });
                /* if(dbResMap.size()>(walkin?600:1)){
                    CreateXMLElements.getInstance().batches(dbResMap,(walkin?600:1)).forEach(list->{genarate_XMLDOC(list);});
                 }else{
@@ -159,10 +166,17 @@ public class inv_detail_credit {
             ex.addAll(exemptions);ex.add(link_key1);
             
             List<Map<String, String>> dbResMap = XmlDB_funcs.getInstance().QueryDB(subRecordsTable1+(walkin?walkin_surffix:""), where);
-            if (dbResMap.isEmpty()) {
+            if (dbResMap.isEmpty()) {//check if empty
                 iam_services.Iam_services.getInstance().Error_logger(null, "Empty sub-records", true);
                 return;
             }
+            
+            //check if subrecords exceeds limit{600}
+             if(dbResMap.size()>1){
+                //splite header records into single row
+               CreateXMLElements.getInstance().batches(dbResMap,1).forEach(sublist->{genarate_XMLDOC(sublist);});
+            }
+            
             dbResMap.forEach((row) -> {
                  Node sub = CreateXMLElements.getInstance().createRecordFields(doc, row, "E1WPU02",ex,attributes);                 
                  addSubOfSubrecords(doc, sub, row.get(link_key1),row.get(link_key2), walkin?"":row.get(link_key3));
@@ -267,9 +281,8 @@ public class inv_detail_credit {
         IDOC.appendChild(record);
     }
     
-    
-
    /* public static void main(String[] args) {
         new inv_detail_credit().generateXML();
     }*/
+    
 }
