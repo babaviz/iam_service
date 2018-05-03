@@ -39,8 +39,8 @@ public class pos_fi_actual_XML {
     public void generateXML() {
         try {
             List<Map<String, String>> dbResMap = XmlDB_funcs.getInstance().QueryDB(parentTable, null);
-            if (dbResMap.size() > 550) {
-                CreateXMLElements.getInstance().batches(dbResMap, 550).forEach(list -> {
+            if (dbResMap.size() > 0) {//split the records, each mother record to fit on a document
+                CreateXMLElements.getInstance().batches(dbResMap, 1).forEach(list -> {
                     genarate_XMLDOC(list);
                 });
             } else {

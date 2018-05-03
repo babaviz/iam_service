@@ -12,6 +12,8 @@ import java.net.URL;
 import java.security.MessageDigest;
 import java.text.SimpleDateFormat;
 import java.util.Date;
+import java.util.HashMap;
+import java.util.Map;
 
 //import net.sf.json.JSONArray;
 //import net.sf.json.JSONObject;
@@ -21,18 +23,19 @@ public class Api_executor {
    // private String USERNAME = "[your username]";
    // private String PASSWORD = "[your shared secret]";
     private String ENDPOINT = ""; //base url for the ecommerce endpoint
-
+    private Map<String, String> settings = new HashMap<>();
     private static Api_executor instance;
     
-    public static Api_executor getInstance(String base_url){
+    public static Api_executor getInstance(Map<String, String> settings){
         if(instance==null){
-            instance=new Api_executor(base_url);
-        }
+            instance=new Api_executor(settings);
+        }        
         return instance;
     }
     
-    private Api_executor(String endpoint) {
-        this.ENDPOINT=endpoint;
+    private Api_executor(Map<String, String> settings) {
+        this.ENDPOINT=settings.get("ecomm_endpoint");
+        this.settings=settings;
     }
 
     public String callMethod(String method, String data) throws IOException {
@@ -43,7 +46,7 @@ public class Api_executor {
         connection.setRequestProperty("Content-Type", "application/json");
         connection.setRequestProperty("Accept", "application/json");
         
-        //connection.addRequestProperty("X-WSSE", getHeader());
+        addHeaderParams(connection);
 
         connection.setDoOutput(true);
         OutputStreamWriter wr = new OutputStreamWriter(connection.getOutputStream());
@@ -62,6 +65,14 @@ public class Api_executor {
         res.close();
 
         return sBuffer.toString();
+    }
+    
+    //add header request paramenters
+    private void addHeaderParams(HttpURLConnection conn){
+        conn.setRequestProperty("FC_ActiveLanguage", settings.get("ecomm_locale_id"));//localeId
+        conn.setRequestProperty("FC_Module", "POS");
+        conn.setRequestProperty("FC_Authorization", settings.get("ecomm_authorization"));//userid
+        conn.setRequestProperty("FC_Tenant_Entity", settings.get("ecomm_tenant_id"));//tenantId
     }
 
     private String getHeader() throws UnsupportedEncodingException {
@@ -110,6 +121,22 @@ public class Api_executor {
 
     private String base64Encode(byte[] bytes) {
         return Base64Coder.encodeLines(bytes);
+    }
+    
+    public Map<String,Integer> fetchRequestParams(){
+        Map<String,Integer> params=new HashMap<>();
+        //get values from db
+        params.put("branchid", 2573104);
+        params.put("salesManId", 2572800);
+        params.put("sessionId", 3735805);
+        params.put("shiftId", 3724305);       
+        return params;
+    }
+    
+    public String getProductID(String itemcode){
+        //fetch product id give the product code
+        
+        return "";
     }
 
     /*public static void main(String[] args) throws IOException {

@@ -35,7 +35,7 @@ import java.util.logging.FileHandler;
 import java.util.logging.Level;
 import java.util.logging.Logger;
 import java.util.logging.SimpleFormatter;
-import org.json.JSONException;
+import org.json.JSONArray;
 import org.json.JSONObject;
 import org.json.XML;
 
@@ -52,7 +52,7 @@ public class Iam_services {
     final String CONNECTION_STRING = "jdbc_connection_string";
     final String DATABASE_DRIVER_MSSSQL = "com.microsoft.sqlserver.jdbc.SQLServerDriver";
     final String FOLDER = "destination_folder";
-    final String IN_FOLDER ="inbound_xml_generateg_folder";
+    final String IN_FOLDER = "inbound_xml_generateg_folder";
     Connection conn = null;
     Map<String, String> settings = new HashMap<>();
 
@@ -75,7 +75,7 @@ public class Iam_services {
         try {
             //initialize logger
             String dateString = new SimpleDateFormat("yyyy_MM_dd").format(new Date());
-            fh = new FileHandler("iam_service_err_" + dateString + ".log", 30*1024 * 1024, 1, true);//new FileHandler("iam_service_err_" + dateString + ".log", true);
+            fh = new FileHandler("iam_service_err_" + dateString + ".log", 30 * 1024 * 1024, 1, true);//new FileHandler("iam_service_err_" + dateString + ".log", true);
             logger.addHandler(fh);
         } catch (IOException | SecurityException ex) {
             Logger.getLogger(Iam_services.class.getName()).log(Level.SEVERE, null, ex);
@@ -207,12 +207,12 @@ public class Iam_services {
             cstm.setNString(1, xml);
             cstm.setString(2, name);
             cstm.execute();
-            
+
             //if its ecommerce, send json as well
-            if(name.toLowerCase().contains("order")){
+            if (name.toLowerCase().contains("order")) {
                 return XML_to_JSON(xml);
             }
-            
+
         } catch (SQLException ex) {
             Error_logger(ex, "dump_xmlFILE_toDB");
             return false;
@@ -238,8 +238,8 @@ public class Iam_services {
             cstm = conn.prepareCall("{call sp_Read_BrandMaster_XMLFILE(?,?)}");
         } else if (fileName.toLowerCase().contains("artmas")) {
             cstm = conn.prepareCall("{call sp_Read_Article_XMlFile(?,?)}");
-        }else if(fileName.toLowerCase().contains("order")){
-            cstm=conn.prepareCall("{call sp_Read_Ecomm_Order_XMLFILE(?,?)}");            
+        } else if (fileName.toLowerCase().contains("order")) {
+            cstm = conn.prepareCall("{call sp_Read_Ecomm_Order_XMLFILE(?,?)}");
         }
 
         return cstm;
@@ -337,7 +337,7 @@ public class Iam_services {
             if (fileEntry.isDirectory()) {
                 continue;
             }
-            Error_logger(null, "Processing file->" + (count++)+"["+fileEntry.getPath()+"]", true);
+            Error_logger(null, "Processing file->" + (count++) + "[" + fileEntry.getPath() + "]", true);
             try {
                 if (dump_xmlFILE_toDB(fileEntry.getName(), readLocalFile(fileEntry.getPath()))) {
                     Files.move(Paths.get(fileEntry.getPath()), Paths.get(new File(processed_dir, fileEntry.getName()).getPath()), StandardCopyOption.REPLACE_EXISTING);
@@ -393,7 +393,7 @@ public class Iam_services {
                     FTP_FileProcessing instance1 = FTP_FileProcessing.getinstance(settings);
                     instance1.uploadFile(new File(fileName).getPath());
                     break;
-                case "local": 
+                case "local":
                     File localInbound = new File(settings.get(IN_FOLDER), "inbound");
                     localInbound.mkdirs();
                     Files.copy(new File(fileName).toPath(), new File(localInbound, new File(fileName).getName()).toPath());
@@ -402,12 +402,12 @@ public class Iam_services {
                     Files.move(new File(fileName).toPath(),
                             new File(new File("inbound_generated", "processed"), new File(fileName).getName()).toPath()
                     );
-                break;
+                    break;
                 default:
                     Error_logger(new Exception("Unsupported settings type:" + settings.get("access_type")), "check_files");
                     return;
             }
-            
+
         } catch (Exception ex) {
             Error_logger(ex, func);
             dbLogger.Log_error(id);
@@ -415,20 +415,153 @@ public class Iam_services {
         }
         dbLogger.Log_success(id, docNum);
     }
-    
-    public boolean XML_to_JSON(String xml){
+
+    public boolean XML_to_JSON(String xml) {
         try {
             JSONObject xmlJSONObj = XML.toJSONObject(xml);
-            String json_indented = xmlJSONObj.toString();
+            //String json_indented = xmlJSONObj.toString();
             //System.out.println(jsonPrettyPrintString);
-            Error_logger(null, json_indented, true);
-            String response = Api_executor.getInstance(settings.get("ecomm_endpoint")).callMethod("", json_indented);
-            Error_logger(null, response, true);
+           // Error_logger(null, json_indented, true);
+            mapJSONData(xmlJSONObj);
+            // String response = Api_executor.getInstance(settings).callMethod("", json_indented);
+            //Error_logger(null, response, true);
         } catch (Exception je) {
             Error_logger(je, "XML_to_JSON");
             return false;
         }
-        
+
         return true;
+    }
+
+    private void mapJSONData(JSONObject convertedXML) {
+        String func="mapJSONData";
+        try {
+            Object obj = convertedXML.getJSONObject("ns1:MT_ECOMM_INV").get("Record");
+
+            // `instanceof` tells us whether the object can be cast to a specific type
+            if (obj instanceof JSONArray) {
+                // it's an array
+                JSONArray recordsArray = (JSONArray) obj;
+                // do all kinds of JSONArray'ish things with urlArray
+                 Error_logger(null, recordsArray.length()+"->Records found!", true);
+                 for (int i = 0; i < recordsArray.length(); i++) {
+                     createJSON((JSONObject) recordsArray.get(i));
+                }
+            } else {
+                // if you know it's either an array or an object, then it's an object
+                JSONObject record = (JSONObject) obj;
+                // do objecty stuff with urlObject
+                 Error_logger(null,"Only one record found!", true);
+                 createJSON(record);
+            }
+
+        } catch (Exception ex) {
+            Error_logger(ex, DB);
+        }
+    }
+
+    private void createJSON(JSONObject jsonRecord) throws Exception{
+        JSONObject parent=new JSONObject();
+        parent.put("currency", "");//get currency
+        
+        Map<String,Integer> requestParams=Api_executor.getInstance(settings).fetchRequestParams();
+        
+        //create customer
+        JSONObject cuJSONObject=new JSONObject();
+        cuJSONObject.put("contacts", new JSONArray());
+        cuJSONObject.put("GroupId", 0);
+        cuJSONObject.put("active", true);
+        cuJSONObject.put("authStatus", false);
+        cuJSONObject.put("awaitingLevel", new JSONArray());
+        cuJSONObject.put("id", jsonRecord.get("ClientID"));
+        cuJSONObject.put("loyaltyCustomer", false);
+        cuJSONObject.put("creditCustomer", true);
+        cuJSONObject.put("customerType", 0);
+        parent.put("customer", cuJSONObject);
+        
+        //branch 
+        JSONObject brJSONObject=new JSONObject();
+        brJSONObject.put("id", requestParams.get("branchid"));//get brach id
+        brJSONObject.put("hierarchyLevelId", 0);
+        parent.put("branch", brJSONObject);        
+        
+        parent.put("structure", new JSONObject("{\"id\":1}"));
+        parent.put("dNoteRemarks", "");
+        
+        parent.put("dNoteDate", new SimpleDateFormat("yyyyMMdd").parse(jsonRecord.getString("OrderDate")).getTime());
+        parent.put("dNoteItemCount", jsonRecord.get("TotalLineNo")); //item count
+        parent.put("salesManId", requestParams.get("salesManId"));//get salesManID
+        parent.put("dNoteExchangeRate", 1);//fetch this from db
+        parent.put("dNoteNetAmount", jsonRecord.get("TotalAmount"));
+        parent.put("dNoteTaxAmount", jsonRecord.get("VATAmount"));
+        parent.put("dNoteTotalAmount", jsonRecord.get("TotalAmount"));
+        parent.put("dNoteSysDate", new Date().getTime());
+        parent.put("terminalId", settings.get("ecomm_terminal_id"));//provided on setting xml
+        parent.put("userId", settings.get("ecomm_user_id"));//provided on setting xml
+        parent.put("customerType", 0);
+        parent.put("generatedInvoice", true);
+        
+        //custCreditDetails
+       JSONObject custCreditDetails= new JSONObject();
+       custCreditDetails.put("id", "3");// not provided
+       custCreditDetails.put("openingBalance", 0);// not provided
+       custCreditDetails.put("closingBalance", 0);//not provided
+       parent.put("custCreditDetails", custCreditDetails);
+       parent.put("sessionId", requestParams.get("sessionId"));//fetch session id from api
+       parent.put("shiftId", requestParams.get("shiftId"));//fetch shiftid from api
+       
+       //orderDetails
+       JSONArray orderJSON=new JSONArray();
+       JSONArray itemDetailsArray=jsonRecord.getJSONArray("ItemDetail");
+        for (int i = 0; i < itemDetailsArray.length(); i++) {
+            JSONObject itemJSON=(JSONObject) itemDetailsArray.get(i);
+            JSONObject mappedItem=new JSONObject();
+            JSONObject productJSON=new JSONObject();
+            //PRODUCT details
+            productJSON.put("id", Api_executor.getInstance(settings).getProductID(itemJSON.getString("ItemCode")));//fetch product id from db using ItemCode, not provided
+            productJSON.put("workFlowId", 0);
+            productJSON.put("code",  itemJSON.get("ItemCode"));
+            productJSON.put("description", "");//not provided
+            productJSON.put("shortDescription", "");//not provided
+            productJSON.put("labelDescription", "");
+            productJSON.put("multiSellQuantity", 0);
+            productJSON.put("active", true);
+            productJSON.put("authStatus",false);
+            productJSON.put("effectiveFrom", parent.get("dNoteDate"));
+            productJSON.put("isScanned", true);
+            productJSON.put("soh", 0);
+            productJSON.put("prodSellPrice", 0);
+            productJSON.put("prodCostPrice", 0);
+            mappedItem.put("product", productJSON);
+            
+            //end of product detail            
+            mappedItem.put("isScanned", true);
+            mappedItem.put("packaging", new JSONObject("{\"id\":1,\"scanCodes\":[]}"));
+            mappedItem.put("packageQuantity", 1);
+            mappedItem.put("quantity", itemJSON.get("Qty"));
+            mappedItem.put("packagePrice", itemJSON.get("Price"));
+            mappedItem.put("itemRemarks", "");
+            mappedItem.put("stockOnHand",0);
+            mappedItem.put("discount", 0);
+            mappedItem.put("receivedQuantity", 0);
+            mappedItem.put("returnQuantity", 0);
+            mappedItem.put("transferQuantity", 0);
+            mappedItem.put("receiptQuantity", 0);
+            mappedItem.put("poOrderedQuantity", 0);
+            mappedItem.put("receiptQuantity", 0);
+            mappedItem.put("poOrderedQuantity", 0);
+            mappedItem.put("grnProdQuantity", 0);
+            mappedItem.put("adjustmentType", 0);
+            mappedItem.put("taxId", 3707800);//fetch tax id from db, but how?
+            mappedItem.put("returnToOriginBranch", false);
+            mappedItem.put("status", 0);
+            mappedItem.put("costPrice", 0);
+            mappedItem.put("taxBreakDown", new JSONObject("{\"taxList\":[],\"taxAmount\":0}"));//tax amount unknown   
+            orderJSON.put(mappedItem);
+        }
+        
+        parent.put("orderDetails", orderJSON);
+        
+        Error_logger(null, parent.toString(),true);
     }
 }
