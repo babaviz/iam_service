@@ -1,6 +1,5 @@
 package api;
 
-
 import java.io.BufferedReader;
 import java.io.IOException;
 import java.io.InputStream;
@@ -9,43 +8,61 @@ import java.io.OutputStreamWriter;
 import java.io.UnsupportedEncodingException;
 import java.net.HttpURLConnection;
 import java.net.URL;
+import java.net.URLEncoder;
 import java.security.MessageDigest;
 import java.text.SimpleDateFormat;
 import java.util.Date;
 import java.util.HashMap;
 import java.util.Map;
+import java.util.logging.Level;
+import java.util.logging.Logger;
+import org.json.JSONArray;
+import org.json.JSONException;
+import org.json.JSONObject;
 
 //import net.sf.json.JSONArray;
 //import net.sf.json.JSONObject;
-
 public class Api_executor {
 
-   // private String USERNAME = "[your username]";
-   // private String PASSWORD = "[your shared secret]";
+    // private String USERNAME = "[your username]";
+    // private String PASSWORD = "[your shared secret]";
     private String ENDPOINT = ""; //base url for the ecommerce endpoint
     private Map<String, String> settings = new HashMap<>();
     private static Api_executor instance;
     
-    public static Api_executor getInstance(Map<String, String> settings){
-        if(instance==null){
-            instance=new Api_executor(settings);
-        }        
+    private final String branch_query="org-hierarchy-master/1/5?_active=true&_q=%s&_reduced=true&_search=true&entries=1&page=1&pageSize=50&refresh=true",
+                                  product_query="product-master?_active=true&_q=%s&_search=true&page=1&pageSize=50&refresh=true",
+                                  invoice_query="invoice/adhoc-invoice/";
+    
+    public static Api_executor getInstance(Map<String, String> settings) {
+        if (instance == null) {
+            instance = new Api_executor(settings);
+        }
         return instance;
     }
-    
+
     private Api_executor(Map<String, String> settings) {
-        this.ENDPOINT=settings.get("ecomm_endpoint");
-        this.settings=settings;
+        this.ENDPOINT = settings.get("ecomm_base_url");
+        this.settings = settings;
     }
 
-    public String callMethod(String method, String data) throws IOException {
-        URL url = new URL(ENDPOINT + (method.isEmpty()?"":"/" + method));
+    public String sendRequest(String str_url, String data) throws Exception {
+        return sendRequest(str_url, data, "POST");
+    }
+    
+    public String createInvoice(String jsonStr) throws Exception{
+        
+        return sendRequest(invoice_query, jsonStr);        
+    }
+    
+    public String sendRequest(String str_url, String data,String requestType) throws Exception {
+        URL url = new URL(str_url);
         //URLConnection connection = url.openConnection();
         HttpURLConnection connection = (HttpURLConnection) url.openConnection();
-        connection.setRequestMethod("POST");
+        connection.setRequestMethod(requestType);
         connection.setRequestProperty("Content-Type", "application/json");
         connection.setRequestProperty("Accept", "application/json");
-        
+
         addHeaderParams(connection);
 
         connection.setDoOutput(true);
@@ -66,9 +83,9 @@ public class Api_executor {
 
         return sBuffer.toString();
     }
-    
+
     //add header request paramenters
-    private void addHeaderParams(HttpURLConnection conn){
+    private void addHeaderParams(HttpURLConnection conn) {
         conn.setRequestProperty("FC_ActiveLanguage", settings.get("ecomm_locale_id"));//localeId
         conn.setRequestProperty("FC_Module", "POS");
         conn.setRequestProperty("FC_Authorization", settings.get("ecomm_authorization"));//userid
@@ -122,29 +139,82 @@ public class Api_executor {
     private String base64Encode(byte[] bytes) {
         return Base64Coder.encodeLines(bytes);
     }
-    
-    public Map<String,Integer> fetchRequestParams(){
-        Map<String,Integer> params=new HashMap<>();
+
+    public Map<String, String> fetchRequestParams(String branchName) {
+        Map<String, String> params = new HashMap<>();
         //get values from db
-        params.put("branchid", 2573104);
-        params.put("salesManId", 2572800);
-        params.put("sessionId", 3735805);
-        params.put("shiftId", 3724305);       
+        params.put("branchid", getObjectID(branchName, "branch"));
+        params.put("salesManId", "");
+        params.put("sessionId", settings.get("ecomm_sessionId"));
+        params.put("shiftId", settings.get("ecomm_shiftId"));
         return params;
     }
-    
-    public String getProductID(String itemcode){
+
+    public String getObjectID(String param,String type) {
         //fetch product id give the product code
-        
-        return "";
+        String qry_url="";
+        switch(type){
+            case "product":
+                qry_url=product_query;
+                break;
+            case "branch":
+                qry_url=branch_query;
+                break;
+            default:
+                //unknown
+                 iam_services.Iam_services.getInstance().Error_logger(null, "Unsupported type:"+type); 
+        }
+        String id="";
+        JSONArray jsonData = getJsonData(String.format(qry_url, encodeParam(param)));
+        if(jsonData.length()>0){
+            try {
+                id=jsonData.getJSONObject(0).getString("id");
+            } catch (JSONException ex) {
+                iam_services.Iam_services.getInstance().Error_logger(ex, "getJsonData"); 
+            }
+        }
+         iam_services.Iam_services.getInstance().Error_logger(null, "Get id :"+qry_url+" response->id:"+id); 
+        return id;
     }
 
+    public JSONArray getJsonData(String queryurl) {
+        try {
+            String url = createUrl(queryurl);
+            String res=sendRequest(url, "", "GET");
+            return new JSONObject(res).getJSONArray("results");
+        } catch (Exception ex) {
+              iam_services.Iam_services.getInstance().Error_logger(ex, "getJsonData"); 
+              return new JSONArray();
+        }
+    }
+
+    private String createUrl(String qry) {
+        String url = this.ENDPOINT;
+        if (url.charAt(url.length() - 1) != '/') {
+            url += "/";
+        }
+
+        if (qry.charAt(0) == '/') {
+            qry = qry.substring(1);
+        }
+        url += qry;
+        return url;
+    }
+
+    private String encodeParam(String param){
+        try {
+            return URLEncoder.encode(param, "UTF-8");
+        } catch (UnsupportedEncodingException ex) {
+            iam_services.Iam_services.getInstance().Error_logger(ex, "encodeParam");
+            return param;
+        }
+    }
     /*public static void main(String[] args) throws IOException {
         Map map = new HashMap();
         map.put("rs_type", new String[]{"standard"});
         map.put("sp", "");
 
-        String response = OMTR_REST.callMethod("Company.GetReportSuites", JSONObject.fromObject(map).toString());
+        String response = OMTR_REST.sendRequest("Company.GetReportSuites", JSONObject.fromObject(map).toString());
         JSONObject jsonObj = JSONObject.fromObject(response);
         JSONArray jsonArry = JSONArray.fromObject(jsonObj.get("report_suites"));
 

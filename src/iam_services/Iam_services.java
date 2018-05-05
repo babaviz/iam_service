@@ -423,7 +423,7 @@ public class Iam_services {
             //System.out.println(jsonPrettyPrintString);
            // Error_logger(null, json_indented, true);
             mapJSONData(xmlJSONObj);
-            // String response = Api_executor.getInstance(settings).callMethod("", json_indented);
+            // String response = Api_executor.getInstance(settings).sendRequest("", json_indented);
             //Error_logger(null, response, true);
         } catch (Exception je) {
             Error_logger(je, "XML_to_JSON");
@@ -456,7 +456,7 @@ public class Iam_services {
             }
 
         } catch (Exception ex) {
-            Error_logger(ex, DB);
+            Error_logger(ex, func);
         }
     }
 
@@ -464,7 +464,7 @@ public class Iam_services {
         JSONObject parent=new JSONObject();
         parent.put("currency", "");//get currency
         
-        Map<String,Integer> requestParams=Api_executor.getInstance(settings).fetchRequestParams();
+        Map<String,String> requestParams=Api_executor.getInstance(settings).fetchRequestParams(jsonRecord.getString("StoreName"));
         
         //create customer
         JSONObject cuJSONObject=new JSONObject();
@@ -518,7 +518,7 @@ public class Iam_services {
             JSONObject mappedItem=new JSONObject();
             JSONObject productJSON=new JSONObject();
             //PRODUCT details
-            productJSON.put("id", Api_executor.getInstance(settings).getProductID(itemJSON.getString("ItemCode")));//fetch product id from db using ItemCode, not provided
+            productJSON.put("id", Api_executor.getInstance(settings).getObjectID(itemJSON.getString("ItemCode"),"product"));//fetch product id from db using ItemCode, not provided
             productJSON.put("workFlowId", 0);
             productJSON.put("code",  itemJSON.get("ItemCode"));
             productJSON.put("description", "");//not provided
@@ -563,5 +563,6 @@ public class Iam_services {
         parent.put("orderDetails", orderJSON);
         
         Error_logger(null, parent.toString(),true);
+        Api_executor.getInstance(settings).createInvoice(parent.toString());
     }
 }
