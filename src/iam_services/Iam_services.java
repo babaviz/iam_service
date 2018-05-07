@@ -74,8 +74,11 @@ public class Iam_services {
     public Iam_services() {
         try {
             //initialize logger
+            //create log folder
+            new File("logs").mkdir();
+            
             String dateString = new SimpleDateFormat("yyyy_MM_dd").format(new Date());
-            fh = new FileHandler("iam_service_err_" + dateString + ".log", 30 * 1024 * 1024, 1, true);//new FileHandler("iam_service_err_" + dateString + ".log", true);
+            fh = new FileHandler("logs"+System.getProperty("file.separator")+"iam_service_err_" + dateString + "_%g.log", 5 * 1024 * 1024, 20, true);//new FileHandler("iam_service_err_" + dateString + ".log", true);
             logger.addHandler(fh);
         } catch (IOException | SecurityException ex) {
             Logger.getLogger(Iam_services.class.getName()).log(Level.SEVERE, null, ex);
@@ -87,8 +90,10 @@ public class Iam_services {
         while (true) {
             try {
                 if (!lock) {
+                    logServiceStart();//show service started
                     check_files();
                     check_and_process_inboundDATA();
+                    logServiceEnd();
                 }
                 try {
                     wait = Integer.parseInt(settings.get("duration").trim());
@@ -191,26 +196,26 @@ public class Iam_services {
         return conn;
     }
 
-    public boolean dump_xmlFILE_toDB(String name, String xml) {
+    public boolean dump_xmlFILE_toDB(File xmlFile, String xml) {
         try {
-            CallableStatement cstm = getStatement(name);
+            CallableStatement cstm = getStatement(xmlFile.getName());
             if (xml.isEmpty()) {
-                Error_logger(new Exception("Empty xml file content:" + name), "dump_xmlFILE_toDB");
+                Error_logger(new Exception("Empty xml file content:" + xmlFile), "dump_xmlFILE_toDB");
                 return true;
             }
 
             if (cstm == null) {
-                Error_logger(new Exception("System couldn't determine category of xml file:" + name), "dump_xmlFILE_toDB");
+                Error_logger(new Exception("System couldn't determine category of xml file:" + xmlFile), "dump_xmlFILE_toDB");
                 return false;
             }
 
             cstm.setNString(1, xml);
-            cstm.setString(2, name);
+            cstm.setString(2, xmlFile.getName());
             cstm.execute();
 
             //if its ecommerce, send json as well
-            if (name.toLowerCase().contains("order")) {
-                return XML_to_JSON(xml);
+            if (xmlFile.getName().toLowerCase().contains("order")) {
+                return XML_to_JSON(xml,xmlFile);
             }
 
         } catch (SQLException ex) {
@@ -337,9 +342,9 @@ public class Iam_services {
             if (fileEntry.isDirectory()) {
                 continue;
             }
-            Error_logger(null, "Processing file->" + (count++) + "[" + fileEntry.getPath() + "]", true);
+            //Error_logger(null, "Processing file->" + (count++) + "[" + fileEntry.getPath() + "]", true);
             try {
-                if (dump_xmlFILE_toDB(fileEntry.getName(), readLocalFile(fileEntry.getPath()))) {
+                if (dump_xmlFILE_toDB(fileEntry, readLocalFile(fileEntry.getPath()))) {
                     Files.move(Paths.get(fileEntry.getPath()), Paths.get(new File(processed_dir, fileEntry.getName()).getPath()), StandardCopyOption.REPLACE_EXISTING);
                 }
             } catch (Exception ex) {
@@ -416,28 +421,34 @@ public class Iam_services {
         dbLogger.Log_success(id, docNum);
     }
 
-    public boolean XML_to_JSON(String xml) {
+    public boolean XML_to_JSON(String xml,File file) {
+        int  id =0; 
+        StatusLogger dbLogger = null;
         try {
+             dbLogger= StatusLogger.getInstance();
+            id=dbLogger.Log_start(file, "Ecomm_Order");
+            
             JSONObject xmlJSONObj = XML.toJSONObject(xml);
             //String json_indented = xmlJSONObj.toString();
             //System.out.println(jsonPrettyPrintString);
            // Error_logger(null, json_indented, true);
-            mapJSONData(xmlJSONObj);
-            // String response = Api_executor.getInstance(settings).sendRequest("", json_indented);
+            return mapJSONData(xmlJSONObj);
+            // String response = Api_executor.getInstance(settings).sendPostRequest("", json_indented);
             //Error_logger(null, response, true);
         } catch (Exception je) {
             Error_logger(je, "XML_to_JSON");
+            if(dbLogger !=null){
+                dbLogger.Log_error(id);
+            }
             return false;
         }
 
-        return true;
     }
 
-    private void mapJSONData(JSONObject convertedXML) {
+    private boolean mapJSONData(JSONObject convertedXML) {
         String func="mapJSONData";
         try {
             Object obj = convertedXML.getJSONObject("ns1:MT_ECOMM_INV").get("Record");
-
             // `instanceof` tells us whether the object can be cast to a specific type
             if (obj instanceof JSONArray) {
                 // it's an array
@@ -454,15 +465,17 @@ public class Iam_services {
                  Error_logger(null,"Only one record found!", true);
                  createJSON(record);
             }
-
         } catch (Exception ex) {
             Error_logger(ex, func);
+            return false;
         }
+        
+        return true;
     }
 
     private void createJSON(JSONObject jsonRecord) throws Exception{
         JSONObject parent=new JSONObject();
-        parent.put("currency", "");//get currency
+        parent.put("currency", new JSONObject("{\"id\":1}"));//get currency
         
         Map<String,String> requestParams=Api_executor.getInstance(settings).fetchRequestParams(jsonRecord.getString("StoreName"));
         
@@ -512,7 +525,15 @@ public class Iam_services {
        
        //orderDetails
        JSONArray orderJSON=new JSONArray();
-       JSONArray itemDetailsArray=jsonRecord.getJSONArray("ItemDetail");
+       Object itemDetails=jsonRecord.get("ItemDetail");
+       
+       JSONArray itemDetailsArray=new JSONArray();
+        if (itemDetails instanceof JSONArray) {
+            itemDetailsArray=(JSONArray)itemDetails;
+        }else{
+            itemDetailsArray.put(itemDetails);
+        }
+       
         for (int i = 0; i < itemDetailsArray.length(); i++) {
             JSONObject itemJSON=(JSONObject) itemDetailsArray.get(i);
             JSONObject mappedItem=new JSONObject();
@@ -562,7 +583,27 @@ public class Iam_services {
         
         parent.put("orderDetails", orderJSON);
         
-        Error_logger(null, parent.toString(),true);
-        Api_executor.getInstance(settings).createInvoice(parent.toString());
+        //Error_logger(null, parent.toString(),true);
+        String createInvoice = Api_executor.getInstance(settings).createInvoice(parent.toString());
+        Error_logger(null, createInvoice, true);
+        
+        JSONObject res=new JSONObject(createInvoice);
+        if(res.get("id").toString().equals("0")){
+            throw new Exception(res.getString("error"));
+        }
+    }
+    
+    private void logServiceStart(){
+        Error_logger(null, "\n"
+                + "============================\n"
+                + "Service Started\n"
+                + "============================\n\n", true);
+    }
+    
+    private void logServiceEnd(){
+        Error_logger(null, "\n"
+                + "***********************************************\n"
+                + "#######Service Ended#############\n"
+                + "***********************************************\n\n\n\n\n\n", true);
     }
 }

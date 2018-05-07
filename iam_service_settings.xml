@@ -2,14 +2,14 @@
 <!DOCTYPE properties SYSTEM "http://java.sun.com/dtd/properties.dtd">
 <properties>
     <!--Enter sqlserver connection settings here-->
-    <entry key="SERVER_INSTANCE">192.168.13.27</entry>
+    <entry key="SERVER_INSTANCE">192.168.13.67</entry>
     <entry key="port"></entry>
     <entry key="DB">xmltest</entry>
     <entry key="user">sa</entry>
     <entry key="password">sa</entry>
 		
     <!--Or, you can provide a commplete jdbc connection string, this is given first priority-->
-    <entry key="jdbc_connection_string">jdbc:sqlserver://192.168.13.27;databaseName=xmltest;user=sa;password=tester</entry>
+    <entry key="jdbc_connection_string">jdbc:sqlserver://192.168.13.67;databaseName=xmltest;user=sa;password=tester</entry>
     <!--End  of sql server connection settings-->  
       
     <!--Check new files after every {X} Minutes-->
@@ -37,8 +37,16 @@
     <entry key="ignore_folders">archive,error</entry>	
     <!--Local working directory where files will be downloaded, leave it untouched-->
     <entry key="working_dir">workspace</entry>
-    <!--end of ftp connection server settings--> 
-	
-	<!--E-commerce-->
-    <entry key="ecomm_endpoint">http://192.168.13.27:9000/iam/api/ecomm/</entry>	
+    <!--end of ftp connection server settings-->   
+    
+    <!--E-commerce-->
+    <entry key="ecomm_base_url">http://192.168.13.136:9999/rest/</entry>
+    <entry key="ecomm_user_id">2</entry>
+    <entry key="ecomm_tenant_id">2</entry>
+    <entry key="ecomm_locale_id">1</entry>
+    <entry key="ecomm_terminal_id">2574600</entry>
+    <entry key="ecomm_session_id">3735805</entry>
+    <entry key="ecomm_shift_id">3724305</entry>
+    <!--end of ecommerce-->
+    
 </properties>

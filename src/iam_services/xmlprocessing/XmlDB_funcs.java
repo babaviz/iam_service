@@ -98,7 +98,7 @@ public class XmlDB_funcs {
             }
         }
 
-        iam_services.Iam_services.getInstance().Error_logger(null, "Query->" + query, true);
+        //iam_services.Iam_services.getInstance().Error_logger(null, "Query->" + query, true);
         return pstm;
     }
 

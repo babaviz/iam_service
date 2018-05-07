@@ -2,14 +2,14 @@
 <!DOCTYPE properties SYSTEM "http://java.sun.com/dtd/properties.dtd">
 <properties>
     <!--Enter sqlserver connection settings here-->
-    <entry key="SERVER_INSTANCE">192.168.13.48</entry>
+    <entry key="SERVER_INSTANCE">192.168.13.67</entry>
     <entry key="port"></entry>
     <entry key="DB">xmltest</entry>
     <entry key="user">sa</entry>
     <entry key="password">sa</entry>
 		
     <!--Or, you can provide a commplete jdbc connection string, this is given first priority-->
-    <entry key="jdbc_connection_string">jdbc:sqlserver://192.168.13.48;databaseName=xmltest;user=sa;password=tester</entry>
+    <entry key="jdbc_connection_string">jdbc:sqlserver://192.168.13.67;databaseName=xmltest;user=sa;password=tester</entry>
     <!--End  of sql server connection settings-->  
       
     <!--Check new files after every {X} Minutes-->
@@ -41,12 +41,12 @@
     
     <!--E-commerce-->
     <entry key="ecomm_base_url">http://vmmain-pc:9330/NexxRetail/rest/</entry>
-    <entry key="ecomm_authorization">6aEDDb8CGR4bjb286C8G1j11bGG3ks2s</entry>
+    <entry key="ecomm_user_id">2</entry>
     <entry key="ecomm_tenant_id">2</entry>
     <entry key="ecomm_locale_id">1</entry>
     <entry key="ecomm_terminal_id">2574600</entry>
-    <entry key="ecomm_sessionId">3735805</entry>
-    <entry key="ecomm_shiftId">3724305</entry>
+    <entry key="ecomm_session_id">3735805</entry>
+    <entry key="ecomm_shift_id">3724305</entry>
     <!--end of ecommerce-->
     
 </properties>

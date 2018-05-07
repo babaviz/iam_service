@@ -1,0 +1,382 @@
+May 07, 2018 2:51:53 PM iam_services.Iam_services Error_logger
+INFO: 3 new Files found
+May 07, 2018 2:51:54 PM iam_services.Iam_services Error_logger
+INFO: Connection succeeded, hurray!
+May 07, 2018 2:51:54 PM iam_services.Iam_services Error_logger
+INFO: 3->Records found!
+May 07, 2018 2:51:54 PM iam_services.Iam_services Error_logger
+SEVERE: Get id :org-hierarchy-master/1/5?_active=true&_q=%s&_reduced=true&_search=true&entries=1&page=1&pageSize=50&refresh=true response->id:
+May 07, 2018 2:51:55 PM iam_services.Iam_services Error_logger
+SEVERE: Get id :product-master?_active=true&_q=%s&_search=true&page=1&pageSize=50&refresh=true response->id:
+May 07, 2018 2:51:55 PM iam_services.Iam_services Error_logger
+SEVERE: Get id :product-master?_active=true&_q=%s&_search=true&page=1&pageSize=50&refresh=true response->id:
+May 07, 2018 2:51:55 PM iam_services.Iam_services Error_logger
+SEVERE: Get id :product-master?_active=true&_q=%s&_search=true&page=1&pageSize=50&refresh=true response->id:
+May 07, 2018 2:51:56 PM iam_services.Iam_services Error_logger
+SEVERE: Get id :product-master?_active=true&_q=%s&_search=true&page=1&pageSize=50&refresh=true response->id:
+May 07, 2018 2:51:56 PM iam_services.Iam_services Error_logger
+SEVERE: Get id :product-master?_active=true&_q=%s&_search=true&page=1&pageSize=50&refresh=true response->id:
+May 07, 2018 2:51:56 PM iam_services.Iam_services Error_logger
+SEVERE: Get id :product-master?_active=true&_q=%s&_search=true&page=1&pageSize=50&refresh=true response->id:2435
+May 07, 2018 2:51:56 PM iam_services.Iam_services Error_logger
+SEVERE: Get id :product-master?_active=true&_q=%s&_search=true&page=1&pageSize=50&refresh=true response->id:
+May 07, 2018 2:51:57 PM iam_services.Iam_services Error_logger
+SEVERE: Get id :product-master?_active=true&_q=%s&_search=true&page=1&pageSize=50&refresh=true response->id:3986
+May 07, 2018 2:51:57 PM iam_services.Iam_services Error_logger
+SEVERE: Get id :product-master?_active=true&_q=%s&_search=true&page=1&pageSize=50&refresh=true response->id:
+May 07, 2018 2:51:57 PM iam_services.Iam_services Error_logger
+SEVERE: Get id :product-master?_active=true&_q=%s&_search=true&page=1&pageSize=50&refresh=true response->id:3849
+May 07, 2018 2:51:57 PM iam_services.Iam_services Error_logger
+SEVERE: Get id :product-master?_active=true&_q=%s&_search=true&page=1&pageSize=50&refresh=true response->id:
+May 07, 2018 2:51:58 PM iam_services.Iam_services Error_logger
+SEVERE: Get id :product-master?_active=true&_q=%s&_search=true&page=1&pageSize=50&refresh=true response->id:
+May 07, 2018 2:51:58 PM iam_services.Iam_services Error_logger
+SEVERE: Get id :product-master?_active=true&_q=%s&_search=true&page=1&pageSize=50&refresh=true response->id:
+May 07, 2018 2:51:58 PM iam_services.Iam_services Error_logger
+SEVERE: Get id :product-master?_active=true&_q=%s&_search=true&page=1&pageSize=50&refresh=true response->id:3779
+May 07, 2018 2:51:58 PM iam_services.Iam_services Error_logger
+SEVERE: Get id :product-master?_active=true&_q=%s&_search=true&page=1&pageSize=50&refresh=true response->id:3979
+May 07, 2018 2:51:59 PM iam_services.Iam_services Error_logger
+SEVERE: Get id :product-master?_active=true&_q=%s&_search=true&page=1&pageSize=50&refresh=true response->id:3948
+May 07, 2018 2:51:59 PM iam_services.Iam_services Error_logger
+SEVERE: Get id :product-master?_active=true&_q=%s&_search=true&page=1&pageSize=50&refresh=true response->id:3959
+May 07, 2018 2:51:59 PM iam_services.Iam_services Error_logger
+SEVERE: Get id :product-master?_active=true&_q=%s&_search=true&page=1&pageSize=50&refresh=true response->id:3638
+May 07, 2018 2:51:59 PM iam_services.Iam_services Error_logger
+SEVERE: Get id :product-master?_active=true&_q=%s&_search=true&page=1&pageSize=50&refresh=true response->id:3971
+May 07, 2018 2:52:00 PM iam_services.Iam_services Error_logger
+SEVERE: Get id :product-master?_active=true&_q=%s&_search=true&page=1&pageSize=50&refresh=true response->id:3794
+May 07, 2018 2:52:00 PM iam_services.Iam_services Error_logger
+SEVERE: mapJSONData
+java.io.IOException: Server returned HTTP response code: 409 for URL: http://192.168.13.136:9999/rest/invoice/adhoc-invoice/
+	at sun.net.www.protocol.http.HttpURLConnection.getInputStream0(HttpURLConnection.java:1840)
+	at sun.net.www.protocol.http.HttpURLConnection.getInputStream(HttpURLConnection.java:1441)
+	at api.Api_executor.sendPostRequest(Api_executor.java:77)
+	at api.Api_executor.sendRequest(Api_executor.java:52)
+	at api.Api_executor.createInvoice(Api_executor.java:57)
+	at iam_services.Iam_services.createJSON(Iam_services.java:585)
+	at iam_services.Iam_services.mapJSONData(Iam_services.java:457)
+	at iam_services.Iam_services.XML_to_JSON(Iam_services.java:433)
+	at iam_services.Iam_services.dump_xmlFILE_toDB(Iam_services.java:216)
+	at iam_services.Iam_services.check_files(Iam_services.java:345)
+	at iam_services.Iam_services.check_files(Iam_services.java:282)
+	at iam_services.Iam_services.doWork(Iam_services.java:93)
+	at iam_services.Iam_services.main(Iam_services.java:71)
+
+May 07, 2018 2:52:00 PM iam_services.Iam_services Error_logger
+INFO: Only one record found!
+May 07, 2018 2:52:00 PM iam_services.Iam_services Error_logger
+SEVERE: Get id :org-hierarchy-master/1/5?_active=true&_q=%s&_reduced=true&_search=true&entries=1&page=1&pageSize=50&refresh=true response->id:8
+May 07, 2018 2:52:00 PM iam_services.Iam_services Error_logger
+SEVERE: Get id :product-master?_active=true&_q=%s&_search=true&page=1&pageSize=50&refresh=true response->id:3352
+May 07, 2018 2:52:00 PM iam_services.Iam_services Error_logger
+INFO: {"deliveryNoteList":[],"invoicePayments":[],"id":0,"number":null,"date":null,"invoiceDeliveryNotesCount":0,"invoiceNetAmount":0.0,"invoiceTaxAmount":0.0,"invoiceTotalAmount":0.0,"invoiceSysDate":null,"branch":null,"structure":null,"currency":null,"customer":null,"salesMan":null,"workFlowId":null,"terminalId":null,"productHierarchy":null,"fullyPaid":false,"paidAmount":0.0,"generateReceipt":false,"balance":0.0,"customerReceiptDetails":null,"extraInformation":null,"remarks":null,"productRemarks":null,"error":"This customer has an overdue invoice #INV000381 which is 55 days old. Limit is 49.0 days as set in profile: tester","exchangeRate":0.0}
+May 07, 2018 2:52:00 PM iam_services.Iam_services Error_logger
+SEVERE: mapJSONData
+java.lang.Exception: This customer has an overdue invoice #INV000381 which is 55 days old. Limit is 49.0 days as set in profile: tester
+	at iam_services.Iam_services.createJSON(Iam_services.java:590)
+	at iam_services.Iam_services.mapJSONData(Iam_services.java:464)
+	at iam_services.Iam_services.XML_to_JSON(Iam_services.java:433)
+	at iam_services.Iam_services.dump_xmlFILE_toDB(Iam_services.java:216)
+	at iam_services.Iam_services.check_files(Iam_services.java:345)
+	at iam_services.Iam_services.check_files(Iam_services.java:282)
+	at iam_services.Iam_services.doWork(Iam_services.java:93)
+	at iam_services.Iam_services.main(Iam_services.java:71)
+
+May 07, 2018 2:52:00 PM iam_services.Iam_services Error_logger
+INFO: Only one record found!
+May 07, 2018 2:52:01 PM iam_services.Iam_services Error_logger
+SEVERE: Get id :org-hierarchy-master/1/5?_active=true&_q=%s&_reduced=true&_search=true&entries=1&page=1&pageSize=50&refresh=true response->id:8
+May 07, 2018 2:52:01 PM iam_services.Iam_services Error_logger
+SEVERE: Get id :product-master?_active=true&_q=%s&_search=true&page=1&pageSize=50&refresh=true response->id:3352
+May 07, 2018 2:52:01 PM iam_services.Iam_services Error_logger
+SEVERE: Get id :product-master?_active=true&_q=%s&_search=true&page=1&pageSize=50&refresh=true response->id:2206
+May 07, 2018 2:52:01 PM iam_services.Iam_services Error_logger
+SEVERE: Get id :product-master?_active=true&_q=%s&_search=true&page=1&pageSize=50&refresh=true response->id:2213
+May 07, 2018 2:52:02 PM iam_services.Iam_services Error_logger
+SEVERE: Get id :product-master?_active=true&_q=%s&_search=true&page=1&pageSize=50&refresh=true response->id:4326
+May 07, 2018 2:52:02 PM iam_services.Iam_services Error_logger
+SEVERE: Get id :product-master?_active=true&_q=%s&_search=true&page=1&pageSize=50&refresh=true response->id:4371
+May 07, 2018 2:52:02 PM iam_services.Iam_services Error_logger
+SEVERE: Get id :product-master?_active=true&_q=%s&_search=true&page=1&pageSize=50&refresh=true response->id:3613
+May 07, 2018 2:52:02 PM iam_services.Iam_services Error_logger
+SEVERE: Get id :product-master?_active=true&_q=%s&_search=true&page=1&pageSize=50&refresh=true response->id:3961
+May 07, 2018 2:52:02 PM iam_services.Iam_services Error_logger
+SEVERE: Get id :product-master?_active=true&_q=%s&_search=true&page=1&pageSize=50&refresh=true response->id:3977
+May 07, 2018 2:52:03 PM iam_services.Iam_services Error_logger
+SEVERE: Get id :product-master?_active=true&_q=%s&_search=true&page=1&pageSize=50&refresh=true response->id:3978
+May 07, 2018 2:52:03 PM iam_services.Iam_services Error_logger
+SEVERE: Get id :product-master?_active=true&_q=%s&_search=true&page=1&pageSize=50&refresh=true response->id:
+May 07, 2018 2:52:03 PM iam_services.Iam_services Error_logger
+SEVERE: Get id :product-master?_active=true&_q=%s&_search=true&page=1&pageSize=50&refresh=true response->id:3756
+May 07, 2018 2:52:03 PM iam_services.Iam_services Error_logger
+SEVERE: Get id :product-master?_active=true&_q=%s&_search=true&page=1&pageSize=50&refresh=true response->id:3579
+May 07, 2018 2:52:04 PM iam_services.Iam_services Error_logger
+SEVERE: Get id :product-master?_active=true&_q=%s&_search=true&page=1&pageSize=50&refresh=true response->id:3754
+May 07, 2018 2:52:04 PM iam_services.Iam_services Error_logger
+SEVERE: Get id :product-master?_active=true&_q=%s&_search=true&page=1&pageSize=50&refresh=true response->id:3621
+May 07, 2018 2:52:04 PM iam_services.Iam_services Error_logger
+SEVERE: Get id :product-master?_active=true&_q=%s&_search=true&page=1&pageSize=50&refresh=true response->id:4139
+May 07, 2018 2:52:04 PM iam_services.Iam_services Error_logger
+SEVERE: Get id :product-master?_active=true&_q=%s&_search=true&page=1&pageSize=50&refresh=true response->id:1835
+May 07, 2018 2:52:05 PM iam_services.Iam_services Error_logger
+SEVERE: Get id :product-master?_active=true&_q=%s&_search=true&page=1&pageSize=50&refresh=true response->id:4140
+May 07, 2018 2:52:05 PM iam_services.Iam_services Error_logger
+SEVERE: Get id :product-master?_active=true&_q=%s&_search=true&page=1&pageSize=50&refresh=true response->id:
+May 07, 2018 2:52:05 PM iam_services.Iam_services Error_logger
+SEVERE: Get id :product-master?_active=true&_q=%s&_search=true&page=1&pageSize=50&refresh=true response->id:
+May 07, 2018 2:52:05 PM iam_services.Iam_services Error_logger
+SEVERE: Get id :product-master?_active=true&_q=%s&_search=true&page=1&pageSize=50&refresh=true response->id:
+May 07, 2018 2:52:05 PM iam_services.Iam_services Error_logger
+SEVERE: Get id :product-master?_active=true&_q=%s&_search=true&page=1&pageSize=50&refresh=true response->id:
+May 07, 2018 2:52:06 PM iam_services.Iam_services Error_logger
+SEVERE: Get id :product-master?_active=true&_q=%s&_search=true&page=1&pageSize=50&refresh=true response->id:
+May 07, 2018 2:52:06 PM iam_services.Iam_services Error_logger
+SEVERE: Get id :product-master?_active=true&_q=%s&_search=true&page=1&pageSize=50&refresh=true response->id:
+May 07, 2018 2:52:06 PM iam_services.Iam_services Error_logger
+SEVERE: Get id :product-master?_active=true&_q=%s&_search=true&page=1&pageSize=50&refresh=true response->id:
+May 07, 2018 2:52:06 PM iam_services.Iam_services Error_logger
+SEVERE: Get id :product-master?_active=true&_q=%s&_search=true&page=1&pageSize=50&refresh=true response->id:
+May 07, 2018 2:52:06 PM iam_services.Iam_services Error_logger
+SEVERE: Get id :product-master?_active=true&_q=%s&_search=true&page=1&pageSize=50&refresh=true response->id:
+May 07, 2018 2:52:07 PM iam_services.Iam_services Error_logger
+SEVERE: Get id :product-master?_active=true&_q=%s&_search=true&page=1&pageSize=50&refresh=true response->id:
+May 07, 2018 2:52:07 PM iam_services.Iam_services Error_logger
+SEVERE: Get id :product-master?_active=true&_q=%s&_search=true&page=1&pageSize=50&refresh=true response->id:
+May 07, 2018 2:52:07 PM iam_services.Iam_services Error_logger
+SEVERE: Get id :product-master?_active=true&_q=%s&_search=true&page=1&pageSize=50&refresh=true response->id:
+May 07, 2018 2:52:07 PM iam_services.Iam_services Error_logger
+SEVERE: Get id :product-master?_active=true&_q=%s&_search=true&page=1&pageSize=50&refresh=true response->id:
+May 07, 2018 2:52:07 PM iam_services.Iam_services Error_logger
+SEVERE: Get id :product-master?_active=true&_q=%s&_search=true&page=1&pageSize=50&refresh=true response->id:
+May 07, 2018 2:52:08 PM iam_services.Iam_services Error_logger
+SEVERE: Get id :product-master?_active=true&_q=%s&_search=true&page=1&pageSize=50&refresh=true response->id:
+May 07, 2018 2:52:08 PM iam_services.Iam_services Error_logger
+SEVERE: Get id :product-master?_active=true&_q=%s&_search=true&page=1&pageSize=50&refresh=true response->id:
+May 07, 2018 2:52:08 PM iam_services.Iam_services Error_logger
+SEVERE: Get id :product-master?_active=true&_q=%s&_search=true&page=1&pageSize=50&refresh=true response->id:
+May 07, 2018 2:52:08 PM iam_services.Iam_services Error_logger
+SEVERE: Get id :product-master?_active=true&_q=%s&_search=true&page=1&pageSize=50&refresh=true response->id:
+May 07, 2018 2:52:09 PM iam_services.Iam_services Error_logger
+SEVERE: Get id :product-master?_active=true&_q=%s&_search=true&page=1&pageSize=50&refresh=true response->id:
+May 07, 2018 2:52:09 PM iam_services.Iam_services Error_logger
+SEVERE: Get id :product-master?_active=true&_q=%s&_search=true&page=1&pageSize=50&refresh=true response->id:
+May 07, 2018 2:52:09 PM iam_services.Iam_services Error_logger
+SEVERE: Get id :product-master?_active=true&_q=%s&_search=true&page=1&pageSize=50&refresh=true response->id:2202
+May 07, 2018 2:52:09 PM iam_services.Iam_services Error_logger
+INFO: {"deliveryNoteList":[],"invoicePayments":[],"id":0,"number":null,"date":null,"invoiceDeliveryNotesCount":0,"invoiceNetAmount":0.0,"invoiceTaxAmount":0.0,"invoiceTotalAmount":0.0,"invoiceSysDate":null,"branch":null,"structure":null,"currency":null,"customer":null,"salesMan":null,"workFlowId":null,"terminalId":null,"productHierarchy":null,"fullyPaid":false,"paidAmount":0.0,"generateReceipt":false,"balance":0.0,"customerReceiptDetails":null,"extraInformation":null,"remarks":null,"productRemarks":null,"error":"This customer has an overdue invoice #INV000381 which is 55 days old. Limit is 49.0 days as set in profile: tester","exchangeRate":0.0}
+May 07, 2018 2:52:09 PM iam_services.Iam_services Error_logger
+SEVERE: mapJSONData
+java.lang.Exception: This customer has an overdue invoice #INV000381 which is 55 days old. Limit is 49.0 days as set in profile: tester
+	at iam_services.Iam_services.createJSON(Iam_services.java:590)
+	at iam_services.Iam_services.mapJSONData(Iam_services.java:464)
+	at iam_services.Iam_services.XML_to_JSON(Iam_services.java:433)
+	at iam_services.Iam_services.dump_xmlFILE_toDB(Iam_services.java:216)
+	at iam_services.Iam_services.check_files(Iam_services.java:345)
+	at iam_services.Iam_services.check_files(Iam_services.java:282)
+	at iam_services.Iam_services.doWork(Iam_services.java:93)
+	at iam_services.Iam_services.main(Iam_services.java:71)
+
+May 07, 2018 2:52:09 PM iam_services.Iam_services Error_logger
+INFO: Query->UPDATE CNB_IAM_IN_Record SET READ_FLG = 1 OUTPUT inserted.* WHERE  (READ_FLG = 0 OR READ_FLG IS NULL) AND CONVERT(DATE, [DATE_STAMP]) = CONVERT(DATE, CURRENT_TIMESTAMP) ;
+May 07, 2018 2:52:09 PM iam_services.Iam_services Error_logger
+INFO: Empty records
+May 07, 2018 3:02:49 PM iam_services.Iam_services Error_logger
+INFO: 
+============================
+Service Started
+============================
+
+
+May 07, 2018 3:02:49 PM iam_services.Iam_services Error_logger
+INFO: 3 new Files found
+May 07, 2018 3:02:49 PM iam_services.Iam_services Error_logger
+INFO: Connection succeeded, hurray!
+May 07, 2018 3:02:49 PM iam_services.Iam_services Error_logger
+INFO: 3->Records found!
+May 07, 2018 3:02:49 PM iam_services.Iam_services Error_logger
+SEVERE: Get id :org-hierarchy-master/1/5?_active=true&_q=%s&_reduced=true&_search=true&entries=1&page=1&pageSize=50&refresh=true response->id:
+May 07, 2018 3:02:50 PM iam_services.Iam_services Error_logger
+SEVERE: Get id :product-master?_active=true&_q=%s&_search=true&page=1&pageSize=50&refresh=true response->id:
+May 07, 2018 3:02:50 PM iam_services.Iam_services Error_logger
+SEVERE: Get id :product-master?_active=true&_q=%s&_search=true&page=1&pageSize=50&refresh=true response->id:
+May 07, 2018 3:02:51 PM iam_services.Iam_services Error_logger
+SEVERE: Get id :product-master?_active=true&_q=%s&_search=true&page=1&pageSize=50&refresh=true response->id:
+May 07, 2018 3:02:51 PM iam_services.Iam_services Error_logger
+SEVERE: Get id :product-master?_active=true&_q=%s&_search=true&page=1&pageSize=50&refresh=true response->id:
+May 07, 2018 3:02:51 PM iam_services.Iam_services Error_logger
+SEVERE: Get id :product-master?_active=true&_q=%s&_search=true&page=1&pageSize=50&refresh=true response->id:
+May 07, 2018 3:02:51 PM iam_services.Iam_services Error_logger
+SEVERE: Get id :product-master?_active=true&_q=%s&_search=true&page=1&pageSize=50&refresh=true response->id:2435
+May 07, 2018 3:02:52 PM iam_services.Iam_services Error_logger
+SEVERE: Get id :product-master?_active=true&_q=%s&_search=true&page=1&pageSize=50&refresh=true response->id:
+May 07, 2018 3:02:52 PM iam_services.Iam_services Error_logger
+SEVERE: Get id :product-master?_active=true&_q=%s&_search=true&page=1&pageSize=50&refresh=true response->id:3986
+May 07, 2018 3:02:52 PM iam_services.Iam_services Error_logger
+SEVERE: Get id :product-master?_active=true&_q=%s&_search=true&page=1&pageSize=50&refresh=true response->id:
+May 07, 2018 3:02:52 PM iam_services.Iam_services Error_logger
+SEVERE: Get id :product-master?_active=true&_q=%s&_search=true&page=1&pageSize=50&refresh=true response->id:3849
+May 07, 2018 3:02:52 PM iam_services.Iam_services Error_logger
+SEVERE: Get id :product-master?_active=true&_q=%s&_search=true&page=1&pageSize=50&refresh=true response->id:
+May 07, 2018 3:02:53 PM iam_services.Iam_services Error_logger
+SEVERE: Get id :product-master?_active=true&_q=%s&_search=true&page=1&pageSize=50&refresh=true response->id:
+May 07, 2018 3:02:53 PM iam_services.Iam_services Error_logger
+SEVERE: Get id :product-master?_active=true&_q=%s&_search=true&page=1&pageSize=50&refresh=true response->id:
+May 07, 2018 3:02:53 PM iam_services.Iam_services Error_logger
+SEVERE: Get id :product-master?_active=true&_q=%s&_search=true&page=1&pageSize=50&refresh=true response->id:3779
+May 07, 2018 3:02:53 PM iam_services.Iam_services Error_logger
+SEVERE: Get id :product-master?_active=true&_q=%s&_search=true&page=1&pageSize=50&refresh=true response->id:3979
+May 07, 2018 3:02:54 PM iam_services.Iam_services Error_logger
+SEVERE: Get id :product-master?_active=true&_q=%s&_search=true&page=1&pageSize=50&refresh=true response->id:3948
+May 07, 2018 3:02:54 PM iam_services.Iam_services Error_logger
+SEVERE: Get id :product-master?_active=true&_q=%s&_search=true&page=1&pageSize=50&refresh=true response->id:3959
+May 07, 2018 3:02:54 PM iam_services.Iam_services Error_logger
+SEVERE: Get id :product-master?_active=true&_q=%s&_search=true&page=1&pageSize=50&refresh=true response->id:3638
+May 07, 2018 3:02:54 PM iam_services.Iam_services Error_logger
+SEVERE: Get id :product-master?_active=true&_q=%s&_search=true&page=1&pageSize=50&refresh=true response->id:3971
+May 07, 2018 3:02:55 PM iam_services.Iam_services Error_logger
+SEVERE: Get id :product-master?_active=true&_q=%s&_search=true&page=1&pageSize=50&refresh=true response->id:3794
+May 07, 2018 3:02:55 PM iam_services.Iam_services Error_logger
+SEVERE: mapJSONData
+java.io.IOException: Server returned HTTP response code: 409 for URL: http://192.168.13.136:9999/rest/invoice/adhoc-invoice/
+	at sun.net.www.protocol.http.HttpURLConnection.getInputStream0(HttpURLConnection.java:1840)
+	at sun.net.www.protocol.http.HttpURLConnection.getInputStream(HttpURLConnection.java:1441)
+	at api.Api_executor.sendPostRequest(Api_executor.java:77)
+	at api.Api_executor.sendRequest(Api_executor.java:52)
+	at api.Api_executor.createInvoice(Api_executor.java:57)
+	at iam_services.Iam_services.createJSON(Iam_services.java:587)
+	at iam_services.Iam_services.mapJSONData(Iam_services.java:459)
+	at iam_services.Iam_services.XML_to_JSON(Iam_services.java:435)
+	at iam_services.Iam_services.dump_xmlFILE_toDB(Iam_services.java:218)
+	at iam_services.Iam_services.check_files(Iam_services.java:347)
+	at iam_services.Iam_services.check_files(Iam_services.java:284)
+	at iam_services.Iam_services.doWork(Iam_services.java:94)
+	at iam_services.Iam_services.main(Iam_services.java:71)
+
+May 07, 2018 3:02:55 PM iam_services.Iam_services Error_logger
+INFO: Only one record found!
+May 07, 2018 3:02:55 PM iam_services.Iam_services Error_logger
+SEVERE: Get id :org-hierarchy-master/1/5?_active=true&_q=%s&_reduced=true&_search=true&entries=1&page=1&pageSize=50&refresh=true response->id:8
+May 07, 2018 3:02:55 PM iam_services.Iam_services Error_logger
+SEVERE: Get id :product-master?_active=true&_q=%s&_search=true&page=1&pageSize=50&refresh=true response->id:3352
+May 07, 2018 3:02:55 PM iam_services.Iam_services Error_logger
+INFO: {"deliveryNoteList":[],"invoicePayments":[],"id":0,"number":null,"date":null,"invoiceDeliveryNotesCount":0,"invoiceNetAmount":0.0,"invoiceTaxAmount":0.0,"invoiceTotalAmount":0.0,"invoiceSysDate":null,"branch":null,"structure":null,"currency":null,"customer":null,"salesMan":null,"workFlowId":null,"terminalId":null,"productHierarchy":null,"fullyPaid":false,"paidAmount":0.0,"generateReceipt":false,"balance":0.0,"customerReceiptDetails":null,"extraInformation":null,"remarks":null,"productRemarks":null,"error":"This customer has an overdue invoice #INV000381 which is 55 days old. Limit is 49.0 days as set in profile: tester","exchangeRate":0.0}
+May 07, 2018 3:02:55 PM iam_services.Iam_services Error_logger
+SEVERE: mapJSONData
+java.lang.Exception: This customer has an overdue invoice #INV000381 which is 55 days old. Limit is 49.0 days as set in profile: tester
+	at iam_services.Iam_services.createJSON(Iam_services.java:592)
+	at iam_services.Iam_services.mapJSONData(Iam_services.java:466)
+	at iam_services.Iam_services.XML_to_JSON(Iam_services.java:435)
+	at iam_services.Iam_services.dump_xmlFILE_toDB(Iam_services.java:218)
+	at iam_services.Iam_services.check_files(Iam_services.java:347)
+	at iam_services.Iam_services.check_files(Iam_services.java:284)
+	at iam_services.Iam_services.doWork(Iam_services.java:94)
+	at iam_services.Iam_services.main(Iam_services.java:71)
+
+May 07, 2018 3:02:55 PM iam_services.Iam_services Error_logger
+INFO: Only one record found!
+May 07, 2018 3:02:56 PM iam_services.Iam_services Error_logger
+SEVERE: Get id :org-hierarchy-master/1/5?_active=true&_q=%s&_reduced=true&_search=true&entries=1&page=1&pageSize=50&refresh=true response->id:8
+May 07, 2018 3:02:56 PM iam_services.Iam_services Error_logger
+SEVERE: Get id :product-master?_active=true&_q=%s&_search=true&page=1&pageSize=50&refresh=true response->id:3352
+May 07, 2018 3:02:56 PM iam_services.Iam_services Error_logger
+SEVERE: Get id :product-master?_active=true&_q=%s&_search=true&page=1&pageSize=50&refresh=true response->id:2206
+May 07, 2018 3:02:56 PM iam_services.Iam_services Error_logger
+SEVERE: Get id :product-master?_active=true&_q=%s&_search=true&page=1&pageSize=50&refresh=true response->id:2213
+May 07, 2018 3:02:57 PM iam_services.Iam_services Error_logger
+SEVERE: Get id :product-master?_active=true&_q=%s&_search=true&page=1&pageSize=50&refresh=true response->id:4326
+May 07, 2018 3:02:57 PM iam_services.Iam_services Error_logger
+SEVERE: Get id :product-master?_active=true&_q=%s&_search=true&page=1&pageSize=50&refresh=true response->id:4371
+May 07, 2018 3:02:57 PM iam_services.Iam_services Error_logger
+SEVERE: Get id :product-master?_active=true&_q=%s&_search=true&page=1&pageSize=50&refresh=true response->id:3613
+May 07, 2018 3:02:57 PM iam_services.Iam_services Error_logger
+SEVERE: Get id :product-master?_active=true&_q=%s&_search=true&page=1&pageSize=50&refresh=true response->id:3961
+May 07, 2018 3:02:57 PM iam_services.Iam_services Error_logger
+SEVERE: Get id :product-master?_active=true&_q=%s&_search=true&page=1&pageSize=50&refresh=true response->id:3977
+May 07, 2018 3:02:58 PM iam_services.Iam_services Error_logger
+SEVERE: Get id :product-master?_active=true&_q=%s&_search=true&page=1&pageSize=50&refresh=true response->id:3978
+May 07, 2018 3:02:58 PM iam_services.Iam_services Error_logger
+SEVERE: Get id :product-master?_active=true&_q=%s&_search=true&page=1&pageSize=50&refresh=true response->id:
+May 07, 2018 3:02:58 PM iam_services.Iam_services Error_logger
+SEVERE: Get id :product-master?_active=true&_q=%s&_search=true&page=1&pageSize=50&refresh=true response->id:3756
+May 07, 2018 3:02:58 PM iam_services.Iam_services Error_logger
+SEVERE: Get id :product-master?_active=true&_q=%s&_search=true&page=1&pageSize=50&refresh=true response->id:3579
+May 07, 2018 3:02:59 PM iam_services.Iam_services Error_logger
+SEVERE: Get id :product-master?_active=true&_q=%s&_search=true&page=1&pageSize=50&refresh=true response->id:3754
+May 07, 2018 3:02:59 PM iam_services.Iam_services Error_logger
+SEVERE: Get id :product-master?_active=true&_q=%s&_search=true&page=1&pageSize=50&refresh=true response->id:3621
+May 07, 2018 3:02:59 PM iam_services.Iam_services Error_logger
+SEVERE: Get id :product-master?_active=true&_q=%s&_search=true&page=1&pageSize=50&refresh=true response->id:4139
+May 07, 2018 3:02:59 PM iam_services.Iam_services Error_logger
+SEVERE: Get id :product-master?_active=true&_q=%s&_search=true&page=1&pageSize=50&refresh=true response->id:1835
+May 07, 2018 3:02:59 PM iam_services.Iam_services Error_logger
+SEVERE: Get id :product-master?_active=true&_q=%s&_search=true&page=1&pageSize=50&refresh=true response->id:4140
+May 07, 2018 3:03:00 PM iam_services.Iam_services Error_logger
+SEVERE: Get id :product-master?_active=true&_q=%s&_search=true&page=1&pageSize=50&refresh=true response->id:
+May 07, 2018 3:03:00 PM iam_services.Iam_services Error_logger
+SEVERE: Get id :product-master?_active=true&_q=%s&_search=true&page=1&pageSize=50&refresh=true response->id:
+May 07, 2018 3:03:00 PM iam_services.Iam_services Error_logger
+SEVERE: Get id :product-master?_active=true&_q=%s&_search=true&page=1&pageSize=50&refresh=true response->id:
+May 07, 2018 3:03:00 PM iam_services.Iam_services Error_logger
+SEVERE: Get id :product-master?_active=true&_q=%s&_search=true&page=1&pageSize=50&refresh=true response->id:
+May 07, 2018 3:03:01 PM iam_services.Iam_services Error_logger
+SEVERE: Get id :product-master?_active=true&_q=%s&_search=true&page=1&pageSize=50&refresh=true response->id:
+May 07, 2018 3:03:01 PM iam_services.Iam_services Error_logger
+SEVERE: Get id :product-master?_active=true&_q=%s&_search=true&page=1&pageSize=50&refresh=true response->id:
+May 07, 2018 3:03:01 PM iam_services.Iam_services Error_logger
+SEVERE: Get id :product-master?_active=true&_q=%s&_search=true&page=1&pageSize=50&refresh=true response->id:
+May 07, 2018 3:03:02 PM iam_services.Iam_services Error_logger
+SEVERE: Get id :product-master?_active=true&_q=%s&_search=true&page=1&pageSize=50&refresh=true response->id:
+May 07, 2018 3:03:02 PM iam_services.Iam_services Error_logger
+SEVERE: Get id :product-master?_active=true&_q=%s&_search=true&page=1&pageSize=50&refresh=true response->id:
+May 07, 2018 3:03:02 PM iam_services.Iam_services Error_logger
+SEVERE: Get id :product-master?_active=true&_q=%s&_search=true&page=1&pageSize=50&refresh=true response->id:
+May 07, 2018 3:03:02 PM iam_services.Iam_services Error_logger
+SEVERE: Get id :product-master?_active=true&_q=%s&_search=true&page=1&pageSize=50&refresh=true response->id:
+May 07, 2018 3:03:03 PM iam_services.Iam_services Error_logger
+SEVERE: Get id :product-master?_active=true&_q=%s&_search=true&page=1&pageSize=50&refresh=true response->id:
+May 07, 2018 3:03:03 PM iam_services.Iam_services Error_logger
+SEVERE: Get id :product-master?_active=true&_q=%s&_search=true&page=1&pageSize=50&refresh=true response->id:
+May 07, 2018 3:03:03 PM iam_services.Iam_services Error_logger
+SEVERE: Get id :product-master?_active=true&_q=%s&_search=true&page=1&pageSize=50&refresh=true response->id:
+May 07, 2018 3:03:03 PM iam_services.Iam_services Error_logger
+SEVERE: Get id :product-master?_active=true&_q=%s&_search=true&page=1&pageSize=50&refresh=true response->id:
+May 07, 2018 3:03:03 PM iam_services.Iam_services Error_logger
+SEVERE: Get id :product-master?_active=true&_q=%s&_search=true&page=1&pageSize=50&refresh=true response->id:
+May 07, 2018 3:03:04 PM iam_services.Iam_services Error_logger
+SEVERE: Get id :product-master?_active=true&_q=%s&_search=true&page=1&pageSize=50&refresh=true response->id:
+May 07, 2018 3:03:04 PM iam_services.Iam_services Error_logger
+SEVERE: Get id :product-master?_active=true&_q=%s&_search=true&page=1&pageSize=50&refresh=true response->id:
+May 07, 2018 3:03:04 PM iam_services.Iam_services Error_logger
+SEVERE: Get id :product-master?_active=true&_q=%s&_search=true&page=1&pageSize=50&refresh=true response->id:
+May 07, 2018 3:03:04 PM iam_services.Iam_services Error_logger
+SEVERE: Get id :product-master?_active=true&_q=%s&_search=true&page=1&pageSize=50&refresh=true response->id:
+May 07, 2018 3:03:04 PM iam_services.Iam_services Error_logger
+SEVERE: Get id :product-master?_active=true&_q=%s&_search=true&page=1&pageSize=50&refresh=true response->id:2202
+May 07, 2018 3:03:05 PM iam_services.Iam_services Error_logger
+INFO: {"deliveryNoteList":[],"invoicePayments":[],"id":0,"number":null,"date":null,"invoiceDeliveryNotesCount":0,"invoiceNetAmount":0.0,"invoiceTaxAmount":0.0,"invoiceTotalAmount":0.0,"invoiceSysDate":null,"branch":null,"structure":null,"currency":null,"customer":null,"salesMan":null,"workFlowId":null,"terminalId":null,"productHierarchy":null,"fullyPaid":false,"paidAmount":0.0,"generateReceipt":false,"balance":0.0,"customerReceiptDetails":null,"extraInformation":null,"remarks":null,"productRemarks":null,"error":"This customer has an overdue invoice #INV000381 which is 55 days old. Limit is 49.0 days as set in profile: tester","exchangeRate":0.0}
+May 07, 2018 3:03:05 PM iam_services.Iam_services Error_logger
+SEVERE: mapJSONData
+java.lang.Exception: This customer has an overdue invoice #INV000381 which is 55 days old. Limit is 49.0 days as set in profile: tester
+	at iam_services.Iam_services.createJSON(Iam_services.java:592)
+	at iam_services.Iam_services.mapJSONData(Iam_services.java:466)
+	at iam_services.Iam_services.XML_to_JSON(Iam_services.java:435)
+	at iam_services.Iam_services.dump_xmlFILE_toDB(Iam_services.java:218)
+	at iam_services.Iam_services.check_files(Iam_services.java:347)
+	at iam_services.Iam_services.check_files(Iam_services.java:284)
+	at iam_services.Iam_services.doWork(Iam_services.java:94)
+	at iam_services.Iam_services.main(Iam_services.java:71)
+
+May 07, 2018 3:03:05 PM iam_services.Iam_services Error_logger
+INFO: Empty records
+May 07, 2018 3:03:05 PM iam_services.Iam_services Error_logger
+INFO: 
+***********************************************
+#######Service Ended#############
+***********************************************
+
+
+
+
+
+
