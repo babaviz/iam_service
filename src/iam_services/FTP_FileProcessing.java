@@ -169,13 +169,13 @@ public class FTP_FileProcessing {
             outputStream.close();
 
             if (success) {
-                Iam_services.getInstance().Error_logger(null, file + " has been downloaded successfully.", true);
+                //Iam_services.getInstance().Error_logger(null, file + " has been downloaded successfully.", true);
 
                 String proc = dir;
                 if (!checkDirectoryExists(ftpClient, proc + settings.get("proccessed_folder_name"))) {
                     boolean makeDirectory = ftpClient.makeDirectory(proc + settings.get("proccessed_folder_name"));
                     if (makeDirectory) {
-                        Iam_services.getInstance().Error_logger(null, "Proccessed dir created successfully", true);
+                        //Iam_services.getInstance().Error_logger(null, "Proccessed dir created successfully", true);
                     } else {
                         Iam_services.getInstance().Error_logger(new Exception("proccessed directory could not be created on the server"), func);
                     }
