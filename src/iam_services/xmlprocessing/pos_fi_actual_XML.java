@@ -96,7 +96,8 @@ public class pos_fi_actual_XML {
             where.put(link_key, key);
             
             List<String> ex=new ArrayList<>();
-            ex.addAll(exemptions);ex.add(link_key);
+            ex.addAll(exemptions);
+            ex.add(link_key);
             
             List<Map<String, String>> dbResMap = XmlDB_funcs.getInstance().QueryDB(subRecordsTable, where);
             if (dbResMap.isEmpty()) {

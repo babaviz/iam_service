@@ -71,6 +71,7 @@ public class inv_detail_credit {
                 
                 //select distict invoice number for each date
                 String column=walkin?"BRNCH_ID":"PACKAGE_ID";
+                
                 List<List<Map<String, String>>> accu_data =new ArrayList<>();
                 for(String date:dateList){                    
                     query="SELECT DISTINCT "+column+"  FROM "+tb+ " WHERE READ_FLG=0 AND CONVERT(DATE,BELEGDATUM)=CONVERT(DATE,'"+date+"') ";
@@ -82,16 +83,17 @@ public class inv_detail_credit {
                         accu_data.add(XmlDB_funcs.getInstance().QueryDB(parentTable+(walkin?walkin_surffix:""), in_where));
                     }
                 }
+                accu_data.forEach(list->{genarate_XMLDOC(list);});
                 //now generate xml
                 //dbResMap = XmlDB_funcs.getInstance().QueryDB(parentTable+(walkin?walkin_surffix:""), null);
-                accu_data.forEach(list->{
+               /* accu_data.forEach(list->{
                      if(list.size()>1){
                          //splite header records into single row
                         CreateXMLElements.getInstance().batches(list,1).forEach(sublist->{genarate_XMLDOC(sublist);});
-                     }else{
+                     }else if(!list.isEmpty()){
                         genarate_XMLDOC(list);
                      }
-                });
+                });*/
                /* if(dbResMap.size()>(walkin?600:1)){
                    CreateXMLElements.getInstance().batches(dbResMap,(walkin?600:1)).forEach(list->{genarate_XMLDOC(list);});
                 }else{

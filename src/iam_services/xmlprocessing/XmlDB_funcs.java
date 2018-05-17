@@ -118,7 +118,7 @@ public class XmlDB_funcs {
         if (brachidMap == null) {//initialize the map
             brachidMap = new HashMap<>();
         }
-        //check if we already have that id, to avaoid network delay connecting everytime
+        //check if we already have that id, to avoid network delay connecting everytime
         if (brachidMap.get(branch_id) != null) {
             return brachidMap.get(branch_id);
         }
@@ -141,6 +141,9 @@ public class XmlDB_funcs {
         }
 
         iam_services.Iam_services.getInstance().Error_logger(null, "Branch mapping res=" + sap_branch_mapping, true);
+        if(sap_branch_mapping==""){
+            return "-";
+        }
         return sap_branch_mapping;
     }
 
