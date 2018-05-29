@@ -211,10 +211,12 @@ public class Iam_services {
 
             cstm.setNString(1, xml);
             cstm.setString(2, xmlFile.getName());
+            System.out.println("Sending to db...");
             cstm.execute();
-
+            System.out.println("Done sending to server");
             //if its ecommerce, send json as well
             if (xmlFile.getName().toLowerCase().contains("order")) {
+                System.out.println("---Ecommerce---");
                 return XML_to_JSON(xml,xmlFile);
             }
 
@@ -251,10 +253,10 @@ public class Iam_services {
     }
 
     public String readLocalFile(String path) {
-        //System.err.println("Reading->" + path);
+        System.err.println("Reading->" + path);
         try {
             String string = new String(Files.readAllBytes(Paths.get(path)));
-            //System.err.println("Done reading");
+            System.err.println("Done reading");
             return string;
         } catch (IOException ex) {
             Error_logger(ex, "readLocalFile");
