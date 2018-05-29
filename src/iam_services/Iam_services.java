@@ -342,7 +342,7 @@ public class Iam_services {
             if (fileEntry.isDirectory()) {
                 continue;
             }
-            //Error_logger(null, "Processing file->" + (count++) + "[" + fileEntry.getPath() + "]", true);
+            Error_logger(null, "Processing file->" + (count++) + "[" + fileEntry.getPath() + "]", true);
             try {
                 if (dump_xmlFILE_toDB(fileEntry, readLocalFile(fileEntry.getPath()))) {
                     Files.move(Paths.get(fileEntry.getPath()), Paths.get(new File(processed_dir, fileEntry.getName()).getPath()), StandardCopyOption.REPLACE_EXISTING);
@@ -434,7 +434,7 @@ public class Iam_services {
            // Error_logger(null, json_indented, true);
             return mapJSONData(xmlJSONObj);
             // String response = Api_executor.getInstance(settings).sendPostRequest("", json_indented);
-            //Error_logger(null, response, true);
+           // Error_logger(null, response, true);
         } catch (Exception je) {
             Error_logger(je, "XML_to_JSON");
             if(dbLogger !=null){
@@ -583,7 +583,7 @@ public class Iam_services {
         
         parent.put("orderDetails", orderJSON);
         
-        //Error_logger(null, parent.toString(),true);
+        Error_logger(null, parent.toString(),true);
         String createInvoice = Api_executor.getInstance(settings).createInvoice(parent.toString());
         Error_logger(null, createInvoice, true);
         

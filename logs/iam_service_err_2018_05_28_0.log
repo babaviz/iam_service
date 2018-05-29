@@ -1,0 +1,28 @@
+May 28, 2018 3:57:48 PM iam_services.Iam_services Error_logger
+INFO: 
+============================
+Service Started
+============================
+
+
+May 28, 2018 3:57:48 PM iam_services.Iam_services Error_logger
+INFO: 1 new Files found
+May 28, 2018 3:57:48 PM iam_services.Iam_services Error_logger
+INFO: Connection succeeded, hurray!
+May 28, 2018 3:57:48 PM iam_services.Iam_services Error_logger
+INFO: Processing file->1[C:\Users\user\Documents\DENNIS\allsamples\artmas_20180523-155109-075.xml]
+May 28, 2018 3:57:49 PM iam_services.Iam_services Error_logger
+INFO: Query->UPDATE CNB_IAM_IN_Record SET READ_FLG = 1 OUTPUT inserted.* WHERE  (READ_FLG = 0 OR READ_FLG IS NULL) AND CONVERT(DATE, [DATE_STAMP]) = CONVERT(DATE, CURRENT_TIMESTAMP) ;
+May 28, 2018 3:57:49 PM iam_services.Iam_services Error_logger
+INFO: Empty records
+May 28, 2018 3:57:49 PM iam_services.Iam_services Error_logger
+INFO: 
+***********************************************
+#######Service Ended#############
+***********************************************
+
+
+
+
+
+

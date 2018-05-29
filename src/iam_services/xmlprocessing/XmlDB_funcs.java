@@ -10,7 +10,6 @@ import java.sql.PreparedStatement;
 import java.sql.ResultSet;
 import java.sql.ResultSetMetaData;
 import java.sql.SQLException;
-import java.sql.Statement;
 import java.util.ArrayList;
 import java.util.HashMap;
 import java.util.List;
@@ -98,7 +97,7 @@ public class XmlDB_funcs {
             }
         }
 
-        //iam_services.Iam_services.getInstance().Error_logger(null, "Query->" + query, true);
+        iam_services.Iam_services.getInstance().Error_logger(null, "Query->" + query, true);
         return pstm;
     }
 

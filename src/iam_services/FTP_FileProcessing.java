@@ -106,7 +106,7 @@ public class FTP_FileProcessing {
             List<String[]> newXMFileList = new ArrayList<>();
             listDirectory(ftpClient, dir, "", 0, newXMFileList);
             // Lists files and directories
-            //Iam_services.getInstance().Error_logger(null, "Dircetory:" + dir, true);
+            Iam_services.getInstance().Error_logger(null, "Dircetory:" + dir, true);
             //FTPFile[] files1 = ftpClient.listFiles(dir);
             Iam_services.getInstance().Error_logger(null, newXMFileList.size() + "  Files found", true);
             //download files for processing
@@ -169,13 +169,13 @@ public class FTP_FileProcessing {
             outputStream.close();
 
             if (success) {
-                //Iam_services.getInstance().Error_logger(null, file + " has been downloaded successfully.", true);
+                Iam_services.getInstance().Error_logger(null, file + " has been downloaded successfully.", true);
 
                 String proc = dir;
                 if (!checkDirectoryExists(ftpClient, proc + settings.get("proccessed_folder_name"))) {
                     boolean makeDirectory = ftpClient.makeDirectory(proc + settings.get("proccessed_folder_name"));
                     if (makeDirectory) {
-                        //Iam_services.getInstance().Error_logger(null, "Proccessed dir created successfully", true);
+                        Iam_services.getInstance().Error_logger(null, "Proccessed dir created successfully", true);
                     } else {
                         Iam_services.getInstance().Error_logger(new Exception("proccessed directory could not be created on the server"), func);
                     }
@@ -223,17 +223,17 @@ public class FTP_FileProcessing {
             dirToList += "/" + currentDir;
         }
 
-        // Iam_services.getInstance().Error_logger(null, dirToList, true);
+         Iam_services.getInstance().Error_logger(null, dirToList, true);
         FTPFile[] subFiles = ftpClient.listFiles(dirToList);
         if (subFiles == null) {
-            // Iam_services.getInstance().Error_logger(null, dirToList+"->Returned null", true);
+            Iam_services.getInstance().Error_logger(null, dirToList+"->Returned null", true);
         } else if (subFiles.length == 0) {
-            //Iam_services.getInstance().Error_logger(null, dirToList+"->list files empty", true);
+            Iam_services.getInstance().Error_logger(null, dirToList+"->list files empty", true);
         } else {
             /* if (subFiles != null && subFiles.length > 0) {*/
             for (FTPFile aFile : subFiles) {
                 String currentFileName = aFile.getName();
-                //Iam_services.getInstance().Error_logger(null, "Early:"+currentDir, true);
+                Iam_services.getInstance().Error_logger(null, "Early:"+currentDir, true);
                 if (currentFileName.equals(".") || currentFileName.equals("..")
                         || new ArrayList<>(Arrays.asList(settings.get("ignore_folders").split(","))).contains(currentFileName)) {
 
@@ -247,11 +247,11 @@ public class FTP_FileProcessing {
                 }*/
                 if (aFile.isDirectory()) {
                     // System.out.println("[" + currentFileName + "]");
-                    //Iam_services.getInstance().Error_logger(null, tab + "[" + currentFileName + "]", true);
+                    Iam_services.getInstance().Error_logger(null, tab + "[" + currentFileName + "]", true);
                     listDirectory(ftpClient, dirToList, currentFileName, level + 1, newFilList);
                 } else {
                     //System.out.println(currentFileName);
-                    //Iam_services.getInstance().Error_logger(null, tab + currentFileName, true);
+                    Iam_services.getInstance().Error_logger(null, tab + currentFileName, true);
                     newFilList.add(new String[]{dirToList, currentFileName});//add to queue
                 }
             }
