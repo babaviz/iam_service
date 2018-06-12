@@ -14,8 +14,12 @@ import java.io.BufferedReader;
 import java.io.File;
 import java.io.FileFilter;
 import java.io.FileInputStream;
+import java.io.FileNotFoundException;
 import java.io.IOException;
+import java.io.InputStream;
 import java.io.InputStreamReader;
+import java.io.Reader;
+import java.io.UnsupportedEncodingException;
 import java.net.URL;
 import java.net.URLConnection;
 import java.nio.file.Files;
@@ -76,9 +80,9 @@ public class Iam_services {
             //initialize logger
             //create log folder
             new File("logs").mkdir();
-            
+
             String dateString = new SimpleDateFormat("yyyy_MM_dd").format(new Date());
-            fh = new FileHandler("logs"+System.getProperty("file.separator")+"iam_service_err_" + dateString + "_%g.log", 5 * 1024 * 1024, 20, true);//new FileHandler("iam_service_err_" + dateString + ".log", true);
+            fh = new FileHandler("logs" + System.getProperty("file.separator") + "iam_service_err_" + dateString + "_%g.log", 5 * 1024 * 1024, 20, true);//new FileHandler("iam_service_err_" + dateString + ".log", true);
             logger.addHandler(fh);
         } catch (IOException | SecurityException ex) {
             Logger.getLogger(Iam_services.class.getName()).log(Level.SEVERE, null, ex);
@@ -208,7 +212,11 @@ public class Iam_services {
                 Error_logger(new Exception("System couldn't determine category of xml file:" + xmlFile), "dump_xmlFILE_toDB");
                 return false;
             }
-
+            
+            //System.err.println("-------------------------------------------------------------------------------");
+            //System.out.println(xml);
+            //System.err.println("-------------------------------------------------------------------------------");
+            
             cstm.setNString(1, xml);
             cstm.setString(2, xmlFile.getName());
             System.out.println("Sending to db...");
@@ -217,7 +225,7 @@ public class Iam_services {
             //if its ecommerce, send json as well
             if (xmlFile.getName().toLowerCase().contains("order")) {
                 System.out.println("---Ecommerce---");
-                return XML_to_JSON(xml,xmlFile);
+                return XML_to_JSON(xml, xmlFile);
             }
 
         } catch (SQLException ex) {
@@ -255,15 +263,51 @@ public class Iam_services {
     public String readLocalFile(String path) {
         System.err.println("Reading->" + path);
         try {
-            String string = new String(Files.readAllBytes(Paths.get(path)));
+           // String string = new String(Files.readAllBytes(Paths.get(path)));
+           String string =readFile_utf8(path);
             System.err.println("Done reading");
             return string;
-        } catch (IOException ex) {
+        } catch (Exception ex) {
             Error_logger(ex, "readLocalFile");
         }
         return "";
     }
 
+    public String readFile(String filepath) {
+        String xml="";
+        try {
+            //I will read chars using utf-8 encoding
+            BufferedReader in = new BufferedReader(new InputStreamReader(
+                    new FileInputStream(filepath), "utf-8"));
+
+            // ok, lets read data from file
+            String line;
+            while ((line = in.readLine()) != null) {
+                // here I use IDE encoding
+                xml+=line;
+                //System.out.println(line);
+                // here I print data using Cp852 encoding
+            }
+            in.close();
+        } catch (IOException e) {
+            e.printStackTrace();
+        }
+        
+        return xml;
+    }
+
+    public String readFile_utf8(String fileName) throws UnsupportedEncodingException, FileNotFoundException, IOException{
+        Reader reader = new InputStreamReader(new FileInputStream(fileName), "utf-8");
+        BufferedReader br = new BufferedReader(reader);
+        String xml="";
+        String line;
+            while ((line = br.readLine()) != null) {
+                xml+=line;
+            }
+            br.close();
+            return xml;
+    }
+    
     public String readRemoteFile(URL url) {
         try {
             URLConnection xyzcon = url.openConnection();
@@ -423,23 +467,23 @@ public class Iam_services {
         dbLogger.Log_success(id, docNum);
     }
 
-    public boolean XML_to_JSON(String xml,File file) {
-        int  id =0; 
+    public boolean XML_to_JSON(String xml, File file) {
+        int id = 0;
         StatusLogger dbLogger = null;
         try {
-             dbLogger= StatusLogger.getInstance();
-            id=dbLogger.Log_start(file, "Ecomm_Order");
-            
+            dbLogger = StatusLogger.getInstance();
+            id = dbLogger.Log_start(file, "Ecomm_Order");
+
             JSONObject xmlJSONObj = XML.toJSONObject(xml);
             //String json_indented = xmlJSONObj.toString();
             //System.out.println(jsonPrettyPrintString);
-           // Error_logger(null, json_indented, true);
+            // Error_logger(null, json_indented, true);
             return mapJSONData(xmlJSONObj);
             // String response = Api_executor.getInstance(settings).sendPostRequest("", json_indented);
-           // Error_logger(null, response, true);
+            // Error_logger(null, response, true);
         } catch (Exception je) {
             Error_logger(je, "XML_to_JSON");
-            if(dbLogger !=null){
+            if (dbLogger != null) {
                 dbLogger.Log_error(id);
             }
             return false;
@@ -448,7 +492,7 @@ public class Iam_services {
     }
 
     private boolean mapJSONData(JSONObject convertedXML) {
-        String func="mapJSONData";
+        String func = "mapJSONData";
         try {
             Object obj = convertedXML.getJSONObject("ns1:MT_ECOMM_INV").get("Record");
             // `instanceof` tells us whether the object can be cast to a specific type
@@ -456,33 +500,33 @@ public class Iam_services {
                 // it's an array
                 JSONArray recordsArray = (JSONArray) obj;
                 // do all kinds of JSONArray'ish things with urlArray
-                 Error_logger(null, recordsArray.length()+"->Records found!", true);
-                 for (int i = 0; i < recordsArray.length(); i++) {
-                     createJSON((JSONObject) recordsArray.get(i));
+                Error_logger(null, recordsArray.length() + "->Records found!", true);
+                for (int i = 0; i < recordsArray.length(); i++) {
+                    createJSON((JSONObject) recordsArray.get(i));
                 }
             } else {
                 // if you know it's either an array or an object, then it's an object
                 JSONObject record = (JSONObject) obj;
                 // do objecty stuff with urlObject
-                 Error_logger(null,"Only one record found!", true);
-                 createJSON(record);
+                Error_logger(null, "Only one record found!", true);
+                createJSON(record);
             }
         } catch (Exception ex) {
             Error_logger(ex, func);
             return false;
         }
-        
+
         return true;
     }
 
-    private void createJSON(JSONObject jsonRecord) throws Exception{
-        JSONObject parent=new JSONObject();
+    private void createJSON(JSONObject jsonRecord) throws Exception {
+        JSONObject parent = new JSONObject();
         parent.put("currency", new JSONObject("{\"id\":1}"));//get currency
-        
-        Map<String,String> requestParams=Api_executor.getInstance(settings).fetchRequestParams(jsonRecord.getString("StoreName"));
-        
+
+        Map<String, String> requestParams = Api_executor.getInstance(settings).fetchRequestParams(jsonRecord.getString("StoreName"));
+
         //create customer
-        JSONObject cuJSONObject=new JSONObject();
+        JSONObject cuJSONObject = new JSONObject();
         cuJSONObject.put("contacts", new JSONArray());
         cuJSONObject.put("GroupId", 0);
         cuJSONObject.put("active", true);
@@ -493,16 +537,16 @@ public class Iam_services {
         cuJSONObject.put("creditCustomer", true);
         cuJSONObject.put("customerType", 0);
         parent.put("customer", cuJSONObject);
-        
+
         //branch 
-        JSONObject brJSONObject=new JSONObject();
+        JSONObject brJSONObject = new JSONObject();
         brJSONObject.put("id", requestParams.get("branchid"));//get brach id
         brJSONObject.put("hierarchyLevelId", 0);
-        parent.put("branch", brJSONObject);        
-        
+        parent.put("branch", brJSONObject);
+
         parent.put("structure", new JSONObject("{\"id\":1}"));
         parent.put("dNoteRemarks", "");
-        
+
         parent.put("dNoteDate", new SimpleDateFormat("yyyyMMdd").parse(jsonRecord.getString("OrderDate")).getTime());
         parent.put("dNoteItemCount", jsonRecord.get("TotalLineNo")); //item count
         parent.put("salesManId", requestParams.get("salesManId"));//get salesManID
@@ -515,48 +559,48 @@ public class Iam_services {
         parent.put("userId", settings.get("ecomm_user_id"));//provided on setting xml
         parent.put("customerType", 0);
         parent.put("generatedInvoice", true);
-        
+
         //custCreditDetails
-       JSONObject custCreditDetails= new JSONObject();
-       custCreditDetails.put("id", "3");// not provided
-       custCreditDetails.put("openingBalance", 0);// not provided
-       custCreditDetails.put("closingBalance", 0);//not provided
-       parent.put("custCreditDetails", custCreditDetails);
-       parent.put("sessionId", requestParams.get("sessionId"));//fetch session id from api
-       parent.put("shiftId", requestParams.get("shiftId"));//fetch shiftid from api
-       
-       //orderDetails
-       JSONArray orderJSON=new JSONArray();
-       Object itemDetails=jsonRecord.get("ItemDetail");
-       
-       JSONArray itemDetailsArray=new JSONArray();
+        JSONObject custCreditDetails = new JSONObject();
+        custCreditDetails.put("id", "3");// not provided
+        custCreditDetails.put("openingBalance", 0);// not provided
+        custCreditDetails.put("closingBalance", 0);//not provided
+        parent.put("custCreditDetails", custCreditDetails);
+        parent.put("sessionId", requestParams.get("sessionId"));//fetch session id from api
+        parent.put("shiftId", requestParams.get("shiftId"));//fetch shiftid from api
+
+        //orderDetails
+        JSONArray orderJSON = new JSONArray();
+        Object itemDetails = jsonRecord.get("ItemDetail");
+
+        JSONArray itemDetailsArray = new JSONArray();
         if (itemDetails instanceof JSONArray) {
-            itemDetailsArray=(JSONArray)itemDetails;
-        }else{
+            itemDetailsArray = (JSONArray) itemDetails;
+        } else {
             itemDetailsArray.put(itemDetails);
         }
-       
+
         for (int i = 0; i < itemDetailsArray.length(); i++) {
-            JSONObject itemJSON=(JSONObject) itemDetailsArray.get(i);
-            JSONObject mappedItem=new JSONObject();
-            JSONObject productJSON=new JSONObject();
+            JSONObject itemJSON = (JSONObject) itemDetailsArray.get(i);
+            JSONObject mappedItem = new JSONObject();
+            JSONObject productJSON = new JSONObject();
             //PRODUCT details
-            productJSON.put("id", Api_executor.getInstance(settings).getObjectID(itemJSON.getString("ItemCode"),"product"));//fetch product id from db using ItemCode, not provided
+            productJSON.put("id", Api_executor.getInstance(settings).getObjectID(itemJSON.getString("ItemCode"), "product"));//fetch product id from db using ItemCode, not provided
             productJSON.put("workFlowId", 0);
-            productJSON.put("code",  itemJSON.get("ItemCode"));
+            productJSON.put("code", itemJSON.get("ItemCode"));
             productJSON.put("description", "");//not provided
             productJSON.put("shortDescription", "");//not provided
             productJSON.put("labelDescription", "");
             productJSON.put("multiSellQuantity", 0);
             productJSON.put("active", true);
-            productJSON.put("authStatus",false);
+            productJSON.put("authStatus", false);
             productJSON.put("effectiveFrom", parent.get("dNoteDate"));
             productJSON.put("isScanned", true);
             productJSON.put("soh", 0);
             productJSON.put("prodSellPrice", 0);
             productJSON.put("prodCostPrice", 0);
             mappedItem.put("product", productJSON);
-            
+
             //end of product detail            
             mappedItem.put("isScanned", true);
             mappedItem.put("packaging", new JSONObject("{\"id\":1,\"scanCodes\":[]}"));
@@ -564,7 +608,7 @@ public class Iam_services {
             mappedItem.put("quantity", itemJSON.get("Qty"));
             mappedItem.put("packagePrice", itemJSON.get("Price"));
             mappedItem.put("itemRemarks", "");
-            mappedItem.put("stockOnHand",0);
+            mappedItem.put("stockOnHand", 0);
             mappedItem.put("discount", 0);
             mappedItem.put("receivedQuantity", 0);
             mappedItem.put("returnQuantity", 0);
@@ -582,27 +626,30 @@ public class Iam_services {
             mappedItem.put("taxBreakDown", new JSONObject("{\"taxList\":[],\"taxAmount\":0}"));//tax amount unknown   
             orderJSON.put(mappedItem);
         }
-        
+
         parent.put("orderDetails", orderJSON);
-        
-        Error_logger(null, parent.toString(),true);
+
+        Error_logger(null, parent.toString(), true);
         String createInvoice = Api_executor.getInstance(settings).createInvoice(parent.toString());
         Error_logger(null, createInvoice, true);
-        
-        JSONObject res=new JSONObject(createInvoice);
-        if(res.get("id").toString().equals("0")){
+
+        JSONObject res = new JSONObject(createInvoice);
+        if (res.get("id").toString().equals("0")) {
             throw new Exception(res.getString("error"));
+        }else{
+            String InvoiceNo=res.get("id").toString();
+            Error_logger(null, "Invoice created successfully, id=>"+InvoiceNo,true);
         }
     }
-    
-    private void logServiceStart(){
+
+    private void logServiceStart() {
         Error_logger(null, "\n"
                 + "============================\n"
                 + "Service Started\n"
                 + "============================\n\n", true);
     }
-    
-    private void logServiceEnd(){
+
+    private void logServiceEnd() {
         Error_logger(null, "\n"
                 + "***********************************************\n"
                 + "#######Service Ended#############\n"

@@ -40,13 +40,13 @@
     <!--end of ftp connection server settings-->   
     
     <!--E-commerce-->
-    <entry key="ecomm_base_url">http://192.168.13.136:9999/rest/</entry>
-    <entry key="ecomm_user_id">2</entry>
+    <entry key="ecomm_base_url">http://192.168.13.136:8080/NexxRetail/rest/</entry>
+    <entry key="ecomm_user_id">2572800</entry>
     <entry key="ecomm_tenant_id">2</entry>
     <entry key="ecomm_locale_id">1</entry>
-    <entry key="ecomm_terminal_id">2574600</entry>
-    <entry key="ecomm_session_id">3735805</entry>
-    <entry key="ecomm_shift_id">3724305</entry>
+    <entry key="ecomm_terminal_id">1</entry>
+    <entry key="ecomm_session_id">3735805</entry><!--Ignore-->
+    <entry key="ecomm_shift_id">3724305</entry><!--Ignore-->
     <!--end of ecommerce-->
     
 </properties>

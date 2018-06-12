@@ -216,7 +216,7 @@ public class Api_executor {
         try {
             String url = createUrl(queryurl);
             String res = sendGetRequet(url);
-            iam_services.Iam_services.getInstance().Error_logger(null, res,true);
+            //iam_services.Iam_services.getInstance().Error_logger(null, res,true);
             return new JSONObject(res).getJSONArray("results");
         } catch (Exception ex) {
             iam_services.Iam_services.getInstance().Error_logger(ex, "getJsonData");
