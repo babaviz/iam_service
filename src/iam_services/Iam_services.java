@@ -28,6 +28,8 @@ import java.nio.file.StandardCopyOption;
 import java.sql.CallableStatement;
 import java.sql.Connection;
 import java.sql.DriverManager;
+import java.sql.PreparedStatement;
+import java.sql.ResultSet;
 import java.sql.SQLException;
 import java.text.SimpleDateFormat;
 import java.util.Date;
@@ -57,6 +59,7 @@ public class Iam_services {
     final String DATABASE_DRIVER_MSSSQL = "com.microsoft.sqlserver.jdbc.SQLServerDriver";
     final String FOLDER = "destination_folder";
     final String IN_FOLDER = "inbound_xml_generateg_folder";
+    
     Connection conn = null;
     Map<String, String> settings = new HashMap<>();
 
@@ -637,8 +640,22 @@ public class Iam_services {
         if (res.get("id").toString().equals("0")) {
             throw new Exception(res.getString("error"));
         }else{
-            String InvoiceNo=res.get("id").toString();
-            Error_logger(null, "Invoice created successfully, id=>"+InvoiceNo,true);
+            String InvoiceNo=res.get("number").toString();
+            Error_logger(null, "Invoice created successfully, id=>"+InvoiceNo,true); 
+            //select max
+            ResultSet rs = Connect().createStatement().executeQuery("SELECT MAX(Log_ID) as id FROM CNB_IAM_Log_HD");
+					
+            //Extact result from ResultSet rs
+            if(rs.next()){
+                int id=rs.getInt("id");
+                System.out.println("Log_ID="+id);	
+                //save to db
+                PreparedStatement pstm=Connect().prepareStatement("UPDATE CNB_IAM_Log_HD SET InvoiceNum=? WHERE Log_ID=?");
+                pstm.setString(1, InvoiceNo);            
+                pstm.setInt(2, id);
+                pstm.execute();
+              }
+            
         }
     }
 
