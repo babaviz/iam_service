@@ -12,8 +12,11 @@ import java.net.URL;
 import java.net.URLEncoder;
 import java.security.MessageDigest;
 import java.text.SimpleDateFormat;
+import java.util.ArrayList;
+import java.util.Arrays;
 import java.util.Date;
 import java.util.HashMap;
+import java.util.List;
 import java.util.Map;
 import java.util.logging.Level;
 import java.util.logging.Logger;
@@ -34,7 +37,8 @@ public class Api_executor {
     
     private final String branch_query = "org-hierarchy-master/1/5?_active=true&_q=%s&_reduced=true&_search=true&entries=1&page=1&pageSize=50&refresh=true",
             product_query = "product-master?_active=true&_q=%s&_search=true&page=1&pageSize=50&refresh=true",
-            invoice_query = "invoice/adhoc-invoice/";
+            invoice_query = "invoice/adhoc-invoice/",
+            creationAttributes_url="product-attributes?_active=true&_q=%s&_reduced=true&_search=true&page=1&pageSize=15&refresh=true&type=3";
 
     public static Api_executor getInstance(Map<String, String> settings) {
         if (instance == null) {
@@ -184,6 +188,20 @@ public class Api_executor {
         params.put("shiftId", settings.get("ecomm_shift_id"));
         return params;
     }
+    
+    public JSONObject getCreationAttributes(String param){
+               
+        JSONArray jsonData = getJsonData(String.format(creationAttributes_url, encodeParam(param)));
+        if(jsonData.length()>0){
+            try {
+                return jsonData.getJSONObject(0);
+            } catch (JSONException ex) {
+                iam_services.Iam_services.getInstance().Error_logger(ex,"getCreationAttributes");
+            }
+        }
+            return new JSONObject();
+        
+    }
 
     public String getObjectID(String param, String type) {
         //fetch product id give the product code
@@ -216,7 +234,7 @@ public class Api_executor {
         try {
             String url = createUrl(queryurl);
             String res = sendGetRequet(url);
-            //iam_services.Iam_services.getInstance().Error_logger(null, res,true);
+            iam_services.Iam_services.getInstance().Error_logger(null, res,true);
             return new JSONObject(res).getJSONArray("results");
         } catch (Exception ex) {
             iam_services.Iam_services.getInstance().Error_logger(ex, "getJsonData");

@@ -32,9 +32,12 @@ import java.sql.PreparedStatement;
 import java.sql.ResultSet;
 import java.sql.SQLException;
 import java.text.SimpleDateFormat;
+import java.util.ArrayList;
+import java.util.Arrays;
 import java.util.Date;
 import java.util.Enumeration;
 import java.util.HashMap;
+import java.util.List;
 import java.util.Map;
 import java.util.Properties;
 import java.util.logging.FileHandler;
@@ -59,7 +62,7 @@ public class Iam_services {
     final String DATABASE_DRIVER_MSSSQL = "com.microsoft.sqlserver.jdbc.SQLServerDriver";
     final String FOLDER = "destination_folder";
     final String IN_FOLDER = "inbound_xml_generateg_folder";
-    
+
     Connection conn = null;
     Map<String, String> settings = new HashMap<>();
 
@@ -146,6 +149,7 @@ public class Iam_services {
             Properties properties = new Properties();
             properties.loadFromXML(fileInput);
             fileInput.close();
+            //System.err.println("mapper:" + properties);
 
             Enumeration enuKeys = properties.keys();
             while (enuKeys.hasMoreElements()) {
@@ -215,11 +219,10 @@ public class Iam_services {
                 Error_logger(new Exception("System couldn't determine category of xml file:" + xmlFile), "dump_xmlFILE_toDB");
                 return false;
             }
-            
+
             //System.err.println("-------------------------------------------------------------------------------");
             //System.out.println(xml);
             //System.err.println("-------------------------------------------------------------------------------");
-            
             cstm.setNString(1, xml);
             cstm.setString(2, xmlFile.getName());
             System.out.println("Sending to db...");
@@ -266,8 +269,8 @@ public class Iam_services {
     public String readLocalFile(String path) {
         System.err.println("Reading->" + path);
         try {
-           // String string = new String(Files.readAllBytes(Paths.get(path)));
-           String string =readFile_utf8(path);
+            // String string = new String(Files.readAllBytes(Paths.get(path)));
+            String string = readFile_utf8(path);
             System.err.println("Done reading");
             return string;
         } catch (Exception ex) {
@@ -277,7 +280,7 @@ public class Iam_services {
     }
 
     public String readFile(String filepath) {
-        String xml="";
+        String xml = "";
         try {
             //I will read chars using utf-8 encoding
             BufferedReader in = new BufferedReader(new InputStreamReader(
@@ -287,7 +290,7 @@ public class Iam_services {
             String line;
             while ((line = in.readLine()) != null) {
                 // here I use IDE encoding
-                xml+=line;
+                xml += line;
                 //System.out.println(line);
                 // here I print data using Cp852 encoding
             }
@@ -295,22 +298,22 @@ public class Iam_services {
         } catch (IOException e) {
             e.printStackTrace();
         }
-        
+
         return xml;
     }
 
-    public String readFile_utf8(String fileName) throws UnsupportedEncodingException, FileNotFoundException, IOException{
+    public String readFile_utf8(String fileName) throws UnsupportedEncodingException, FileNotFoundException, IOException {
         Reader reader = new InputStreamReader(new FileInputStream(fileName), "utf-8");
         BufferedReader br = new BufferedReader(reader);
-        String xml="";
+        String xml = "";
         String line;
-            while ((line = br.readLine()) != null) {
-                xml+=line;
-            }
-            br.close();
-            return xml;
+        while ((line = br.readLine()) != null) {
+            xml += line;
+        }
+        br.close();
+        return xml;
     }
-    
+
     public String readRemoteFile(URL url) {
         try {
             URLConnection xyzcon = url.openConnection();
@@ -558,7 +561,7 @@ public class Iam_services {
         parent.put("dNoteTaxAmount", jsonRecord.get("VATAmount"));
         parent.put("dNoteTotalAmount", jsonRecord.get("TotalAmount"));
         parent.put("dNoteSysDate", new Date().getTime());
-        parent.put("terminalId", settings.get("ecomm_terminal_id"));//provided on setting xml
+        parent.put("terminalId", settings.get(requestParams.get("branchid")));//provided on setting xml
         parent.put("userId", settings.get("ecomm_user_id"));//provided on setting xml
         parent.put("customerType", 0);
         parent.put("generatedInvoice", true);
@@ -583,8 +586,29 @@ public class Iam_services {
             itemDetailsArray.put(itemDetails);
         }
 
+        //create creationAttributes
+        List<String> attributesQue = new ArrayList<>(
+                Arrays.asList("E_OrderNo", "E_Schedule", "E_CustName", "E_CustAdd1", "E_CustAdd2", "E_DelArea", "E_ContactNo", "E_PymntKind", "E_DeliveryChrgs", "E_Substitute")
+        );
+
+        JSONArray creationAttributes_array = new JSONArray();
+        for (String obj : attributesQue) {
+            String val = jsonRecord.getString(obj.replace("E_", ""));
+            if (val != null && !val.isEmpty()) {
+                JSONObject creationAttributes_JSONObject = Api_executor.getInstance(settings).getCreationAttributes(obj);
+                creationAttributes_JSONObject.put("value", val);
+                creationAttributes_array.put(creationAttributes_JSONObject);
+            }
+
+        }
+
+        parent.put("creationAttributes", creationAttributes_array);
+
         for (int i = 0; i < itemDetailsArray.length(); i++) {
             JSONObject itemJSON = (JSONObject) itemDetailsArray.get(i);
+            
+            if(itemJSON.getString("LineStatus").equalsIgnoreCase("D"))continue;
+            
             JSONObject mappedItem = new JSONObject();
             JSONObject productJSON = new JSONObject();
             //PRODUCT details
@@ -639,23 +663,23 @@ public class Iam_services {
         JSONObject res = new JSONObject(createInvoice);
         if (res.get("id").toString().equals("0")) {
             throw new Exception(res.getString("error"));
-        }else{
-            String InvoiceNo=res.get("number").toString();
-            Error_logger(null, "Invoice created successfully, id=>"+InvoiceNo,true); 
+        } else {
+            String InvoiceNo = res.get("number").toString();
+            Error_logger(null, "Invoice created successfully, id=>" + InvoiceNo, true);
             //select max
             ResultSet rs = Connect().createStatement().executeQuery("SELECT MAX(Log_ID) as id FROM CNB_IAM_Log_HD");
-					
+
             //Extact result from ResultSet rs
-            if(rs.next()){
-                int id=rs.getInt("id");
-                System.out.println("Log_ID="+id);	
+            if (rs.next()) {
+                int id = rs.getInt("id");
+                System.out.println("Log_ID=" + id);
                 //save to db
-                PreparedStatement pstm=Connect().prepareStatement("UPDATE CNB_IAM_Log_HD SET InvoiceNum=? WHERE Log_ID=?");
-                pstm.setString(1, InvoiceNo);            
+                PreparedStatement pstm = Connect().prepareStatement("UPDATE CNB_IAM_Log_HD SET InvoiceNum=? WHERE Log_ID=?");
+                pstm.setString(1, InvoiceNo);
                 pstm.setInt(2, id);
                 pstm.execute();
-              }
-            
+            }
+
         }
     }
 

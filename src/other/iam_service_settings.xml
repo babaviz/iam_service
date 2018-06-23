@@ -45,6 +45,22 @@
     <entry key="ecomm_tenant_id">2</entry>
     <entry key="ecomm_locale_id">1</entry>
     <entry key="ecomm_terminal_id">2574600</entry>
+    <!--branch terminals to be used-->
+		<!--E.g 
+		<entry key="12">4</entry>
+		
+    Enter all branches with their terminals here
+    -->
+    <entry key="branch_ID2">terminal_ID</entry>
+    <entry key="branch_ID3">terminal_ID</entry>
+    <entry key="branch_ID4">terminal_ID</entry>
+    <entry key="branch_ID5">terminal_ID</entry>
+    <entry key="2573104">2574600</entry><!--example-->
+    <!--END of branch terminals-->
+	
+    <entry key="ecomm_session_id">3735805</entry><!--Ignore-->
+    <entry key="ecomm_shift_id">3724305</entry><!--Ignore-->
+    <!--end of ecommerce-->
     <entry key="ecomm_session_id">3735805</entry>
     <entry key="ecomm_shift_id">3724305</entry>
     <!--end of ecommerce-->
