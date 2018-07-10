@@ -31,6 +31,7 @@ import java.sql.DriverManager;
 import java.sql.PreparedStatement;
 import java.sql.ResultSet;
 import java.sql.SQLException;
+import java.sql.Statement;
 import java.text.SimpleDateFormat;
 import java.util.ArrayList;
 import java.util.Arrays;
@@ -62,6 +63,7 @@ public class Iam_services {
     final String DATABASE_DRIVER_MSSSQL = "com.microsoft.sqlserver.jdbc.SQLServerDriver";
     final String FOLDER = "destination_folder";
     final String IN_FOLDER = "inbound_xml_generateg_folder";
+    public int batchID=0;
 
     Connection conn = null;
     Map<String, String> settings = new HashMap<>();
@@ -225,6 +227,7 @@ public class Iam_services {
             //System.err.println("-------------------------------------------------------------------------------");
             cstm.setNString(1, xml);
             cstm.setString(2, xmlFile.getName());
+            cstm.setInt(3, batchID);
             System.out.println("Sending to db...");
             cstm.execute();
             System.out.println("Done sending to server");
@@ -241,26 +244,56 @@ public class Iam_services {
         return true;
     }
 
+    private void getNextBatchID() {
+        String query = "INSERT INTO CNB_Outbound_BatchID_tbl (START_TIME) VALUES(GETDATE())";
+        PreparedStatement pstmt;
+        int key = 0;
+        try {
+            pstmt = conn.prepareStatement(query, Statement.RETURN_GENERATED_KEYS);
+            pstmt.executeUpdate();
+            
+            ResultSet keys = pstmt.getGeneratedKeys();
+            keys.next();
+            key = keys.getInt(1);
+            keys.close();
+            pstmt.close();
+            
+        } catch (SQLException e) {
+            e.printStackTrace();
+            Error_logger(e, "getNextBatchID");
+        }
+        batchID=key;
+    }
+    
+    private void updateEndtime(int totalFiles, int errorfiles){
+        try {
+            String query = "UPDATE CNB_Outbound_BatchID_tbl SET END_TIME=GETDATE(), SUCCESSFUL="+totalFiles+", FAILED="+errorfiles+", FILES_PROCESSED="+(totalFiles+errorfiles)+" WHERE BatchID="+batchID;
+            conn.prepareStatement(query).execute();
+        } catch (SQLException ex) {
+            Error_logger(ex, "updateEndtime");
+        }
+    }
+
     public CallableStatement getStatement(String fileName) throws SQLException {
         CallableStatement cstm = null;
-        if (fileName.toLowerCase().contains("price_ean")) {
-            cstm = conn.prepareCall("{call sp_Read_PriceMasterEan_XMLFILE(?,?)}");
-        } else if (fileName.toLowerCase().contains("price_artuom")) {
-            cstm = conn.prepareCall("{call sp_Read_PriceMasterArticleUom_XMLFILE(?,?)}");
+        if (fileName.toLowerCase().contains("price_ean")) {//#
+            cstm = conn.prepareCall("{call sp_Read_PriceMasterEan_XMLFILE(?,?,?)}");
+        } else if (fileName.toLowerCase().contains("price_artuom")) {//#
+            cstm = conn.prepareCall("{call sp_Read_PriceMasterArticleUom_XMLFILE(?,?,?)}");
         } else if (fileName.toLowerCase().contains("pi_artmas")) {
-            cstm = conn.prepareCall("{call sp_Read_PI_ARTIMAS_XMlFile(?,?)}");
-        } else if (fileName.toLowerCase().contains("merc")) {
-            cstm = conn.prepareCall("{call sp_Read_MERC_XMlFile(?,?)}");
-        } else if (fileName.toLowerCase().contains("ean_")) {
-            cstm = conn.prepareCall("{call sp_Read_EAN_XMlFile(?,?)}");
-        } else if (fileName.toLowerCase().contains("customer")) {
-            cstm = conn.prepareCall("{call sp_Read_customerMaster_XMLFILE(?,?)}");
-        } else if (fileName.toLowerCase().contains("brand")) {
-            cstm = conn.prepareCall("{call sp_Read_BrandMaster_XMLFILE(?,?)}");
-        } else if (fileName.toLowerCase().contains("artmas")) {
-            cstm = conn.prepareCall("{call sp_Read_Article_XMlFile(?,?)}");
+            cstm = conn.prepareCall("{call sp_Read_PI_ARTIMAS_XMlFile(?,?,?)}");
+        } else if (fileName.toLowerCase().contains("merc")) {//#
+            cstm = conn.prepareCall("{call sp_Read_MERC_XMlFile(?,?,?)}");
+        } else if (fileName.toLowerCase().contains("ean_")) {//#
+            cstm = conn.prepareCall("{call sp_Read_EAN_XMlFile(?,?,?)}");
+        } else if (fileName.toLowerCase().contains("customer")) {//#
+            cstm = conn.prepareCall("{call sp_Read_customerMaster_XMLFILE(?,?,?)}");
+        } else if (fileName.toLowerCase().contains("brand")) {//#
+            cstm = conn.prepareCall("{call sp_Read_BrandMaster_XMLFILE(?,?,?)}");
+        } else if (fileName.toLowerCase().contains("artmas")) {//#
+            cstm = conn.prepareCall("{call sp_Read_Article_XMlFile(?,?,?)}");
         } else if (fileName.toLowerCase().contains("order")) {
-            cstm = conn.prepareCall("{call sp_Read_Ecomm_Order_XMLFILE(?,?)}");
+            cstm = conn.prepareCall("{call sp_Read_Ecomm_Order_XMLFILE(?,?,?)}");
         }
 
         return cstm;
@@ -375,7 +408,7 @@ public class Iam_services {
 
         //filter xml files
         //System.err.println(folder.listFiles(new XMLFileFilter()).length + " new Files found");
-        int new_files = folder.listFiles(new XMLFileFilter()).length;
+        int new_files = folder.listFiles(new XMLFileFilter("")).length;
         Error_logger(null, new_files + " new Files found", true);
 
         if (new_files > 0) {
@@ -384,40 +417,59 @@ public class Iam_services {
             return;
         }
 
+        //folder to keep a copy processed files
         File processed_dir = new File(folder, "proccessed");
         if (!processed_dir.exists()) {
             processed_dir.mkdirs();
         }
 
+        //folder to keep a copy error files
+        File error_dir = new File(folder, "erroneous");
+        if (!error_dir.exists()) {
+            error_dir.mkdirs();
+        }
+
         int count = 1;
-        for (final File fileEntry : folder.listFiles(new XMLFileFilter())) {
-            if (fileEntry.isDirectory()) {
-                continue;
-            }
-            Error_logger(null, "Processing file->" + (count++) + "[" + fileEntry.getPath() + "]", true);
-            try {
-                if (dump_xmlFILE_toDB(fileEntry, readLocalFile(fileEntry.getPath()))) {
-                    Files.move(Paths.get(fileEntry.getPath()), Paths.get(new File(processed_dir, fileEntry.getName()).getPath()), StandardCopyOption.REPLACE_EXISTING);
+        /*
+        1. Brand
+        2. Classification
+        3. Article
+        4. EAN
+        5. Article UOM Price
+        6. Article EAN Price
+        7. Customer
+         */
+        
+        List<String> sortKeys = new ArrayList<>(
+                Arrays.asList("brand", "merc", "artmas", "ean_", "price_artuom", "price_ean", "customer", "pi_artmas", "order")
+        );
+        
+        int totalFiles=0,errorfiles=0;
+        getNextBatchID();//fetch next batch id
+        for (String pattern : sortKeys) {
+            for (final File fileEntry : folder.listFiles(new XMLFileFilter(pattern,error_dir))) {
+                if (fileEntry.isDirectory()) {
+                    continue;
+                }                
+                Error_logger(null, "Processing file->" + (count++) + "[" + fileEntry.getPath() + "]", true);
+                try {
+                    if (dump_xmlFILE_toDB(fileEntry, readLocalFile(fileEntry.getPath()))) {
+                        Files.move(Paths.get(fileEntry.getPath()), Paths.get(new File(processed_dir, fileEntry.getName()).getPath()), StandardCopyOption.REPLACE_EXISTING);
+                        totalFiles++;
+                    } else {
+                        Files.move(Paths.get(fileEntry.getPath()), Paths.get(new File(error_dir, fileEntry.getName()).getPath()), StandardCopyOption.REPLACE_EXISTING);
+                        errorfiles++;
+                    }
+                } catch (Exception ex) {
+                    Error_logger(ex, "check_files");
                 }
-            } catch (Exception ex) {
-                Error_logger(ex, "check_files");
             }
         }
+        updateEndtime(totalFiles,errorfiles);//mark batch processing complete
     }
 
     public void processRemoteFolder() {
         Error_logger(new UnsupportedOperationException("remote operation not supported"), "processRemoteFolder");
-    }
-
-    /**
-     * A class that implements the Java FileFilter interface.
-     */
-    public class XMLFileFilter implements FileFilter {
-
-        @Override
-        public boolean accept(File file) {
-            return file.getName().toLowerCase().endsWith("xml");
-        }
     }
 
     public static Iam_services getInstance() {
@@ -606,9 +658,11 @@ public class Iam_services {
 
         for (int i = 0; i < itemDetailsArray.length(); i++) {
             JSONObject itemJSON = (JSONObject) itemDetailsArray.get(i);
-            
-            if(itemJSON.getString("LineStatus").equalsIgnoreCase("D"))continue;
-            
+
+            if (itemJSON.getString("LineStatus").equalsIgnoreCase("D")) {
+                continue;
+            }
+
             JSONObject mappedItem = new JSONObject();
             JSONObject productJSON = new JSONObject();
             //PRODUCT details
@@ -696,4 +750,43 @@ public class Iam_services {
                 + "#######Service Ended#############\n"
                 + "***********************************************\n\n\n\n\n\n", true);
     }
+    
+    /**
+     * A class that implements the Java FileFilter interface.
+     */
+    public class XMLFileFilter implements FileFilter {
+
+        private String pattern;
+        private File error_dir=null;
+
+        public XMLFileFilter(String regex) {
+            this.pattern = regex;
+        }
+        
+        public XMLFileFilter(String regex,File errorFile) {
+            this.pattern = regex;
+            this.error_dir=errorFile;
+        }
+        
+
+        @Override
+        public boolean accept(File file) {
+            boolean isXml= file.getName().toLowerCase().endsWith("xml") && filter(file);
+            
+            if(!file.getName().toLowerCase().endsWith("xml") && file.isFile() && error_dir !=null){
+                try {
+                    Files.move(Paths.get(file.getPath()), Paths.get(new File(error_dir, file.getName()).getPath()), StandardCopyOption.REPLACE_EXISTING);
+                } catch (IOException ex) {
+                    Error_logger(ex, "accept");
+                }
+            }
+            
+            return isXml;
+        }
+
+        private boolean filter(File file) {
+            return pattern.isEmpty() || file.getName().toLowerCase().contains(pattern);
+        }
+    }
+    
 }

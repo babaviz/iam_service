@@ -88,19 +88,6 @@ public class FTP_FileProcessing {
             //dir
             connect();
             String dir = settings.get("remote_outbound_folder");
-            /* if (!dir.isEmpty() && !dir.contains("/")) {
-                dir = "/" + dir;
-            }*/
-            //check if processed dir exist then create it
-            /*String proc = dir.trim().isEmpty() ? "" : dir + "/";
-            if (!checkDirectoryExists(ftpClient, proc + settings.get("proccessed_folder_name"))) {
-                boolean makeDirectory = ftpClient.makeDirectory(proc + settings.get("proccessed_folder_name"));
-                if (makeDirectory) {
-                    Iam_services.getInstance().Error_logger(null, "Proccessed dir created successfully", true);
-                } else {
-                    Iam_services.getInstance().Error_logger(new Exception("proccessed directory could not be created on the server"), func);
-                }
-            }*/
 
             //test
             List<String[]> newXMFileList = new ArrayList<>();
@@ -110,15 +97,15 @@ public class FTP_FileProcessing {
             //FTPFile[] files1 = ftpClient.listFiles(dir);
             Iam_services.getInstance().Error_logger(null, newXMFileList.size() + "  Files found", true);
             //download files for processing
-            for (String[] file : newXMFileList) {
+            newXMFileList.forEach((file) -> {
                 download_file(ftpClient, file[1], file[0]);
-            }
+            });
 
             //get_down_LoadFiles(files1, ftpClient, dir.trim().isEmpty() ? "" : dir + "/");*/
             //check and process downloaded files
-            if (newXMFileList.size() > 0) {
+            //if (newXMFileList.size() > 0) {
                 Iam_services.getInstance().check_files(true);
-            }
+           // }
         } catch (Exception ex) {
             Iam_services.getInstance().Error_logger(ex, func);
         } finally {
@@ -172,14 +159,14 @@ public class FTP_FileProcessing {
                 Iam_services.getInstance().Error_logger(null, file + " has been downloaded successfully.", true);
 
                 String proc = dir;
-                if (!checkDirectoryExists(ftpClient, proc + settings.get("proccessed_folder_name"))) {
+                /*if (!checkDirectoryExists(ftpClient, proc + settings.get("proccessed_folder_name"))) {
                     boolean makeDirectory = ftpClient.makeDirectory(proc + settings.get("proccessed_folder_name"));
                     if (makeDirectory) {
                         Iam_services.getInstance().Error_logger(null, "Proccessed dir created successfully", true);
                     } else {
                         Iam_services.getInstance().Error_logger(new Exception("proccessed directory could not be created on the server"), func);
                     }
-                }
+                }*/
 
                 boolean rename = ftpClient.rename(dir + file, dir + settings.get("proccessed_folder_name") + "/" + file);
 
