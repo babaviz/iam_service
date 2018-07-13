@@ -466,6 +466,17 @@ public class Iam_services {
             }
         }
         updateEndtime(totalFiles,errorfiles);//mark batch processing complete
+        
+        logReadServiceEnd(totalFiles,errorfiles);
+        
+        String sp = settings.get("final_sp");
+        if(sp !=null && !sp.isEmpty()){
+            try {
+                conn.prepareCall("{call "+sp+" }").execute();
+            } catch (SQLException ex) {
+                Error_logger(ex, "check_files");
+            }
+        }
     }
 
     public void processRemoteFolder() {
@@ -749,6 +760,19 @@ public class Iam_services {
                 + "***********************************************\n"
                 + "#######Service Ended#############\n"
                 + "***********************************************\n\n\n\n\n\n", true);
+    }
+    
+    private void logReadServiceEnd(int success,int fail) {
+        Error_logger(null, "\n"
+                + "~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~\n"
+                + " Service finished reading XML Files, \n"
+                + "Batch ID: "+batchID+"\n"
+                + "Total xml files processed:"+(success+fail)+"\n"
+                + "Succeful: "+success+"\n"
+                + "Failed:"+fail+"\n"
+                + "..."
+                + "Now Executing Final Stored Procedure: "+settings.get("final_sp")+"\n"
+                + "~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~\n\n", true);
     }
     
     /**
