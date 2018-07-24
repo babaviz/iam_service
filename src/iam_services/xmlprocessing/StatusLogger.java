@@ -36,7 +36,7 @@ public class StatusLogger {
         return instance;
     }
 
-    public int Log_start(File xmlFile, String type) {
+    public int Log_start(File xmlFile, String type,int batchId) {
         int id = 0;
         CallableStatement cstm = null;
         /*
@@ -51,7 +51,7 @@ public class StatusLogger {
          */
         String xml = getContent(xmlFile.getPath());
         try {
-            cstm = conn.prepareCall("{call sp_log_files(?,?,?,?,?,?,?,?)}");
+            cstm = conn.prepareCall("{call sp_log_files(?,?,?,?,?,?,?,?,?)}");
             cstm.setString(1, null);
             cstm.setNString(2, xml);
             cstm.setString(3, "EXTERNAL JAVA SERVICE");
@@ -59,6 +59,7 @@ public class StatusLogger {
             cstm.setString(5, null);
             cstm.setInt(6, 1);
             cstm.setString(7, type);
+            cstm.setInt(8, batchId);
             //System.err.println("sending...");
             cstm.registerOutParameter("Log_id", java.sql.Types.INTEGER);            
             cstm.execute();

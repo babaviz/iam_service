@@ -58,8 +58,6 @@
     <entry key="2573104">2574600</entry><!--example-->
     <!--END of branch terminals-->
 	
-    <entry key="ecomm_session_id">3735805</entry><!--Ignore-->
-    <entry key="ecomm_shift_id">3724305</entry><!--Ignore-->
     <!--end of ecommerce-->
     <entry key="ecomm_session_id">3735805</entry>
     <entry key="ecomm_shift_id">3724305</entry>

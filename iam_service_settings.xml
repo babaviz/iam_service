@@ -62,5 +62,8 @@
     <entry key="ecomm_shift_id">3724305</entry><!--Ignore-->
     <!--end of ecommerce-->
 
+	<!--add a final stored procedure to execute after proccessing xml files, leave blank if none-->
+    <!--only the name is requred eg sp_Read_EAN_XMlFile() -->
+    <entry key="final_sp">SP_Run_ALL_SP_IAM_TO_NEXX()</entry>
     
 </properties>

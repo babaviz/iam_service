@@ -504,7 +504,7 @@ public class Iam_services {
         try {
             new File("inbound_generated", "processed").mkdirs();
             dbLogger = StatusLogger.getInstance();
-            id = dbLogger.Log_start(new File(fileName), type);
+            id = dbLogger.Log_start(new File(fileName), type,batchID);
             switch (settings.get("access_type").toLowerCase()) {
                 case "remote":
                     processRemoteFolder();
@@ -541,7 +541,7 @@ public class Iam_services {
         StatusLogger dbLogger = null;
         try {
             dbLogger = StatusLogger.getInstance();
-            id = dbLogger.Log_start(file, "Ecomm_Order");
+            id = dbLogger.Log_start(file, "Ecomm_Order",batchID);
 
             JSONObject xmlJSONObj = XML.toJSONObject(xml);
             //String json_indented = xmlJSONObj.toString();
