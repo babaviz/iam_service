@@ -52,16 +52,16 @@ public class Api_executor {
         this.settings = settings;
     }
 
-    public String sendRequest(String str_url, String data) throws Exception {
-        return sendPostRequest(str_url, data, "POST");
+    public String sendRequest(String str_url, String data,String userid) throws Exception {
+        return sendPostRequest(str_url, data, "POST",userid);
     }
 
-    public String createInvoice(String jsonStr) throws Exception {
+    public String createInvoice(String jsonStr ,String userid) throws Exception {
 
-        return sendRequest(createUrl(invoice_query), jsonStr);
+        return sendRequest(createUrl(invoice_query), jsonStr ,userid);
     }
 
-    public String sendPostRequest(String str_url, String data, String requestType) throws Exception {
+    public String sendPostRequest(String str_url, String data, String requestType ,String userid) throws Exception {
         URL url = new URL(str_url);
         //URLConnection connection = url.openConnection();
         HttpURLConnection connection = (HttpURLConnection) url.openConnection();
@@ -70,7 +70,7 @@ public class Api_executor {
         connection.setRequestProperty("Accept", "application/json");
         connection.setRequestProperty("User-Agent", USER_AGENT);
         
-        addHeaderParams(connection);
+        addHeaderParamsb(connection,userid);
 
         connection.setDoOutput(true);
         //OutputStreamWriter wr = new OutputStreamWriter(connection.getOutputStream());
@@ -128,6 +128,14 @@ public class Api_executor {
         conn.setRequestProperty("FC_ActiveLanguage", settings.get("ecomm_locale_id"));//localeId
         conn.setRequestProperty("FC_Module", "POS");
         conn.setRequestProperty("FC_Authorization", settings.get("ecomm_user_id"));//userid
+        conn.setRequestProperty("FC_Tenant_Entity", settings.get("ecomm_tenant_id"));//tenantId
+    }
+    
+    //add header request paramenters
+    private void addHeaderParamsb(HttpURLConnection conn,String useid) {
+        conn.setRequestProperty("FC_ActiveLanguage", settings.get("ecomm_locale_id"));//localeId
+        conn.setRequestProperty("FC_Module", "POS");
+        conn.setRequestProperty("FC_Authorization", useid);//userid
         conn.setRequestProperty("FC_Tenant_Entity", settings.get("ecomm_tenant_id"));//tenantId
     }
 

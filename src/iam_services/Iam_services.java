@@ -64,6 +64,9 @@ public class Iam_services {
     final String FOLDER = "destination_folder";
     final String IN_FOLDER = "inbound_xml_generateg_folder";
     public int batchID=0;
+    public int eccomerceStatus=0;
+
+
 
     Connection conn = null;
     Map<String, String> settings = new HashMap<>();
@@ -429,6 +432,13 @@ public class Iam_services {
             error_dir.mkdirs();
         }
 
+
+        //folder to keep a copy error files
+        File ecom_error_dir = new File(error_dir, "ecom_files");
+        if (!ecom_error_dir.exists()) {
+            ecom_error_dir.mkdirs();
+        }
+
         int count = 1;
         /*
         1. Brand
@@ -457,8 +467,14 @@ public class Iam_services {
                         Files.move(Paths.get(fileEntry.getPath()), Paths.get(new File(processed_dir, fileEntry.getName()).getPath()), StandardCopyOption.REPLACE_EXISTING);
                         totalFiles++;
                     } else {
-                        Files.move(Paths.get(fileEntry.getPath()), Paths.get(new File(error_dir, fileEntry.getName()).getPath()), StandardCopyOption.REPLACE_EXISTING);
-                        errorfiles++;
+                       if(eccomerceStatus ==2) {
+                           Files.move(Paths.get(fileEntry.getPath()), Paths.get(new File(ecom_error_dir, fileEntry.getName()).getPath()), StandardCopyOption.REPLACE_EXISTING);
+                           eccomerceStatus =0;
+                           errorfiles++;
+                       }else {
+                           Files.move(Paths.get(fileEntry.getPath()), Paths.get(new File(error_dir, fileEntry.getName()).getPath()), StandardCopyOption.REPLACE_EXISTING);
+                           errorfiles++;
+                       }
                     }
                 } catch (Exception ex) {
                     Error_logger(ex, "check_files");
@@ -589,6 +605,7 @@ public class Iam_services {
     }
 
     private void createJSON(JSONObject jsonRecord) throws Exception {
+        String userIdEntry ="";
         JSONObject parent = new JSONObject();
         parent.put("currency", new JSONObject("{\"id\":1}"));//get currency
 
@@ -612,6 +629,7 @@ public class Iam_services {
         brJSONObject.put("id", requestParams.get("branchid"));//get brach id
         brJSONObject.put("hierarchyLevelId", 0);
         parent.put("branch", brJSONObject);
+        userIdEntry = "ecomm_user_id_"+requestParams.get("branchid");
 
         parent.put("structure", new JSONObject("{\"id\":1}"));
         parent.put("dNoteRemarks", "");
@@ -625,7 +643,8 @@ public class Iam_services {
         parent.put("dNoteTotalAmount", jsonRecord.get("TotalAmount"));
         parent.put("dNoteSysDate", new Date().getTime());
         parent.put("terminalId", settings.get(requestParams.get("branchid")));//provided on setting xml
-        parent.put("userId", settings.get("ecomm_user_id"));//provided on setting xml
+        parent.put("userId",settings.get(userIdEntry));//provided on setting xml
+        String userid =settings.get(userIdEntry);
         parent.put("customerType", 0);
         parent.put("generatedInvoice", true);
 
@@ -722,11 +741,23 @@ public class Iam_services {
         parent.put("orderDetails", orderJSON);
 
         Error_logger(null, parent.toString(), true);
-        String createInvoice = Api_executor.getInstance(settings).createInvoice(parent.toString());
-        Error_logger(null, createInvoice, true);
+        String createInvoice="";
+        JSONObject res =null;
+        try {
+            createInvoice = Api_executor.getInstance(settings).createInvoice(parent.toString() ,userid);
+            Error_logger(null, createInvoice, true);
 
-        JSONObject res = new JSONObject(createInvoice);
+            res = new JSONObject(createInvoice);
+        }catch (Exception exc){
+            eccomerceStatus =2;
+            throw new Exception(exc);
+        }
+//       createInvoice = Api_executor.getInstance(settings).createInvoice(parent.toString() ,userid);
+//        Error_logger(null, createInvoice, true);
+//
+//         res = new JSONObject(createInvoice);
         if (res.get("id").toString().equals("0")) {
+            eccomerceStatus =2;
             throw new Exception(res.getString("error"));
         } else {
             String InvoiceNo = res.get("number").toString();
