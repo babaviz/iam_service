@@ -31,7 +31,7 @@ import org.w3c.dom.Node;
 public class inv_detail_credit {
     
         private String 
-                parentTable =            "CNB_IAM_IN_E1WPU01",
+                parentTable = "CNB_IAM_IN_E1WPU01",
                 subRecordsTable1 = "CNB_IAM_IN_E1WPU02",
                 subRecordsTable2 = "CNB_IAM_IN_E1WPU05",
                 subRecordsTable3 = "CNB_IAM_IN_E1WPU04",
@@ -80,7 +80,7 @@ public class inv_detail_credit {
                         Map<String,String> in_where=new HashMap<>();
                         in_where.put(column, col);
                         in_where.put("no","CONVERT(DATE,BELEGDATUM)=CONVERT(DATE,'"+date+"')");
-                        accu_data.add(XmlDB_funcs.getInstance().QueryDB(parentTable+(walkin?walkin_surffix:""), in_where));
+                        accu_data.add(XmlDB_funcs.getInstance().QueryDB(parentTable+(walkin?walkin_surffix:""), in_where,true));
                     }
                 }
                 accu_data.forEach(list->{genarate_XMLDOC(list);});
@@ -128,10 +128,18 @@ public class inv_detail_credit {
             //prepare records
             
            
-            String brand_id="not found";
+            String brand_id=" ";
+            
+            System.err.println("Inv checkPoint\n"+dbResMap);
                         
             try{
-                brand_id=XmlDB_funcs.getInstance().getSAPBranchMapping(dbResMap.get(0).get("BRNCH_ID"));
+                if(walkin){
+                    brand_id=XmlDB_funcs.getInstance().getSAPBranchMapping(dbResMap.get(0).get("BRNCH_ID"));//BRNCH_ID
+                }else{ 
+                    String branchString=XmlDB_funcs.getInstance().getBranchIdGivenPackageId(dbResMap.get(0).get("PACKAGE_ID"), parentTable);
+                   iam_services.Iam_services.getInstance().Error_logger(null, "Fetched branch:"+branchString, true);
+                    brand_id=XmlDB_funcs.getInstance().getSAPBranchMapping(branchString);//BRNCH_ID
+                }
             }catch(Exception ex){
                    iam_services.Iam_services.getInstance().Error_logger(ex, "genarate_XMLDOC");
             }
@@ -139,10 +147,16 @@ public class inv_detail_credit {
             addHeaderRow(doc, IDOC, dateFormated,docNum,brand_id);
             
             dbResMap.forEach((row) -> {
-                Node record = CreateXMLElements.getInstance().createRecordFields(doc, row, "E1WPU01",exemptions,attributes);
-                addSubrecords(doc, record, row.get(link_key1));
-                IDOC.appendChild(record);
+                /*if(row.get("BRNCH_ID")==null){
+                    iam_services.Iam_services.getInstance().Error_logger(null, "record has no branch id", true);
+                    //return;
+                }else{*/
+                    Node record = CreateXMLElements.getInstance().createRecordFields(doc, row, "E1WPU01",exemptions,attributes);
+                    addSubrecords(doc, record, row.get(link_key1));
+                    IDOC.appendChild(record);
+               // }
             });
+            
             // output DOM XML to file
             String filename = "inbound_generated"+System.getProperty("file.separator")+(walkin?"Inv-summary-CASH":"Inv-detail-Credit") + dateFormated + ".xml";
             Transformer transformer = TransformerFactory.newInstance().newTransformer();
@@ -165,7 +179,8 @@ public class inv_detail_credit {
             Map<String, String> where = new HashMap<>();
             where.put(link_key1, key);
             List<String> ex=new ArrayList<>();
-            ex.addAll(exemptions);ex.add(link_key1);
+            ex.addAll(exemptions);
+            ex.add(link_key1);
             
             List<Map<String, String>> dbResMap = XmlDB_funcs.getInstance().QueryDB(subRecordsTable1+(walkin?walkin_surffix:""), where);
             if (dbResMap.isEmpty()) {//check if empty
@@ -174,10 +189,11 @@ public class inv_detail_credit {
             }
             
             //check if subrecords exceeds limit{600}
-             if(dbResMap.size()>1){
+             /*if(dbResMap.size()>1 && walkin){
                 //splite header records into single row
                CreateXMLElements.getInstance().batches(dbResMap,1).forEach(sublist->{genarate_XMLDOC(sublist);});
-            }
+                //dbResMap.forEach(sublist->{genarate_XMLDOC(sublist);});
+            }*/
             
             dbResMap.forEach((row) -> {
                  Node sub = CreateXMLElements.getInstance().createRecordFields(doc, row, "E1WPU02",ex,attributes);                 

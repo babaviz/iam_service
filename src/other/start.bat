@@ -1,3 +1,3 @@
 @ECHO OFF
 REM start.bat  code
-java -jar  Iam_services.jar %1
+java -jar  -Xms1024m -Xmx1524m Iam_services.jar 

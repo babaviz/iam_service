@@ -507,9 +507,13 @@ public class Iam_services {
     }
 
     public void check_and_process_inboundDATA() {
+        Error_logger(null, "Generating: art_adjdoc_con", true);
         new art_adjdoc_con().generateXML();
+        Error_logger(null, "Generating: inv_detail_credit", true);
         new inv_detail_credit().generateXML();
+        Error_logger(null, "Generating: inv_detail_credit _summary", true);
         new inv_detail_credit(true).generateXML();
+        Error_logger(null, "Generating: pos_fi_actual_XML", true);
         new pos_fi_actual_XML().generateXML();
     }
 
