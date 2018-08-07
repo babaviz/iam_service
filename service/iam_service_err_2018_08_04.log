@@ -1,0 +1,75 @@
+Aug 04, 2018 6:05:32 PM iam_services.Iam_services Error_logger
+INFO: 0 new Files found
+Aug 04, 2018 6:05:48 PM iam_services.Iam_services Error_logger
+SEVERE: MSQLConnection
+com.microsoft.sqlserver.jdbc.SQLServerException: The TCP/IP connection to the host 192.168.13.27, port 1433 has failed. Error: "Connection refused: no further information. Verify the connection properties. Make sure that an instance of SQL Server is running on the host and accepting TCP/IP connections at the port. Make sure that TCP connections to the port are not blocked by a firewall.".
+	at com.microsoft.sqlserver.jdbc.SQLServerException.makeFromDriverError(SQLServerException.java:191)
+	at com.microsoft.sqlserver.jdbc.SQLServerException.ConvertConnectExceptionToSQLServerException(SQLServerException.java:242)
+	at com.microsoft.sqlserver.jdbc.SocketFinder.findSocket(IOBuffer.java:2369)
+	at com.microsoft.sqlserver.jdbc.TDSChannel.open(IOBuffer.java:551)
+	at com.microsoft.sqlserver.jdbc.SQLServerConnection.connectHelper(SQLServerConnection.java:1963)
+	at com.microsoft.sqlserver.jdbc.SQLServerConnection.login(SQLServerConnection.java:1628)
+	at com.microsoft.sqlserver.jdbc.SQLServerConnection.connectInternal(SQLServerConnection.java:1459)
+	at com.microsoft.sqlserver.jdbc.SQLServerConnection.connect(SQLServerConnection.java:773)
+	at com.microsoft.sqlserver.jdbc.SQLServerDriver.connect(SQLServerDriver.java:1168)
+	at java.sql.DriverManager.getConnection(Unknown Source)
+	at java.sql.DriverManager.getConnection(Unknown Source)
+	at iam_services.Iam_services.MSQLConnection(Iam_services.java:181)
+	at iam_services.Iam_services.Connect(Iam_services.java:109)
+	at iam_services.xmlprocessing.XmlDB_funcs.<init>(XmlDB_funcs.java:32)
+	at iam_services.xmlprocessing.XmlDB_funcs.getInstance(XmlDB_funcs.java:41)
+	at iam_services.xmlprocessing.art_adjdoc_con.generateXML(art_adjdoc_con.java:41)
+	at iam_services.Iam_services.check_and_process_inboundDATA(Iam_services.java:363)
+	at iam_services.Iam_services.doWork(Iam_services.java:87)
+	at iam_services.Iam_services.main(Iam_services.java:67)
+
+Aug 04, 2018 6:05:48 PM iam_services.Iam_services Error_logger
+SEVERE: Connect
+java.lang.Exception: Failed to connect with connection string: jdbc:sqlserver://192.168.13.27;databaseName=xmltest;user=sa;password=tester
+	at iam_services.Iam_services.Connect(Iam_services.java:111)
+	at iam_services.xmlprocessing.XmlDB_funcs.<init>(XmlDB_funcs.java:32)
+	at iam_services.xmlprocessing.XmlDB_funcs.getInstance(XmlDB_funcs.java:41)
+	at iam_services.xmlprocessing.art_adjdoc_con.generateXML(art_adjdoc_con.java:41)
+	at iam_services.Iam_services.check_and_process_inboundDATA(Iam_services.java:363)
+	at iam_services.Iam_services.doWork(Iam_services.java:87)
+	at iam_services.Iam_services.main(Iam_services.java:67)
+
+Aug 04, 2018 6:06:02 PM iam_services.Iam_services Error_logger
+SEVERE: MSQLConnection
+com.microsoft.sqlserver.jdbc.SQLServerException: The TCP/IP connection to the host 192.168.13.27, port 1433 has failed. Error: "Connection refused: no further information. Verify the connection properties. Make sure that an instance of SQL Server is running on the host and accepting TCP/IP connections at the port. Make sure that TCP connections to the port are not blocked by a firewall.".
+	at com.microsoft.sqlserver.jdbc.SQLServerException.makeFromDriverError(SQLServerException.java:191)
+	at com.microsoft.sqlserver.jdbc.SQLServerException.ConvertConnectExceptionToSQLServerException(SQLServerException.java:242)
+	at com.microsoft.sqlserver.jdbc.SocketFinder.findSocket(IOBuffer.java:2369)
+	at com.microsoft.sqlserver.jdbc.TDSChannel.open(IOBuffer.java:551)
+	at com.microsoft.sqlserver.jdbc.SQLServerConnection.connectHelper(SQLServerConnection.java:1963)
+	at com.microsoft.sqlserver.jdbc.SQLServerConnection.login(SQLServerConnection.java:1628)
+	at com.microsoft.sqlserver.jdbc.SQLServerConnection.connectInternal(SQLServerConnection.java:1459)
+	at com.microsoft.sqlserver.jdbc.SQLServerConnection.connect(SQLServerConnection.java:773)
+	at com.microsoft.sqlserver.jdbc.SQLServerDriver.connect(SQLServerDriver.java:1168)
+	at java.sql.DriverManager.getConnection(Unknown Source)
+	at java.sql.DriverManager.getConnection(Unknown Source)
+	at iam_services.Iam_services.MSQLConnection(Iam_services.java:181)
+	at iam_services.Iam_services.Connect(Iam_services.java:113)
+	at iam_services.xmlprocessing.XmlDB_funcs.<init>(XmlDB_funcs.java:32)
+	at iam_services.xmlprocessing.XmlDB_funcs.getInstance(XmlDB_funcs.java:41)
+	at iam_services.xmlprocessing.art_adjdoc_con.generateXML(art_adjdoc_con.java:41)
+	at iam_services.Iam_services.check_and_process_inboundDATA(Iam_services.java:363)
+	at iam_services.Iam_services.doWork(Iam_services.java:87)
+	at iam_services.Iam_services.main(Iam_services.java:67)
+
+Aug 04, 2018 6:06:02 PM iam_services.Iam_services Error_logger
+INFO: Failed to connect with connection string: jdbc:sqlserver://192.168.13.27 ;databaseName=xmltest;user=sa;password=sa
+Aug 04, 2018 6:06:02 PM iam_services.Iam_services Error_logger
+INFO: System could not connect to the server using provided settings
+Aug 04, 2018 6:06:02 PM iam_services.Iam_services Error_logger
+SEVERE: generateXML
+java.lang.Exception: Could not establish connection
+	at iam_services.xmlprocessing.XmlDB_funcs.<init>(XmlDB_funcs.java:34)
+	at iam_services.xmlprocessing.XmlDB_funcs.getInstance(XmlDB_funcs.java:41)
+	at iam_services.xmlprocessing.art_adjdoc_con.generateXML(art_adjdoc_con.java:41)
+	at iam_services.Iam_services.check_and_process_inboundDATA(Iam_services.java:363)
+	at iam_services.Iam_services.doWork(Iam_services.java:87)
+	at iam_services.Iam_services.main(Iam_services.java:67)
+
+Aug 04, 2018 6:13:28 PM iam_services.Iam_services Error_logger
+INFO: 0 new Files found

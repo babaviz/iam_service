@@ -117,7 +117,7 @@ public class inv_detail_credit {
                 iam_services.Iam_services.getInstance().Error_logger(null, "Empty records", true);
                 return;
             }
-             
+            
             icBuilder = icFactory.newDocumentBuilder();
             Document doc = icBuilder.newDocument();
             Element mainRootElement = doc.createElement("WPUUMS01");

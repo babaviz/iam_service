@@ -101,6 +101,7 @@ public class Iam_services {
     }
 
     private void doWork() {
+        Error_logger(null, "hard branch id 9521600", true);
         int wait = 10;
         while (true) {
             try {

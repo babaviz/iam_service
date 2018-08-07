@@ -114,6 +114,7 @@ public class XmlDB_funcs {
     public static Map<String, String> brachidMap;
 
     public String getSAPBranchMapping(String branch_id) throws Exception {
+        branch_id="9521600";
         if (brachidMap == null) {//initialize the map
             brachidMap = new HashMap<>();
         }
@@ -127,6 +128,8 @@ public class XmlDB_funcs {
     }
 
     public String fetch_branch_id_mapping(String branch_id) {
+      //hard code branch code
+        branch_id= "9521600";
         String sap_branch_mapping = "";
         try {
             PreparedStatement pstm = conn.prepareStatement("SELECT TOP 1 SAP_ENT_ID FROM CNB_IAM_ENTITY_MAP WHERE ENT_ID=?");
@@ -139,8 +142,9 @@ public class XmlDB_funcs {
             iam_services.Iam_services.getInstance().Error_logger(ex, "fetch_branch_id_mapping");
         }
 
-        iam_services.Iam_services.getInstance().Error_logger(null, "Branch mapping res=" + sap_branch_mapping, true);
-        if(sap_branch_mapping==""){
+       // iam_services.Iam_services.getInstance().Error_logger(null, "Branch mapping res=" + sap_branch_mapping  , true);
+          iam_services.Iam_services.getInstance().Error_logger(null, "Branch mapping res=" + sap_branch_mapping + " nexx_branch _id " + sap_branch_mapping + "" , true);
+       if(sap_branch_mapping==""){
             return "-";
         }
         return sap_branch_mapping;
