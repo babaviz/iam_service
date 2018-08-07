@@ -2,7 +2,9 @@
  * To change this license header, choose License Headers in Project Properties.
  * To change this template file, choose Tools | Templates
  * and open the template in the editor.
+CNB_IAM_IN_E1WPG01
  */
+
 package iam_services.xmlprocessing;
 
 import java.sql.Connection;
@@ -79,17 +81,19 @@ public class XmlDB_funcs {
             query = "UPDATE " + table + " SET READ_FLG = 1 OUTPUT inserted.* WHERE  (READ_FLG = 0 OR READ_FLG IS NULL) AND CONVERT(DATE, [DATE_STAMP]) = CONVERT(DATE, CURRENT_TIMESTAMP) ;";
             pstm = conn.prepareStatement(query);
         } else {
-            StringBuilder sql = new StringBuilder("SELECT * FROM " + table + " WHERE ");
-            if(false){
-                sql = new StringBuilder("UPDATE " + table + " SET READ_FLG = 1 OUTPUT inserted.* WHERE ");
+            final StringBuilder sql = new StringBuilder();
+            if(update){
+                sql.append("UPDATE ").append(table).append(" SET READ_FLG = 1 OUTPUT inserted.* WHERE ");
+            }else{
+                sql.append("SELECT * FROM ").append(table).append(" WHERE ");
             }
             List<String> wherecols = new ArrayList<>();
             where.entrySet().forEach(set -> {
                 if (!set.getKey().equals("no")) {
-                    sql.append(" " + set.getKey() + "=? AND");
+                    sql.append(" ").append(set.getKey()).append("=? AND");
                     wherecols.add(set.getKey());
                 } else {//Its ready, just a string
-                    sql.append(" " + set.getValue() + " AND");
+                    sql.append(" ").append(set.getValue()).append(" AND");
                 }
             });
             query = sql.toString();

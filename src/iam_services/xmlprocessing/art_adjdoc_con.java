@@ -61,8 +61,8 @@ public class art_adjdoc_con {
                     for(String col:distinct_inv_bra_by_day){
                         Map<String,String> in_where=new HashMap<>();
                         in_where.put(column, col);
-                        in_where.put("no","CONVERT(DATE,BELEGDATUM)=CONVERT(DATE,'"+date+"')");
-                        accu_data.add(XmlDB_funcs.getInstance().QueryDB(parentTable, in_where));
+                        in_where.put("no","CONVERT(DATE,BELEGDATUM)=CONVERT(DATE,'"+date+"') AND READ_FLG=0 ");
+                        accu_data.add(XmlDB_funcs.getInstance().QueryDB(parentTable, in_where,true));
                     }
                 }
                 //now generate xml
