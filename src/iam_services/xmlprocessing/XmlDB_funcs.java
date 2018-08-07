@@ -25,6 +25,7 @@ public class XmlDB_funcs {
 
     private Connection conn;
     private static XmlDB_funcs instance;
+    public static Map<String, String> brachidMap = new HashMap<>();
 
     public XmlDB_funcs() throws Exception {
         if (conn == null) {
@@ -69,7 +70,8 @@ public class XmlDB_funcs {
         return new ArrayList<>();//empty
     }
 
-    private PreparedStatement buildQuery(String table, Map<String, String> where) throws SQLException {
+    
+    private PreparedStatement buildQuery(String table, Map<String, String> where,boolean update) throws SQLException {
         PreparedStatement pstm;
         String query = "";
         if (where == null) {
@@ -78,12 +80,15 @@ public class XmlDB_funcs {
             pstm = conn.prepareStatement(query);
         } else {
             StringBuilder sql = new StringBuilder("SELECT * FROM " + table + " WHERE ");
+            if(false){
+                sql = new StringBuilder("UPDATE " + table + " SET READ_FLG = 1 OUTPUT inserted.* WHERE ");
+            }
             List<String> wherecols = new ArrayList<>();
             where.entrySet().forEach(set -> {
-                if(!set.getKey().equals("no")){
+                if (!set.getKey().equals("no")) {
                     sql.append(" " + set.getKey() + "=? AND");
                     wherecols.add(set.getKey());
-                }else{//Its ready, just a string
+                } else {//Its ready, just a string
                     sql.append(" " + set.getValue() + " AND");
                 }
             });
@@ -102,8 +107,12 @@ public class XmlDB_funcs {
     }
 
     public List<Map<String, String>> QueryDB(String table, Map<String, String> where) {
+        return QueryDB(table, where, false);
+    }
+    
+    public List<Map<String, String>> QueryDB(String table, Map<String, String> where,boolean update) {
         try {
-            PreparedStatement pstm = buildQuery(table, where);
+            PreparedStatement pstm = buildQuery(table, where,update);
             return getDBResMap(pstm);
         } catch (SQLException ex) {
             iam_services.Iam_services.getInstance().Error_logger(ex, "QueryDB");
@@ -111,10 +120,9 @@ public class XmlDB_funcs {
         return new ArrayList<>();
     }
 
-    public static Map<String, String> brachidMap;
 
     public String getSAPBranchMapping(String branch_id) throws Exception {
-        branch_id="9521600";
+        iam_services.Iam_services.getInstance().Error_logger(null, "getSAPBranchMapping:" + branch_id, true);
         if (brachidMap == null) {//initialize the map
             brachidMap = new HashMap<>();
         }
@@ -128,29 +136,30 @@ public class XmlDB_funcs {
     }
 
     public String fetch_branch_id_mapping(String branch_id) {
-      //hard code branch code
-        branch_id= "9521600";
+        
         String sap_branch_mapping = "";
         try {
             PreparedStatement pstm = conn.prepareStatement("SELECT TOP 1 SAP_ENT_ID FROM CNB_IAM_ENTITY_MAP WHERE ENT_ID=?");
             pstm.setString(1, branch_id);
             ResultSet rs = pstm.executeQuery();
-            while (rs.next()) {
+            if (rs.next()) {
                 sap_branch_mapping = rs.getString("SAP_ENT_ID");
             }
         } catch (Exception ex) {
             iam_services.Iam_services.getInstance().Error_logger(ex, "fetch_branch_id_mapping");
         }
 
-       // iam_services.Iam_services.getInstance().Error_logger(null, "Branch mapping res=" + sap_branch_mapping  , true);
-          iam_services.Iam_services.getInstance().Error_logger(null, "Branch mapping res=" + sap_branch_mapping + " nexx_branch _id " + sap_branch_mapping + "" , true);
-       if(sap_branch_mapping==""){
-            return "-";
+        if (sap_branch_mapping.trim().isEmpty()) {
+            brachidMap.put(branch_id, "Not found");
+            sap_branch_mapping = "Not found";
         }
+        iam_services.Iam_services.getInstance().Error_logger(null, "Branch mapping res=" + sap_branch_mapping, true);
+        brachidMap.put(branch_id, sap_branch_mapping);
         return sap_branch_mapping;
     }
 
     public List<String> getDistict_byDate(String column, String query) {
+
         List<String> res = new ArrayList<>();
         try {
             PreparedStatement pstm = conn.prepareStatement(query);
@@ -165,11 +174,29 @@ public class XmlDB_funcs {
         return res;
     }
 
-    /*public static void main(String[] args) {
+    public String getBranchIdGivenPackageId(String packageId, String table) {
+       
+        
+        String branchId = "";
         try {
-            System.out.println(getInstance().getDBResMap("CNB_IAM_E1WXX01"));
-        } catch (Exception ex) {
-            Logger.getLogger(XmlDB_funcs.class.getName()).log(Level.SEVERE, null, ex);
+            PreparedStatement pstm = conn.prepareStatement("SELECT TOP 1 BRNCH_ID FROM " + table + " WHERE PACKAGE_ID=?");
+            pstm.setString(1, packageId);
+            ResultSet rs = pstm.executeQuery();
+            if (rs.next()) {
+                branchId = rs.getString("BRNCH_ID");
+            }
+        } catch (Exception e) {
+            e.printStackTrace();
         }
-    }*/
+        //brachidMap.put(packageId, branchId);
+        return branchId;
+    }
+
+    /*public static void main(String[] args) {
+     try {
+     System.out.println(getInstance().getDBResMap("CNB_IAM_E1WXX01"));
+     } catch (Exception ex) {
+     Logger.getLogger(XmlDB_funcs.class.getName()).log(Level.SEVERE, null, ex);
+     }
+     }*/
 }
