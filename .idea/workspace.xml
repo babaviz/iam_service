@@ -1,16 +1,19 @@
 <?xml version="1.0" encoding="UTF-8"?>
 <project version="4">
+  <component name="ArtifactsWorkspaceSettings">
+    <artifacts-to-build>
+      <artifact name="iam_service:jar" />
+    </artifacts-to-build>
+  </component>
   <component name="ChangeListManager">
     <list default="true" id="63eff998-e680-4b79-978a-f01012e289ab" name="Default" comment="">
-      <change beforePath="$PROJECT_DIR$/.idea/iam_service.iml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/iam_service.iml" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/.idea/libraries/lib.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/libraries/lib.xml" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/.idea/misc.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/misc.xml" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/.idea/artifacts/iam_services_jar.xml" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/src/META-INF/MANIFEST.MF" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/.idea/iam_service.iml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/iam_services.iml" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/.idea/modules.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/modules.xml" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/lib/apache-commons-net.jar" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/lib/commons-net-3.3-ftp.jar" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/lib/sqljdbc41.jar" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/nbproject/private/private.xml" beforeDir="false" afterPath="$PROJECT_DIR$/nbproject/private/private.xml" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/iam_services/xmlprocessing/art_adjdoc_con.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/iam_services/xmlprocessing/art_adjdoc_con.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/other/iam_service_settings.xml" beforeDir="false" afterPath="$PROJECT_DIR$/src/other/iam_service_settings.xml" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/other/start.bat" beforeDir="false" afterPath="$PROJECT_DIR$/src/other/start.bat" afterDir="false" />
     </list>
     <option name="EXCLUDED_CONVERTED_TO_IGNORED" value="true" />
     <option name="SHOW_DIALOG" value="false" />
@@ -30,27 +33,35 @@
       </usages-collector>
       <usages-collector id="statistics.file.extensions.open">
         <counts>
+          <entry key="MF" value="1" />
+          <entry key="bat" value="1" />
           <entry key="iml" value="1" />
           <entry key="java" value="11" />
-          <entry key="xml" value="1" />
+          <entry key="xml" value="2" />
         </counts>
       </usages-collector>
       <usages-collector id="statistics.file.types.open">
         <counts>
+          <entry key="Batch" value="1" />
           <entry key="IDEA_MODULE" value="1" />
           <entry key="JAVA" value="10" />
+          <entry key="Manifest" value="1" />
           <entry key="Scratch" value="1" />
-          <entry key="XML" value="1" />
+          <entry key="XML" value="2" />
         </counts>
       </usages-collector>
       <usages-collector id="statistics.file.types.edit">
         <counts>
+          <entry key="Batch" value="3" />
           <entry key="JAVA" value="26" />
+          <entry key="XML" value="6" />
         </counts>
       </usages-collector>
       <usages-collector id="statistics.file.extensions.edit">
         <counts>
+          <entry key="bat" value="3" />
           <entry key="java" value="26" />
+          <entry key="xml" value="6" />
         </counts>
       </usages-collector>
       <usages-collector id="statistics.js.language.service.starts" />
@@ -60,12 +71,13 @@
   </component>
   <component name="FileEditorManager">
     <leaf SIDE_TABS_SIZE_LIMIT_KEY="300">
-      <file pinned="false" current-in-tab="true">
+      <file pinned="false" current-in-tab="false">
         <entry file="file://$PROJECT_DIR$/src/iam_services/Iam_services.java">
           <provider selected="true" editor-type-id="text-editor">
-            <state relative-caret-position="290">
-              <caret line="67" lean-forward="true" selection-start-line="67" selection-end-line="67" />
+            <state relative-caret-position="152">
+              <caret line="783" column="5" selection-start-line="783" selection-start-column="5" selection-end-line="783" selection-end-column="5" />
               <folding>
+                <element signature="docComment;class#Iam_services#0" expanded="true" />
                 <element signature="e#2371#2590#0" expanded="true" />
                 <element signature="e#2596#3237#0" expanded="true" />
                 <element signature="e#3243#4061#0" expanded="true" />
@@ -81,20 +93,29 @@
           </provider>
         </entry>
       </file>
-      <file pinned="false" current-in-tab="false">
-        <entry file="file://$PROJECT_DIR$/src/iam_services/xmlprocessing/art_adjdoc_con.java">
+      <file pinned="false" current-in-tab="true">
+        <entry file="file://$PROJECT_DIR$/src/other/start.bat">
           <provider selected="true" editor-type-id="text-editor">
-            <state relative-caret-position="53">
-              <caret line="53" selection-start-line="53" selection-end-line="53" />
+            <state relative-caret-position="75">
+              <caret line="3" lean-forward="true" selection-start-line="3" selection-end-line="3" />
             </state>
           </provider>
         </entry>
       </file>
       <file pinned="false" current-in-tab="false">
-        <entry file="file://$PROJECT_DIR$/src/iam_services/xmlprocessing/CreateXMLElements.java">
+        <entry file="file://$PROJECT_DIR$/src/other/iam_service_settings.xml">
           <provider selected="true" editor-type-id="text-editor">
-            <state relative-caret-position="250">
-              <caret line="33" column="13" selection-start-line="33" selection-start-column="13" selection-end-line="33" selection-end-column="13" />
+            <state relative-caret-position="302">
+              <caret line="65" column="21" selection-start-line="65" selection-start-column="21" selection-end-line="65" selection-end-column="21" />
+            </state>
+          </provider>
+        </entry>
+      </file>
+      <file pinned="false" current-in-tab="false">
+        <entry file="file://$PROJECT_DIR$/src/iam_services/xmlprocessing/art_adjdoc_con.java">
+          <provider selected="true" editor-type-id="text-editor">
+            <state relative-caret-position="53">
+              <caret line="53" selection-start-line="53" selection-end-line="53" />
             </state>
           </provider>
         </entry>
@@ -125,7 +146,7 @@
         <entry file="file://$PROJECT_DIR$/src/iam_services/FTP_FileProcessing.java">
           <provider selected="true" editor-type-id="text-editor">
             <state relative-caret-position="66">
-              <caret line="62" column="35" lean-forward="true" selection-start-line="62" selection-start-column="35" selection-end-line="62" selection-end-column="35" />
+              <caret line="62" column="35" selection-start-line="62" selection-start-column="35" selection-end-line="62" selection-end-column="35" />
               <folding>
                 <element signature="imports" expanded="true" />
               </folding>
@@ -165,6 +186,7 @@
       <find>dump_xmlFILE_toDB(</find>
       <find>sess</find>
       <find>destination_folder</find>
+      <find>inbound_xml_generateg_folder</find>
     </findStrings>
   </component>
   <component name="Git.Settings">
@@ -177,6 +199,8 @@
         <option value="$PROJECT_DIR$/src/iam_services/Iam_services.java" />
         <option value="$PROJECT_DIR$/src/iam_services/xmlprocessing/inv_detail_credit.java" />
         <option value="$PROJECT_DIR$/src/iam_services/FTP_FileProcessing.java" />
+        <option value="$PROJECT_DIR$/src/other/iam_service_settings.xml" />
+        <option value="$PROJECT_DIR$/src/other/start.bat" />
       </list>
     </option>
   </component>
@@ -212,20 +236,31 @@
             <path>
               <item name="iam_services" type="b2602c69:ProjectViewProjectNode" />
               <item name="iam_services" type="462c0819:PsiDirectoryNode" />
-              <item name="src" type="462c0819:PsiDirectoryNode" />
+              <item name="dist" type="462c0819:PsiDirectoryNode" />
+            </path>
+            <path>
+              <item name="iam_services" type="b2602c69:ProjectViewProjectNode" />
+              <item name="iam_services" type="462c0819:PsiDirectoryNode" />
+              <item name="dist" type="462c0819:PsiDirectoryNode" />
+              <item name="artifacts" type="462c0819:PsiDirectoryNode" />
+            </path>
+            <path>
+              <item name="iam_services" type="b2602c69:ProjectViewProjectNode" />
+              <item name="iam_services" type="462c0819:PsiDirectoryNode" />
+              <item name="dist" type="462c0819:PsiDirectoryNode" />
+              <item name="artifacts" type="462c0819:PsiDirectoryNode" />
+              <item name="build" type="462c0819:PsiDirectoryNode" />
+            </path>
+            <path>
+              <item name="iam_services" type="b2602c69:ProjectViewProjectNode" />
+              <item name="iam_services" type="462c0819:PsiDirectoryNode" />
+              <item name="dist" type="462c0819:PsiDirectoryNode" />
+              <item name="production" type="462c0819:PsiDirectoryNode" />
             </path>
             <path>
               <item name="iam_services" type="b2602c69:ProjectViewProjectNode" />
               <item name="iam_services" type="462c0819:PsiDirectoryNode" />
               <item name="src" type="462c0819:PsiDirectoryNode" />
-              <item name="iam_services" type="462c0819:PsiDirectoryNode" />
-            </path>
-            <path>
-              <item name="iam_services" type="b2602c69:ProjectViewProjectNode" />
-              <item name="iam_services" type="462c0819:PsiDirectoryNode" />
-              <item name="src" type="462c0819:PsiDirectoryNode" />
-              <item name="iam_services" type="462c0819:PsiDirectoryNode" />
-              <item name="xmlprocessing" type="462c0819:PsiDirectoryNode" />
             </path>
             <path>
               <item name="iam_services" type="b2602c69:ProjectViewProjectNode" />
@@ -248,12 +283,12 @@
     <property name="MemberChooser.sorted" value="false" />
     <property name="WebServerToolWindowFactoryState" value="false" />
     <property name="aspect.path.notification.shown" value="true" />
-    <property name="com.android.tools.idea.instantapp.provision.ProvisionBeforeRunTaskProvider.myTimeStamp" value="1535544749200" />
+    <property name="com.android.tools.idea.instantapp.provision.ProvisionBeforeRunTaskProvider.myTimeStamp" value="1535549792948" />
     <property name="com.intellij.ide.scratch.LRUPopupBuilder$1/New Scratch File" value="JAVA" />
-    <property name="last_opened_file_path" value="$PROJECT_DIR$/lib" />
-    <property name="project.structure.last.edited" value="Global Libraries" />
+    <property name="last_opened_file_path" value="$PROJECT_DIR$/src/other/iam_service_settings.xml" />
+    <property name="project.structure.last.edited" value="Artifacts" />
     <property name="project.structure.proportion" value="0.15" />
-    <property name="project.structure.side.proportion" value="0.2" />
+    <property name="project.structure.side.proportion" value="0.20344828" />
     <property name="settings.editor.selected.configurable" value="configurable.group.language" />
   </component>
   <component name="RunDashboard">
@@ -304,7 +339,7 @@
     </configuration>
     <configuration name="Iam_services" type="Application" factoryName="Application" temporary="true" nameIsGenerated="true">
       <option name="MAIN_CLASS_NAME" value="iam_services.Iam_services" />
-      <module name="iam_service" />
+      <module name="iam_services" />
       <option name="WORKING_DIRECTORY" value="$PROJECT_DIR$" />
       <extension name="coverage">
         <pattern>
@@ -359,6 +394,19 @@
     </configuration>
     <configuration default="true" type="JUnit" factoryName="JUnit">
       <option name="WORKING_DIRECTORY" value="$MODULE_DIR$" />
+      <method v="2">
+        <option name="Make" enabled="true" />
+      </method>
+    </configuration>
+    <configuration default="true" type="JetRunConfigurationType" factoryName="Kotlin">
+      <module name="iam_services" />
+      <option name="VM_PARAMETERS" />
+      <option name="PROGRAM_PARAMETERS" />
+      <option name="ALTERNATIVE_JRE_PATH_ENABLED" value="false" />
+      <option name="ALTERNATIVE_JRE_PATH" />
+      <option name="PASS_PARENT_ENVS" value="true" />
+      <option name="MAIN_CLASS_NAME" />
+      <option name="WORKING_DIRECTORY" />
       <method v="2">
         <option name="Make" enabled="true" />
       </method>
@@ -442,12 +490,12 @@
       <workItem from="1532424767741" duration="6299000" />
       <workItem from="1535440478704" duration="2793000" />
       <workItem from="1535525873009" duration="421000" />
-      <workItem from="1535541371932" duration="3558000" />
+      <workItem from="1535541371932" duration="7144000" />
     </task>
     <servers />
   </component>
   <component name="TimeTrackingManager">
-    <option name="totallyTimeSpent" value="13071000" />
+    <option name="totallyTimeSpent" value="16657000" />
   </component>
   <component name="ToolWindowManager">
     <frame x="-8" y="-8" width="1382" height="784" extended-state="6" />
@@ -461,7 +509,7 @@
       <window_info id="Web" order="5" sideWeight="0.135" side_tool="true" weight="0.23524962" />
       <window_info id="Palette&#9;" order="6" />
       <window_info id="Favorites" order="7" sideWeight="0.55585104" side_tool="true" weight="0.2647504" />
-      <window_info content_ui="combo" id="Project" order="8" sideWeight="0.865" visible="true" weight="0.2655068" />
+      <window_info active="true" content_ui="combo" id="Project" order="8" sideWeight="0.865" visible="true" weight="0.23373677" />
       <window_info id="JavaEE:App" order="9" side_tool="true" />
       <window_info anchor="bottom" id="Message" order="0" />
       <window_info anchor="bottom" id="TypeScript" order="1" weight="0.32941177" />
@@ -469,7 +517,7 @@
       <window_info anchor="bottom" id="REST Client" order="3" sideWeight="0.48789713" weight="0.36302522" />
       <window_info anchor="bottom" auto_hide="true" id="Version Control" order="4" sideWeight="0.60060513" side_tool="true" weight="0.5243698" />
       <window_info anchor="bottom" id="Cvs" order="5" weight="0.25" />
-      <window_info anchor="bottom" id="Event Log" order="6" sideWeight="0.5204236" side_tool="true" weight="0.64033616" />
+      <window_info anchor="bottom" id="Event Log" order="6" sideWeight="0.5204236" side_tool="true" weight="0.64" />
       <window_info anchor="bottom" id="Chat" order="7" weight="0.32941177" />
       <window_info anchor="bottom" id="Inspection" order="8" weight="0.4" />
       <window_info anchor="bottom" id="Persistence" order="9" />
@@ -578,7 +626,7 @@
         </state>
       </provider>
     </entry>
-    <entry file="file://$PROJECT_DIR$/.idea/iam_service.iml">
+    <entry file="file://$PROJECT_DIR$/.idea/iam_services.iml">
       <provider selected="true" editor-type-id="text-editor">
         <state relative-caret-position="-150" />
       </provider>
@@ -603,7 +651,7 @@
     <entry file="file://$PROJECT_DIR$/src/iam_services/FTP_FileProcessing.java">
       <provider selected="true" editor-type-id="text-editor">
         <state relative-caret-position="66">
-          <caret line="62" column="35" lean-forward="true" selection-start-line="62" selection-start-column="35" selection-end-line="62" selection-end-column="35" />
+          <caret line="62" column="35" selection-start-line="62" selection-start-column="35" selection-end-line="62" selection-end-column="35" />
           <folding>
             <element signature="imports" expanded="true" />
           </folding>
@@ -632,9 +680,10 @@
     </entry>
     <entry file="file://$PROJECT_DIR$/src/iam_services/Iam_services.java">
       <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="290">
-          <caret line="67" lean-forward="true" selection-start-line="67" selection-end-line="67" />
+        <state relative-caret-position="152">
+          <caret line="783" column="5" selection-start-line="783" selection-start-column="5" selection-end-line="783" selection-end-column="5" />
           <folding>
+            <element signature="docComment;class#Iam_services#0" expanded="true" />
             <element signature="e#2371#2590#0" expanded="true" />
             <element signature="e#2596#3237#0" expanded="true" />
             <element signature="e#3243#4061#0" expanded="true" />
@@ -646,6 +695,23 @@
             <element signature="e#19057#20756#0" expanded="true" />
             <element signature="e#22840#31138#0" expanded="true" />
           </folding>
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/src/other/iam_service_settings.xml">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="302">
+          <caret line="65" column="21" selection-start-line="65" selection-start-column="21" selection-end-line="65" selection-end-column="21" />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/src/META-INF/MANIFEST_old.MF">
+      <provider selected="true" editor-type-id="text-editor" />
+    </entry>
+    <entry file="file://$PROJECT_DIR$/src/other/start.bat">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="75">
+          <caret line="3" lean-forward="true" selection-start-line="3" selection-end-line="3" />
         </state>
       </provider>
     </entry>
@@ -666,10 +732,12 @@
       <state key="ArtifactsStructureConfigurable.UI">
         <settings>
           <artifact-editor />
+          <last-edited>iam_services:jar</last-edited>
           <splitter-proportions>
             <option name="proportions">
               <list>
-                <option value="0.2" />
+                <option value="0.20344828" />
+                <option value="0.5" />
               </list>
             </option>
           </splitter-proportions>
@@ -681,7 +749,7 @@
           <splitter-proportions>
             <option name="proportions">
               <list>
-                <option value="0.2" />
+                <option value="0.20344828" />
               </list>
             </option>
           </splitter-proportions>
@@ -713,11 +781,11 @@
       </state>
       <state key="ModuleStructureConfigurable.UI">
         <settings>
-          <last-edited>iam_service</last-edited>
+          <last-edited>iam_services</last-edited>
           <splitter-proportions>
             <option name="proportions">
               <list>
-                <option value="0.2" />
+                <option value="0.20344828" />
               </list>
             </option>
           </splitter-proportions>
@@ -741,7 +809,7 @@
           <splitter-proportions>
             <option name="proportions">
               <list>
-                <option value="0.2" />
+                <option value="0.20344828" />
               </list>
             </option>
           </splitter-proportions>

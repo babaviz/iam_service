@@ -1,0 +1,15 @@
+<component name="ArtifactManager">
+  <artifact name="iam_services:jar">
+    <output-path>$PROJECT_DIR$/dist/artifacts/build</output-path>
+    <root id="root">
+      <element id="archive" name="iam_services.jar">
+        <element id="module-output" name="iam_services" />
+      </element>
+      <element id="directory" name="lib">
+        <element id="library" level="project" name="lib" />
+      </element>
+      <element id="file-copy" path="$PROJECT_DIR$/src/other/start.bat" />
+      <element id="file-copy" path="$PROJECT_DIR$/src/other/iam_service_settings.xml" />
+    </root>
+  </artifact>
+</component>
