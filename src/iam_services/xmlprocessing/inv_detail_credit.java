@@ -30,7 +30,7 @@ import org.w3c.dom.Node;
  */
 public class inv_detail_credit {
     
-        private String 
+        private final String 
                 parentTable = "CNB_IAM_IN_E1WPU01",
                 subRecordsTable1 = "CNB_IAM_IN_E1WPU02",
                 subRecordsTable2 = "CNB_IAM_IN_E1WPU05",
@@ -40,11 +40,12 @@ public class inv_detail_credit {
                 
                 link_key1 = "PACKAGE_ID",
                 link_key2="ARTNR",
-                link_key3="Dnote_Detail_ID";
+                link_key3="Dnote_Detail_ID",
+                link_key3_summary="id";
        
         
     private boolean walkin;
-    private String walkin_surffix="_summary";
+    private final String walkin_surffix="_summary";
     private ArrayList<String> exemptions=new ArrayList<>(Arrays.asList("id", "DATE_STAMP","READ_FLG","BRNCH_ID","Dnote_Detail_ID"));
     private Map<String,String> attributes=new HashMap<>();
     
@@ -197,7 +198,7 @@ public class inv_detail_credit {
             
             dbResMap.forEach((row) -> {
                  Node sub = CreateXMLElements.getInstance().createRecordFields(doc, row, "E1WPU02",ex,attributes);                 
-                 addSubOfSubrecords(doc, sub, row.get(link_key1),row.get(link_key2), walkin?"":row.get(link_key3));
+                 addSubOfSubrecords(doc, sub, row.get(link_key1),row.get(link_key2), walkin?row.get(link_key3_summary):row.get(link_key3));
                  record.appendChild(sub);
             });
 
@@ -211,9 +212,7 @@ public class inv_detail_credit {
             Map<String, String> where = new HashMap<>();
             where.put(link_key2, key2);
             where.put(link_key1, key1);
-            if(!walkin){//if invoice details
-                where.put(link_key3, key3);
-            }
+            where.put(walkin?link_key3_summary:link_key3, key3);
             
             ArrayList<String> ex=new ArrayList<>();
             ex.addAll(exemptions);ex.add(link_key1);

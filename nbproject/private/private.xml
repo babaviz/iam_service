@@ -5,7 +5,10 @@
         <group>
             <file>file:/C:/Users/user/Documents/DENNIS/iam_services/src/iam_services/xmlprocessing/StatusLogger.java</file>
             <file>file:/C:/Users/user/Documents/DENNIS/iam_services/src/iam_services/Iam_services.java</file>
+            <file>file:/C:/Users/user/Documents/DENNIS/iam_services/src/iam_services/xmlprocessing/inv_detail_credit.java</file>
+            <file>file:/C:/Users/user/Documents/DENNIS/iam_services/src/iam_services/xmlprocessing/art_adjdoc_con.java</file>
             <file>file:/C:/Users/user/Documents/DENNIS/iam_services/src/other/iam_service_settings.xml</file>
+            <file>file:/C:/Users/user/Documents/DENNIS/iam_services/src/iam_services/xmlprocessing/XmlDB_funcs.java</file>
         </group>
     </open-files>
 </project-private>
