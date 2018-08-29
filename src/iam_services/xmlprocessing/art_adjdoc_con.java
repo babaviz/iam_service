@@ -30,13 +30,14 @@ import org.w3c.dom.Node;
  */
 public class art_adjdoc_con {
 
-    private String parentTable = "CNB_IAM_IN_E1WPG01",
+    private final String 
+            parentTable = "CNB_IAM_IN_E1WPG01",
             subRecordsTable = "CNB_IAM_IN_E1WPG02",
             link_key = "BONNUMMER",
             link_key2="BRNCH_ID";
     
-    private ArrayList<String> exemptions=new ArrayList<>(Arrays.asList("id", "DATE_STAMP","BRNCH_ID","READ_FLG"));
-    private Map<String,String> attributes=new HashMap<>();
+    private final ArrayList<String> exemptions=new ArrayList<>(Arrays.asList("id", "DATE_STAMP","BRNCH_ID","READ_FLG"));
+    private final Map<String,String> attributes=new HashMap<>();
 
     public art_adjdoc_con() {
         attributes.clear();
